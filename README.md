@@ -8,6 +8,7 @@ Contenido del repositorio sheweb Siglo del Hombre
 sheweb->
 	|-doc -> documentacion del proyecto
 	|	|-usercase -> Esquemas de casos de uso
+        |       |-flowcharts -> Set de diagramas de flujo
 	|	|-database-> Esquema de base de datos
 	|	|-class-> Estructura de clases
 	|	|-readyset -> Documentacion general del proyecto en plantillas readySet
