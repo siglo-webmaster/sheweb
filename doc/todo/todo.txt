@@ -1,0 +1,4 @@
+terminar documentacion del proyecto
+Revalidar esquema de base de datos
+reunirse nuevamente con Martica de contabilidad para validar modelo de sistema
+validar punto a punto las caracateristicas del sistema actual con el nuevo sistema
