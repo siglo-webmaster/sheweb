@@ -1,4 +1,7 @@
-terminar documentacion del proyecto
-Revalidar esquema de base de datos
-reunirse nuevamente con Martica de contabilidad para validar modelo de sistema
-validar punto a punto las caracateristicas del sistema actual con el nuevo sistema
+* terminar documentacion del proyecto
+* Revalidar esquema de base de datos
+* reunirse nuevamente con Martica de contabilidad para validar modelo de sistema
+* validar punto a punto las caracateristicas del sistema actual con el nuevo sistema
+* revisar viabilidad de utilizar frmework yii para reducir tiempode desarrollo junto con el set de clases ya generado para la nueva pagina web
+* revisar el modelo de servidores esclavos y servidor maestro para permitir la desconeccion de puntos de venta
+ en el sistema y retorma de consecutovos al momento de reanudar la coneccion web
