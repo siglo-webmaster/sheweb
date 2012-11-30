@@ -1,0 +1,13 @@
+window_sizes 1338 719 167 1165 558 87
+diagrams
+  active  usecasediagram_ref 128055 // superUsuario
+    1165 558 100 25 0 0
+end
+show_stereotypes
+selected 
+  package_ref 129 // sheweb
+open
+  usecaseview_ref 128055 // casos_de_uso
+end
+end
+verbose
