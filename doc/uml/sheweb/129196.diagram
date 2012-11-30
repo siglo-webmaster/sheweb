@@ -1,0 +1,25 @@
+format 74
+
+classcanvas 128044 class_ref 129324 // coordinadorComercial
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 146 305 2000
+end
+usecasecanvas 128172 usecase_ref 132396 // administracion de rutas de vendedores
+  xyzwh 480 206 3005 64 32 label_xy 394 238
+end
+usecasecanvas 128428 usecase_ref 132524 // administracion de convenios y contratos
+  xyzwh 485 282 3005 64 32 label_xy 395 314
+end
+usecasecanvas 128684 usecase_ref 132652 // administrar reservas de inventario
+  xyzwh 490 354 3005 64 32 label_xy 419 386
+end
+fragment 128940 "coordinacion Comercial"
+  xyzwh 308 137 2000 392 389
+end
+line 128300 ----
+  from ref 128044 z 3006 to ref 128172
+line 128556 ----
+  from ref 128428 z 3006 to ref 128044
+line 128812 ----
+  from ref 128684 z 3006 to ref 128044
+end
