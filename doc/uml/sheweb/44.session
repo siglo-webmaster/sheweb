@@ -1,0 +1,8 @@
+window_sizes 1224 1030 192 1026 836 120
+show_stereotypes
+selected usecasediagram_ref 129196 // coordinadorComercial
+open
+  usecase_ref 128311 // administracion de modulos del sistema
+  usecase_ref 131372 // registrar problemas en entrega de mercancia a clientes
+end
+end
