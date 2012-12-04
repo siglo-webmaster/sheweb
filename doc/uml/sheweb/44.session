@@ -1,4 +1,8 @@
-window_sizes 1224 1030 192 1026 836 120
+window_sizes 1886 1033 215 1665 839 120
+diagrams
+  active  usecasediagram_ref 135724 // vendedorComercial
+    1665 839 80 25 0 0
+end
 show_stereotypes
 selected usecasediagram_ref 129196 // coordinadorComercial
 open

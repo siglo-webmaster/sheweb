@@ -2,19 +2,52 @@ format 74
 
 classcanvas 128044 class_ref 129324 // coordinadorComercial
   class_drawing_mode default show_context_mode default show_stereotype_properties default
-  xyz 146 305 2000
+  xyz 19 313 2000
 end
 usecasecanvas 128172 usecase_ref 132396 // administracion de rutas de vendedores
-  xyzwh 480 206 3005 64 32 label_xy 394 238
+  xyzwh 263 235 3005 65 37 label_xy 176 270
 end
 usecasecanvas 128428 usecase_ref 132524 // administracion de convenios y contratos
-  xyzwh 485 282 3005 64 32 label_xy 395 314
+  xyzwh 442 350 3005 63 41 label_xy 351 390
 end
 usecasecanvas 128684 usecase_ref 132652 // administrar reservas de inventario
-  xyzwh 490 354 3005 64 32 label_xy 419 386
+  xyzwh 446 421 3005 63 41 label_xy 374 461
 end
 fragment 128940 "coordinacion Comercial"
-  xyzwh 308 137 2000 392 389
+  xyzwh 179 149 2000 539 729
+end
+usecasecanvas 129068 usecase_ref 139180 // administracion de clientes
+  xyzwh 416 493 3005 63 41 label_xy 368 533
+end
+usecasecanvas 129324 usecase_ref 139308 // seguimiento de rutas
+  xyzwh 530 165 3005 64 32 label_xy 498 197
+end
+usecasecanvas 129580 usecase_ref 139436 // seguimiento y modificacion tiempos de vencimiento de rutas
+  xyzwh 522 274 3005 65 35 label_xy 329 311
+end
+usecasecanvas 129836 usecase_ref 139564 // modificar items en las rutas antes de separacion
+  xyzwh 531 219 3005 64 32 label_xy 417 251
+end
+usecasecanvas 130092 usecase_ref 139692 // generar pedidos a clientes
+  xyzwh 250 179 3005 64 32 label_xy 203 211
+end
+usecasecanvas 130348 usecase_ref 139820 // consultar reportes
+  xyzwh 271 672 3005 64 32 label_xy 248 704
+end
+usecasecanvas 130476 usecase_ref 139948 // reportes de ventas por vendedor
+  xyzwh 461 576 3005 64 32 label_xy 394 608
+end
+usecasecanvas 130604 usecase_ref 140076 // reportes de inventario
+  xyzwh 455 642 3005 64 32 label_xy 421 674
+end
+usecasecanvas 130732 usecase_ref 140204 // reporte de novedades
+  xyzwh 457 701 3005 64 32 label_xy 423 733
+end
+usecasecanvas 130860 usecase_ref 140332 // pedidos e importaciones  proximas a llegar
+  xyzwh 468 750 3005 64 32 label_xy 371 782
+end
+usecasecanvas 130988 usecase_ref 140460 // reservas sobre importaciones
+  xyzwh 471 809 3005 64 32 label_xy 415 841
 end
 line 128300 ----
   from ref 128044 z 3006 to ref 128172
@@ -22,4 +55,26 @@ line 128556 ----
   from ref 128428 z 3006 to ref 128044
 line 128812 ----
   from ref 128684 z 3006 to ref 128044
+line 129196 ----
+  from ref 129068 z 3006 to ref 128044
+line 129452 --->
+  from ref 128172 z 3006 to ref 129324
+line 129708 ---> decenter_end 218
+  from ref 128172 z 3006 to ref 129580
+line 129964 --->
+  from ref 128172 z 3006 to ref 129836
+line 130220 ----
+  from ref 128044 z 3006 to ref 130092
+line 131116 ----
+  from ref 128044 z 3006 to ref 130348
+line 131244 --->
+  from ref 130348 z 3006 to ref 130476
+line 131372 --->
+  from ref 130348 z 3006 to ref 130604
+line 131500 --->
+  from ref 130348 z 3006 to ref 130732
+line 131628 --->
+  from ref 130348 z 3006 to ref 130860
+line 131756 --->
+  from ref 130348 z 3006 to ref 130988
 end

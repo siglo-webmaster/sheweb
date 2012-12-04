@@ -1,0 +1,123 @@
+format 74
+
+classcanvas 128044 class_ref 135852 // vendedorComercial
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 69.6 283.3 2000
+end
+fragment 128172 "Ventas"
+  xyzwh 230.6 5.4 2000 860 835
+end
+usecasecanvas 128300 usecase_ref 140588 // crear y/o consultar clientes
+  xyzwh 515.8 21.4 3005 64 32 label_xy 469 54
+end
+usecasecanvas 128428 usecase_ref 140716 // generar cotizaciones
+  xyzwh 485.8 127.4 3005 64 32 label_xy 457 160
+end
+usecasecanvas 128556 usecase_ref 140844 // preruteo
+  xyzwh 808 130.6 3005 64 32 label_xy 814 164
+end
+usecasecanvas 128684 usecase_ref 140972 // ruteo
+  xyzwh 799.8 187.4 3010 64 32 label_xy 817 220
+end
+usecasecanvas 128812 usecase_ref 141100 // modificar rutas
+  xyzwh 499.6 239.2 3005 64 32 label_xy 486 272
+end
+usecasecanvas 129580 usecase_ref 141228 // actualizar datos de clientes
+  xyzwh 820.8 15.2 3005 64 32 label_xy 773 48
+end
+usecasecanvas 129836 usecase_ref 141356 // clonacion de rutas
+  xyzwh 925.8 174.6 3005 64 32 label_xy 911 208
+end
+usecasecanvas 130092 usecase_ref 141484 // consultar estado en cartera del cliente
+  xyzwh 923.6 65.8 3005 64 32 label_xy 842 99
+end
+usecasecanvas 130348 usecase_ref 141612 // solicitar mercancia a importar y reservar para clientes
+  xyzwh 404.6 507.4 3005 64 32 label_xy 274 540
+end
+usecasecanvas 130604 usecase_ref 141740 // cambiar estado de sus rutas
+  xyzwh 804.6 244.6 3011 64 32 label_xy 753 278
+end
+usecasecanvas 130732 usecase_ref 141868 // modificar items de rutas
+  xyzwh 950.8 299.2 3010 64 32 label_xy 911 332
+end
+usecasecanvas 130988 usecase_ref 141996 // modificar vencimiento
+  xyzwh 811 319.4 3005 64 32 label_xy 777 352
+end
+usecasecanvas 131244 usecase_ref 142124 // solicitar cambio de prioridad de ruta
+  xyzwh 941.2 382.4 3005 64 32 label_xy 865 415
+end
+usecasecanvas 131628 usecase_ref 142252 // consultar estado de sus rutas
+  xyzwh 503.2 324.6 3005 64 32 label_xy 445 358
+end
+usecasecanvas 131884 usecase_ref 142380 // generar solicitudes especiales de empaque de ruta
+  xyzwh 764.6 430.6 3005 64 32 label_xy 643 464
+end
+usecasecanvas 132012 usecase_ref 142508 // generar solicitudes especiales de despacho de ruta
+  xyzwh 811.2 549.4 3005 64 32 label_xy 689 582
+end
+usecasecanvas 132140 usecase_ref 142636 // generar solicitudes especiales de facturacion y/o remisionado de rutas
+  xyzwh 819.6 490.6 3005 64 32 label_xy 640 524
+end
+usecasecanvas 132268 usecase_ref 142764 // Ingresar casos especiales de ruteo
+  xyzwh 471.4 416.8 3005 64 32 label_xy 402 450
+end
+usecasecanvas 133292 usecase_ref 142892 // generar, consultar y modificar ordenes de venta en ferias y eventos
+  xyzwh 468.4 589.4 3005 64 32 label_xy 295 622
+end
+usecasecanvas 133420 usecase_ref 139820 // consultar reportes
+  xyzwh 381.2 659.6 3005 64 32 label_xy 358 693
+end
+usecasecanvas 133548 usecase_ref 140204 // reporte de novedades
+  xyzwh 613.6 656.4 3005 64 32 label_xy 580 689
+end
+usecasecanvas 133676 usecase_ref 143020 // reporte de existencias de inventario
+  xyzwh 621.4 734.8 3005 64 32 label_xy 546 768
+end
+usecasecanvas 134188 usecase_ref 143148 // consultar historico de pedidos
+  xyzwh 691 65 3011 64 32 label_xy 634 98
+end
+line 128940 ----
+  from ref 128044 z 3006 to ref 128300
+line 129068 ----
+  from ref 128044 z 3006 to ref 128428
+line 129196 ----
+  from ref 128044 z 3006 to ref 128812
+line 129324 --->
+  from ref 128428 z 3006 to ref 128556
+line 129452 --->
+  from ref 128428 z 3011 to ref 128684
+line 129708 ---> decenter_begin 268
+  from ref 128300 z 3006 to ref 129580
+line 129964 --->
+  from ref 128428 z 3006 to ref 129836
+line 130220 --->
+  from ref 128300 z 3006 to ref 130092
+line 130476 ----
+  from ref 128044 z 3006 to ref 130348
+line 130860 --->
+  from ref 128812 z 3011 to ref 130732
+line 131116 --->
+  from ref 128812 z 3006 to ref 130988
+line 131372 --->
+  from ref 128812 z 3006 to ref 131244
+line 131756 ----
+  from ref 131628 z 3006 to ref 128044
+line 132524 ----
+  from ref 128044 z 3006 to ref 132268
+line 132652 --->
+  from ref 132268 z 3006 to ref 131884
+line 132780 --->
+  from ref 132268 z 3006 to ref 132140
+line 132908 --->
+  from ref 132268 z 3006 to ref 132012
+line 133164 --->
+  from ref 128812 z 3012 to ref 130604
+line 133804 ----
+  from ref 128044 z 3006 to ref 133420
+line 133932 --->
+  from ref 133420 z 3006 to ref 133548
+line 134060 --->
+  from ref 133420 z 3006 to ref 133676
+line 134316 --->
+  from ref 128300 z 3012 to ref 134188
+end
