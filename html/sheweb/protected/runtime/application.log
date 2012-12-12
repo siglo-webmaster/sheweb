@@ -1,0 +1,102 @@
+2012/12/12 15:59:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CModule.php(388): CDbConnection->init()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('')
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/index.php?r=gii/model
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/index.php?r=gii/default/index
+---
+2012/12/12 16:00:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CModule.php(388): CDbConnection->init()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/gii/generators/model/ModelCode.php(57): CModule->__get('db')
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CFormModel.php(40): ModelCode->init()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/gii/CCodeGenerator.php(154): CFormModel->__construct()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/gii/CCodeGenerator.php(64): CCodeGenerator->prepare()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): CCodeGenerator->actionIndex()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('')
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('gii/model')
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/index.php?r=gii/model
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/index.php?r=gii/default/index
+---
+2012/12/12 16:16:54 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sheweb2013.tipostercerosos' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `tipostercerosos`.
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2012/12/12 16:57:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "project/create".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('project/create')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/index.php?r=project/create
+---
+2012/12/12 16:58:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "project".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('project')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/index.php?r=project
+---
+2012/12/12 17:02:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "project".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('project')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/index.php?r=project
+---
+2012/12/12 17:05:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "projects".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('projects')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/index.php?r=projects
+---
+2012/12/12 17:06:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "project".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('project')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/index.php?r=project
+---
+2012/12/12 17:06:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "projects".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('projects')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/index.php?r=projects
+---
+2012/12/12 17:06:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Projects".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('Projects')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/index.php?r=Projects
+---
