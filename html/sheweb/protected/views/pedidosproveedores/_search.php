@@ -32,6 +32,11 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'moneda_idmoneda'); ?>
+		<?php echo $form->textField($model,'moneda_idmoneda'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'fechacreacion'); ?>
 		<?php echo $form->textField($model,'fechacreacion'); ?>
 	</div>
@@ -62,8 +67,18 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'moneda_idmoneda'); ?>
-		<?php echo $form->textField($model,'moneda_idmoneda'); ?>
+		<?php echo $form->label($model,'descripcion'); ?>
+		<?php echo $form->textArea($model,'descripcion',array('rows'=>6, 'cols'=>50)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'observaciones'); ?>
+		<?php echo $form->textArea($model,'observaciones',array('rows'=>6, 'cols'=>50)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'estado'); ?>
+		<?php echo $form->textField($model,'estado',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
 
 	<div class="row buttons">

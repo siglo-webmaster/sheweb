@@ -8,18 +8,21 @@
  * @property integer $usuariocreacion
  * @property integer $usuarioaprobacion
  * @property integer $idproveedor
+ * @property integer $moneda_idmoneda
  * @property string $fechacreacion
  * @property string $fechacierre
  * @property string $fechaestimada
  * @property string $fechaaprobacion
  * @property string $fechaentrada
  * @property string $fechaliberacion
- * @property integer $moneda_idmoneda
+ * @property string $descripcion
+ * @property string $observaciones
+ * @property string $estado
  *
  * The followings are the available model relations:
  * @property Pedidosprovedoresdocumentos[] $pedidosprovedoresdocumentoses
- * @property Moneda $monedaIdmoneda
  * @property Terceros $idproveedor0
+ * @property Moneda $monedaIdmoneda
  * @property Usuarios $usuariocreacion0
  * @property Usuarios $usuarioaprobacion0
  * @property Pedidosproveedoresentradasalmacen[] $pedidosproveedoresentradasalmacens
@@ -56,10 +59,11 @@ class Pedidosproveedores extends CActiveRecord
 		return array(
 			array('idproveedor, moneda_idmoneda', 'required'),
 			array('usuariocreacion, usuarioaprobacion, idproveedor, moneda_idmoneda', 'numerical', 'integerOnly'=>true),
-			array('fechacreacion, fechacierre, fechaestimada, fechaaprobacion, fechaentrada, fechaliberacion', 'safe'),
+			array('estado', 'length', 'max'=>45),
+			array('fechacreacion, fechacierre, fechaestimada, fechaaprobacion, fechaentrada, fechaliberacion, descripcion, observaciones', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idpedidosproveedores, usuariocreacion, usuarioaprobacion, idproveedor, fechacreacion, fechacierre, fechaestimada, fechaaprobacion, fechaentrada, fechaliberacion, moneda_idmoneda', 'safe', 'on'=>'search'),
+			array('idpedidosproveedores, usuariocreacion, usuarioaprobacion, idproveedor, moneda_idmoneda, fechacreacion, fechacierre, fechaestimada, fechaaprobacion, fechaentrada, fechaliberacion, descripcion, observaciones, estado', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -72,8 +76,8 @@ class Pedidosproveedores extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'pedidosprovedoresdocumentoses' => array(self::HAS_MANY, 'Pedidosprovedoresdocumentos', 'pedidosproveedores_idpedidosproveedores'),
-			'monedaIdmoneda' => array(self::BELONGS_TO, 'Moneda', 'moneda_idmoneda'),
 			'idproveedor0' => array(self::BELONGS_TO, 'Terceros', 'idproveedor'),
+			'monedaIdmoneda' => array(self::BELONGS_TO, 'Moneda', 'moneda_idmoneda'),
 			'usuariocreacion0' => array(self::BELONGS_TO, 'Usuarios', 'usuariocreacion'),
 			'usuarioaprobacion0' => array(self::BELONGS_TO, 'Usuarios', 'usuarioaprobacion'),
 			'pedidosproveedoresentradasalmacens' => array(self::MANY_MANY, 'Pedidosproveedoresentradasalmacen', 'pedidosproveedores_has_pedidosproveedoresentradasalmacen(idpedidosproveedores, idpedidosproveedoresentradasalmacen)'),
@@ -92,13 +96,16 @@ class Pedidosproveedores extends CActiveRecord
 			'usuariocreacion' => 'Usuariocreacion',
 			'usuarioaprobacion' => 'Usuarioaprobacion',
 			'idproveedor' => 'Idproveedor',
+			'moneda_idmoneda' => 'Moneda Idmoneda',
 			'fechacreacion' => 'Fechacreacion',
 			'fechacierre' => 'Fechacierre',
 			'fechaestimada' => 'Fechaestimada',
 			'fechaaprobacion' => 'Fechaaprobacion',
 			'fechaentrada' => 'Fechaentrada',
 			'fechaliberacion' => 'Fechaliberacion',
-			'moneda_idmoneda' => 'Moneda Idmoneda',
+			'descripcion' => 'Descripcion',
+			'observaciones' => 'Observaciones',
+			'estado' => 'Estado',
 		);
 	}
 
@@ -117,13 +124,16 @@ class Pedidosproveedores extends CActiveRecord
 		$criteria->compare('usuariocreacion',$this->usuariocreacion);
 		$criteria->compare('usuarioaprobacion',$this->usuarioaprobacion);
 		$criteria->compare('idproveedor',$this->idproveedor);
+		$criteria->compare('moneda_idmoneda',$this->moneda_idmoneda);
 		$criteria->compare('fechacreacion',$this->fechacreacion,true);
 		$criteria->compare('fechacierre',$this->fechacierre,true);
 		$criteria->compare('fechaestimada',$this->fechaestimada,true);
 		$criteria->compare('fechaaprobacion',$this->fechaaprobacion,true);
 		$criteria->compare('fechaentrada',$this->fechaentrada,true);
 		$criteria->compare('fechaliberacion',$this->fechaliberacion,true);
-		$criteria->compare('moneda_idmoneda',$this->moneda_idmoneda);
+		$criteria->compare('descripcion',$this->descripcion,true);
+		$criteria->compare('observaciones',$this->observaciones,true);
+		$criteria->compare('estado',$this->estado,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

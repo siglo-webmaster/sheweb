@@ -71,7 +71,9 @@ class PedidosproveedoresController extends Controller
 		{
 			$model->attributes=$_POST['Pedidosproveedores'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idpedidosproveedores));
+                            $this->redirect(array('pedidosprovedoresdocumentos/create', 'pedidosproveedores_idpedidosproveedores'=>$model->idpedidosproveedores));
+
+				//$this->redirect(array('view','id'=>$model->idpedidosproveedores));
 		}
 
 		$this->render('create',array(

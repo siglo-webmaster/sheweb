@@ -49,14 +49,17 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'usuariocreacion',
 		'usuarioaprobacion',
 		'idproveedor',
+		'moneda_idmoneda',
 		'fechacreacion',
-		'fechacierre',
 		/*
+		'fechacierre',
 		'fechaestimada',
 		'fechaaprobacion',
 		'fechaentrada',
 		'fechaliberacion',
-		'moneda_idmoneda',
+		'descripcion',
+		'observaciones',
+		'estado',
 		*/
 		array(
 			'class'=>'CButtonColumn',

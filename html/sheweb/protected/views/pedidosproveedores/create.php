@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Crear Pedido a Proveedores</h1>
+<h1>Create Pedidosproveedores</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

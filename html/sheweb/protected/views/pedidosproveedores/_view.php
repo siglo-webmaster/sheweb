@@ -21,6 +21,10 @@
 	<?php echo CHtml::encode($data->idproveedor); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('moneda_idmoneda')); ?>:</b>
+	<?php echo CHtml::encode($data->moneda_idmoneda); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fechacreacion')); ?>:</b>
 	<?php echo CHtml::encode($data->fechacreacion); ?>
 	<br />
@@ -29,11 +33,11 @@
 	<?php echo CHtml::encode($data->fechacierre); ?>
 	<br />
 
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fechaestimada')); ?>:</b>
 	<?php echo CHtml::encode($data->fechaestimada); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fechaaprobacion')); ?>:</b>
 	<?php echo CHtml::encode($data->fechaaprobacion); ?>
 	<br />
@@ -46,8 +50,16 @@
 	<?php echo CHtml::encode($data->fechaliberacion); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('moneda_idmoneda')); ?>:</b>
-	<?php echo CHtml::encode($data->moneda_idmoneda); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('descripcion')); ?>:</b>
+	<?php echo CHtml::encode($data->descripcion); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('observaciones')); ?>:</b>
+	<?php echo CHtml::encode($data->observaciones); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('estado')); ?>:</b>
+	<?php echo CHtml::encode($data->estado); ?>
 	<br />
 
 	*/ ?>
