@@ -100,3 +100,438 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/index.php?r=Projects
 ---
+2012/12/12 23:47:59 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/home/adso/publ...')
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CClientScript.php(463): CAssetManager->publish('/home/adso/publ...')
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('login')
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/index.php?r=site/login
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/
+---
+2012/12/12 23:49:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "giit".' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('giit')
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/index.php?r=giit
+---
+2012/12/13 10:30:48 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sheweb2013`.`departamento`, CONSTRAINT `fk_departamento_pais1` FOREIGN KEY (`pais_idpais`) REFERENCES `pais` (`idpais`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `departamento` (`pais_idpais`, `nombre`) VALUES (:yp0, :yp1).
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/controllers/DepartamentoController.php (73)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2012/12/13 10:30:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sheweb2013`.`departamento`, CONSTRAINT `fk_departamento_pais1` FOREIGN KEY (`pais_idpais`) REFERENCES `pais` (`idpais`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `departamento` (`pais_idpais`, `nombre`) VALUES (:yp0, :yp1)' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(1017): CDbCommand->execute()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(796): CActiveRecord->insert(NULL)
+#2 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/controllers/DepartamentoController.php(73): CActiveRecord->save()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): DepartamentoController->actionCreate()
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('departamento/cr...')
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/departamento/create
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/departamento/create
+---
+2012/12/13 10:37:35 [error] [exception.CException] exception 'CException' with message 'Property "Departamento.pais" is not defined.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(144): CComponent->__get('pais')
+#1 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/views/departamento/_view.php(15): CActiveRecord->__get('pais')
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(131): require('/home/adso/publ...')
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/adso/publ...', Array, false)
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CListView.php(260): CBaseController->renderFile('/home/adso/publ...', Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(174): CBaseListView->run()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/views/departamento/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/adso/publ...')
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/adso/publ...', Array, true)
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/adso/publ...', Array, true)
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#15 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/controllers/DepartamentoController.php(128): CController->render('index', Array)
+#16 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): DepartamentoController->actionIndex()
+#17 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#18 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#20 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#24 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('index')
+#26 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('departamento/in...')
+#27 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#28 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/departamento/index
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/departamento/2
+---
+2012/12/13 10:39:09 [error] [exception.CException] exception 'CException' with message 'Property "Departamento.Pais" is not defined.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(144): CComponent->__get('Pais')
+#1 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/views/departamento/_view.php(15): CActiveRecord->__get('Pais')
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(131): require('/home/adso/publ...')
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/adso/publ...', Array, false)
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CListView.php(260): CBaseController->renderFile('/home/adso/publ...', Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(174): CBaseListView->run()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/views/departamento/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/adso/publ...')
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/adso/publ...', Array, true)
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/adso/publ...', Array, true)
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#15 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/controllers/DepartamentoController.php(128): CController->render('index', Array)
+#16 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): DepartamentoController->actionIndex()
+#17 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#18 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#20 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#24 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('index')
+#26 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('departamento/in...')
+#27 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#28 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/departamento/index
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/departamento/2
+---
+2012/12/13 10:39:10 [error] [exception.CException] exception 'CException' with message 'Property "Departamento.Pais" is not defined.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(144): CComponent->__get('Pais')
+#1 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/views/departamento/_view.php(15): CActiveRecord->__get('Pais')
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(131): require('/home/adso/publ...')
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/adso/publ...', Array, false)
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CListView.php(260): CBaseController->renderFile('/home/adso/publ...', Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(174): CBaseListView->run()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/views/departamento/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/adso/publ...')
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/adso/publ...', Array, true)
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/adso/publ...', Array, true)
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#15 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/controllers/DepartamentoController.php(128): CController->render('index', Array)
+#16 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): DepartamentoController->actionIndex()
+#17 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#18 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#20 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#24 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('index')
+#26 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('departamento/in...')
+#27 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#28 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/departamento/index
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/departamento/2
+---
+2012/12/13 10:39:10 [error] [exception.CException] exception 'CException' with message 'Property "Departamento.Pais" is not defined.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(144): CComponent->__get('Pais')
+#1 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/views/departamento/_view.php(15): CActiveRecord->__get('Pais')
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(131): require('/home/adso/publ...')
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/adso/publ...', Array, false)
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CListView.php(260): CBaseController->renderFile('/home/adso/publ...', Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(174): CBaseListView->run()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/views/departamento/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/adso/publ...')
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/adso/publ...', Array, true)
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/adso/publ...', Array, true)
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#15 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/controllers/DepartamentoController.php(128): CController->render('index', Array)
+#16 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): DepartamentoController->actionIndex()
+#17 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#18 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#20 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#24 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('index')
+#26 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('departamento/in...')
+#27 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#28 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/departamento/index
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/departamento/2
+---
+2012/12/13 10:39:10 [error] [exception.CException] exception 'CException' with message 'Property "Departamento.Pais" is not defined.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(144): CComponent->__get('Pais')
+#1 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/views/departamento/_view.php(15): CActiveRecord->__get('Pais')
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(131): require('/home/adso/publ...')
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/adso/publ...', Array, false)
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CListView.php(260): CBaseController->renderFile('/home/adso/publ...', Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(174): CBaseListView->run()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/views/departamento/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/adso/publ...')
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/adso/publ...', Array, true)
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/adso/publ...', Array, true)
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#15 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/controllers/DepartamentoController.php(128): CController->render('index', Array)
+#16 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): DepartamentoController->actionIndex()
+#17 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#18 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#20 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#24 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('index')
+#26 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('departamento/in...')
+#27 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#28 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/departamento/index
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/departamento/2
+---
+2012/12/13 10:39:10 [error] [exception.CException] exception 'CException' with message 'Property "Departamento.Pais" is not defined.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(144): CComponent->__get('Pais')
+#1 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/views/departamento/_view.php(15): CActiveRecord->__get('Pais')
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(131): require('/home/adso/publ...')
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/adso/publ...', Array, false)
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CListView.php(260): CBaseController->renderFile('/home/adso/publ...', Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(174): CBaseListView->run()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/views/departamento/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/adso/publ...')
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/adso/publ...', Array, true)
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/adso/publ...', Array, true)
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#15 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/controllers/DepartamentoController.php(128): CController->render('index', Array)
+#16 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): DepartamentoController->actionIndex()
+#17 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#18 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#20 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#24 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('index')
+#26 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('departamento/in...')
+#27 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#28 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/departamento/index
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/departamento/2
+---
+2012/12/13 10:39:10 [error] [exception.CException] exception 'CException' with message 'Property "Departamento.Pais" is not defined.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(144): CComponent->__get('Pais')
+#1 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/views/departamento/_view.php(15): CActiveRecord->__get('Pais')
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(131): require('/home/adso/publ...')
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/adso/publ...', Array, false)
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CListView.php(260): CBaseController->renderFile('/home/adso/publ...', Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(174): CBaseListView->run()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/views/departamento/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/adso/publ...')
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/adso/publ...', Array, true)
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/adso/publ...', Array, true)
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#15 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/controllers/DepartamentoController.php(128): CController->render('index', Array)
+#16 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): DepartamentoController->actionIndex()
+#17 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#18 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#20 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#24 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('index')
+#26 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('departamento/in...')
+#27 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#28 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/departamento/index
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/departamento/2
+---
+2012/12/13 10:39:11 [error] [exception.CException] exception 'CException' with message 'Property "Departamento.Pais" is not defined.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(144): CComponent->__get('Pais')
+#1 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/views/departamento/_view.php(15): CActiveRecord->__get('Pais')
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(131): require('/home/adso/publ...')
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/adso/publ...', Array, false)
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CListView.php(260): CBaseController->renderFile('/home/adso/publ...', Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(174): CBaseListView->run()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/views/departamento/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/adso/publ...')
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/adso/publ...', Array, true)
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/adso/publ...', Array, true)
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#15 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/controllers/DepartamentoController.php(128): CController->render('index', Array)
+#16 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): DepartamentoController->actionIndex()
+#17 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#18 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#20 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#24 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('index')
+#26 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('departamento/in...')
+#27 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#28 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/departamento/index
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/departamento/2
+---
+2012/12/13 11:34:19 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sheweb2013`.`pedidosproveedores`, CONSTRAINT `fk_pedidosproveedores_terceros1` FOREIGN KEY (`idproveedor`) REFERENCES `terceros` (`idterceros`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `pedidosproveedores` (`fechacierre`, `fechaestimada`, `moneda_idmoneda`, `idproveedor`, `usuariocreacion`, `usuarioaprobacion`, `fechacreacion`, `fechaaprobacion`, `fechaentrada`, `fechaliberacion`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9).
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/controllers/PedidosproveedoresController.php (73)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2012/12/13 11:34:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sheweb2013`.`pedidosproveedores`, CONSTRAINT `fk_pedidosproveedores_terceros1` FOREIGN KEY (`idproveedor`) REFERENCES `terceros` (`idterceros`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `pedidosproveedores` (`fechacierre`, `fechaestimada`, `moneda_idmoneda`, `idproveedor`, `usuariocreacion`, `usuarioaprobacion`, `fechacreacion`, `fechaaprobacion`, `fechaentrada`, `fechaliberacion`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9)' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(1017): CDbCommand->execute()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(796): CActiveRecord->insert(NULL)
+#2 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/controllers/PedidosproveedoresController.php(73): CActiveRecord->save()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): PedidosproveedoresController->actionCreate()
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('pedidosproveedo...')
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/pedidosproveedores/create
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/pedidosproveedores/create
+---
+2012/12/13 11:37:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "terceros".' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('terceros')
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/terceros
+---
+2012/12/13 11:37:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tercero".' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('tercero')
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/tercero
+---
+2012/12/13 11:37:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tercero".' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('tercero')
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/tercero
+---
+2012/12/13 18:04:28 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sheweb2013`.`terceros`, CONSTRAINT `fk_terceros_ciudad1` FOREIGN KEY (`ciudad_idciudad`) REFERENCES `ciudad` (`idciudad`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `terceros` (`tiposidentificacion_idtiposidentificacion`, `ciudad_idciudad`, `identificacion`, `nombre`, `telefono`, `email`, `contacto`, `telefonocontacto`, `direccion`, `estado`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9).
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/controllers/TercerosController.php (73)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2012/12/13 18:04:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sheweb2013`.`terceros`, CONSTRAINT `fk_terceros_ciudad1` FOREIGN KEY (`ciudad_idciudad`) REFERENCES `ciudad` (`idciudad`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `terceros` (`tiposidentificacion_idtiposidentificacion`, `ciudad_idciudad`, `identificacion`, `nombre`, `telefono`, `email`, `contacto`, `telefonocontacto`, `direccion`, `estado`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9)' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(1017): CDbCommand->execute()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(796): CActiveRecord->insert(NULL)
+#2 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/controllers/TercerosController.php(73): CActiveRecord->save()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): TercerosController->actionCreate()
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('terceros/create')
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/terceros/create
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/terceros/create
+---
+2012/12/13 18:11:02 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sheweb2013`.`ciudad`, CONSTRAINT `fk_ciudad_departamento1` FOREIGN KEY (`departamento_iddepartamento`) REFERENCES `departamento` (`iddepartamento`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `ciudad` (`departamento_iddepartamento`, `nombre`) VALUES (:yp0, :yp1).
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/controllers/CiudadController.php (73)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2012/12/13 18:11:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sheweb2013`.`ciudad`, CONSTRAINT `fk_ciudad_departamento1` FOREIGN KEY (`departamento_iddepartamento`) REFERENCES `departamento` (`iddepartamento`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `ciudad` (`departamento_iddepartamento`, `nombre`) VALUES (:yp0, :yp1)' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(1017): CDbCommand->execute()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(796): CActiveRecord->insert(NULL)
+#2 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/controllers/CiudadController.php(73): CActiveRecord->save()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): CiudadController->actionCreate()
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('ciudad/create')
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/ciudad/create
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/index.php/ciudad/create
+---

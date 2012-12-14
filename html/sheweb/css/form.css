@@ -62,7 +62,8 @@ div.form label
 
 div.form .row
 {
-	margin: 5px 0;
+	margin: 10px 15px 0 10px;
+        float:left;
 }
 
 div.form .hint

@@ -86,4 +86,10 @@ class Moneda extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+        
+        
+        /*Funcion que retorna listado de monedas disponible en el sistema*/
+        public static function getMoneda(){
+            
+        }
 }

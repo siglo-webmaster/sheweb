@@ -10,7 +10,9 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('pais_idpais')); ?>:</b>
-	<?php echo CHtml::encode($data->pais_idpais); ?>
+	<?php 
+            echo CHtml::encode($data->paisIdpais->nombre. " (".$data->pais_idpais.")"); 
+        ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nombre')); ?>:</b>
