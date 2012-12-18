@@ -21,8 +21,8 @@
  *
  * The followings are the available model relations:
  * @property Pedidosprovedoresdocumentos[] $pedidosprovedoresdocumentoses
- * @property Terceros $idproveedor0
  * @property Moneda $monedaIdmoneda
+ * @property Terceros $idproveedor0
  * @property Usuarios $usuariocreacion0
  * @property Usuarios $usuarioaprobacion0
  * @property Pedidosproveedoresentradasalmacen[] $pedidosproveedoresentradasalmacens
@@ -76,8 +76,8 @@ class Pedidosproveedores extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'pedidosprovedoresdocumentoses' => array(self::HAS_MANY, 'Pedidosprovedoresdocumentos', 'pedidosproveedores_idpedidosproveedores'),
-			'idproveedor0' => array(self::BELONGS_TO, 'Terceros', 'idproveedor'),
 			'monedaIdmoneda' => array(self::BELONGS_TO, 'Moneda', 'moneda_idmoneda'),
+			'idproveedor0' => array(self::BELONGS_TO, 'Terceros', 'idproveedor'),
 			'usuariocreacion0' => array(self::BELONGS_TO, 'Usuarios', 'usuariocreacion'),
 			'usuarioaprobacion0' => array(self::BELONGS_TO, 'Usuarios', 'usuarioaprobacion'),
 			'pedidosproveedoresentradasalmacens' => array(self::MANY_MANY, 'Pedidosproveedoresentradasalmacen', 'pedidosproveedores_has_pedidosproveedoresentradasalmacen(idpedidosproveedores, idpedidosproveedoresentradasalmacen)'),

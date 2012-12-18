@@ -8,93 +8,115 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'pedidosproveedores-form',
-	'enableAjaxValidation'=>false,
+	'enableAjaxValidation'=>true,
+        'htmlOptions' => array('enctype' => 'multipart/form-data'),
 )); ?>
 
+    
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+        <?php echo $form->errorSummary(array($pedidosproveedores,$pedidosproveedoresdocumentos)); ?>
+
+	
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'usuariocreacion'); ?>
-		<?php echo $form->textField($model,'usuariocreacion'); ?>
-		<?php echo $form->error($model,'usuariocreacion'); ?>
+		<?php echo $form->labelEx($pedidosproveedores,'idproveedor'); ?>
+		<?php 
+                
+                    $select = CHtml::listData(Terceros::model()->findAll(), 'idterceros', 'nombre');
+                    echo $form->dropDownList($pedidosproveedores,'idproveedor',$select);
+                ?>
+		<?php echo $form->error($pedidosproveedores,'idproveedor'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'usuarioaprobacion'); ?>
-		<?php echo $form->textField($model,'usuarioaprobacion'); ?>
-		<?php echo $form->error($model,'usuarioaprobacion'); ?>
+		<?php echo $form->labelEx($pedidosproveedores,'moneda_idmoneda'); ?>
+		<?php 
+                
+                    $select = CHtml::listData(Moneda::model()->findAll(), 'idmoneda', 'nombre');
+                    echo $form->dropDownList($pedidosproveedores,'moneda_idmoneda',$select);
+                ?>
+		<?php echo $form->error($pedidosproveedores,'moneda_idmoneda'); ?>
+	</div>
+        
+         <div class="row">
+        <?php echo $form->labelEx($pedidosproveedores,'fechacierre'); ?>
+        <?php
+            if ($pedidosproveedores->fechacierre!='') {
+                $pedidosproveedores->fechacierre=date('Y-m-d',strtotime($pedidosproveedores->fechacierre));
+                
+            }
+            $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+                'model'=>$pedidosproveedores,
+                'attribute'=>'fechacierre',
+                'value'=>$pedidosproveedores->fechacierre,
+                'language' => 'es',
+                'htmlOptions' => array('readonly'=>"readonly"),
+                'options'=>array(
+                    'autoSize'=>true,
+                    'defaultDate'=>$pedidosproveedores->fechacierre,
+                    'dateFormat'=>'yy-mm-dd',
+                    'buttonImage'=>Yii::app()->baseUrl.'/images/basic/calendar_icon_mini.png',
+                    'buttonImageOnly'=>true,
+                    'buttonText'=>'Fecha',
+                    'selectOtherMonths'=>true,
+                    'showAnim'=>'slide',
+                    'showButtonPanel'=>true,
+                    'showOn'=>'button',
+                    'showOtherMonths'=>true,
+                    'changeMonth' => 'true',
+                    'changeYear' => 'true',),
+                ));
+            ?>
+		<?php echo $form->error($pedidosproveedores,'fechacierre'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'idproveedor'); ?>
-		<?php echo $form->textField($model,'idproveedor'); ?>
-		<?php echo $form->error($model,'idproveedor'); ?>
+            <?php echo $form->labelEx($pedidosproveedores,'fechaestimada'); ?>
+            <?php
+            if ($pedidosproveedores->fechaestimada!='') {
+                $pedidosproveedores->fechaestimada=date('Y-m-d',strtotime($pedidosproveedores->fechaestimada));
+                
+            }
+            $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+                'model'=>$pedidosproveedores,
+                'attribute'=>'fechaestimada',
+                'value'=>$pedidosproveedores->fechaestimada,
+                'language' => 'es',
+                'htmlOptions' => array('readonly'=>"readonly"),
+                'options'=>array(
+                    'autoSize'=>true,
+                    'defaultDate'=>$pedidosproveedores->fechaestimada,
+                    'dateFormat'=>'yy-mm-dd',
+                    'buttonImage'=>Yii::app()->baseUrl.'/images/basic/calendar_icon_mini.png',
+                    'buttonImageOnly'=>true,
+                    'buttonText'=>'Fecha',
+                    'selectOtherMonths'=>true,
+                    'showAnim'=>'slide',
+                    'showButtonPanel'=>true,
+                    'showOn'=>'button',
+                    'showOtherMonths'=>true,
+                    'changeMonth' => 'true',
+                    'changeYear' => 'true',),
+                ));
+            ?>
+            <?php echo $form->error($pedidosproveedores,'fechaestimada'); ?>
 	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'moneda_idmoneda'); ?>
-		<?php echo $form->textField($model,'moneda_idmoneda'); ?>
-		<?php echo $form->error($model,'moneda_idmoneda'); ?>
+        
+        <div class="row">
+		<?php echo $form->labelEx($pedidosproveedores,'descripcion'); ?>
+		<?php echo $form->textArea($pedidosproveedores,'descripcion', array('rows'=>4,'cols'=>80)); ?>
+		<?php echo $form->error($pedidosproveedores,'descripcion'); ?>
 	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'fechacreacion'); ?>
-		<?php echo $form->textField($model,'fechacreacion'); ?>
-		<?php echo $form->error($model,'fechacreacion'); ?>
+        
+        <div class="row">
+		<?php echo $form->labelEx($pedidosproveedoresdocumentos,'url'); ?>
+                <?php echo $form->fileField($pedidosproveedoresdocumentos, 'url'); ?>
+		<?php echo $form->error($pedidosproveedoresdocumentos,'url'); ?>
 	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'fechacierre'); ?>
-		<?php echo $form->textField($model,'fechacierre'); ?>
-		<?php echo $form->error($model,'fechacierre'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'fechaestimada'); ?>
-		<?php echo $form->textField($model,'fechaestimada'); ?>
-		<?php echo $form->error($model,'fechaestimada'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'fechaaprobacion'); ?>
-		<?php echo $form->textField($model,'fechaaprobacion'); ?>
-		<?php echo $form->error($model,'fechaaprobacion'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'fechaentrada'); ?>
-		<?php echo $form->textField($model,'fechaentrada'); ?>
-		<?php echo $form->error($model,'fechaentrada'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'fechaliberacion'); ?>
-		<?php echo $form->textField($model,'fechaliberacion'); ?>
-		<?php echo $form->error($model,'fechaliberacion'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'descripcion'); ?>
-		<?php echo $form->textArea($model,'descripcion',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'descripcion'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'observaciones'); ?>
-		<?php echo $form->textArea($model,'observaciones',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'observaciones'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'estado'); ?>
-		<?php echo $form->textField($model,'estado',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'estado'); ?>
-	</div>
-
+        
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($pedidosproveedores->isNewRecord ? 'Crear' : 'Guardar'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

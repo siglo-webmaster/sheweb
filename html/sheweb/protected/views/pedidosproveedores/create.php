@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Pedidosproveedores', 'url'=>array('index')),
-	array('label'=>'Manage Pedidosproveedores', 'url'=>array('admin')),
+	array('label'=>'Listar Pedidos a proveedores', 'url'=>array('index')),
+	array('label'=>'Manejar Pedidos a proveedores', 'url'=>array('admin')),
 );
 ?>
 
 <h1>Create Pedidosproveedores</h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form', array('pedidosproveedores'=>$pedidosproveedores,'pedidosproveedoresdocumentos'=>$pedidosproveedoresdocumentos)); ?>

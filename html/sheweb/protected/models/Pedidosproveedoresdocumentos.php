@@ -1,24 +1,23 @@
 <?php
 
 /**
- * This is the model class for table "pedidosprovedoresdocumentos".
+ * This is the model class for table "pedidosproveedoresdocumentos".
  *
- * The followings are the available columns in table 'pedidosprovedoresdocumentos':
- * @property integer $idpedidosprovedoresdocumentos
+ * The followings are the available columns in table 'pedidosproveedoresdocumentos':
+ * @property integer $idpedidosproveedoresdocumentos
  * @property integer $pedidosproveedores_idpedidosproveedores
- * @property string $nombre
- * @property string $estado
  * @property string $url
  *
  * The followings are the available model relations:
  * @property Pedidosproveedores $pedidosproveedoresIdpedidosproveedores
  */
-class Pedidosprovedoresdocumentos extends CActiveRecord
+class Pedidosproveedoresdocumentos extends CActiveRecord
 {
+        public $url;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Pedidosprovedoresdocumentos the static model class
+	 * @return Pedidosproveedoresdocumentos the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -30,7 +29,7 @@ class Pedidosprovedoresdocumentos extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'pedidosprovedoresdocumentos';
+		return 'pedidosproveedoresdocumentos';
 	}
 
 	/**
@@ -40,12 +39,14 @@ class Pedidosprovedoresdocumentos extends CActiveRecord
 	{
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
+            
 		return array(
-			array('pedidosproveedores_idpedidosproveedores,url', 'required'),
+			array('pedidosproveedores_idpedidosproveedores, url', 'required'),
 			array('pedidosproveedores_idpedidosproveedores', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idpedidosprovedoresdocumentos, pedidosproveedores_idpedidosproveedores, url', 'safe', 'on'=>'search'),
+			array('idpedidosproveedoresdocumentos, pedidosproveedores_idpedidosproveedores, url', 'safe', 'on'=>'search'),
+                        array('url', 'file', 'types'=>'jpg, gif, png'),
 		);
 	}
 
@@ -67,7 +68,7 @@ class Pedidosprovedoresdocumentos extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idpedidosprovedoresdocumentos' => 'Idpedidosprovedoresdocumentos',
+			'idpedidosproveedoresdocumentos' => 'Idpedidosproveedoresdocumentos',
 			'pedidosproveedores_idpedidosproveedores' => 'Pedidosproveedores Idpedidosproveedores',
 			'url' => 'Url',
 		);
@@ -84,7 +85,7 @@ class Pedidosprovedoresdocumentos extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('idpedidosprovedoresdocumentos',$this->idpedidosprovedoresdocumentos);
+		$criteria->compare('idpedidosproveedoresdocumentos',$this->idpedidosproveedoresdocumentos);
 		$criteria->compare('pedidosproveedores_idpedidosproveedores',$this->pedidosproveedores_idpedidosproveedores);
 		$criteria->compare('url',$this->url,true);
 

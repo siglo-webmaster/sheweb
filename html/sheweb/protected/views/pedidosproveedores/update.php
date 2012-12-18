@@ -4,18 +4,18 @@
 
 $this->breadcrumbs=array(
 	'Pedidosproveedores'=>array('index'),
-	$model->idpedidosproveedores=>array('view','id'=>$model->idpedidosproveedores),
+	$pedidosproveedores->idpedidosproveedores=>array('view','id'=>$pedidosproveedores->idpedidosproveedores),
 	'Update',
 );
 
 $this->menu=array(
 	array('label'=>'List Pedidosproveedores', 'url'=>array('index')),
 	array('label'=>'Create Pedidosproveedores', 'url'=>array('create')),
-	array('label'=>'View Pedidosproveedores', 'url'=>array('view', 'id'=>$model->idpedidosproveedores)),
+	array('label'=>'View Pedidosproveedores', 'url'=>array('view', 'id'=>$pedidosproveedores->idpedidosproveedores)),
 	array('label'=>'Manage Pedidosproveedores', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Pedidosproveedores <?php echo $model->idpedidosproveedores; ?></h1>
+<h1>Update Pedidosproveedores <?php echo $pedidosproveedores->idpedidosproveedores; ?></h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form', array('pedidosproveedores'=>$pedidosproveedores,'pedidosproveedoresdocumentos'=>$pedidosproveedoresdocumentos)); ?>

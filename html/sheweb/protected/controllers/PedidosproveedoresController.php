@@ -62,23 +62,57 @@ class PedidosproveedoresController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Pedidosproveedores;
+		$pedidosproveedores=new Pedidosproveedores; //CARGAR MODELO 
+                $pedidosproveedoresdocumentos=new Pedidosproveedoresdocumentos();//CARGAR MODELO 
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation(array($pedidosproveedores)); //VALIDACION DE CAMPOS MEDIANTE AJAX
 
-		if(isset($_POST['Pedidosproveedores']))
+		if(isset($_POST['Pedidosproveedores']))//CONFIRMAR SI HAY FORMULARIOS PARA SALVAR
 		{
-			$model->attributes=$_POST['Pedidosproveedores'];
-			if($model->save())
-                            $this->redirect(array('pedidosprovedoresdocumentos/create', 'pedidosproveedores_idpedidosproveedores'=>$model->idpedidosproveedores));
+			$pedidosproveedores->attributes=$_POST['Pedidosproveedores']; // CARGAR ATRIBUTOS OBTENIDOS EN LOS FORMULARIOS
+                        
+                        
+                        if($pedidosproveedores->validate()){ //VALIDAR CAMPOS DE EL MODELO
+                            $transaction = Yii::app()->db->beginTransaction(); // INICIAR TRANSACCION
+                            try{
+                                    $pedidosproveedores->save(); //GUARDAR ATRIBUTOS EN EL MODELO
+                                    if(isset($_POST['Pedidosproveedoresdocumentos'])){
+                                        
+                                           
+                                         $pedidosproveedoresdocumentos->attributes=$_POST['Pedidosproveedoresdocumentos'];  // CARGAR ATRIBUTOS OBTENIDOS EN LOS FORMULARIOS
+                                         $pedidosproveedoresdocumentos->pedidosproveedores_idpedidosproveedores = $pedidosproveedores->idpedidosproveedores; //OBTENER LLAVE FORANEA
 
-				//$this->redirect(array('view','id'=>$model->idpedidosproveedores));
+                                        if($pedidosproveedoresdocumentos->validate()){//VALIDAR CAMPOS DE EL MODELO
+
+                                            $pedidosproveedoresdocumentos->url=CUploadedFile::getInstance($pedidosproveedoresdocumentos,'url');
+                                            if($pedidosproveedoresdocumentos->save()){//GUARDAR ATRIBUTOS EN EL MODELO
+
+                                                $pedidosproveedoresdocumentos->url->saveAs('attaches/nombre');
+                                            }
+
+                                            
+
+                                            
+                                        }
+                                    }
+                                    $transaction->commit(); //GUARDAR TRANSACCION
+                                    $this->redirect(array('view','id'=>$pedidosproveedores->idpedidosproveedores)); //REDIRIGIR AL DETALLE DEL ITEM NUEVO
+                                
+                                }catch (Exception $e){
+                                    $transaction->rollBack(); //NO GUARDAR TRANSACCION
+                                    $e->getMessage(); //DESPLEGAR MENSAGE DE ERROR
+
+
+                                }
+                            
+                        }                        
+				
 		}
 
 		$this->render('create',array(
-			'model'=>$model,
-		));
+			'pedidosproveedores'=>$pedidosproveedores,
+                        'pedidosproveedoresdocumentos'=>$pedidosproveedoresdocumentos,
+		)); //DESPLEGAR FORMULARIO PARA CREACION DE NUEVO ITEM
 	}
 
 	/**
@@ -88,21 +122,56 @@ class PedidosproveedoresController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
+		$pedidosproveedores=$this->loadModel($id); //CARGAR MODELO 
+                $criteria=new CDbCriteria;
+                $criteria->select='idpedidosproveedoresdocumentos,url';  // only select the 'title' column
+                $criteria->condition='pedidosproveedores_idpedidosproveedores=:pedidosproveedores_idpedidosproveedores';
+                $criteria->params=array(':pedidosproveedores_idpedidosproveedores'=>$id);
+                $pedidosproveedoresdocumentos=Pedidosproveedoresdocumentos::model()->find($criteria);//CARGAR MODELO 
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation(array($pedidosproveedores)); //VALIDACION DE CAMPOS MEDIANTE AJAX
 
-		if(isset($_POST['Pedidosproveedores']))
+		if(isset($_POST['Pedidosproveedores'],$_POST['Pedidosproveedoresdocumentos']))//CONFIRMAR SI HAY FORMULARIOS PARA SALVAR
 		{
-			$model->attributes=$_POST['Pedidosproveedores'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->idpedidosproveedores));
+			$pedidosproveedores->attributes=$_POST['Pedidosproveedores']; // CARGAR ATRIBUTOS OBTENIDOS EN LOS FORMULARIOS
+                        $pedidosproveedoresdocumentos->attributes=$_POST['Pedidosproveedoresdocumentos'];  // CARGAR ATRIBUTOS OBTENIDOS EN LOS FORMULARIOS
+                        
+                        if($pedidosproveedores->validate()){ //VALIDAR CAMPOS DE EL MODELO
+                            $transaction = Yii::app()->db->beginTransaction(); // INICIAR TRANSACCION
+                            try{
+                                    $pedidosproveedores->save(); //GUARDAR ATRIBUTOS EN EL MODELO
+                                    
+                                    $pedidosproveedoresdocumentos->pedidosproveedores_idpedidosproveedores = $pedidosproveedores->idpedidosproveedores; //OBTENER LLAVE FORANEA
+                                    if($pedidosproveedoresdocumentos->validate()){//VALIDAR CAMPOS DE EL MODELO
+                                        
+                                        $pedidosproveedoresdocumentos->url=CUploadedFile::getInstance($pedidosproveedoresdocumentos,'url');
+                                        
+                                        if($pedidosproveedoresdocumentos->save()){//GUARDAR ATRIBUTOS EN EL MODELO
+                                        
+                                            $pedidosproveedoresdocumentos->url->saveAs('attaches/');
+                                        }
+                                        $transaction->commit(); //GUARDAR TRANSACCION
+
+                                        $this->redirect(array('view','id'=>$pedidosproveedores->idpedidosproveedores)); //REDIRIGIR AL DETALLE DEL ITEM NUEVO
+                                    }
+                                    
+                                    $transaction->rollBack(); //NO GUARDAR TRANSACCION
+                                
+                                }catch (Exception $e){
+                                    $transaction->rollBack(); //NO GUARDAR TRANSACCION
+                                    $e->getMessage(); //DESPLEGAR MENSAGE DE ERROR
+
+
+                                }
+                            
+                        }                        
+				
 		}
 
 		$this->render('update',array(
-			'model'=>$model,
-		));
+			'pedidosproveedores'=>$pedidosproveedores,
+                        'pedidosproveedoresdocumentos'=>$pedidosproveedoresdocumentos,
+		)); //DESPLEGAR FORMULARIO PARA CREACION DE NUEVO ITEM
 	}
 
 	/**
