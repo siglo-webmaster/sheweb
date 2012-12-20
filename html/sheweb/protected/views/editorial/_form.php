@@ -20,13 +20,13 @@
 		<?php echo $form->textField($model,'nombre',array('size'=>60,'maxlength'=>256)); ?>
 		<?php echo $form->error($model,'nombre'); ?>
 	</div>
-
+        <hr class="separador_blanco">
 	<div class="row">
 		<?php echo $form->labelEx($model,'estado'); ?>
-		<?php echo $form->textField($model,'estado',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->dropDownList($model,'estado',array("activo"=>"activo","inactivo"=>"inactivo")); ?>
 		<?php echo $form->error($model,'estado'); ?>
 	</div>
-
+        <hr class="separador_blanco">
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

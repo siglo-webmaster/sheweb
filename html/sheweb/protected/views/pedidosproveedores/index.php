@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Pedidosproveedores', 'url'=>array('create')),
-	array('label'=>'Manage Pedidosproveedores', 'url'=>array('admin')),
+	array('label'=>'Crear Pedidos a Proveedores', 'url'=>array('create')),
+	array('label'=>'Administrar Pedidos a Proveedores', 'url'=>array('admin')),
 );
 ?>
 

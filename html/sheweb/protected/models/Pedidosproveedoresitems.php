@@ -12,8 +12,8 @@
  * @property string $estado
  *
  * The followings are the available model relations:
- * @property Pedidosproveedores $pedidosproveedoresIdpedidosproveedores
  * @property Item $itemIditem
+ * @property Pedidosproveedores $pedidosproveedoresIdpedidosproveedores
  * @property Pedidosproveedoresitemsdetalle[] $pedidosproveedoresitemsdetalles
  */
 class Pedidosproveedoresitems extends CActiveRecord
@@ -61,8 +61,8 @@ class Pedidosproveedoresitems extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'pedidosproveedoresIdpedidosproveedores' => array(self::BELONGS_TO, 'Pedidosproveedores', 'pedidosproveedores_idpedidosproveedores'),
 			'itemIditem' => array(self::BELONGS_TO, 'Item', 'item_iditem'),
+			'pedidosproveedoresIdpedidosproveedores' => array(self::BELONGS_TO, 'Pedidosproveedores', 'pedidosproveedores_idpedidosproveedores'),
 			'pedidosproveedoresitemsdetalles' => array(self::HAS_MANY, 'Pedidosproveedoresitemsdetalle', 'pedidosproveedoresitems_idpedidosproveedoresitems'),
 		);
 	}

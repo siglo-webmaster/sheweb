@@ -33,6 +33,9 @@
 	<?php echo CHtml::encode($data->fechacierre); ?>
 	<br />
 
+        <b><?php  echo CHtml::link('additems', array('additems', 'id'=>$data->idpedidosproveedores));  ?></b>
+	<br />
+        
 	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fechaestimada')); ?>:</b>
 	<?php echo CHtml::encode($data->fechaestimada); ?>

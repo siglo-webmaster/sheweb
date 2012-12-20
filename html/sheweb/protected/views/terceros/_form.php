@@ -17,13 +17,21 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'tiposidentificacion_idtiposidentificacion'); ?>
-		<?php echo $form->textField($model,'tiposidentificacion_idtiposidentificacion'); ?>
+		<?php 
+                
+                    $select = CHtml::listData(Tiposidentificacion::model()->findAll(), 'idtiposidentificacion', 'nombre');
+                    echo $form->dropDownList($model,'tiposidentificacion_idtiposidentificacion',$select);
+                ?>
 		<?php echo $form->error($model,'tiposidentificacion_idtiposidentificacion'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'ciudad_idciudad'); ?>
-		<?php echo $form->textField($model,'ciudad_idciudad'); ?>
+		<?php 
+                
+                    $select = CHtml::listData(Ciudad::model()->findAll(), 'idciudad', 'nombre');
+                    echo $form->dropDownList($model,'ciudad_idciudad',$select);
+                ?>
 		<?php echo $form->error($model,'ciudad_idciudad'); ?>
 	</div>
 
@@ -69,12 +77,15 @@
 		<?php echo $form->error($model,'direccion'); ?>
 	</div>
 
+        <hr class="separador_blanco">
+        
 	<div class="row">
 		<?php echo $form->labelEx($model,'estado'); ?>
-		<?php echo $form->textField($model,'estado',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->dropDownList($model,'estado',array("activo"=>"activo","inactivo"=>"inactivo")); ?>
 		<?php echo $form->error($model,'estado'); ?>
 	</div>
 
+        <hr class="separador_blanco">
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

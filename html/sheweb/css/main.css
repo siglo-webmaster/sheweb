@@ -227,3 +227,9 @@ div.search-form
 {
 	background: #80CFFF;
 }
+
+.separador_blanco{
+    color:#ffffff;
+    background: #ffffff;
+    border-color: #ffffff;
+}

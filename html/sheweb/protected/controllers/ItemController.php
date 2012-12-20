@@ -62,20 +62,81 @@ class ItemController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Item;
-
+		$item=new Item;
+                $item_has_categoria = new ItemHasCategoria;
+                $item_has_autor = new ItemHasAutor;
+                $item_has_tipoformato = new ItemHasTipoformato;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Item']))
 		{
-			$model->attributes=$_POST['Item'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->iditem));
+			$item->attributes=$_POST['Item'];
+			if($item->save()){
+                            //Relacionar con categorias
+                            if(isset($_POST['item_has_categoria'])){
+                                if(is_array($_POST['item_has_categoria'] )){
+                                    foreach($_POST['item_has_categoria'] as $idcategoria){
+                                        $itemhascategoria =  new ItemHasCategoria;
+                                        $itemhascategoria->item_iditem = $item->iditem;
+                                        $itemhascategoria->categoria_idcategoria = $idcategoria;
+                                        if (!$itemhascategoria->save()){
+                                            print_r($itemhascategoria->errors);
+                                            yii::app()->end();
+                                        }
+                                        
+                                     }
+                                }
+                                   
+                            }
+                            
+                            //Relacionar con autores
+                            
+                            if(isset($_POST['item_has_autor'])){
+                                if(is_array($_POST['item_has_autor'] )){
+                                    foreach($_POST['item_has_autor'] as $idautor){
+                                        $itemhasautor =  new ItemHasAutor;
+                                        $itemhasautor->item_iditem = $item->iditem;
+                                        $itemhasautor->autor_idautor = $idautor;
+                                        if (!$itemhasautor->save()){
+                                            print_r($itemhasautor->errors);
+                                            yii::app()->end();
+                                        }
+                                        
+                                     }
+                                }
+                                   
+                            }
+                            
+                            //relacion con tipos de formato
+                            if(isset($_POST['item_has_tipoformato'])){
+                                if(is_array($_POST['item_has_tipoformato'] )){
+                                    foreach($_POST['item_has_tipoformato'] as $idtipoformato){
+                                        $itemhastipoformato =  new ItemHasTipoformato;
+                                        $itemhastipoformato->item_iditem = $item->iditem;
+                                        $itemhastipoformato->tipoformato_idtipoformato = $idtipoformato;
+                                        if (!$itemhastipoformato->save()){
+                                            print_r($itemhastipoformato->errors);
+                                            yii::app()->end();
+                                        }
+                                        
+                                     }
+                                }
+                                   
+                            }
+                            
+                            $this->redirect(array('view','id'=>$item->iditem));
+                            
+                            
+                        }
+				
 		}
 
 		$this->render('create',array(
-			'model'=>$model,
+			'item'=>$item,
+                        'item_has_categoria'=>$item_has_categoria,
+                        'item_has_autor'=>$item_has_autor,
+                        'item_has_tipoformato'=>$item_has_tipoformato
 		));
 	}
 
@@ -86,21 +147,128 @@ class ItemController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
+		$item=$this->loadModel($id);
+                $item_has_categoria = new ItemHasCategoria;
+                $item_has_autor = new ItemHasAutor;
+                $item_has_tipoformato = new ItemHasTipoformato;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Item']))
 		{
-			$model->attributes=$_POST['Item'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->iditem));
+			$item->attributes=$_POST['Item'];
+			if($item->save()){
+                            //Actualizar categorias
+                            $item_has_categoria->deleteAllByAttributes(array('item_iditem'=>$item->iditem));
+                            if(isset($_POST['item_has_categoria'])){
+                                if(is_array($_POST['item_has_categoria'] )){
+                                    foreach($_POST['item_has_categoria'] as $idcategoria){
+                                        $itemhascategoria =  new ItemHasCategoria;
+                                        $itemhascategoria->item_iditem = $item->iditem;
+                                        $itemhascategoria->categoria_idcategoria = $idcategoria;
+                                        if (!$itemhascategoria->save()){
+                                            print_r($itemhascategoria->errors);
+                                            yii::app()->end();
+                                        }
+                                        
+                                     }
+                                }
+                                   
+                            }
+                            
+                            //Actualizar autores
+                            $item_has_autor->deleteAllByAttributes(array('item_iditem'=>$item->iditem));
+                            if(isset($_POST['item_has_autor'])){
+                                if(is_array($_POST['item_has_autor'] )){
+                                    foreach($_POST['item_has_autor'] as $idautor){
+                                        $itemhasautor =  new ItemHasAutor;
+                                        $itemhasautor->item_iditem = $item->iditem;
+                                        $itemhasautor->autor_idautor = $idautor;
+                                        if (!$itemhasautor->save()){
+                                            print_r($itemhasautor->errors);
+                                            yii::app()->end();
+                                        }
+                                        
+                                     }
+                                }
+                                   
+                            }
+                            
+                            //Actualizar formatos
+                            $item_has_tipoformato->deleteAllByAttributes(array('item_iditem'=>$item->iditem));
+                            if(isset($_POST['item_has_tipoformato'])){
+                                if(is_array($_POST['item_has_tipoformato'] )){
+                                    foreach($_POST['item_has_tipoformato'] as $idtipoformato){
+                                        $itemhastipoformato =  new ItemHasTipoformato;
+                                        $itemhastipoformato->item_iditem = $item->iditem;
+                                        $itemhastipoformato->tipoformato_idtipoformato = $idtipoformato;
+                                        if (!$itemhastipoformato->save()){
+                                            print_r($itemhastipoformato->errors);
+                                            yii::app()->end();
+                                        }
+                                        
+                                     }
+                                }
+                                   
+                            }
+                            
+                            $this->redirect(array('view','id'=>$item->iditem));
+                            
+                            
+                        }
+				
 		}
-
+               
+               //Get listado de categorias
+               $sql = "select ic.categoria_idcategoria   from item_has_categoria as ic 
+                            where ic.item_iditem='".$id."'" ;               
+                $categorias = Yii::app()->db->createCommand($sql)->queryAll();
+                if(is_array($categorias)){
+                    $cat=array();
+                    foreach($categorias as $row){
+                        $cat[]=$row['categoria_idcategoria'];
+                    }
+                }else{
+                    $row=null;
+                }
+                
+                
+                
+               //Get listado de autores
+               $sql = "select ia.autor_idautor   from item_has_autor as ia 
+                            where ia.item_iditem='".$id."'" ;               
+                $autores = Yii::app()->db->createCommand($sql)->queryAll();
+                if(is_array($autores)){
+                    $aut=array();
+                    foreach($autores as $row){
+                        $aut[]=$row['autor_idautor'];
+                    }
+                }else{
+                    $row=null;
+                }
+                
+               
+                //Get listado de formatos
+               $sql = "select itf.tipoformato_idtipoformato   from item_has_tipoformato as itf 
+                            where itf.item_iditem='".$id."'" ;               
+                $formatos = Yii::app()->db->createCommand($sql)->queryAll();
+                if(is_array($formatos)){
+                    $form=array();
+                    foreach($formatos as $row){
+                        $form[]=$row['tipoformato_idtipoformato'];
+                    }
+                }else{
+                    $row=null;
+                }
+                
 		$this->render('update',array(
-			'model'=>$model,
+			'item'=>$item,
+                        'item_has_categoria'=>$cat,
+                        'item_has_autor'=>$aut,
+                        'item_has_tipoformato'=>$form
 		));
+                
 	}
 
 	/**

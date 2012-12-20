@@ -18,4 +18,4 @@ $this->menu=array(
 
 <h1>Update Pedidosproveedoresitems <?php echo $model->idpedidosproveedoresitems; ?></h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form', array('model'=>$model,'pedidosproveedores_idpedidosproveedores'=>$pedidosproveedores_idpedidosproveedores,)); ?>

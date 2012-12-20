@@ -4,18 +4,22 @@
 
 $this->breadcrumbs=array(
 	'Items'=>array('index'),
-	$model->iditem=>array('view','id'=>$model->iditem),
+	$item->iditem=>array('view','id'=>$item->iditem),
 	'Update',
 );
 
 $this->menu=array(
 	array('label'=>'List Item', 'url'=>array('index')),
 	array('label'=>'Create Item', 'url'=>array('create')),
-	array('label'=>'View Item', 'url'=>array('view', 'id'=>$model->iditem)),
+	array('label'=>'View Item', 'url'=>array('view', 'id'=>$item->iditem)),
 	array('label'=>'Manage Item', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Item <?php echo $model->iditem; ?></h1>
+<h1>Update Item <?php echo $item->iditem; ?></h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form', array('item'=>$item,
+                                                'item_has_categoria'=>$item_has_categoria,
+                                                'item_has_autor'=>$item_has_autor,
+                                                'item_has_tipoformato'=>$item_has_tipoformato)); 
+?>

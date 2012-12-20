@@ -115,6 +115,14 @@
 		<?php echo $form->error($pedidosproveedoresdocumentos,'url'); ?>
 	</div>
         
+        <div class="row">
+		<?php echo $form->labelEx($pedidosproveedores,'observaciones'); ?>
+		<?php echo $form->textArea($pedidosproveedores,'observaciones', array('rows'=>4,'cols'=>80)); ?>
+		<?php echo $form->error($pedidosproveedores,'observaciones'); ?>
+	</div>
+        
+        <hr class="separador_blanco">
+        
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($pedidosproveedores->isNewRecord ? 'Crear' : 'Guardar'); ?>
 	</div>

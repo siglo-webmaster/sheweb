@@ -39,6 +39,10 @@ class PedidosproveedoresController extends Controller
 				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
 			),
+                        array('allow', // allow authenticated user to perform 'additems'  action
+				'actions'=>array('additems'),
+				'users'=>array('@'),
+			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
@@ -123,39 +127,43 @@ class PedidosproveedoresController extends Controller
 	public function actionUpdate($id)
 	{
 		$pedidosproveedores=$this->loadModel($id); //CARGAR MODELO 
+                $pedidosproveedoresdocumentos=new Pedidosproveedoresdocumentos();//CARGAR MODELO 
+                
                 $criteria=new CDbCriteria;
                 $criteria->select='idpedidosproveedoresdocumentos,url';  // only select the 'title' column
                 $criteria->condition='pedidosproveedores_idpedidosproveedores=:pedidosproveedores_idpedidosproveedores';
                 $criteria->params=array(':pedidosproveedores_idpedidosproveedores'=>$id);
-                $pedidosproveedoresdocumentos=Pedidosproveedoresdocumentos::model()->find($criteria);//CARGAR MODELO 
+                $pedidosproveedoresdocumentos->model()->find($criteria);
 
 		$this->performAjaxValidation(array($pedidosproveedores)); //VALIDACION DE CAMPOS MEDIANTE AJAX
 
-		if(isset($_POST['Pedidosproveedores'],$_POST['Pedidosproveedoresdocumentos']))//CONFIRMAR SI HAY FORMULARIOS PARA SALVAR
+		if(isset($_POST['Pedidosproveedores']))//CONFIRMAR SI HAY FORMULARIOS PARA SALVAR
 		{
 			$pedidosproveedores->attributes=$_POST['Pedidosproveedores']; // CARGAR ATRIBUTOS OBTENIDOS EN LOS FORMULARIOS
-                        $pedidosproveedoresdocumentos->attributes=$_POST['Pedidosproveedoresdocumentos'];  // CARGAR ATRIBUTOS OBTENIDOS EN LOS FORMULARIOS
+                        
                         
                         if($pedidosproveedores->validate()){ //VALIDAR CAMPOS DE EL MODELO
                             $transaction = Yii::app()->db->beginTransaction(); // INICIAR TRANSACCION
                             try{
                                     $pedidosproveedores->save(); //GUARDAR ATRIBUTOS EN EL MODELO
-                                    
-                                    $pedidosproveedoresdocumentos->pedidosproveedores_idpedidosproveedores = $pedidosproveedores->idpedidosproveedores; //OBTENER LLAVE FORANEA
-                                    if($pedidosproveedoresdocumentos->validate()){//VALIDAR CAMPOS DE EL MODELO
+                                    if(isset($_POST['Pedidosproveedoresdocumentos'])){
                                         
-                                        $pedidosproveedoresdocumentos->url=CUploadedFile::getInstance($pedidosproveedoresdocumentos,'url');
-                                        
-                                        if($pedidosproveedoresdocumentos->save()){//GUARDAR ATRIBUTOS EN EL MODELO
-                                        
-                                            $pedidosproveedoresdocumentos->url->saveAs('attaches/');
-                                        }
-                                        $transaction->commit(); //GUARDAR TRANSACCION
+                                           
+                                         $pedidosproveedoresdocumentos->attributes=$_POST['Pedidosproveedoresdocumentos'];  // CARGAR ATRIBUTOS OBTENIDOS EN LOS FORMULARIOS
+                                         $pedidosproveedoresdocumentos->pedidosproveedores_idpedidosproveedores = $pedidosproveedores->idpedidosproveedores; //OBTENER LLAVE FORANEA
 
-                                        $this->redirect(array('view','id'=>$pedidosproveedores->idpedidosproveedores)); //REDIRIGIR AL DETALLE DEL ITEM NUEVO
+                                        if($pedidosproveedoresdocumentos->validate()){//VALIDAR CAMPOS DE EL MODELO
+
+                                            $pedidosproveedoresdocumentos->url=CUploadedFile::getInstance($pedidosproveedoresdocumentos,'url');
+                                            if($pedidosproveedoresdocumentos->save()){//GUARDAR ATRIBUTOS EN EL MODELO
+
+                                                $pedidosproveedoresdocumentos->url->saveAs('attaches/nombre');
+                                            }
+
+                                        }
                                     }
-                                    
-                                    $transaction->rollBack(); //NO GUARDAR TRANSACCION
+                                    $transaction->commit(); //GUARDAR TRANSACCION
+                                    $this->redirect(array('view','id'=>$pedidosproveedores->idpedidosproveedores)); //REDIRIGIR AL DETALLE DEL ITEM NUEVO
                                 
                                 }catch (Exception $e){
                                     $transaction->rollBack(); //NO GUARDAR TRANSACCION
@@ -171,6 +179,31 @@ class PedidosproveedoresController extends Controller
 		$this->render('update',array(
 			'pedidosproveedores'=>$pedidosproveedores,
                         'pedidosproveedoresdocumentos'=>$pedidosproveedoresdocumentos,
+		)); //DESPLEGAR FORMULARIO PARA CREACION DE NUEVO ITEM
+	}
+        
+        
+        /**
+	 * Updates a particular model.
+	 * If update is successful, the browser will be redirected to the 'view' page.
+	 * @param integer $id the ID of the model to be updated
+	 */
+	public function actionAdditems($id)
+	{
+		$pedidosproveedores=$this->loadModel($id); //CARGAR MODELO 
+
+
+		if(isset($_POST['Pedidosproveedores']))//CONFIRMAR SI HAY FORMULARIOS PARA SALVAR
+		{
+			$pedidosproveedores->attributes=$_POST['Pedidosproveedores']; // CARGAR ATRIBUTOS OBTENIDOS EN LOS FORMULARIOS
+       
+                                              
+				
+		}
+
+		$this->render('additems',array(
+			'pedidosproveedores'=>$pedidosproveedores,
+                        
 		)); //DESPLEGAR FORMULARIO PARA CREACION DE NUEVO ITEM
 	}
 

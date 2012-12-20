@@ -63,7 +63,11 @@ class PedidosproveedoresitemsController extends Controller
 	public function actionCreate()
 	{
 		$model=new Pedidosproveedoresitems;
-
+                if(isset($_REQUEST['pedidosproveedores_idpedidosproveedores'])){
+                    $pedidosproveedores_idpedidosproveedores=$_REQUEST['pedidosproveedores_idpedidosproveedores'];
+                }else{
+                    $pedidosproveedores_idpedidosproveedores=false;
+                }
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -76,6 +80,7 @@ class PedidosproveedoresitemsController extends Controller
 
 		$this->render('create',array(
 			'model'=>$model,
+                        'pedidosproveedores_idpedidosproveedores'=>$pedidosproveedores_idpedidosproveedores,
 		));
 	}
 
@@ -98,8 +103,10 @@ class PedidosproveedoresitemsController extends Controller
 				$this->redirect(array('view','id'=>$model->idpedidosproveedoresitems));
 		}
 
+                               
 		$this->render('update',array(
 			'model'=>$model,
+                    'pedidosproveedores_idpedidosproveedores'=>$model->pedidosproveedores_idpedidosproveedores,
 		));
 	}
 
