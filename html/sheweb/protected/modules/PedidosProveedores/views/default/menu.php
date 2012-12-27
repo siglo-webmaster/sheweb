@@ -24,6 +24,10 @@
                                                         ),
                                                        
                                                 ),
+                                                array(
+                                                    "url"=>array("route"=>"/".$this->module->id."/pedidosproveedoresentradasalmacen/index"),
+                                                    "label"=>"Entradas de almacen",
+                                                ),
                                                 
                                 ),
                     

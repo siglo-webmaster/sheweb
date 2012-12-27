@@ -32,7 +32,7 @@ class PedidosproveedoresitemdetallereservaController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','getreservas'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -72,7 +72,8 @@ class PedidosproveedoresitemdetallereservaController extends Controller
 			$model->attributes=$_POST['Pedidosproveedoresitemdetallereserva'];
                         $model->usuarios_idusuarios=1;
 			if($model->save())
-                               $this->redirect (Yii::app ()->baseUrl."/index.php/PedidosProveedores/pedidosproveedores/view/id/1");
+                            $this->redirect (Yii::app ()->baseUrl."/index.php/PedidosProveedores/pedidosproveedoresitemdetallereserva/getreservas/id/".$model->pedidosproveedoresitems_idpedidosproveedoresitems);
+                               //$this->redirect (Yii::app ()->baseUrl."/index.php/PedidosProveedores/pedidosproveedores/view/id/1");
 				//$this->redirect(array('view','id'=>$model->idpedidosproveedoresitemdetallereserva));
 		}
                 $model->pedidosproveedoresitems_idpedidosproveedoresitems = (isset($_REQUEST['idpedidosproveedoresitems']))?$_REQUEST['idpedidosproveedoresitems']:false;
@@ -98,7 +99,8 @@ class PedidosproveedoresitemdetallereservaController extends Controller
 		{
 			$model->attributes=$_POST['Pedidosproveedoresitemdetallereserva'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idpedidosproveedoresitemdetallereserva));
+                            $this->redirect (Yii::app ()->baseUrl."/index.php/PedidosProveedores/pedidosproveedoresitemdetallereserva/getreservas/id/".$model->pedidosproveedoresitems_idpedidosproveedoresitems);
+				//$this->redirect(array('view','id'=>$model->idpedidosproveedoresitemdetallereserva));
 		}
 
 		$this->render('update',array(
@@ -131,6 +133,31 @@ class PedidosproveedoresitemdetallereservaController extends Controller
 		));
 	}
 
+        /**
+	 * Lists all models of one item
+	 */
+	public function actionGetreservas($id)
+	{
+		$dataProvider=new CActiveDataProvider('ViewPedidosproveedoresitemdetallereserva',array(
+                                                                                                    'criteria'=>array(
+                                                                                                                        'condition'=>'idpedidosproveedoresitems='.$id,
+                
+                                                                                                                    )
+                                                                                             )
+                );
+                
+                $idpedidosproveedores = Yii::app()->db->createCommand("Select pedidosproveedores_idpedidosproveedores from pedidosproveedoresitems where idpedidosproveedoresitems=".$id)->queryAll();
+                $idpedidosproveedores=$idpedidosproveedores[0]['pedidosproveedores_idpedidosproveedores'];
+                
+                
+                
+		$this->render('listreservaciones',array(
+			'dataProvider'=>$dataProvider,
+                        'idpedidosproveedoresitems'=>$id,
+                        'idpedidosproveedores'=>$idpedidosproveedores,
+		));
+	}
+        
 	/**
 	 * Manages all models.
 	 */
