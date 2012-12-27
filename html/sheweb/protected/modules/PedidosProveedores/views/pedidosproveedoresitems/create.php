@@ -15,6 +15,6 @@ $this->menu=array(
  */
 ?>
 <?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
-<h1>Create Pedidosproveedoresitems</h1>
+<h1>Agregar nuevo item al pedido # <?php echo $pedidosproveedores_idpedidosproveedores; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model,'pedidosproveedores_idpedidosproveedores'=>$pedidosproveedores_idpedidosproveedores)); ?>

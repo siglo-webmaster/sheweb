@@ -32,11 +32,11 @@ class ItemController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','getItem'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete','getItem'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -55,6 +55,21 @@ class ItemController extends Controller
 			'model'=>$this->loadModel($id),
 		));
 	}
+        
+        public function actionGetItem(){
+          
+	  if (!empty($_GET['term'])) {
+		$sql = 'SELECT iditem as id, concat ("[",iditem,"] ",nombre ) as value FROM item WHERE nombre LIKE :qterm ';
+		
+		$command = Yii::app()->db->createCommand($sql);
+		$qterm = '%'.$_GET['term'].'%';
+		$command->bindParam(":qterm", $qterm, PDO::PARAM_STR);
+		$result = $command->queryAll();
+		echo CJSON::encode($result); exit;
+	  } else {
+		return false;
+          }
+        }
 
 	/**
 	 * Creates a new model.

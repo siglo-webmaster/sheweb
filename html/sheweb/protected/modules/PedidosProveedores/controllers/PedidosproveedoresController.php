@@ -191,7 +191,8 @@ class PedidosproveedoresController extends Controller
 	public function actionAdditems($id)
 	{
 		$pedidosproveedores=$this->loadModel($id); //CARGAR MODELO 
-
+                
+                
 
 		if(isset($_POST['Pedidosproveedores']))//CONFIRMAR SI HAY FORMULARIOS PARA SALVAR
 		{
@@ -203,6 +204,7 @@ class PedidosproveedoresController extends Controller
 
 		$this->render('additems',array(
 			'pedidosproveedores'=>$pedidosproveedores,
+                        
                         
 		)); //DESPLEGAR FORMULARIO PARA CREACION DE NUEVO ITEM
 	}

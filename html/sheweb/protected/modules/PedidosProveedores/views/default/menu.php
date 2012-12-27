@@ -12,13 +12,19 @@
                                                 "url"=>array("route"=>"/".$this->module->id."/pedidosproveedores/admin"),
                                                 "label"=>"Pedidos",
                                                 array(
-                                                        "url"=>array("route"=>"/".$this->module->id."/pedidosproveedores/create"),
-                                                        "label"=>"Nuevo Pedido"
+                                                        "url"=>array("route"=>"/".$this->module->id."/pedidosproveedores/admin"),
+                                                        "label"=>"Pedidos a proveedor",
+                                                        array(
+                                                                "url"=>array("route"=>"/".$this->module->id."/pedidosproveedores/create"),
+                                                                "label"=>"Nuevo Pedido"
+                                                        ),
+                                                        array(
+                                                                "url"=>array("route"=>"/".$this->module->id."/pedidosproveedores/index"),
+                                                                "label"=>"Listar Pedidos"
+                                                        ),
+                                                       
                                                 ),
-                                                array(
-                                                        "url"=>array("route"=>"/".$this->module->id."/pedidosproveedores/index"),
-                                                        "label"=>"Listar Pedidos"
-                                                ),
+                                                
                                 ),
                     
                                 array(

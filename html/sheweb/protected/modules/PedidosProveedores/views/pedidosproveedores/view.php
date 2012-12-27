@@ -18,7 +18,15 @@ $this->menu=array(
 <?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
 <h1>View Pedidosproveedores #<?php echo $model->idpedidosproveedores; ?></h1>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
+<?php
+            $model->idproveedor0->nombre;
+        ?>
+
+<?php
+    echo $this->renderPartial('_view',array('data'=>$model));
+?>
+
+<?php /*$this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'idpedidosproveedores',
@@ -36,4 +44,9 @@ $this->menu=array(
 		'observaciones',
 		'estado',
 	),
-)); ?>
+)); 
+ * 
+ */
+ ?>
+ 
+

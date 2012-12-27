@@ -16,20 +16,31 @@
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
         <?php echo $form->errorSummary(array($pedidosproveedores)); ?>
+        <div>
         <?php
-            echo CHtml::link("Agregar nuevo item",Yii::app()->createUrl($this->module->id."/pedidosproveedoresitems/create", array("pedidosproveedores_idpedidosproveedores"=>$pedidosproveedores->idpedidosproveedores)));
+            echo CHtml::link("[ Agregar nuevo item ]",Yii::app()->createUrl($this->module->id."/pedidosproveedoresitems/create", array("pedidosproveedores_idpedidosproveedores"=>$pedidosproveedores->idpedidosproveedores)));
         ?>
+        &nbsp;&nbsp;&nbsp;&nbsp;
         <?php
-            $Provider = new CActiveDataProvider('Pedidosproveedoresitems');
+            echo CHtml::link("[ Regresar ]",Yii::app()->createUrl($this->module->id."/pedidosproveedores/view", array("id"=>$pedidosproveedores->idpedidosproveedores)));
+        ?>
+            
+        </div>
+        <?php
+            $Provider = new CActiveDataProvider('ViewPedidosproveedoresitemsagrupado', array('criteria'=>array('condition'=>'pedidosproveedores_idpedidosproveedores='.$pedidosproveedores->idpedidosproveedores)));
  
             $this->widget('ext.groupgridview.GroupGridView', array(
                 'id' => 'grid1',
                 'dataProvider' => $Provider,
+                'mergeColumns' => array('nombre'),
                  'columns' => array(
-                  'idpedidosproveedoresitems',
-                  'item_iditem',
+                  'nombre',
                   'solicitado',
-                  'recibido',
+                  array('class' => 'CLinkColumn',
+                        'header'=>'Reservado',
+                        'labelExpression'=>'$data->reservado    ',
+                        'urlExpression'=>'Yii::app()->createUrl("/PedidosProveedores/pedidosproveedoresitemdetallereserva/create", array("idpedidosproveedoresitems"=>$data->idpedidosproveedoresitems))',
+                  ),
                   array('class' => 'CButtonColumn',
                         'template'=>'{update}{delete}',
                         'buttons'=>array(
@@ -43,9 +54,6 @@
         ?>
         <hr class="separador_blanco">
         
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($pedidosproveedores->isNewRecord ? 'Crear' : 'Guardar'); ?>
-	</div>
 
 <?php $this->endWidget(); ?>
 

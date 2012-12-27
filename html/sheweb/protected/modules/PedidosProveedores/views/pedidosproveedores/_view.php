@@ -1,6 +1,6 @@
 <?php
 /* @var $this PedidosproveedoresController */
-/* @var $data Pedidosproveedores */
+
 ?>
 
 <div class="view">
@@ -16,13 +16,13 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('usuarioaprobacion')); ?>:</b>
 	<?php echo CHtml::encode($data->usuarioaprobacion); ?>
 	<br />
-
+        
 	<b><?php echo CHtml::encode($data->getAttributeLabel('idproveedor')); ?>:</b>
-	<?php echo CHtml::encode($data->idproveedor); ?>
+	<?php echo CHtml::encode($data->idproveedor0->nombre); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('moneda_idmoneda')); ?>:</b>
-	<?php echo CHtml::encode($data->moneda_idmoneda); ?>
+	<?php echo CHtml::encode($data->monedaIdmoneda->nombre); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fechacreacion')); ?>:</b>
@@ -33,8 +33,42 @@
 	<?php echo CHtml::encode($data->fechacierre); ?>
 	<br />
 
-        <b><?php  echo CHtml::link('additems', array('additems', 'id'=>$data->idpedidosproveedores));  ?></b>
+        <b>
+        <?php
+             echo CHtml::link("Agregar nuevo item",Yii::app()->createUrl($this->module->id."/pedidosproveedoresitems/create", array("pedidosproveedores_idpedidosproveedores"=>$data->idpedidosproveedores)));
+        ?>
+        </b>
 	<br />
+        
+        
+         <?php
+            $Provider = new CActiveDataProvider('ViewPedidosproveedoresitemsagrupado', array('criteria'=>array('condition'=>'pedidosproveedores_idpedidosproveedores='.$data->idpedidosproveedores)));
+ 
+            $this->widget('ext.groupgridview.GroupGridView', array(
+                'id' => 'grid1',
+                'dataProvider' => $Provider,
+                'mergeColumns' => array('nombre'),
+                 'columns' => array(
+                  'nombre',
+                  'solicitado',
+                  'reservado',
+                  array('class' => 'CLinkColumn',
+                        'header'=>'Reservar',
+                        'label'=>'reservar',
+                        'urlExpression'=>'Yii::app()->createUrl("/PedidosProveedores/pedidosproveedoresitemdetallereserva/create", array("idpedidosproveedoresitems"=>$data->idpedidosproveedoresitems))',
+                  ),
+                  array('class' => 'CButtonColumn',
+                        'header'=>'Opciones',
+                        'template'=>'{update}{delete}',
+                        'buttons'=>array(
+                                            'update'=>array('url'=>'Yii::app()->createUrl("/PedidosProveedores/pedidosproveedoresitems/update", array("id"=>$data->idpedidosproveedoresitems))'),
+                                            'delete'=>array('url'=>'Yii::app()->createUrl("/PedidosProveedores/pedidosproveedoresitems/delete", array("id"=>$data->idpedidosproveedoresitems))'),
+                                        ),
+                      ),
+                  
+                ),
+              ));
+        ?>
         
 	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fechaestimada')); ?>:</b>
