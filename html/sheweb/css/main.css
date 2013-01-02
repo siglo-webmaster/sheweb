@@ -233,3 +233,8 @@ div.search-form
     background: #ffffff;
     border-color: #ffffff;
 }
+
+#mprint{
+    float:right;
+    margin: 0 10px 0 0;
+}

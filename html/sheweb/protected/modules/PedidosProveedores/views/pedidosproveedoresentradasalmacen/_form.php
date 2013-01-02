@@ -34,7 +34,7 @@
 		<?php echo $form->error($model,'pedidosproveedores_idpedidosproveedores'); ?>
 	</div>
         
-        <div class="grid-view">
+        <div class="grid-view" >
             <table class="items">
                 <thead>
                     <tr>
@@ -50,20 +50,24 @@
                 <tbody>
         
         <?php
-            
+            $i=0;
             foreach($items as $row){
                 echo "<tr>";
-                    echo"<td>".$row['nombre']."</td>";
+                    echo"<td>".$row['nombre'].
+                            "<input type='hidden' name='idpedidosproveedoresitems_".$i."' value='".$row['idpedidosproveedoresitems']."' >".
+                            "<input type='hidden' name='iditem_".$i."' value='".$row['item_iditem']."' >".
+                         "</td>";
                     echo"<td>".$row['solicitado']."</td>";
                     echo"<td>".$row['recibido']."</td>";
-                    echo"<td><input type='text' size='4'></input></td>";
-                    echo"<td><input type='text' size='4'></input></td>";
-                    echo"<td><input type='text' size='8'></input></td>";
-                    echo"<td><input type='checkbox'></input></td>";
+                    echo"<td><input type='text' size='4' name='recibir_".$i."'></input></td>";
+                    echo"<td><input type='text' size='4' name='fallado_".$i."'></input></td>";
+                    echo"<td><input type='text' size='8' name='observaciones_".$i."'></input></td>";
+                    echo"<td><input type='checkbox' name='finalizar_".$i."'></input></td>";
                 echo "</tr>";
+                $i++;
             }
             
-
+            echo "<input type='hidden' name='numeroitems' value='".$i."' >";
         ?>
                 </tbody>
                 </table>
@@ -78,6 +82,8 @@
 		<?php echo $form->error($model,'observaciones'); ?>
 	</div>
         
+        <hr class="separador_blanco">
+        <input type="checkbox" name="cerrarpedido" value="cerrar"> Cerrar este pedido y no recibir mas mercancia
         <hr class="separador_blanco">
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear Entrada' : 'Save'); ?>

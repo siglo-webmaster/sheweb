@@ -53,6 +53,7 @@ class PedidosproveedoresentradasalmacenController extends Controller
 	{
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+                        'items'=>Yii::app()->db->createCommand("select * from view_pedidosproveedoresentradasalmacendetalle where idpedidosproveedoresentradasalmacen=".$id)->queryAll(),
 		));
 	}
 
@@ -72,16 +73,55 @@ class PedidosproveedoresentradasalmacenController extends Controller
 			$model->attributes=$_POST['Pedidosproveedoresentradasalmacen'];
                         $model->usuarios_idusuarios=1;
                         $model->fecha=date('Y-m-d h:i:s');
-                        
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->idpedidosproveedoresentradasalmacen));
+                        if($model->save()){
+                            if(isset($_POST['numeroitems'])){
+                                for($i=0;$i<$_POST['numeroitems'];$i++){
+                                    if(($_POST['recibir_'.$i]!='')&&($_POST['recibir_'.$i]>0)){
+                                        $arreglo=array(
+                                                        'idpedidosproveedoresentradasalmacen'=>$model->idpedidosproveedoresentradasalmacen,
+                                                        'item_iditem'=>$_POST['iditem_'.$i],
+                                                        'cantidad'=>$_POST['recibir_'.$i]);
+                                        $detalle = new Pedidosproveedoresentradasalmacendetalle;
+                                        $detalle->attributes=$arreglo;
+                                        $detalle->save();
+                                        
+                                        Yii::app()->db->createCommand('update pedidosproveedoresitems set  recibido=recibido+'.$_POST['recibir_'.$i]." where idpedidosproveedoresitems=".$_POST['idpedidosproveedoresitems_'.$i])->execute();
+                                        unset($detalle);
+                                    }
+                                    
+                                    
+                                    
+                                    if(($_POST['fallado_'.$i]!='')&&($_POST['fallado_'.$i]>0)){
+                                        $arreglo=array(
+                                                        'idpedidosproveedoresentradasalmacen'=>$model->idpedidosproveedoresentradasalmacen,
+                                                        'item_iditem'=>$_POST['iditem_'.$i],
+                                                        'cantidad'=>$_POST['fallado_'.$i],
+                                                        'observaciones'=>$_POST['observaciones_'.$i],
+                                                    );
+                                        $detalle = new Pedidosproveedoresentradasalmacenfallados;
+                                        $detalle->attributes=$arreglo;
+                                        $detalle->save();
+                                        unset($detalle);
+                                    }
+                                    
+                                    if(isset($_POST['finalizar_'.$i])){
+                                           Yii::app()->db->createCommand("update pedidosproveedoresitems set estado='cerrado'  where idpedidosproveedoresitems=".$_POST['idpedidosproveedoresitems_'.$i])->execute();
+                                    }
+                                }
+                            }
+                            $items = Yii::app()->db->createCommand("select * from view_pedidosproveedoresitemsagrupado where pedidosproveedores_idpedidosproveedores=".$model->pedidosproveedores_idpedidosproveedores." and estado='activo' ")->queryAll();
+                            if((!sizeof($items)>0)||(isset($_POST['cerrarpedido']))){
+                              Yii::app()->db->createCommand("update pedidosproveedores set  estado='cerrado' where idpedidosproveedores=".$model->pedidosproveedores_idpedidosproveedores)->execute();  
+                            }
+                        }
+                        $this->redirect(array('view','id'=>$model->idpedidosproveedoresentradasalmacen));
 		}
                 
-                $items = Yii::app()->db->createCommand("select * from view_pedidosproveedoresitemsagrupado where pedidosproveedores_idpedidosproveedores=1")->queryAll();
+               
                 
 		$this->render('create',array(
 			'model'=>$model,
-                        'items'=>$items,
+                        'items'=>Yii::app()->db->createCommand("select * from view_pedidosproveedoresitemsagrupado where pedidosproveedores_idpedidosproveedores=".$id." and estado='activo' ")->queryAll(),
                         'idpedidosproveedores'=>$id,
 		));
 	}
@@ -129,7 +169,7 @@ class PedidosproveedoresentradasalmacenController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('ViewPedidosproveedores');
+		$dataProvider=new CActiveDataProvider('ViewPedidosproveedores',array('criteria'=>array('condition'=>"estado='activo'")));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
