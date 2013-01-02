@@ -29,6 +29,7 @@ return array(
 		),
                 'Parametros',
                 'PedidosProveedores',
+                'userGroups'=>array( 'accessCode'=>'poiumnbv', 'salt'=>'lkjhyuio', ),
 		
 	),
 
@@ -37,6 +38,7 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+                        'class'=>'userGroups.components.WebUserGroups',
 		),
 		// uncomment the following to enable URLs in path-format
 		
@@ -47,6 +49,7 @@ return array(
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
+                    'showScriptName'=>false,    
 		),
 		
               /*

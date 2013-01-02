@@ -35,8 +35,8 @@
 				array('label'=>'Inicio', 'url'=>array('/site/index')),
                                 array('label'=>'Pedidos', 'url'=>Yii::app()->createUrl("PedidosProveedores"), 'visible'=>!Yii::app()->user->isGuest),
                                 array('label'=>'Parametros', 'url'=>Yii::app()->createUrl("Parametros"), 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				array('label'=>'Login', 'url'=>array('/userGroups'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/userGroups/user/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
 	</div><!-- mainmenu -->

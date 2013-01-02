@@ -23,7 +23,9 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'estado'); ?>
-		<?php echo $form->textField($model,'estado',array('size'=>45,'maxlength'=>45)); ?>
+		<?php 
+                     echo $form->dropDownList($model,'estado',array('activo'=>'activo','inactivo'=>'inactivo'));
+                ?>
 		<?php echo $form->error($model,'estado'); ?>
 	</div>
 

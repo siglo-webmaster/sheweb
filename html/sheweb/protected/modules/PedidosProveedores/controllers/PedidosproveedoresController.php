@@ -79,6 +79,12 @@ class PedidosproveedoresController extends Controller
                         if($pedidosproveedores->validate()){ //VALIDAR CAMPOS DE EL MODELO
                             $transaction = Yii::app()->db->beginTransaction(); // INICIAR TRANSACCION
                             try{
+                                    if($pedidosproveedores->isNewRecord){
+                                        $pedidosproveedores->usuariocreacion=Yii::app()->user->id;
+                                        $pedidosproveedores->fechacreacion=date("Y-m-d h:i:s");
+                                        $pedidosproveedores->estado='activo';
+                                    }
+                                    
                                     $pedidosproveedores->save(); //GUARDAR ATRIBUTOS EN EL MODELO
                                     if(isset($_POST['Pedidosproveedoresdocumentos'])){
                                         

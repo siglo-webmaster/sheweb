@@ -17,7 +17,11 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'pais_idpais'); ?>
-		<?php echo $form->textField($model,'pais_idpais'); ?>
+		<?php 
+                
+                    $select = CHtml::listData(Pais::model()->findAll(), 'idpais', 'nombre');
+                    echo $form->dropDownList($model,'pais_idpais',$select);
+                ?>
 		<?php echo $form->error($model,'pais_idpais'); ?>
 	</div>
 

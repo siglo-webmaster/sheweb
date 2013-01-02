@@ -23,7 +23,7 @@
 		<?php echo $form->labelEx($pedidosproveedores,'idproveedor'); ?>
 		<?php 
                 
-                    $select = CHtml::listData(Terceros::model()->findAll(), 'idterceros', 'nombre');
+                    $select = CHtml::listData(Terceros::model()->findAll("idterceros in (select distinct terceros_idterceros from terceros_has_tiposterceros where tiposterceros_idtiposterceros=2) and estado='activo'"), 'idterceros', 'nombre');
                     echo $form->dropDownList($pedidosproveedores,'idproveedor',$select);
                 ?>
 		<?php echo $form->error($pedidosproveedores,'idproveedor'); ?>
@@ -122,6 +122,8 @@
 	</div>
         
         <hr class="separador_blanco">
+        
+            
         
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($pedidosproveedores->isNewRecord ? 'Crear' : 'Guardar'); ?>

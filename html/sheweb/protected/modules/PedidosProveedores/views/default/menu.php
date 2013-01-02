@@ -31,18 +31,7 @@
                                                 
                                 ),
                     
-                                array(
-                                                "url"=>array("route"=>"/".$this->module->id."/autor/admin"),
-                                                "label"=>"Autores",
-                                                array(
-                                                        "url"=>array("route"=>"/".$this->module->id."/autor/create"),
-                                                        "label"=>"Nuevo Autor"
-                                                ),
-                                                array(
-                                                        "url"=>array("route"=>"/".$this->module->id."/autor/index"),
-                                                        "label"=>"Listar Autores"
-                                                ),
-                                ),
+                                
                         ),
                 "stylesheet"=>"menu_blue1.css",
                 "menuID"=>"myMenu",

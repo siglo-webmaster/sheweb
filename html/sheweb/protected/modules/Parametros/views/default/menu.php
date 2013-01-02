@@ -130,6 +130,40 @@
                                 ),//FIN TIPO->Tipos de terceros
                              
                          ),//FIN TIPO
+                         //ITEMS
+                         array(
+                             "url"=>array(),
+                             "label"=>"Items",
+                                array(
+                                    "url"=>array("route"=>"/Parametros/terceros"),
+                                              "label"=>"Terceros",
+                                ),
+                               array(
+                                    "url"=>array("route"=>"/Parametros/editorial"),
+                                              "label"=>"Editoriales",
+                                ),
+                                array(
+                                    "url"=>array("route"=>"/Parametros/categoria"),
+                                              "label"=>"Categorias",
+                                ),
+                               array(
+                                                           "url"=>array("route"=>"/".$this->module->id."/autor/admin"),
+                                                           "label"=>"Autores",
+                                                           array(
+                                                                   "url"=>array("route"=>"/".$this->module->id."/autor/create"),
+                                                                   "label"=>"Nuevo Autor"
+                                                           ),
+                                                           array(
+                                                                   "url"=>array("route"=>"/".$this->module->id."/autor/index"),
+                                                                   "label"=>"Listar Autores"
+                                                           ),
+                                           ),
+                                   array(
+                                       'url'=>array('route'=>"/".$this->module->id."/item"),
+                                       'label'=>'Productos'
+                                   ),
+                         ),//FIN ITEMS
+                         
                     
                     ),///FIN MENU
                     
