@@ -9,13 +9,13 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Pedidosproveedores', 'url'=>array('index')),
-	array('label'=>'Create Pedidosproveedores', 'url'=>array('create')),
-	array('label'=>'View Pedidosproveedores', 'url'=>array('view', 'id'=>$pedidosproveedores->idpedidosproveedores)),
-	array('label'=>'Manage Pedidosproveedores', 'url'=>array('admin')),
+	array('label'=>'Listar Pedidos', 'url'=>array('index')),
+	array('label'=>'Crear Pedido', 'url'=>array('create')),
+	array('label'=>'Ver detalles', 'url'=>array('view', 'id'=>$pedidosproveedores->idpedidosproveedores)),
+	array('label'=>'Administrar pedidos', 'url'=>array('admin')),
 );
 ?>
 <?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
-<h1>Update Pedidosproveedores <?php echo $pedidosproveedores->idpedidosproveedores; ?></h1>
+<h1>Editar pedido a proveedores # <?php echo $pedidosproveedores->idpedidosproveedores; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('pedidosproveedores'=>$pedidosproveedores,'pedidosproveedoresdocumentos'=>$pedidosproveedoresdocumentos)); ?>

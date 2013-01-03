@@ -70,7 +70,7 @@ class PedidosproveedoresitemdetallereservaController extends Controller
 		if(isset($_POST['Pedidosproveedoresitemdetallereserva']))
 		{
 			$model->attributes=$_POST['Pedidosproveedoresitemdetallereserva'];
-                        $model->usuarios_idusuarios=1;
+                        $model->usuarios_idusuarios=Yii::app()->user->id;
 			if($model->save())
                             $this->redirect (Yii::app ()->baseUrl."/index.php/PedidosProveedores/pedidosproveedoresitemdetallereserva/getreservas/id/".$model->pedidosproveedoresitems_idpedidosproveedoresitems);
                                //$this->redirect (Yii::app ()->baseUrl."/index.php/PedidosProveedores/pedidosproveedores/view/id/1");
@@ -91,7 +91,9 @@ class PedidosproveedoresitemdetallereservaController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
+                if(Yii::app()->user->id!=$model->usuarios_idusuarios){
+                    $this->redirect (Yii::app ()->baseUrl."/index.php/PedidosProveedores/pedidosproveedoresitemdetallereserva/getreservas/id/".$model->pedidosproveedoresitems_idpedidosproveedoresitems);
+                }
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -115,7 +117,12 @@ class PedidosproveedoresitemdetallereservaController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+                $this->loadModel($id);
+                if(Yii::app()->user->id!=$model->usuarios_idusuarios){
+                    $this->redirect (Yii::app ()->baseUrl."/index.php/PedidosProveedores/pedidosproveedoresitemdetallereserva/getreservas/id/".$model->pedidosproveedoresitems_idpedidosproveedoresitems);
+                }
+                
+		$this->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))

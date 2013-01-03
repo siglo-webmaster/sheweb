@@ -2,24 +2,61 @@
 /* @var $this PedidosproveedoresController */
 
 ?>
+<?php
+      if($data->estado=='aprobado'){
+          $this->widget('ext.mPrint.mPrint', array(
+            'title' => 'Siglo del Hombre Editores S.A.',        //the title of the document. Defaults to the HTML title
+            'tooltip' => 'Imprimir',    //tooltip message of the print icon. Defaults to 'print'
+            'text' => NULL, //text which will appear beside the print icon. Defaults to NULL
+            'element' => '#pedido',      //the element to be printed.
+            'exceptions' => array(     //the element/s which will be ignored
+                '.summary',
+                '.search-form',
+                '#ver-opciones',
+            ),
+            'publishCss' => true       //publish the CSS for the whole page?
+        ));
+      }
+       
+ 
+?>
 
-<div class="view">
+<?php
+    $separador="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idpedidosproveedores')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->idpedidosproveedores), array('view', 'id'=>$data->idpedidosproveedores)); ?>
-	<br />
+?>
+<div class="view" id="pedido">
 
+	<b><h3>Pedido a proveedores #<?php echo $data->idpedidosproveedores; ?></h3></b>
+	        
+        <b><?php echo CHtml::encode($data->getAttributeLabel('ESTADO')); ?>:</b>
+	<?php echo CHtml::encode($data->estado); ?>
+        <?php echo $separador; ?>
+        
 	<b><?php echo CHtml::encode($data->getAttributeLabel('usuariocreacion')); ?>:</b>
-	<?php echo CHtml::encode($data->usuariocreacion); ?>
-	<br />
+	<?php 
+                if(isset($data->usuariocreacion0->username)){
+                    echo CHtml::encode($data->usuariocreacion0->username);
+                }
+        ?>
+	<?php echo $separador; ?>
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('usuarioaprobacion')); ?>:</b>
-	<?php echo CHtml::encode($data->usuarioaprobacion); ?>
+	<?php 
+            if(isset($data->usuarioaprobacion0->username)){
+                echo CHtml::encode($data->usuarioaprobacion0->username); 
+            }
+         ?>
+        <?php echo $separador; ?>
+        <div id='ver-opciones'>
+        <?php echo CHtml::link("Ver opciones ", array('view', 'id'=>$data->idpedidosproveedores)); ?>
+        </div>
+        
 	<br />
         
 	<b><?php echo CHtml::encode($data->getAttributeLabel('idproveedor')); ?>:</b>
 	<?php echo CHtml::encode($data->idproveedor0->nombre); ?>
-	<br />
+	<?php echo $separador; ?>
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('moneda_idmoneda')); ?>:</b>
 	<?php echo CHtml::encode($data->monedaIdmoneda->nombre); ?>
@@ -27,15 +64,22 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fechacreacion')); ?>:</b>
 	<?php echo CHtml::encode($data->fechacreacion); ?>
-	<br />
+	<?php echo $separador; ?>
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fechacierre')); ?>:</b>
 	<?php echo CHtml::encode($data->fechacierre); ?>
-	<br />
+	<?php echo $separador; ?>
+        
+        <b><?php echo CHtml::encode($data->getAttributeLabel('fechaaprobacion')); ?>:</b>
+	<?php echo CHtml::encode($data->fechaaprobacion); ?>
+	<?php echo $separador; ?>
 
         <b>
         <?php
-             echo CHtml::link("Agregar nuevo item",Yii::app()->createUrl($this->module->id."/pedidosproveedoresitems/create", array("pedidosproveedores_idpedidosproveedores"=>$data->idpedidosproveedores)));
+            if($data->estado=='activo'){
+                echo CHtml::link("Agregar nuevo item",Yii::app()->createUrl($this->module->id."/pedidosproveedoresitems/create", array("pedidosproveedores_idpedidosproveedores"=>$data->idpedidosproveedores)));
+            }
+             
         ?>
         </b>
 	<br />
@@ -43,12 +87,9 @@
         
          <?php
             $Provider = new CActiveDataProvider('ViewPedidosproveedoresitemsagrupado', array('criteria'=>array('condition'=>'pedidosproveedores_idpedidosproveedores='.$data->idpedidosproveedores)));
- 
-            $this->widget('ext.groupgridview.GroupGridView', array(
-                'id' => 'grid1',
-                'dataProvider' => $Provider,
-                'mergeColumns' => array('nombre'),
-                 'columns' => array(
+            
+            if($data->estado=='activo'){
+                $columnas = array(
                   'nombre',
                   'solicitado',
                   'reservado',
@@ -66,7 +107,20 @@
                                         ),
                       ),
                   
-                ),
+                );
+            }else{
+                $columnas = array(
+                  'nombre',
+                  'solicitado',
+                  'reservado',
+                );
+            }
+            
+            $this->widget('ext.groupgridview.GroupGridView', array(
+                'id' => 'grid1',
+                'dataProvider' => $Provider,
+                'mergeColumns' => array('nombre'),
+                 'columns' => $columnas,
               ));
         ?>
         

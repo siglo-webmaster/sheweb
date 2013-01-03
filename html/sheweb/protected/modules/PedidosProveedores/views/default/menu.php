@@ -9,26 +9,26 @@
         array(
                 "menu"=>array(
                                 array(
-                                                "url"=>array("route"=>"/".$this->module->id."/pedidosproveedores/admin"),
-                                                "label"=>"Pedidos",
+                                                "url"=>array("route"=>"/".$this->module->id."/pedidosproveedores/index"),
+                                                "label"=>"Pedidos a proveedor",
                                                 array(
-                                                        "url"=>array("route"=>"/".$this->module->id."/pedidosproveedores/admin"),
-                                                        "label"=>"Pedidos a proveedor",
-                                                        array(
-                                                                "url"=>array("route"=>"/".$this->module->id."/pedidosproveedores/create"),
-                                                                "label"=>"Nuevo Pedido"
-                                                        ),
-                                                        array(
-                                                                "url"=>array("route"=>"/".$this->module->id."/pedidosproveedores/index"),
-                                                                "label"=>"Listar Pedidos"
-                                                        ),
-                                                       
+                                                        "url"=>array("route"=>"/".$this->module->id."/pedidosproveedores/create"),
+                                                        "label"=>"Nuevo Pedido"
                                                 ),
                                                 array(
-                                                    "url"=>array("route"=>"/".$this->module->id."/pedidosproveedoresentradasalmacen/index"),
-                                                    "label"=>"Entradas de almacen",
+                                                        "url"=>array("route"=>"/".$this->module->id."/pedidosproveedores/index"),
+                                                        "label"=>"Pedidos Activos"
                                                 ),
-                                                
+
+                                                array(
+                                                        "url"=>array("route"=>"/".$this->module->id."/pedidosproveedores/index/estado/aprobado"),
+                                                        "label"=>"Pedidos Aprobados"
+                                                ),
+
+                                                array(
+                                                        "url"=>array("route"=>"/".$this->module->id."/pedidosproveedores/index/estado/cerrado"),
+                                                        "label"=>"Pedidos Cerrados"
+                                                ),
                                 ),
                     
                                 

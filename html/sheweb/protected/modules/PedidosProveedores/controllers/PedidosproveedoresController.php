@@ -36,9 +36,10 @@ class PedidosproveedoresController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'actions'=>array('admin','delete','changestate'),
+				'users'=>array('admin','ogaleano'),
 			),
+                        
                         array('allow', // allow authenticated user to perform 'additems'  action
 				'actions'=>array('additems'),
 				'users'=>array('@'),
@@ -133,6 +134,11 @@ class PedidosproveedoresController extends Controller
 	public function actionUpdate($id)
 	{
 		$pedidosproveedores=$this->loadModel($id); //CARGAR MODELO 
+                
+                if($pedidosproveedores->estado!='activo'){
+                        throw new CHttpException(99,'El pedido # '.$id.' no esta Activo. No puede modificarlo');
+                }
+                
                 $pedidosproveedoresdocumentos=new Pedidosproveedoresdocumentos();//CARGAR MODELO 
                 
                 $criteria=new CDbCriteria;
@@ -194,10 +200,49 @@ class PedidosproveedoresController extends Controller
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
 	 */
+	public function actionChangestate($id)
+	{
+		$pedidosproveedores=$this->loadModel($id); //CARGAR MODELO 
+
+		if(isset($_POST['Pedidosproveedores']))//CONFIRMAR SI HAY FORMULARIOS PARA SALVAR
+		{
+			$pedidosproveedores->attributes=$_POST['Pedidosproveedores']; // CARGAR ATRIBUTOS OBTENIDOS EN LOS FORMULARIOS
+                        $pedidosproveedores->usuarioaprobacion = Yii::app()->user->id;
+                        $pedidosproveedores->fechaaprobacion=date("Y-m-d h:i:s");
+                        
+                        if($pedidosproveedores->validate()){ //VALIDAR CAMPOS DE EL MODELO
+                            $transaction = Yii::app()->db->beginTransaction(); // INICIAR TRANSACCION
+                            try{
+                                    $pedidosproveedores->save(); //GUARDAR ATRIBUTOS EN EL MODELO
+                                    $transaction->commit(); //GUARDAR TRANSACCION
+                                    $this->redirect(array('view','id'=>$pedidosproveedores->idpedidosproveedores)); //REDIRIGIR AL DETALLE DEL ITEM NUEVO
+                                
+                                }catch (Exception $e){
+                                    $transaction->rollBack(); //NO GUARDAR TRANSACCION
+                                    $e->getMessage(); //DESPLEGAR MENSAGE DE ERROR
+
+
+                                }
+                            
+                        }                        
+				
+		}
+
+		$this->render('changestate',array(
+			'pedidosproveedores'=>$pedidosproveedores,
+                        
+		)); 
+	}
+        
+        
+        /**
+	 * Updates a particular model.
+	 * If update is successful, the browser will be redirected to the 'view' page.
+	 * @param integer $id the ID of the model to be updated
+	 */
 	public function actionAdditems($id)
 	{
 		$pedidosproveedores=$this->loadModel($id); //CARGAR MODELO 
-                
                 
 
 		if(isset($_POST['Pedidosproveedores']))//CONFIRMAR SI HAY FORMULARIOS PARA SALVAR
@@ -232,9 +277,9 @@ class PedidosproveedoresController extends Controller
 	/**
 	 * Lists all models.
 	 */
-	public function actionIndex()
+	public function actionIndex($estado='activo')
 	{
-		$dataProvider=new CActiveDataProvider('Pedidosproveedores');
+		$dataProvider=new CActiveDataProvider('Pedidosproveedores',array('criteria'=>array('condition'=>"estado='".$estado."'")));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));

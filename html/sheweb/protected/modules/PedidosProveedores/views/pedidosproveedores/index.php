@@ -7,12 +7,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Crear Pedidos a Proveedores', 'url'=>array('create')),
-	array('label'=>'Administrar Pedidos a Proveedores', 'url'=>array('admin')),
+	array('label'=>'Crear Pedido', 'url'=>array('create')),
+	array('label'=>'Administrar Pedidos', 'url'=>array('admin')),
 );
 ?>
 <?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
-<h1>Pedidosproveedores</h1>
+<h1>Pedidos a proveedores</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

@@ -29,6 +29,7 @@ return array(
 		),
                 'Parametros',
                 'PedidosProveedores',
+                'EntradasAlmacen',
                 'userGroups'=>array( 'accessCode'=>'poiumnbv', 'salt'=>'lkjhyuio', ),
 		
 	),

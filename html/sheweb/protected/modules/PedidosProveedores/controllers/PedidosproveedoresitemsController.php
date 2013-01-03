@@ -63,8 +63,13 @@ class PedidosproveedoresitemsController extends Controller
 	public function actionCreate()
 	{
 		$model=new Pedidosproveedoresitems;
+                
                 if(isset($_REQUEST['pedidosproveedores_idpedidosproveedores'])){
                     $pedidosproveedores_idpedidosproveedores=$_REQUEST['pedidosproveedores_idpedidosproveedores'];
+                    $pedido = $this->loadPedidosproveedoresModel($pedidosproveedores_idpedidosproveedores);
+                    if($pedido->estado!='activo'){
+                        throw new CHttpException(99,'El pedido # '.$pedidosproveedores_idpedidosproveedores.' no esta Activo. No puede agregar mas items');
+                    }
                 }else{
                     $pedidosproveedores_idpedidosproveedores=false;
                 }
@@ -104,7 +109,11 @@ class PedidosproveedoresitemsController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-                 
+                
+                if($model->pedidosproveedoresIdpedidosproveedores->estado!="activo"){
+                    throw new CHttpException(99,'El pedido # '.$model->pedidosproveedoresIdpedidosproveedores->idpedidosproveedores.' no esta Activo. No puede agregar mas items');
+                }
+                
 		if(isset($_POST['Pedidosproveedoresitems']))
 		{
 			$model->attributes=$_POST['Pedidosproveedoresitems'];
@@ -173,6 +182,19 @@ class PedidosproveedoresitemsController extends Controller
 		return $model;
 	}
 
+        /**
+	 * Returns the data model based on the primary key given in the GET variable.
+	 * If the data model is not found, an HTTP exception will be raised.
+	 * @param integer the ID of the model to be loaded
+	 */
+	public function loadPedidosproveedoresModel($id)
+	{
+		$model=Pedidosproveedores::model()->findByPk($id);
+		if($model===null)
+			throw new CHttpException(404,'The requested page does not exist.');
+		return $model;
+	}
+        
 	/**
 	 * Performs the AJAX validation.
 	 * @param CModel the model to be validated
