@@ -36,7 +36,7 @@ class PedidosproveedoresController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','changestate'),
+				'actions'=>array('admin','delete','changestate','printorder','dinamicmoneda'),
 				'users'=>array('admin','ogaleano'),
 			),
                         
@@ -228,11 +228,77 @@ class PedidosproveedoresController extends Controller
 				
 		}
 
-		$this->render('changestate',array(
+                if(($pedidosproveedores->estado=='activo')||($pedidosproveedores->estado=='aprobado')||($pedidosproveedores->estado=='cerrado')){
+                    $this->render('changestate',array(
 			'pedidosproveedores'=>$pedidosproveedores,
-                        
-		)); 
+
+                    )); 
+                }else{
+                    $this->redirect(array('view','id'=>$pedidosproveedores->idpedidosproveedores)); //REDIRIGIR AL DETALLE DEL ITEM
+                }
+                
+		
 	}
+        
+        
+        public function actionDinamicmoneda(){
+            $data=Moneda::model()->findAll('idmoneda in (select distinct t.moneda_idmoneda from terceros_has_moneda as t where t.terceros_idterceros:=terceros_idterceros) ', 
+                  array(':terceros_idterceros'=>(int) $_POST['idproveedor']));
+ 
+            $data=CHtml::listData($data,'idmoneda','nombre');
+            foreach($data as $value=>$name)
+            {
+                echo CHtml::tag('option',
+                           array('value'=>$value),CHtml::encode($name),true);
+            }
+        }
+
+
+        
+        /**
+	 * Updates a particular model.
+	 * If update is successful, the browser will be redirected to the 'view' page.
+	 * @param integer $id the ID of the model to be updated
+	 */
+	public function actionPrintorder($id)
+	{
+		$pedidosproveedores=$this->loadModel($id); //CARGAR MODELO 
+
+		if(isset($_POST['Pedidosproveedores']))//CONFIRMAR SI HAY FORMULARIOS PARA SALVAR
+		{
+			$pedidosproveedores->attributes=$_POST['Pedidosproveedores']; // CARGAR ATRIBUTOS OBTENIDOS EN LOS FORMULARIOS
+                        $pedidosproveedores->usuarioaprobacion = Yii::app()->user->id;
+                        
+                        if($pedidosproveedores->validate()){ //VALIDAR CAMPOS DE EL MODELO
+                            $transaction = Yii::app()->db->beginTransaction(); // INICIAR TRANSACCION
+                            try{
+                                    $pedidosproveedores->save(); //GUARDAR ATRIBUTOS EN EL MODELO
+                                    $transaction->commit(); //GUARDAR TRANSACCION
+                                    $this->redirect(array('view','id'=>$pedidosproveedores->idpedidosproveedores)); //REDIRIGIR AL DETALLE DEL ITEM NUEVO
+                                
+                                }catch (Exception $e){
+                                    $transaction->rollBack(); //NO GUARDAR TRANSACCION
+                                    $e->getMessage(); //DESPLEGAR MENSAGE DE ERROR
+
+
+                                }
+                            
+                        }                        
+				
+		}
+
+                if($pedidosproveedores->estado=='aprobado'){
+                    $this->render('printorder',array(
+			'pedidosproveedores'=>$pedidosproveedores,
+
+                    )); 
+                }else{
+                    $this->redirect(array('view','id'=>$pedidosproveedores->idpedidosproveedores)); //REDIRIGIR AL DETALLE DEL ITEM
+                }
+                
+		
+	}
+        
         
         
         /**

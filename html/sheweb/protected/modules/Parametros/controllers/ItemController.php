@@ -81,6 +81,7 @@ class ItemController extends Controller
                 $item_has_categoria = new ItemHasCategoria;
                 $item_has_autor = new ItemHasAutor;
                 $item_has_tipoformato = new ItemHasTipoformato;
+                $item_has_terceros = new ItemHasTerceros;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -140,6 +141,14 @@ class ItemController extends Controller
                                    
                             }
                             
+                            //relacionar con proveedor
+                            $item_has_terceros->attributes = $_POST['ItemHasTerceros'];
+                            $item_has_terceros->item_iditem = $item->iditem;
+                            if (!$item_has_terceros->save()){
+                                print_r($item_has_terceros->errors);
+                                yii::app()->end();
+                            }
+                            
                             $this->redirect(array('view','id'=>$item->iditem));
                             
                             
@@ -151,7 +160,8 @@ class ItemController extends Controller
 			'item'=>$item,
                         'item_has_categoria'=>$item_has_categoria,
                         'item_has_autor'=>$item_has_autor,
-                        'item_has_tipoformato'=>$item_has_tipoformato
+                        'item_has_tipoformato'=>$item_has_tipoformato,
+                        'item_has_terceros'=>$item_has_terceros,
 		));
 	}
 
@@ -166,7 +176,7 @@ class ItemController extends Controller
                 $item_has_categoria = new ItemHasCategoria;
                 $item_has_autor = new ItemHasAutor;
                 $item_has_tipoformato = new ItemHasTipoformato;
-
+                $item_has_terceros = new ItemHasTerceros;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -228,6 +238,15 @@ class ItemController extends Controller
                                    
                             }
                             
+                            //Actualizar proveedor
+                            $item_has_terceros->deleteAllByAttributes(array('item_iditem'=>$item->iditem));
+                            $item_has_terceros->attributes = $_POST['ItemHasTerceros'];
+                            $item_has_terceros->item_iditem = $item->iditem;
+                            if (!$item_has_terceros->save()){
+                                print_r($item_has_terceros->errors);
+                                yii::app()->end();
+                            }
+                            
                             $this->redirect(array('view','id'=>$item->iditem));
                             
                             
@@ -277,11 +296,16 @@ class ItemController extends Controller
                     $row=null;
                 }
                 
+                $item_has_terceros = ItemHasTerceros::model()->findByAttributes(array('item_iditem'=>$id));
+                if(!$item_has_terceros){
+                    $item_has_terceros = new ItemHasTerceros;
+                }
 		$this->render('update',array(
 			'item'=>$item,
                         'item_has_categoria'=>$cat,
                         'item_has_autor'=>$aut,
-                        'item_has_tipoformato'=>$form
+                        'item_has_tipoformato'=>$form,
+                        'item_has_terceros'=>$item_has_terceros,
 		));
                 
 	}

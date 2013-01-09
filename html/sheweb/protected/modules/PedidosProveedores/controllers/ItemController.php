@@ -56,10 +56,13 @@ class ItemController extends Controller
 		));
 	}
         
-        public function actionGetItem(){
+        public function actionGetItem($idproveedor){
           
 	  if (!empty($_GET['term'])) {
-		$sql = 'SELECT iditem as id, concat ("[",iditem,"] ",nombre ) as value FROM item WHERE nombre LIKE :qterm ';
+		$sql = 'SELECT i.iditem as id, concat ("[", i.iditem, "] ", i.nombre ) as value FROM item as i 
+                        inner join item_has_terceros as iht on iht.item_iditem=i.iditem 
+                            and iht.terceros_idterceros='.$idproveedor.'
+                        WHERE i.nombre LIKE :qterm ';
 		
 		$command = Yii::app()->db->createCommand($sql);
 		$qterm = '%'.$_GET['term'].'%';

@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 <?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
-<h1>Update Terceros <?php echo $model->idterceros; ?></h1>
+<h1>Actualizar Tercero <?php echo $model->idterceros; ?></h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model,'terceros_has_tiposterceros'=>$terceros_has_tiposterceros,)); ?>
+<?php echo $this->renderPartial('_form', array('model'=>$model,'terceros_has_tiposterceros'=>$terceros_has_tiposterceros,'terceros_has_moneda'=>$terceros_has_moneda,)); ?>

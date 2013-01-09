@@ -167,7 +167,7 @@ class PedidosproveedoresentradasalmacenController extends Controller
 	/**
 	 * Lists all models.
 	 */
-	public function actionIndex($estado='aprobado')
+	public function actionIndex($estado='impreso')
 	{
 		$dataProvider=new CActiveDataProvider('ViewPedidosproveedores',array('criteria'=>array('condition'=>"estado='".$estado."'")));
 		$this->render('index',array(

@@ -22,6 +22,7 @@
                     if(isset($pedidosproveedores_idpedidosproveedores)){
                         if($pedidosproveedores_idpedidosproveedores!=false){
                             echo $form->hiddenField($model,'pedidosproveedores_idpedidosproveedores',array('value'=>$pedidosproveedores_idpedidosproveedores));
+                            $pedido = Pedidosproveedores::model()->findByPk($pedidosproveedores_idpedidosproveedores);
                             $campo = false;
                         }
                     }
@@ -44,7 +45,7 @@
                     'name'=>'Pedidosproveedoresitems[item_iditem]',
                     'value'=>$model->item_iditem,
             //	'source'=>$people, // <- use this for pre-set array of values
-                    'source'=>Yii::app()->createUrl($this->module->id."/item/getItem"),// <- path to controller which returns dynamic data
+                    'source'=>Yii::app()->createUrl($this->module->id."/item/getItem/idproveedor/" . $pedido->idproveedor),// <- path to controller which returns dynamic data
                     // additional javascript options for the autocomplete plugin
                     'options'=>array(
                             'minLength'=>'1', // min chars to start search

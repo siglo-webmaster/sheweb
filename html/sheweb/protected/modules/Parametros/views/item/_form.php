@@ -81,6 +81,15 @@
 		<?php echo $form->textField($item,'nombre',array('size'=>60,'maxlength'=>512)); ?>
 		<?php echo $form->error($item,'nombre'); ?>
 	</div>
+        
+        <div class="row">
+		<?php echo $form->labelEx($item,'Proveedor'); ?>
+                <?php 
+                    $select = CHtml::listData(ViewProveedores::model()->findAll(), 'idterceros', 'nombre');
+                    echo $form->dropDownList($item_has_terceros,'terceros_idterceros',$select);
+                ?>
+		
+	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($item,'isbn'); ?>

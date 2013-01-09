@@ -21,5 +21,7 @@ $this->menu=array(
 <?php echo $this->renderPartial('_form', array('item'=>$item,
                                                 'item_has_categoria'=>$item_has_categoria,
                                                 'item_has_autor'=>$item_has_autor,
-                                                'item_has_tipoformato'=>$item_has_tipoformato)); 
+                                                'item_has_tipoformato'=>$item_has_tipoformato,
+                                                'item_has_terceros'=>$item_has_terceros,
+    )); 
 ?>

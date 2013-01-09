@@ -3,19 +3,8 @@
 
 ?>
 <?php
-      if($data->estado=='aprobado'){
-          $this->widget('ext.mPrint.mPrint', array(
-            'title' => 'Siglo del Hombre Editores S.A.',        //the title of the document. Defaults to the HTML title
-            'tooltip' => 'Imprimir',    //tooltip message of the print icon. Defaults to 'print'
-            'text' => NULL, //text which will appear beside the print icon. Defaults to NULL
-            'element' => '#pedido',      //the element to be printed.
-            'exceptions' => array(     //the element/s which will be ignored
-                '.summary',
-                '.search-form',
-                '#ver-opciones',
-            ),
-            'publishCss' => true       //publish the CSS for the whole page?
-        ));
+      if($data->estado=='impreso'){
+          
       }
        
  
@@ -49,7 +38,57 @@
          ?>
         <?php echo $separador; ?>
         <div id='ver-opciones'>
-        <?php echo CHtml::link("Ver opciones ", array('view', 'id'=>$data->idpedidosproveedores)); ?>
+            <table>
+                <tr>
+                    <?php switch($data->estado){
+                               case 'activo':{
+                                   //AGREGAR NUEVO ITEM
+                                   echo "<td>";
+                                   echo CHtml::link("Agregar nuevo item",Yii::app()->createUrl($this->module->id."/pedidosproveedoresitems/create", array("pedidosproveedores_idpedidosproveedores"=>$data->idpedidosproveedores)));
+                                   echo "</td>";
+                                   
+                                   //CAMBIAR ESTADO
+                                   echo "<td>";
+                                   echo CHtml::link("Cambiar estado",Yii::app()->createUrl($this->module->id."/pedidosproveedores/changestate", array("id"=>$data->idpedidosproveedores)));
+                                   echo "</td>";
+                                   
+                                   break;
+                               }
+                               
+                               case 'aprobado':{
+                                   echo "<td>";
+                                   echo CHtml::link("Generar Impresion de Orden",Yii::app()->createUrl($this->module->id."/pedidosproveedores/printorder", array("id"=>$data->idpedidosproveedores)));
+                                   echo "</td>";
+                                    //CAMBIAR ESTADO
+                                   echo "<td>";
+                                   echo CHtml::link("Cambiar estado",Yii::app()->createUrl($this->module->id."/pedidosproveedores/changestate", array("id"=>$data->idpedidosproveedores)));
+                                   echo "</td>";
+                                   break;
+                               }
+                               
+                               case 'impreso':{
+                                   echo "<td>";
+                                   $this->widget('ext.mPrint.mPrint', array(
+                                        'title' => 'Siglo del Hombre Editores S.A.',        //the title of the document. Defaults to the HTML title
+                                        'tooltip' => 'Imprimir',    //tooltip message of the print icon. Defaults to 'print'
+                                        'text' => NULL, //text which will appear beside the print icon. Defaults to NULL
+                                        'element' => '#pedido',      //the element to be printed.
+                                        'exceptions' => array(     //the element/s which will be ignored
+                                            '.summary',
+                                            '.search-form',
+                                            '#ver-opciones',
+                                        ),
+                                        'publishCss' => true       //publish the CSS for the whole page?
+                                    ));
+                                   echo "</td>";
+                                   break;
+                               }
+                           }
+                           
+                           //echo CHtml::link("Ver opciones ", array('view', 'id'=>$data->idpedidosproveedores)); ?></td>
+                </tr>
+            </table>
+        
         </div>
         
 	<br />
@@ -74,14 +113,7 @@
 	<?php echo CHtml::encode($data->fechaaprobacion); ?>
 	<?php echo $separador; ?>
 
-        <b>
-        <?php
-            if($data->estado=='activo'){
-                echo CHtml::link("Agregar nuevo item",Yii::app()->createUrl($this->module->id."/pedidosproveedoresitems/create", array("pedidosproveedores_idpedidosproveedores"=>$data->idpedidosproveedores)));
-            }
-             
-        ?>
-        </b>
+        
 	<br />
         
         

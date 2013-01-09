@@ -29,6 +29,22 @@
                     ));
             ?>
         </did>
+        
+        <did class="row">
+            <?php
+                 echo "Moneda: ";  
+                $data= CHtml::listData(Moneda::model()->findAll(), 'idmoneda', 'nombre');
+                $this->widget('ext.EchMultiSelect.EchMultiSelect', array(
+                        'name' => 'terceros_has_moneda[]',    
+                        'data' => $data,
+                        'value'=>$terceros_has_moneda,
+                        'dropDownHtmlOptions'=> array(
+                            'style'=>'width:100px;',
+                        ),
+                    ));
+            ?>
+        </did>
+        
         <hr class="separador_blanco">
 	<div class="row">
 		<?php echo $form->labelEx($model,'tiposidentificacion_idtiposidentificacion'); ?>
@@ -92,16 +108,18 @@
 		<?php echo $form->error($model,'direccion'); ?>
 	</div>
         
-        
+        <hr class='separador_blanco'>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'estado'); ?>
 		<?php echo $form->dropDownList($model,'estado',array('activo'=>'activo','inactivo'=>'inactivo')); ?>
 		<?php echo $form->error($model,'estado'); ?>
 	</div>
-
+        
+        <hr class='separador_blanco'>
+        
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -15,7 +15,7 @@ $this->menu=array(
 
 
 <?php
-        if($estado=='aprobado'){
+        if($estado=='impreso'){
             echo "<h1>Pedidos a Proveedores pendientes de entrada</h1>";
             $columnas= array(
                   'idpedidosproveedores',

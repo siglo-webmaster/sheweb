@@ -24,7 +24,16 @@
 		<?php 
                 
                     $select = CHtml::listData(Terceros::model()->findAll("idterceros in (select distinct terceros_idterceros from terceros_has_tiposterceros where tiposterceros_idtiposterceros=2) and estado='activo'"), 'idterceros', 'nombre');
-                    echo $form->dropDownList($pedidosproveedores,'idproveedor',$select);
+                    echo $form->dropDownList($pedidosproveedores,'idproveedor',$select,
+                        array(
+                         'ajax'=>   array(
+                                'type'=>'POST',
+                                'url'=>CController::createUrl('PedidosProveedores/pedidosproveedores/dinamicmoneda'),
+                                'update'=>'moneda_idmoneda'
+                         ),   
+                        )
+                    );
+                    
                 ?>
 		<?php echo $form->error($pedidosproveedores,'idproveedor'); ?>
 	</div>
@@ -34,6 +43,7 @@
 		<?php 
                 
                     $select = CHtml::listData(Moneda::model()->findAll(), 'idmoneda', 'nombre');
+                    
                     echo $form->dropDownList($pedidosproveedores,'moneda_idmoneda',$select);
                 ?>
 		<?php echo $form->error($pedidosproveedores,'moneda_idmoneda'); ?>
