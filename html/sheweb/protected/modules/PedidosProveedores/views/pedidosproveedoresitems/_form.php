@@ -77,6 +77,16 @@
 		<?php echo $form->error($model,'solicitado'); ?>
 	</div>
 
+        <div class="row">
+        <?php 
+                echo "Condicion Comercial:";
+                $select = CHtml::listData(Condicioncomercial::model()->findAll(), 'idcondicioncomercial', 'nombre');
+                echo $form->dropDownList($model,'condicioncomercial_idcondicioncomercial',$select);
+        ?>
+        </div>
+        
+        <hr class="separador_blanco">
+        
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
 	</div>

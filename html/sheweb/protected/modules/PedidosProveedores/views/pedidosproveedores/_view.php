@@ -18,9 +18,14 @@
 
 	<b><h3>Pedido a proveedores #<?php echo $data->idpedidosproveedores; ?></h3></b>
 	        
-        <b><?php echo CHtml::encode($data->getAttributeLabel('ESTADO')); ?>:</b>
+        <b><?php echo CHtml::encode($data->getAttributeLabel('estado')); ?>:</b>
 	<?php echo CHtml::encode($data->estado); ?>
         <?php echo $separador; ?>
+        
+        <b><?php echo CHtml::encode($data->getAttributeLabel('tipopedidosproveedores_idtipopedidosproveedores')); ?>:</b>
+	<?php echo CHtml::encode( (isset($data->tipopedidosproveedoresIdtipopedidosproveedores->nombre))?$data->tipopedidosproveedoresIdtipopedidosproveedores->nombre : 0); ?>
+        <?php echo $separador; ?>
+        <br>
         
 	<b><?php echo CHtml::encode($data->getAttributeLabel('usuariocreacion')); ?>:</b>
 	<?php 
@@ -124,6 +129,7 @@
                 $columnas = array(
                   'nombre',
                   'solicitado',
+                  'condicioncomercial',
                   'reservado',
                   array('class' => 'CLinkColumn',
                         'header'=>'Accion',

@@ -5,8 +5,8 @@
  *
  * The followings are the available columns in table 'pedidosproveedores':
  * @property integer $idpedidosproveedores
- * @property integer $usuariocreacion
- * @property integer $usuarioaprobacion
+ * @property string $usuariocreacion
+ * @property string $usuarioaprobacion
  * @property integer $idproveedor
  * @property integer $moneda_idmoneda
  * @property string $fechacreacion
@@ -18,14 +18,16 @@
  * @property string $descripcion
  * @property string $observaciones
  * @property string $estado
+ * @property integer $tipopedidosproveedores_idtipopedidosproveedores
  *
  * The followings are the available model relations:
- * @property Pedidosprovedoresdocumentos[] $pedidosprovedoresdocumentoses
+ * @property Tipopedidosproveedores $tipopedidosproveedoresIdtipopedidosproveedores
  * @property Moneda $monedaIdmoneda
  * @property Terceros $idproveedor0
- * @property Usuarios $usuariocreacion0
- * @property Usuarios $usuarioaprobacion0
+ * @property UsergroupsUser $usuarioaprobacion0
+ * @property UsergroupsUser $usuariocreacion0
  * @property Pedidosproveedoresentradasalmacen[] $pedidosproveedoresentradasalmacens
+ * @property Pedidosproveedoresdocumentos[] $pedidosproveedoresdocumentoses
  * @property Pedidosproveedoresentradasalmacen[] $pedidosproveedoresentradasalmacens1
  * @property Pedidosproveedoresitems[] $pedidosproveedoresitems
  */
@@ -57,13 +59,14 @@ class Pedidosproveedores extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idproveedor, moneda_idmoneda', 'required'),
-			array('usuariocreacion, usuarioaprobacion, idproveedor, moneda_idmoneda', 'numerical', 'integerOnly'=>true),
+			array('idproveedor, moneda_idmoneda, tipopedidosproveedores_idtipopedidosproveedores', 'required'),
+			array('idproveedor, moneda_idmoneda, tipopedidosproveedores_idtipopedidosproveedores', 'numerical', 'integerOnly'=>true),
+			array('usuariocreacion, usuarioaprobacion', 'length', 'max'=>20),
 			array('estado', 'length', 'max'=>45),
 			array('fechacreacion, fechacierre, fechaestimada, fechaaprobacion, fechaentrada, fechaliberacion, descripcion, observaciones', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idpedidosproveedores, usuariocreacion, usuarioaprobacion, idproveedor, moneda_idmoneda, fechacreacion, fechacierre, fechaestimada, fechaaprobacion, fechaentrada, fechaliberacion, descripcion, observaciones, estado', 'safe', 'on'=>'search'),
+			array('idpedidosproveedores, usuariocreacion, usuarioaprobacion, idproveedor, moneda_idmoneda, fechacreacion, fechacierre, fechaestimada, fechaaprobacion, fechaentrada, fechaliberacion, descripcion, observaciones, estado, tipopedidosproveedores_idtipopedidosproveedores', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -75,12 +78,13 @@ class Pedidosproveedores extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'pedidosprovedoresdocumentoses' => array(self::HAS_MANY, 'Pedidosprovedoresdocumentos', 'pedidosproveedores_idpedidosproveedores'),
+			'tipopedidosproveedoresIdtipopedidosproveedores' => array(self::BELONGS_TO, 'Tipopedidosproveedores', 'tipopedidosproveedores_idtipopedidosproveedores'),
 			'monedaIdmoneda' => array(self::BELONGS_TO, 'Moneda', 'moneda_idmoneda'),
 			'idproveedor0' => array(self::BELONGS_TO, 'Terceros', 'idproveedor'),
-			'usuariocreacion0' => array(self::BELONGS_TO, 'UsergroupsUser', 'usuariocreacion'),
 			'usuarioaprobacion0' => array(self::BELONGS_TO, 'UsergroupsUser', 'usuarioaprobacion'),
+			'usuariocreacion0' => array(self::BELONGS_TO, 'UsergroupsUser', 'usuariocreacion'),
 			'pedidosproveedoresentradasalmacens' => array(self::MANY_MANY, 'Pedidosproveedoresentradasalmacen', 'pedidosproveedores_has_pedidosproveedoresentradasalmacen(idpedidosproveedores, idpedidosproveedoresentradasalmacen)'),
+			'pedidosproveedoresdocumentoses' => array(self::HAS_MANY, 'Pedidosproveedoresdocumentos', 'pedidosproveedores_idpedidosproveedores'),
 			'pedidosproveedoresentradasalmacens1' => array(self::HAS_MANY, 'Pedidosproveedoresentradasalmacen', 'pedidosproveedores_idpedidosproveedores'),
 			'pedidosproveedoresitems' => array(self::HAS_MANY, 'Pedidosproveedoresitems', 'pedidosproveedores_idpedidosproveedores'),
 		);
@@ -106,6 +110,7 @@ class Pedidosproveedores extends CActiveRecord
 			'descripcion' => 'Descripcion',
 			'observaciones' => 'Observaciones',
 			'estado' => 'Estado',
+			'tipopedidosproveedores_idtipopedidosproveedores' => 'Tipopedidosproveedores Idtipopedidosproveedores',
 		);
 	}
 
@@ -121,8 +126,8 @@ class Pedidosproveedores extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('idpedidosproveedores',$this->idpedidosproveedores);
-		$criteria->compare('usuariocreacion',$this->usuariocreacion);
-		$criteria->compare('usuarioaprobacion',$this->usuarioaprobacion);
+		$criteria->compare('usuariocreacion',$this->usuariocreacion,true);
+		$criteria->compare('usuarioaprobacion',$this->usuarioaprobacion,true);
 		$criteria->compare('idproveedor',$this->idproveedor);
 		$criteria->compare('moneda_idmoneda',$this->moneda_idmoneda);
 		$criteria->compare('fechacreacion',$this->fechacreacion,true);
@@ -134,9 +139,21 @@ class Pedidosproveedores extends CActiveRecord
 		$criteria->compare('descripcion',$this->descripcion,true);
 		$criteria->compare('observaciones',$this->observaciones,true);
 		$criteria->compare('estado',$this->estado,true);
+		$criteria->compare('tipopedidosproveedores_idtipopedidosproveedores',$this->tipopedidosproveedores_idtipopedidosproveedores);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+        
+        
+        /*LOG DE CAMBIOS*/
+        public function behaviors()
+        {
+            return array(
+                'LoggableBehavior'=>
+                    'application.extensions.auditTrail.behaviors.LoggableBehavior',
+            );
+        }
+ 
 }

@@ -39,6 +39,7 @@
                 <thead>
                     <tr>
                         <th>Item</th>
+                        <th>Tipo</th>
                         <th>Solicitado</th>
                         <th>Recibido</th>
                         <th>Recibir</th>
@@ -57,6 +58,7 @@
                             "<input type='hidden' name='idpedidosproveedoresitems_".$i."' value='".$row['idpedidosproveedoresitems']."' >".
                             "<input type='hidden' name='iditem_".$i."' value='".$row['item_iditem']."' >".
                          "</td>";
+                    echo"<td>".$row['condicioncomercial']."<input type='hidden' size='4' name='idcondicioncomercial_".$i."' value='".$row['idcondicioncomercial']."'></input></td>";
                     echo"<td>".$row['solicitado']."</td>";
                     echo"<td>".$row['recibido']."</td>";
                     echo"<td><input type='text' size='4' name='recibir_".$i."'></input></td>";

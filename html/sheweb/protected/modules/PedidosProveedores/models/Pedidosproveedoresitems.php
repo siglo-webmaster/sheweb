@@ -10,11 +10,13 @@
  * @property integer $solicitado
  * @property integer $recibido
  * @property string $estado
+ * @property integer $condicioncomercial_idcondicioncomercial
  *
  * The followings are the available model relations:
+ * @property Pedidosproveedoresitemdetallereserva[] $pedidosproveedoresitemdetallereservas
+ * @property Condicioncomercial $condicioncomercialIdcondicioncomercial
  * @property Item $itemIditem
  * @property Pedidosproveedores $pedidosproveedoresIdpedidosproveedores
- * @property Pedidosproveedoresitemsdetalle[] $pedidosproveedoresitemsdetalles
  */
 class Pedidosproveedoresitems extends CActiveRecord
 {
@@ -44,12 +46,12 @@ class Pedidosproveedoresitems extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('pedidosproveedores_idpedidosproveedores, item_iditem', 'required'),
-			array('pedidosproveedores_idpedidosproveedores, item_iditem, solicitado, recibido', 'numerical', 'integerOnly'=>true),
+			array('pedidosproveedores_idpedidosproveedores, item_iditem, condicioncomercial_idcondicioncomercial', 'required'),
+			array('pedidosproveedores_idpedidosproveedores, item_iditem, solicitado, recibido, condicioncomercial_idcondicioncomercial', 'numerical', 'integerOnly'=>true),
 			array('estado', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idpedidosproveedoresitems, pedidosproveedores_idpedidosproveedores, item_iditem, solicitado, recibido, estado', 'safe', 'on'=>'search'),
+			array('idpedidosproveedoresitems, pedidosproveedores_idpedidosproveedores, item_iditem, solicitado, recibido, estado, condicioncomercial_idcondicioncomercial', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,9 +63,10 @@ class Pedidosproveedoresitems extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'pedidosproveedoresitemdetallereservas' => array(self::HAS_MANY, 'Pedidosproveedoresitemdetallereserva', 'pedidosproveedoresitems_idpedidosproveedoresitems'),
+			'condicioncomercialIdcondicioncomercial' => array(self::BELONGS_TO, 'Condicioncomercial', 'condicioncomercial_idcondicioncomercial'),
 			'itemIditem' => array(self::BELONGS_TO, 'Item', 'item_iditem'),
 			'pedidosproveedoresIdpedidosproveedores' => array(self::BELONGS_TO, 'Pedidosproveedores', 'pedidosproveedores_idpedidosproveedores'),
-			'pedidosproveedoresitemsdetalles' => array(self::HAS_MANY, 'Pedidosproveedoresitemsdetalle', 'pedidosproveedoresitems_idpedidosproveedoresitems'),
 		);
 	}
 
@@ -79,6 +82,7 @@ class Pedidosproveedoresitems extends CActiveRecord
 			'solicitado' => 'Solicitado',
 			'recibido' => 'Recibido',
 			'estado' => 'Estado',
+			'condicioncomercial_idcondicioncomercial' => 'Condicioncomercial Idcondicioncomercial',
 		);
 	}
 
@@ -99,9 +103,21 @@ class Pedidosproveedoresitems extends CActiveRecord
 		$criteria->compare('solicitado',$this->solicitado);
 		$criteria->compare('recibido',$this->recibido);
 		$criteria->compare('estado',$this->estado,true);
+		$criteria->compare('condicioncomercial_idcondicioncomercial',$this->condicioncomercial_idcondicioncomercial);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+        
+        
+        /*LOG DE CAMBIOS*/
+        public function behaviors()
+        {
+            return array(
+                'LoggableBehavior'=>
+                    'application.extensions.auditTrail.behaviors.LoggableBehavior',
+            );
+        }
+ 
 }

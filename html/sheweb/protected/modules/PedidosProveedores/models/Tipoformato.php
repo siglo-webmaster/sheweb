@@ -86,4 +86,13 @@ class Tipoformato extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+        
+        /*LOG DE CAMBIOS*/
+        public function behaviors()
+        {
+            return array(
+                'LoggableBehavior'=>
+                    'application.extensions.auditTrail.behaviors.LoggableBehavior',
+            );
+        }
 }

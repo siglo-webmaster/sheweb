@@ -49,6 +49,19 @@
 		<?php echo $form->error($pedidosproveedores,'moneda_idmoneda'); ?>
 	</div>
         
+        <div class="row">
+		<?php echo $form->labelEx($pedidosproveedores,'tipopedidosproveedores_idtipopedidosproveedores'); ?>
+		<?php 
+                
+                    $select = CHtml::listData(Tipopedidosproveedores::model()->findAll(), 'idtipopedidosproveedores', 'nombre');
+                    
+                    echo $form->dropDownList($pedidosproveedores,'tipopedidosproveedores_idtipopedidosproveedores',$select);
+                ?>
+		<?php echo $form->error($pedidosproveedores,'tipopedidosproveedores_idtipopedidosproveedores'); ?>
+	</div>
+        
+        <hr class='separador_blanco'>
+        
          <div class="row">
         <?php echo $form->labelEx($pedidosproveedores,'fechacierre'); ?>
         <?php

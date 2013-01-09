@@ -129,6 +129,34 @@
                                     
                                 ),//FIN TIPO->Tipos de terceros
                              
+                              //TIPO->Tipos condicion comerciales
+                                array("url"=>array("route"=>"/Parametros/condicioncomercial/admin"),
+                                       "label"=>"Condicion comercial",
+                                            array(
+                                                "url"=>array("route"=>"/Parametros/condicioncomercial/create"),
+                                                  "label"=>"Nueva condicion",
+                                              ),
+                                             array(
+                                                  "url"=>array("route"=>"/Parametros/condicioncomercial/index"),
+                                                  "label"=>"Listar condiciones",
+                                              )
+                                    
+                                ),//FIN TIPO->Tipos condicion comerciales
+                             
+                             //TIPO->Tipos pedidosproveedores
+                                array("url"=>array("route"=>"/Parametros/tipopedidosproveedores/admin"),
+                                       "label"=>"Tipos pedidos",
+                                            array(
+                                                "url"=>array("route"=>"/Parametros/tipopedidosproveedores/create"),
+                                                  "label"=>"Nueva tipopedidos",
+                                              ),
+                                             array(
+                                                  "url"=>array("route"=>"/Parametros/tipopedidosproveedores/index"),
+                                                  "label"=>"Listar tipopedidos",
+                                              )
+                                    
+                                ),//FIN TIPO->Tipos pedidosproveedores
+                             
                          ),//FIN TIPO
                          //ITEMS
                          array(

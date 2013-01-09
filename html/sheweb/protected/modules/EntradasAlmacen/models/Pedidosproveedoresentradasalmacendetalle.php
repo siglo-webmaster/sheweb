@@ -8,8 +8,10 @@
  * @property integer $idpedidosproveedoresentradasalmacen
  * @property integer $item_iditem
  * @property integer $cantidad
+ * @property integer $condicioncomercial_idcondicioncomercial
  *
  * The followings are the available model relations:
+ * @property Condicioncomercial $condicioncomercialIdcondicioncomercial
  * @property Item $itemIditem
  * @property Pedidosproveedoresentradasalmacen $idpedidosproveedoresentradasalmacen0
  */
@@ -41,11 +43,11 @@ class Pedidosproveedoresentradasalmacendetalle extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idpedidosproveedoresentradasalmacen, item_iditem', 'required'),
-			array('idpedidosproveedoresentradasalmacen, item_iditem, cantidad', 'numerical', 'integerOnly'=>true),
+			array('idpedidosproveedoresentradasalmacen, item_iditem, condicioncomercial_idcondicioncomercial', 'required'),
+			array('idpedidosproveedoresentradasalmacen, item_iditem, cantidad, condicioncomercial_idcondicioncomercial', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idpedidosproveedoresentradasalmacendetalle, idpedidosproveedoresentradasalmacen, item_iditem, cantidad', 'safe', 'on'=>'search'),
+			array('idpedidosproveedoresentradasalmacendetalle, idpedidosproveedoresentradasalmacen, item_iditem, cantidad, condicioncomercial_idcondicioncomercial', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -57,6 +59,7 @@ class Pedidosproveedoresentradasalmacendetalle extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'condicioncomercialIdcondicioncomercial' => array(self::BELONGS_TO, 'Condicioncomercial', 'condicioncomercial_idcondicioncomercial'),
 			'itemIditem' => array(self::BELONGS_TO, 'Item', 'item_iditem'),
 			'idpedidosproveedoresentradasalmacen0' => array(self::BELONGS_TO, 'Pedidosproveedoresentradasalmacen', 'idpedidosproveedoresentradasalmacen'),
 		);
@@ -72,6 +75,7 @@ class Pedidosproveedoresentradasalmacendetalle extends CActiveRecord
 			'idpedidosproveedoresentradasalmacen' => 'Idpedidosproveedoresentradasalmacen',
 			'item_iditem' => 'Item Iditem',
 			'cantidad' => 'Cantidad',
+			'condicioncomercial_idcondicioncomercial' => 'Condicioncomercial Idcondicioncomercial',
 		);
 	}
 
@@ -90,9 +94,21 @@ class Pedidosproveedoresentradasalmacendetalle extends CActiveRecord
 		$criteria->compare('idpedidosproveedoresentradasalmacen',$this->idpedidosproveedoresentradasalmacen);
 		$criteria->compare('item_iditem',$this->item_iditem);
 		$criteria->compare('cantidad',$this->cantidad);
+		$criteria->compare('condicioncomercial_idcondicioncomercial',$this->condicioncomercial_idcondicioncomercial);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+        
+        
+        /*LOG DE CAMBIOS*/
+        public function behaviors()
+        {
+            return array(
+                'LoggableBehavior'=>
+                    'application.extensions.auditTrail.behaviors.LoggableBehavior',
+            );
+        }
+ 
 }

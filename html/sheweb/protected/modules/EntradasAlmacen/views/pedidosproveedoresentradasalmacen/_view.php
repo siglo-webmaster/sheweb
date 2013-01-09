@@ -17,6 +17,7 @@
         <thead>
             <th>C&oacute;digo</th>
             <th>Nombre</th>
+            <th>Tipo</th>
             <th>Cantidad</th>
         </thead>
         <tbody>
@@ -26,6 +27,7 @@
             echo "<tr>";
             echo "<td>".$row['item_iditem']."</td>";
             echo "<td>".$row['nombre']."</td>";
+            echo "<td>".$row['condicioncomercial']."</td>";
             echo "<td>".$row['cantidad']."</td>";
             echo "</tr>";
         }

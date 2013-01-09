@@ -36,6 +36,7 @@
                  'columns' => array(
                   'nombre',
                   'solicitado',
+                  'condicioncomercial',
                   'reservado',
                   array('class' => 'CLinkColumn',
                         'header'=>'Accion',

@@ -20,6 +20,7 @@ $this->menu=array(
             $columnas= array(
                   'idpedidosproveedores',
                   'nombreproveedor',
+                  'tipopedidosproveedores',
                   'fechaestimada',
                   'descripcion',
                   array('class' => 'CLinkColumn',
@@ -33,6 +34,7 @@ $this->menu=array(
             $columnas = array(
                   'idpedidosproveedores',
                   'nombreproveedor',
+                  'tipopedidosproveedores',
                   'fechaestimada',
                   'descripcion',
                   'estado');

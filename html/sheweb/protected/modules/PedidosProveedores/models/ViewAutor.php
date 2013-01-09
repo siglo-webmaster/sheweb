@@ -84,4 +84,6 @@ class ViewAutor extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+        
+
 }

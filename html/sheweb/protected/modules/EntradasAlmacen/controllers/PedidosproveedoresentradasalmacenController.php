@@ -80,6 +80,7 @@ class PedidosproveedoresentradasalmacenController extends Controller
                                         $arreglo=array(
                                                         'idpedidosproveedoresentradasalmacen'=>$model->idpedidosproveedoresentradasalmacen,
                                                         'item_iditem'=>$_POST['iditem_'.$i],
+                                                        'condicioncomercial_idcondicioncomercial'=>$_POST['idcondicioncomercial_'.$i],
                                                         'cantidad'=>$_POST['recibir_'.$i]);
                                         $detalle = new Pedidosproveedoresentradasalmacendetalle;
                                         $detalle->attributes=$arreglo;
