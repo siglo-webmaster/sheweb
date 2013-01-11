@@ -18,8 +18,15 @@ $this->menu=array(
 ?>
 
 <?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
-<h1>Pedido a proveedores #<?php echo $model->idpedidosproveedores; ?></h1>
 
+
+
+<h1>Pedido a proveedores #<?php echo $model->idpedidosproveedores; ?></h1>
+<?php
+    if(isset($error)){
+        echo "<h3 style='color:red;'>".$error."</h3>";
+    }
+?>
 <?php
             $model->idproveedor0->nombre;
         ?>

@@ -6,14 +6,16 @@
  * The followings are the available columns in table 'pedidosproveedoresitemdetallereserva':
  * @property integer $idpedidosproveedoresitemdetallereserva
  * @property integer $pedidosproveedoresitems_idpedidosproveedoresitems
- * @property integer $usuarios_idusuarios
  * @property integer $bodega_idbodega
+ * @property integer $proyectosespeciales_idproyectosespeciales
+ * @property string $usuarios_idusuarios
  * @property integer $reservado
  *
  * The followings are the available model relations:
+ * @property Proyectosespeciales $proyectosespecialesIdproyectosespeciales
  * @property Bodega $bodegaIdbodega
+ * @property UsergroupsUser $usuariosIdusuarios
  * @property Pedidosproveedoresitems $pedidosproveedoresitemsIdpedidosproveedoresitems
- * @property Usuarios $usuariosIdusuarios
  */
 class Pedidosproveedoresitemdetallereserva extends CActiveRecord
 {
@@ -43,11 +45,12 @@ class Pedidosproveedoresitemdetallereserva extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('pedidosproveedoresitems_idpedidosproveedoresitems, usuarios_idusuarios, bodega_idbodega', 'required'),
-			array('pedidosproveedoresitems_idpedidosproveedoresitems, usuarios_idusuarios, bodega_idbodega, reservado', 'numerical', 'integerOnly'=>true),
+			array('pedidosproveedoresitems_idpedidosproveedoresitems, bodega_idbodega', 'required'),
+			array('pedidosproveedoresitems_idpedidosproveedoresitems, bodega_idbodega, proyectosespeciales_idproyectosespeciales, reservado', 'numerical', 'integerOnly'=>true),
+			array('usuarios_idusuarios', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idpedidosproveedoresitemdetallereserva, pedidosproveedoresitems_idpedidosproveedoresitems, usuarios_idusuarios, bodega_idbodega, reservado', 'safe', 'on'=>'search'),
+			array('idpedidosproveedoresitemdetallereserva, pedidosproveedoresitems_idpedidosproveedoresitems, bodega_idbodega, proyectosespeciales_idproyectosespeciales, usuarios_idusuarios, reservado', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,9 +62,10 @@ class Pedidosproveedoresitemdetallereserva extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'proyectosespecialesIdproyectosespeciales' => array(self::BELONGS_TO, 'Proyectosespeciales', 'proyectosespeciales_idproyectosespeciales'),
 			'bodegaIdbodega' => array(self::BELONGS_TO, 'Bodega', 'bodega_idbodega'),
+			'usuariosIdusuarios' => array(self::BELONGS_TO, 'UsergroupsUser', 'usuarios_idusuarios'),
 			'pedidosproveedoresitemsIdpedidosproveedoresitems' => array(self::BELONGS_TO, 'Pedidosproveedoresitems', 'pedidosproveedoresitems_idpedidosproveedoresitems'),
-			'usuariosIdusuarios' => array(self::BELONGS_TO, 'Usuarios', 'usuarios_idusuarios'),
 		);
 	}
 
@@ -73,8 +77,9 @@ class Pedidosproveedoresitemdetallereserva extends CActiveRecord
 		return array(
 			'idpedidosproveedoresitemdetallereserva' => 'Idpedidosproveedoresitemdetallereserva',
 			'pedidosproveedoresitems_idpedidosproveedoresitems' => 'Pedidosproveedoresitems Idpedidosproveedoresitems',
-			'usuarios_idusuarios' => 'Usuarios Idusuarios',
 			'bodega_idbodega' => 'Bodega Idbodega',
+			'proyectosespeciales_idproyectosespeciales' => 'Proyectosespeciales Idproyectosespeciales',
+			'usuarios_idusuarios' => 'Usuarios Idusuarios',
 			'reservado' => 'Reservado',
 		);
 	}
@@ -92,14 +97,16 @@ class Pedidosproveedoresitemdetallereserva extends CActiveRecord
 
 		$criteria->compare('idpedidosproveedoresitemdetallereserva',$this->idpedidosproveedoresitemdetallereserva);
 		$criteria->compare('pedidosproveedoresitems_idpedidosproveedoresitems',$this->pedidosproveedoresitems_idpedidosproveedoresitems);
-		$criteria->compare('usuarios_idusuarios',$this->usuarios_idusuarios);
 		$criteria->compare('bodega_idbodega',$this->bodega_idbodega);
+		$criteria->compare('proyectosespeciales_idproyectosespeciales',$this->proyectosespeciales_idproyectosespeciales);
+		$criteria->compare('usuarios_idusuarios',$this->usuarios_idusuarios,true);
 		$criteria->compare('reservado',$this->reservado);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+        
         
         /*LOG DE CAMBIOS*/
         public function behaviors()
@@ -109,4 +116,5 @@ class Pedidosproveedoresitemdetallereserva extends CActiveRecord
                     'application.extensions.auditTrail.behaviors.LoggableBehavior',
             );
         }
+ 
 }

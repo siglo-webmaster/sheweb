@@ -132,10 +132,26 @@
 		<?php echo $form->error($pedidosproveedores,'descripcion'); ?>
 	</div>
         
+      
         <div class="row">
-		<?php echo $form->labelEx($pedidosproveedoresdocumentos,'url'); ?>
-                <?php echo $form->fileField($pedidosproveedoresdocumentos, 'url'); ?>
+                <b>Anexar Documentos:</b>                
+                <?php $this->widget('CMultiFileUpload',array(
+                    'name'=>'anexos',
+                    'accept'=>'jpg|png|doc|docx|pdf|xls|xlsx|ppt|txt|tif',
+                    'max'=>20,
+                    'remove'=>Yii::t('ui','Borrar'),
+                    'denied'=>'tipo de archivo no permitido', //message that is displayed when a file type is not allowed
+                    'duplicate'=>'nombre de archivo duplicado', //message that is displayed when a file appears twice
+                    'htmlOptions'=>array('size'=>25),
+                    )); 
+                ?>
+            
 		<?php echo $form->error($pedidosproveedoresdocumentos,'url'); ?>
+	</div>
+        
+        <div class="row">
+            <b>V&iacute;nculos anexos (uno por linea):</b> 
+		<?php echo $form->textArea($pedidosproveedoresdocumentos,'url', array('rows'=>4,'cols'=>80)); ?>
 	</div>
         
         <div class="row">

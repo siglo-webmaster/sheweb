@@ -6,8 +6,7 @@
       if($data->estado=='impreso'){
           
       }
-       
- 
+
 ?>
 
 <?php
@@ -43,16 +42,35 @@
          ?>
         <?php echo $separador; ?>
         <div id='ver-opciones'>
-            <hr>
-            <b>Documentos anexos: </b>
-            <ul>
+            
         <?php
-            foreach($pedidosproveedoresdocumentos as $row){
-                echo "<li>".CHtml::link($row['nombre'],Yii::app()->createUrl($row['url']),array('target'=>'_blank'))."</li>";
+            if(isset($pedidosproveedoresdocumentos)){
+                echo "<hr>
+                        <b>Documentos anexos: </b>
+                        <ul>";
+                
+                foreach($pedidosproveedoresdocumentos as $row){
+                    switch($row['tiposdocumentosanexos_idtiposdocumentosanexos']){
+                        case 1:{
+                            echo "<li>".CHtml::link($row['nombre'],Yii::app()->createUrl($row['url']),array('target'=>'_blank'))."</li>";
+                            break;
+                        }
+                        case 2:{
+                            $row['url'] = ltrim($row['url'],'http://');
+                            echo "<li> <a href='http://".$row['url']."' target='_blank'>".$row['url']."</a></li>";
+                            break;
+                        }
+                        default :{
+                            echo "<li>".$row['url']."</li>";
+                            break;
+                        }
+                    }
+                    
+                }
+                echo "</ul>";
             }
-
         ?>  
-            </ul>
+            
             <hr>
             <table>
                 <tr>

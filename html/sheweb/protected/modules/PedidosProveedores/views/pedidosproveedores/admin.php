@@ -40,27 +40,21 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php 
+   
+    $this->widget('ext.groupgridview.GroupGridView', array(
 	'id'=>'pedidosproveedores-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
 		'idpedidosproveedores',
-		'usuariocreacion',
-		'usuarioaprobacion',
-		'idproveedor',
-		'moneda_idmoneda',
-		'fechacreacion',
-		/*
-		'fechacierre',
-		'fechaestimada',
-		'fechaaprobacion',
-		'fechaentrada',
-		'fechaliberacion',
-		'descripcion',
-		'observaciones',
 		'estado',
-		*/
+                array(
+                'class'=>'CLinkColumn',
+                'header'=>'Especial',
+                'label'=>'Clonar',
+                'urlExpression'=>'Yii::app()->createUrl("/PedidosProveedores/pedidosproveedores/clone/id/".$data->idpedidosproveedores)',
+                ),
 		array(
 			'class'=>'CButtonColumn',
 		),

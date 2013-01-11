@@ -117,12 +117,12 @@ class PedidosproveedoresitemdetallereservaController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-                $this->loadModel($id);
+                $model = $this->loadModel($id);
                 if(Yii::app()->user->id!=$model->usuarios_idusuarios){
                     $this->redirect (Yii::app ()->baseUrl."/index.php/PedidosProveedores/pedidosproveedoresitemdetallereserva/getreservas/id/".$model->pedidosproveedoresitems_idpedidosproveedoresitems);
                 }
                 
-		$this->delete();
+		$model->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))

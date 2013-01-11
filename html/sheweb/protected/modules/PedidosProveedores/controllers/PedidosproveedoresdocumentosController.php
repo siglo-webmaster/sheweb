@@ -60,9 +60,9 @@ class PedidosproveedoresdocumentosController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate($idpedidosproveedores=false)
+	public function actionCreate($id=false)
 	{
-                if(!$idpedidosproveedores){
+                if(!$id){
                     die("no id pedido proveedor");
                 }
 		$model=new Pedidosproveedoresdocumentos;
@@ -79,7 +79,7 @@ class PedidosproveedoresdocumentosController extends Controller
 
 		$this->render('create',array(
 			'model'=>$model,
-                        'idpedidosproveedores'=$idpedidosproveedores,
+                        'idpedidosproveedores'=>$id,
 		));
 	}
 

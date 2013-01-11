@@ -30,8 +30,27 @@
                                                         "label"=>"Pedidos Cerrados"
                                                 ),
                                 ),
-                    
+                                //
                                 
+                                array(
+                                                "url"=>array("route"=>"/".$this->module->id."/proyectosespeciales/index"),
+                                                "label"=>"Proyectos especiales",
+                                                array(
+                                                        "url"=>array("route"=>"/".$this->module->id."/proyectosespeciales/create"),
+                                                        "label"=>"Nuevo Proyecto"
+                                                ),
+                                                array(
+                                                        "url"=>array("route"=>"/".$this->module->id."/proyectosespeciales/index"),
+                                                        "label"=>"Proyectos Activos"
+                                                ),
+
+                                                array(
+                                                        "url"=>array("route"=>"/".$this->module->id."/proyectosespeciales/admin"),
+                                                        "label"=>"Admin proyectos"
+                                                ),
+                                ),
+                    
+                                //
                         ),
                 "stylesheet"=>"menu_blue1.css",
                 "menuID"=>"myMenu",

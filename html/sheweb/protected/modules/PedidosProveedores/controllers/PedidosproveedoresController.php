@@ -36,7 +36,7 @@ class PedidosproveedoresController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','changestate','printorder','dinamicmoneda'),
+				'actions'=>array('admin','delete','changestate','printorder','dinamicmoneda', 'clone'),
 				'users'=>array('admin','ogaleano'),
 			),
                         
@@ -54,14 +54,96 @@ class PedidosproveedoresController extends Controller
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
-	public function actionView($id)
+	public function actionView($id,$error=false)
 	{
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
                         'pedidosproveedoresdocumentos'=>Yii::app()->db->createCommand("select * from pedidosproveedoresdocumentos where pedidosproveedores_idpedidosproveedores=".$id." ")->queryAll(),
+                        'error'=>$error,
 		));
 	}
 
+        /**
+	 * Displays a particular model.
+	 * @param integer $id the ID of the model to be displayed
+	 */
+	public function actionClone($id,$error=false)
+	{
+		$pedidosproveedores = $this->loadModel($id);
+                
+                
+                unset($pedidosproveedores->idpedidosproveedores);
+                $pedidosproveedores->usuariocreacion = Yii::app()->user->id;
+                $pedidosproveedores->estado = "activo";
+                $pedidosproveedores->setIsNewRecord(true);
+                $pedidosproveedores->save(false);
+                
+                ///CLONACION DE LOS ITEMS
+                $pedidosproveedoresitems = Yii::app()->db->createCommand("select * from pedidosproveedoresitems where pedidosproveedores_idpedidosproveedores=".$id." ")->queryAll();
+                
+                if(is_array($pedidosproveedoresitems)){
+                    
+                    foreach($pedidosproveedoresitems as $row){
+                        $items = new Pedidosproveedoresitems;
+                        $items->attributes=$row;
+                        $items->setIsNewRecord(true);
+                        $items->pedidosproveedores_idpedidosproveedores = $pedidosproveedores->idpedidosproveedores;
+                        $idpedidosproveedoresitems = $row['idpedidosproveedoresitems'];
+                        unset($items->idpedidosproveedoresitems);
+                        $items->save(false);
+                        $newidpedidosproveedoresitems = $items->idpedidosproveedoresitems;
+                        unset($items);
+                        
+                        ///////////CLONACION DE LAS RESERVAS DE LOS ITEMS//////////
+                        
+                        $pedidosproveedoresitemdetallereserva = Yii::app()->db->createCommand("select * from pedidosproveedoresitemdetallereserva where pedidosproveedoresitems_idpedidosproveedoresitems=".$idpedidosproveedoresitems)->queryAll();
+                
+                        if(is_array($pedidosproveedoresitemdetallereserva)){
+
+                            foreach($pedidosproveedoresitemdetallereserva as $row2){
+                                $ppitems = new Pedidosproveedoresitemdetallereserva;
+                                $ppitems->attributes=$row2;
+                                $ppitems->setIsNewRecord(true);
+                                $ppitems->pedidosproveedoresitems_idpedidosproveedoresitems = $newidpedidosproveedoresitems;
+                                unset($ppitems->idpedidosproveedoresitemdetallereserva);
+                                $ppitems->save(false);
+                                unset($ppitems);
+                            }
+
+                        }
+                        
+                        /////FIN RESERVAS ///////
+                        
+                        unset($idpedidosproveedoresitems);
+                    }
+                    
+                }
+                
+                //////FIN CLONACION DE ITEMS
+                
+                /////CLONACION DE DOCUMENTOS ANEXOS
+                 $pedidosproveedoresdocumentos = Yii::app()->db->createCommand("select * from pedidosproveedoresdocumentos where pedidosproveedores_idpedidosproveedores=".$id." ")->queryAll();
+                
+                if(is_array($pedidosproveedoresdocumentos)){
+                    
+                    foreach($pedidosproveedoresdocumentos as $row){
+                        $items = new Pedidosproveedoresdocumentos;
+                        $items->attributes=$row;
+                        $items->setIsNewRecord(true);
+                        $items->pedidosproveedores_idpedidosproveedores = $pedidosproveedores->idpedidosproveedores;
+                        unset($items->idpedidosproveedoresdocumentos);
+                        $items->save(false);
+                        unset($items);
+                    }
+                    
+                }
+                
+                ///// FIN CLONACION DOCUMENTOS ANEXOS
+        
+                $this->redirect(array('view','id'=>$pedidosproveedores->idpedidosproveedores));
+	}
+        
+        
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
@@ -88,26 +170,46 @@ class PedidosproveedoresController extends Controller
                                     }
                                     
                                     $pedidosproveedores->save(); //GUARDAR ATRIBUTOS EN EL MODELO
-                                    if(isset($_POST['Pedidosproveedoresdocumentos'])){
-                                        
-                                           
-                                         $pedidosproveedoresdocumentos->attributes=$_POST['Pedidosproveedoresdocumentos'];  // CARGAR ATRIBUTOS OBTENIDOS EN LOS FORMULARIOS
-                                         $pedidosproveedoresdocumentos->pedidosproveedores_idpedidosproveedores = $pedidosproveedores->idpedidosproveedores; //OBTENER LLAVE FORANEA
-
+                                    $files_uploades = CUploadedFile::getInstancesByName('anexos');
+                                         
+                                    if(!is_dir("uploadedfiles/pedidosproveedoresdocumentos/".$pedidosproveedores->idpedidosproveedores)){
+                                           if(!mkdir("uploadedfiles/pedidosproveedoresdocumentos/".$pedidosproveedores->idpedidosproveedores)){
+                                               die("No pudo crearse la carpeta de archivos " ."uploadedfiles/pedidosproveedoresdocumentos/".$pedidosproveedores->idpedidosproveedores);
+                                           }
+                                       }
                                        
-
-                                        $pedidosproveedoresdocumentos->nombre=CUploadedFile::getInstance($pedidosproveedoresdocumentos,'url');
-                                        $pedidosproveedoresdocumentos->url="uploadedfiles/pedidosproveedoresdocumentos/".$pedidosproveedores->idpedidosproveedores."/".$pedidosproveedoresdocumentos->nombre;
+                                    $pedidosproveedoresdocumentos->pedidosproveedores_idpedidosproveedores = $pedidosproveedores->idpedidosproveedores; //OBTENER LLAVE FORANEA  
+                                    
+                                    foreach ($files_uploades as $image => $pic) {
+                                        $pedidosproveedoresdocumentos=new Pedidosproveedoresdocumentos();//CARGAR MODELO 
+                                        $pedidosproveedoresdocumentos->pedidosproveedores_idpedidosproveedores = $pedidosproveedores->idpedidosproveedores; //OBTENER LLAVE FORANEA  
+                                        $pic->saveAs("uploadedfiles/pedidosproveedoresdocumentos/".$pedidosproveedores->idpedidosproveedores."/".$pic->name);
+                                        $pedidosproveedoresdocumentos->nombre=$pic->name;
                                         $pedidosproveedoresdocumentos->tiposdocumentosanexos_idtiposdocumentosanexos=1;
-                                        if($pedidosproveedoresdocumentos->save()){//GUARDAR ATRIBUTOS EN EL MODELO
-                                            if(!is_dir("uploadedfiles/pedidosproveedoresdocumentos/".$pedidosproveedores->idpedidosproveedores)){
-                                                if(!mkdir("uploadedfiles/pedidosproveedoresdocumentos/".$pedidosproveedores->idpedidosproveedores)){
-                                                    die("No pudo crearse la carpeta de archivos " ."uploadedfiles/pedidosproveedoresdocumentos/".$pedidosproveedores->idpedidosproveedores);
-                                                }
-                                            }
-                                            $pedidosproveedoresdocumentos->nombre->saveAs("uploadedfiles/pedidosproveedoresdocumentos/".$pedidosproveedores->idpedidosproveedores."/".$pedidosproveedoresdocumentos->nombre);
-                                        }
-                                      
+                                        $pedidosproveedoresdocumentos->url="uploadedfiles/pedidosproveedoresdocumentos/".$pedidosproveedores->idpedidosproveedores."/".$pic->name;
+                                        $pedidosproveedoresdocumentos->save();
+                                        unset($pedidosproveedoresdocumentos);
+                                    }
+                                    
+                                    
+                                    if(isset($_POST['Pedidosproveedoresdocumentos'])){
+
+                                      $temparray = explode(chr(10),$_POST['Pedidosproveedoresdocumentos']['url']);
+                                      if(is_array($temparray)){
+                                          foreach($temparray as $field){
+                                              
+                                                $pedidosproveedoresdocumentos=new Pedidosproveedoresdocumentos();//CARGAR MODELO 
+                                                $pedidosproveedoresdocumentos->pedidosproveedores_idpedidosproveedores = $pedidosproveedores->idpedidosproveedores; //OBTENER LLAVE FORANEA  
+                                                $pedidosproveedoresdocumentos->nombre=$field;
+                                                $pedidosproveedoresdocumentos->tiposdocumentosanexos_idtiposdocumentosanexos=2;
+                                                $pedidosproveedoresdocumentos->url=$field;
+                                                $pedidosproveedoresdocumentos->save();
+                                                unset($pedidosproveedoresdocumentos);
+                                              
+                                              
+                                          }
+                                      }
+                                        
                                     }
                                     $transaction->commit(); //GUARDAR TRANSACCION
                                     $this->redirect(array('view','id'=>$pedidosproveedores->idpedidosproveedores
@@ -162,29 +264,55 @@ class PedidosproveedoresController extends Controller
                             $transaction = Yii::app()->db->beginTransaction(); // INICIAR TRANSACCION
                             try{
                                     $pedidosproveedores->save(); //GUARDAR ATRIBUTOS EN EL MODELO
-                                    if(isset($_POST['Pedidosproveedoresdocumentos'])){
-                                        
-                                           
-                                         $pedidosproveedoresdocumentos->attributes=$_POST['Pedidosproveedoresdocumentos'];  // CARGAR ATRIBUTOS OBTENIDOS EN LOS FORMULARIOS
-                                         $pedidosproveedoresdocumentos->pedidosproveedores_idpedidosproveedores = $pedidosproveedores->idpedidosproveedores; //OBTENER LLAVE FORANEA
-
-                                        if($pedidosproveedoresdocumentos->validate()){//VALIDAR CAMPOS DE EL MODELO
-
-                                            $pedidosproveedoresdocumentos->url=CUploadedFile::getInstance($pedidosproveedoresdocumentos,'url');
-                                            if($pedidosproveedoresdocumentos->save()){//GUARDAR ATRIBUTOS EN EL MODELO
-
-                                                $pedidosproveedoresdocumentos->url->saveAs('attaches/nombre');
-                                            }
-
-                                        }
+                                     $files_uploades = CUploadedFile::getInstancesByName('anexos');
+                                     
+                                    if(!is_dir("uploadedfiles/pedidosproveedoresdocumentos/".$pedidosproveedores->idpedidosproveedores)){
+                                           if(!mkdir("uploadedfiles/pedidosproveedoresdocumentos/".$pedidosproveedores->idpedidosproveedores)){
+                                               die("No pudo crearse la carpeta de archivos " ."uploadedfiles/pedidosproveedoresdocumentos/".$pedidosproveedores->idpedidosproveedores);
+                                           }
+                                       }
+                                       
+                                    $pedidosproveedoresdocumentos->pedidosproveedores_idpedidosproveedores = $pedidosproveedores->idpedidosproveedores; //OBTENER LLAVE FORANEA  
+                                    
+                                    foreach ($files_uploades as $image => $pic) {
+                                        $pedidosproveedoresdocumentos=new Pedidosproveedoresdocumentos();//CARGAR MODELO 
+                                        $pedidosproveedoresdocumentos->pedidosproveedores_idpedidosproveedores = $pedidosproveedores->idpedidosproveedores; //OBTENER LLAVE FORANEA  
+                                        $pic->saveAs("uploadedfiles/pedidosproveedoresdocumentos/".$pedidosproveedores->idpedidosproveedores."/".$pic->name);
+                                        $pedidosproveedoresdocumentos->nombre=$pic->name;
+                                        $pedidosproveedoresdocumentos->tiposdocumentosanexos_idtiposdocumentosanexos=1;
+                                        $pedidosproveedoresdocumentos->url="uploadedfiles/pedidosproveedoresdocumentos/".$pedidosproveedores->idpedidosproveedores."/".$pic->name;
+                                        $pedidosproveedoresdocumentos->save();
+                                        unset($pedidosproveedoresdocumentos);
                                     }
+                                    
+                                    
+                                    if(isset($_POST['Pedidosproveedoresdocumentos'])){
+
+                                      $temparray = explode(chr(10),$_POST['Pedidosproveedoresdocumentos']['url']);
+                                      if(is_array($temparray)){
+                                          foreach($temparray as $field){
+                                              
+                                                $pedidosproveedoresdocumentos=new Pedidosproveedoresdocumentos();//CARGAR MODELO 
+                                                $pedidosproveedoresdocumentos->pedidosproveedores_idpedidosproveedores = $pedidosproveedores->idpedidosproveedores; //OBTENER LLAVE FORANEA  
+                                                $pedidosproveedoresdocumentos->nombre=$field;
+                                                $pedidosproveedoresdocumentos->tiposdocumentosanexos_idtiposdocumentosanexos=2;
+                                                $pedidosproveedoresdocumentos->url=$field;
+                                                $pedidosproveedoresdocumentos->save();
+                                                unset($pedidosproveedoresdocumentos);
+                                              
+                                              
+                                          }
+                                      }
+                                        
+                                    }
+                                    
+                                    
                                     $transaction->commit(); //GUARDAR TRANSACCION
                                     $this->redirect(array('view','id'=>$pedidosproveedores->idpedidosproveedores)); //REDIRIGIR AL DETALLE DEL ITEM NUEVO
                                 
                                 }catch (Exception $e){
                                     $transaction->rollBack(); //NO GUARDAR TRANSACCION
                                     $e->getMessage(); //DESPLEGAR MENSAGE DE ERROR
-
 
                                 }
                             
@@ -206,13 +334,24 @@ class PedidosproveedoresController extends Controller
 	 */
 	public function actionChangestate($id)
 	{
-		$pedidosproveedores=$this->loadModel($id); //CARGAR MODELO 
-
+		
+                
+                
+                $pedidosproveedores=$this->loadModel($id); //CARGAR MODELO 
+                
 		if(isset($_POST['Pedidosproveedores']))//CONFIRMAR SI HAY FORMULARIOS PARA SALVAR
 		{
 			$pedidosproveedores->attributes=$_POST['Pedidosproveedores']; // CARGAR ATRIBUTOS OBTENIDOS EN LOS FORMULARIOS
                         $pedidosproveedores->usuarioaprobacion = Yii::app()->user->id;
                         $pedidosproveedores->fechaaprobacion=date("Y-m-d h:i:s");
+                        
+                        if($pedidosproveedores->estado=="aprobado"){
+                            $rows = ViewPedidosproveedoresitemsagrupado::model()->count(" solicitado < reservado and pedidosproveedores_idpedidosproveedores=".$id);
+                            if($rows>0){
+                                $this->redirect(array('view','id'=>$id, 'error'=>"No puede cambiarse este pedido a estado aprobado.<br>Hay reservas superiores a lo solicitado.")); //REDIRIGIR AL DETALLE DEL ITEM
+                            }
+                        }
+                        
                         
                         if($pedidosproveedores->validate()){ //VALIDAR CAMPOS DE EL MODELO
                             $transaction = Yii::app()->db->beginTransaction(); // INICIAR TRANSACCION

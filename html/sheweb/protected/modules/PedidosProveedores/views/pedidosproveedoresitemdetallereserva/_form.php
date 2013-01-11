@@ -15,9 +15,7 @@
 
 	<?php echo $form->errorSummary($model); ?>
         
-        <?php
-            echo $model->pedidosproveedoresitemsIdpedidosproveedoresitems->pedidosproveedores_idpedidosproveedores;
-        ?>
+
 		
 	<?php echo $form->hiddenField($model,'pedidosproveedoresitems_idpedidosproveedoresitems'); ?>
 
@@ -37,6 +35,16 @@
 		<?php echo $form->textField($model,'reservado'); ?>
 		<?php echo $form->error($model,'reservado'); ?>
 	</div>
+        
+        <div class="row">
+		<?php echo "<b>Proyecto</b>" ?>
+                <?php
+                    $select = CHtml::listData(Proyectosespeciales::model()->findAll(" estado='activo' "), 'idproyectosespeciales', 'nombre');
+                    echo $form->dropDownList($model,'proyectosespeciales_idproyectosespeciales',$select);
+                ?>
+		<?php echo $form->error($model,'proyectosespeciales_idproyectosespeciales'); ?>
+	</div>
+        
         <hr class='separador_blanco'>
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Actualizar'); ?>
