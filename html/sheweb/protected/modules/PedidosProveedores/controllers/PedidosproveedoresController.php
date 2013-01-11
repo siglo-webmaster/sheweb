@@ -58,6 +58,7 @@ class PedidosproveedoresController extends Controller
 	{
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+                        'pedidosproveedoresdocumentos'=>Yii::app()->db->createCommand("select * from pedidosproveedoresdocumentos where pedidosproveedores_idpedidosproveedores=".$id." ")->queryAll(),
 		));
 	}
 
@@ -93,21 +94,24 @@ class PedidosproveedoresController extends Controller
                                          $pedidosproveedoresdocumentos->attributes=$_POST['Pedidosproveedoresdocumentos'];  // CARGAR ATRIBUTOS OBTENIDOS EN LOS FORMULARIOS
                                          $pedidosproveedoresdocumentos->pedidosproveedores_idpedidosproveedores = $pedidosproveedores->idpedidosproveedores; //OBTENER LLAVE FORANEA
 
-                                        if($pedidosproveedoresdocumentos->validate()){//VALIDAR CAMPOS DE EL MODELO
+                                       
 
-                                            $pedidosproveedoresdocumentos->url=CUploadedFile::getInstance($pedidosproveedoresdocumentos,'url');
-                                            if($pedidosproveedoresdocumentos->save()){//GUARDAR ATRIBUTOS EN EL MODELO
-
-                                                $pedidosproveedoresdocumentos->url->saveAs('attaches/nombre');
+                                        $pedidosproveedoresdocumentos->nombre=CUploadedFile::getInstance($pedidosproveedoresdocumentos,'url');
+                                        $pedidosproveedoresdocumentos->url="uploadedfiles/pedidosproveedoresdocumentos/".$pedidosproveedores->idpedidosproveedores."/".$pedidosproveedoresdocumentos->nombre;
+                                        $pedidosproveedoresdocumentos->tiposdocumentosanexos_idtiposdocumentosanexos=1;
+                                        if($pedidosproveedoresdocumentos->save()){//GUARDAR ATRIBUTOS EN EL MODELO
+                                            if(!is_dir("uploadedfiles/pedidosproveedoresdocumentos/".$pedidosproveedores->idpedidosproveedores)){
+                                                if(!mkdir("uploadedfiles/pedidosproveedoresdocumentos/".$pedidosproveedores->idpedidosproveedores)){
+                                                    die("No pudo crearse la carpeta de archivos " ."uploadedfiles/pedidosproveedoresdocumentos/".$pedidosproveedores->idpedidosproveedores);
+                                                }
                                             }
-
-                                            
-
-                                            
+                                            $pedidosproveedoresdocumentos->nombre->saveAs("uploadedfiles/pedidosproveedoresdocumentos/".$pedidosproveedores->idpedidosproveedores."/".$pedidosproveedoresdocumentos->nombre);
                                         }
+                                      
                                     }
                                     $transaction->commit(); //GUARDAR TRANSACCION
-                                    $this->redirect(array('view','id'=>$pedidosproveedores->idpedidosproveedores)); //REDIRIGIR AL DETALLE DEL ITEM NUEVO
+                                    $this->redirect(array('view','id'=>$pedidosproveedores->idpedidosproveedores
+                                                        )); //REDIRIGIR AL DETALLE DEL ITEM NUEVO
                                 
                                 }catch (Exception $e){
                                     $transaction->rollBack(); //NO GUARDAR TRANSACCION

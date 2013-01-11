@@ -6,16 +6,17 @@
  * The followings are the available columns in table 'pedidosproveedoresentradasalmacen':
  * @property integer $idpedidosproveedoresentradasalmacen
  * @property string $fecha
+ * @property string $documentoproveedor
  * @property string $observaciones
  * @property integer $bodega_idbodega
- * @property integer $usuarios_idusuarios
  * @property integer $pedidosproveedores_idpedidosproveedores
+ * @property string $usuarios_idusuarios
  *
  * The followings are the available model relations:
  * @property Pedidosproveedores[] $pedidosproveedores
  * @property Bodega $bodegaIdbodega
  * @property Pedidosproveedores $pedidosproveedoresIdpedidosproveedores
- * @property Usuarios $usuariosIdusuarios
+ * @property UsergroupsUser $usuariosIdusuarios
  * @property Pedidosproveedoresentradasalmacendetalle[] $pedidosproveedoresentradasalmacendetalles
  * @property Pedidosproveedoresentradasalmacenfallados[] $pedidosproveedoresentradasalmacenfalladoses
  */
@@ -47,12 +48,14 @@ class Pedidosproveedoresentradasalmacen extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('bodega_idbodega, usuarios_idusuarios, pedidosproveedores_idpedidosproveedores', 'required'),
-			array('bodega_idbodega, usuarios_idusuarios, pedidosproveedores_idpedidosproveedores', 'numerical', 'integerOnly'=>true),
+			array('bodega_idbodega, pedidosproveedores_idpedidosproveedores', 'required'),
+			array('bodega_idbodega, pedidosproveedores_idpedidosproveedores', 'numerical', 'integerOnly'=>true),
+			array('documentoproveedor', 'length', 'max'=>255),
+			array('usuarios_idusuarios', 'length', 'max'=>20),
 			array('fecha, observaciones', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idpedidosproveedoresentradasalmacen, fecha, observaciones, bodega_idbodega, usuarios_idusuarios, pedidosproveedores_idpedidosproveedores', 'safe', 'on'=>'search'),
+			array('idpedidosproveedoresentradasalmacen, fecha, documentoproveedor, observaciones, bodega_idbodega, pedidosproveedores_idpedidosproveedores, usuarios_idusuarios', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -67,7 +70,7 @@ class Pedidosproveedoresentradasalmacen extends CActiveRecord
 			'pedidosproveedores' => array(self::MANY_MANY, 'Pedidosproveedores', 'pedidosproveedores_has_pedidosproveedoresentradasalmacen(idpedidosproveedoresentradasalmacen, idpedidosproveedores)'),
 			'bodegaIdbodega' => array(self::BELONGS_TO, 'Bodega', 'bodega_idbodega'),
 			'pedidosproveedoresIdpedidosproveedores' => array(self::BELONGS_TO, 'Pedidosproveedores', 'pedidosproveedores_idpedidosproveedores'),
-			'usuariosIdusuarios' => array(self::BELONGS_TO, 'Usuarios', 'usuarios_idusuarios'),
+			'usuariosIdusuarios' => array(self::BELONGS_TO, 'UsergroupsUser', 'usuarios_idusuarios'),
 			'pedidosproveedoresentradasalmacendetalles' => array(self::HAS_MANY, 'Pedidosproveedoresentradasalmacendetalle', 'idpedidosproveedoresentradasalmacen'),
 			'pedidosproveedoresentradasalmacenfalladoses' => array(self::HAS_MANY, 'Pedidosproveedoresentradasalmacenfallados', 'idpedidosproveedoresentradasalmacen'),
 		);
@@ -81,10 +84,11 @@ class Pedidosproveedoresentradasalmacen extends CActiveRecord
 		return array(
 			'idpedidosproveedoresentradasalmacen' => 'Idpedidosproveedoresentradasalmacen',
 			'fecha' => 'Fecha',
+			'documentoproveedor' => 'Documentoproveedor',
 			'observaciones' => 'Observaciones',
 			'bodega_idbodega' => 'Bodega Idbodega',
-			'usuarios_idusuarios' => 'Usuarios Idusuarios',
 			'pedidosproveedores_idpedidosproveedores' => 'Pedidosproveedores Idpedidosproveedores',
+			'usuarios_idusuarios' => 'Usuarios Idusuarios',
 		);
 	}
 
@@ -101,15 +105,17 @@ class Pedidosproveedoresentradasalmacen extends CActiveRecord
 
 		$criteria->compare('idpedidosproveedoresentradasalmacen',$this->idpedidosproveedoresentradasalmacen);
 		$criteria->compare('fecha',$this->fecha,true);
+		$criteria->compare('documentoproveedor',$this->documentoproveedor,true);
 		$criteria->compare('observaciones',$this->observaciones,true);
 		$criteria->compare('bodega_idbodega',$this->bodega_idbodega);
-		$criteria->compare('usuarios_idusuarios',$this->usuarios_idusuarios);
 		$criteria->compare('pedidosproveedores_idpedidosproveedores',$this->pedidosproveedores_idpedidosproveedores);
+		$criteria->compare('usuarios_idusuarios',$this->usuarios_idusuarios,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+        
         
         /*LOG DE CAMBIOS*/
         public function behaviors()
@@ -119,4 +125,5 @@ class Pedidosproveedoresentradasalmacen extends CActiveRecord
                     'application.extensions.auditTrail.behaviors.LoggableBehavior',
             );
         }
+ 
 }

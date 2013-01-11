@@ -7,8 +7,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Pedidosproveedoresentradasalmacen', 'url'=>array('create')),
-	array('label'=>'Manage Pedidosproveedoresentradasalmacen', 'url'=>array('admin')),
+	array('label'=>'Consultar entradas', 'url'=>array('admin')),
 );
 ?>
 <?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>

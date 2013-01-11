@@ -155,8 +155,23 @@
                                                   "label"=>"Listar tipopedidos",
                                               )
                                     
-                                ),//FIN TIPO->Tipos pedidosproveedores
+                                ),//FIN TIPO->Tipos documentosanexos
                              
+                                 //TIPO->Tipos de formato
+                                array("url"=>array("route"=>"/Parametros/tiposdocumentosanexos/admin"),
+                                       "label"=>"Tipos doc anexos",
+                                            array(
+                                                "url"=>array("route"=>"/Parametros/tiposdocumentosanexos/create"),
+                                                  "label"=>"Nuevo doc anexo",
+                                              ),
+                                             array(
+                                                  "url"=>array("route"=>"/Parametros/tiposdocumentosanexos/index"),
+                                                  "label"=>"Listar doc anexo",
+                                              )
+                                    
+                                ),//FIN TIPO->Tipos de formatos
+                             
+                                
                          ),//FIN TIPO
                          //ITEMS
                          array(

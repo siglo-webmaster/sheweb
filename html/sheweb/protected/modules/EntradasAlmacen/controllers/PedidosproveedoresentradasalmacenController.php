@@ -54,6 +54,7 @@ class PedidosproveedoresentradasalmacenController extends Controller
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
                         'items'=>Yii::app()->db->createCommand("select * from view_pedidosproveedoresentradasalmacendetalle where idpedidosproveedoresentradasalmacen=".$id)->queryAll(),
+                        'fallados'=>Yii::app()->db->createCommand("select * from view_pedidosproveedoresentradasalmacenfallados where idpedidosproveedoresentradasalmacen=".$id)->queryAll(),
 		));
 	}
 
@@ -97,6 +98,7 @@ class PedidosproveedoresentradasalmacenController extends Controller
                                                         'idpedidosproveedoresentradasalmacen'=>$model->idpedidosproveedoresentradasalmacen,
                                                         'item_iditem'=>$_POST['iditem_'.$i],
                                                         'cantidad'=>$_POST['fallado_'.$i],
+                                                        'condicioncomercial_idcondicioncomercial'=>$_POST['idcondicioncomercial_'.$i],
                                                         'observaciones'=>$_POST['observaciones_'.$i],
                                                     );
                                         $detalle = new Pedidosproveedoresentradasalmacenfallados;

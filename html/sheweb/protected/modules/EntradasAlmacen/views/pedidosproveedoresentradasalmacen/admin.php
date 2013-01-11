@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Pedidosproveedoresentradasalmacen', 'url'=>array('index')),
-	array('label'=>'Create Pedidosproveedoresentradasalmacen', 'url'=>array('create')),
+	array('label'=>'Listar pendientes', 'url'=>array('index')),
+	
 );
 
 Yii::app()->clientScript->registerScript('search', "

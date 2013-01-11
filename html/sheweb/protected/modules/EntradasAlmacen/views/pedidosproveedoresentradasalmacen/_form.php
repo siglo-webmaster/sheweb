@@ -79,6 +79,12 @@
         <hr class="separador_blanco">
         
         <div class="row">
+		<?php echo $form->labelEx($model,'documentoproveedor'); ?>
+		<?php echo $form->textField($model,'documentoproveedor',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'documentoproveedor'); ?>
+	</div>
+        
+        <div class="row">
 		<?php echo $form->labelEx($model,'observaciones'); ?>
 		<?php echo $form->textArea($model,'observaciones',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'observaciones'); ?>

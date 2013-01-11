@@ -43,6 +43,17 @@
          ?>
         <?php echo $separador; ?>
         <div id='ver-opciones'>
+            <hr>
+            <b>Documentos anexos: </b>
+            <ul>
+        <?php
+            foreach($pedidosproveedoresdocumentos as $row){
+                echo "<li>".CHtml::link($row['nombre'],Yii::app()->createUrl($row['url']),array('target'=>'_blank'))."</li>";
+            }
+
+        ?>  
+            </ul>
+            <hr>
             <table>
                 <tr>
                     <?php switch($data->estado){
@@ -127,6 +138,7 @@
             
             if($data->estado=='activo'){
                 $columnas = array(
+                  'item_iditem',
                   'nombre',
                   'solicitado',
                   'condicioncomercial',
@@ -148,9 +160,10 @@
                 );
             }else{
                 $columnas = array(
+                  'item_iditem',
                   'nombre',
                   'solicitado',
-                  'reservado',
+                  'condicioncomercial',
                 );
             }
             

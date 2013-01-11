@@ -16,6 +16,7 @@ $this->menu=array(
         array('label'=>'Administrar Pedidos', 'url'=>array('admin')),
 );
 ?>
+
 <?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
 <h1>Pedido a proveedores #<?php echo $model->idpedidosproveedores; ?></h1>
 
@@ -24,7 +25,7 @@ $this->menu=array(
         ?>
 
 <?php
-    echo $this->renderPartial('_view',array('data'=>$model));
+    echo $this->renderPartial('_view',array('data'=>$model,"pedidosproveedoresdocumentos"=>$pedidosproveedoresdocumentos));
 ?>
 
 <?php /*$this->widget('zii.widgets.CDetailView', array(

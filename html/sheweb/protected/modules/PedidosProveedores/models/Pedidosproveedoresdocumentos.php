@@ -6,14 +6,16 @@
  * The followings are the available columns in table 'pedidosproveedoresdocumentos':
  * @property integer $idpedidosproveedoresdocumentos
  * @property integer $pedidosproveedores_idpedidosproveedores
+ * @property integer $tiposdocumentosanexos_idtiposdocumentosanexos
  * @property string $url
+ * @property string $nombre
  *
  * The followings are the available model relations:
+ * @property Tiposdocumentosanexos $tiposdocumentosanexosIdtiposdocumentosanexos
  * @property Pedidosproveedores $pedidosproveedoresIdpedidosproveedores
  */
 class Pedidosproveedoresdocumentos extends CActiveRecord
 {
-        public $url;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -39,14 +41,13 @@ class Pedidosproveedoresdocumentos extends CActiveRecord
 	{
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
-            
 		return array(
-			array('pedidosproveedores_idpedidosproveedores, url', 'required'),
-			array('pedidosproveedores_idpedidosproveedores', 'numerical', 'integerOnly'=>true),
+			array('pedidosproveedores_idpedidosproveedores, tiposdocumentosanexos_idtiposdocumentosanexos, url, nombre', 'required'),
+			array('pedidosproveedores_idpedidosproveedores, tiposdocumentosanexos_idtiposdocumentosanexos', 'numerical', 'integerOnly'=>true),
+			array('nombre', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idpedidosproveedoresdocumentos, pedidosproveedores_idpedidosproveedores, url', 'safe', 'on'=>'search'),
-                        array('url', 'file', 'types'=>'jpg, gif, png'),
+			array('idpedidosproveedoresdocumentos, pedidosproveedores_idpedidosproveedores, tiposdocumentosanexos_idtiposdocumentosanexos, url, nombre', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,6 +59,7 @@ class Pedidosproveedoresdocumentos extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'tiposdocumentosanexosIdtiposdocumentosanexos' => array(self::BELONGS_TO, 'Tiposdocumentosanexos', 'tiposdocumentosanexos_idtiposdocumentosanexos'),
 			'pedidosproveedoresIdpedidosproveedores' => array(self::BELONGS_TO, 'Pedidosproveedores', 'pedidosproveedores_idpedidosproveedores'),
 		);
 	}
@@ -70,7 +72,9 @@ class Pedidosproveedoresdocumentos extends CActiveRecord
 		return array(
 			'idpedidosproveedoresdocumentos' => 'Idpedidosproveedoresdocumentos',
 			'pedidosproveedores_idpedidosproveedores' => 'Pedidosproveedores Idpedidosproveedores',
+			'tiposdocumentosanexos_idtiposdocumentosanexos' => 'Tiposdocumentosanexos Idtiposdocumentosanexos',
 			'url' => 'Url',
+			'nombre' => 'Nombre',
 		);
 	}
 
@@ -87,12 +91,15 @@ class Pedidosproveedoresdocumentos extends CActiveRecord
 
 		$criteria->compare('idpedidosproveedoresdocumentos',$this->idpedidosproveedoresdocumentos);
 		$criteria->compare('pedidosproveedores_idpedidosproveedores',$this->pedidosproveedores_idpedidosproveedores);
+		$criteria->compare('tiposdocumentosanexos_idtiposdocumentosanexos',$this->tiposdocumentosanexos_idtiposdocumentosanexos);
 		$criteria->compare('url',$this->url,true);
+		$criteria->compare('nombre',$this->nombre,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+        
         
         /*LOG DE CAMBIOS*/
         public function behaviors()
@@ -102,4 +109,5 @@ class Pedidosproveedoresdocumentos extends CActiveRecord
                     'application.extensions.auditTrail.behaviors.LoggableBehavior',
             );
         }
+ 
 }

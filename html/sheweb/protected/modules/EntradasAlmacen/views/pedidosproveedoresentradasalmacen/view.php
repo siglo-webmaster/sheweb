@@ -8,11 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Pedidosproveedoresentradasalmacen', 'url'=>array('index')),
-	array('label'=>'Create Pedidosproveedoresentradasalmacen', 'url'=>array('create')),
-	array('label'=>'Update Pedidosproveedoresentradasalmacen', 'url'=>array('update', 'id'=>$model->idpedidosproveedoresentradasalmacen)),
-	array('label'=>'Delete Pedidosproveedoresentradasalmacen', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idpedidosproveedoresentradasalmacen),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Pedidosproveedoresentradasalmacen', 'url'=>array('admin')),
+	array('label'=>'Entradas pendientes', 'url'=>array('index')),
+	array('label'=>'Consultar entradas', 'url'=>array('admin')),
 );
 ?>
 
@@ -38,6 +35,6 @@ $this->menu=array(
 <div id="entrada">
 <h3>Entrada de almac&eacute;n  #<?php echo $model->idpedidosproveedoresentradasalmacen; ?></h3>
 
-<?php echo $this->renderPartial('_view', array('data'=>$model,'items'=>$items)); ?>
+<?php echo $this->renderPartial('_view', array('data'=>$model,'items'=>$items,'fallados'=>$fallados)); ?>
 
 </div>
