@@ -77,6 +77,7 @@
 		<?php echo $form->error($model,'solicitado'); ?>
 	</div>
 
+
         <div class="row">
         <?php 
                 echo "Condicion Comercial:";

@@ -19,63 +19,89 @@
         </tr>
     </table>
     
-    <table width="100%">
-        <thead>
-            <tr>
-                <th colspan="4" style="text-align: center;">RECIBIDOS CONFORMES</th>
-            </tr>
-            <tr>
-                <th>C&oacute;digo</th>
-                <th>Nombre</th>
-                <th>Tipo</th>
-                <th>Cantidad</th>
-            </tr>
-        </thead>
-        <tbody>
-            
-       <?php
-        foreach($items as $row){
-            echo "<tr>";
-            echo "<td>".$row['item_iditem']."</td>";
-            echo "<td>".$row['nombre']."</td>";
-            echo "<td>".$row['condicioncomercial']."</td>";
-            echo "<td>".$row['cantidad']."</td>";
-            echo "</tr>";
-        }
-       ?>
-            
-        </tbody>
-    </table>
+    <?php   
     
-    <table width="100%">
-        <thead>
-            <tr>
-                <th colspan="5" style="text-align: center;">FALLADOS</th>
-            </tr>
-            <tr>
-                <th>C&oacute;digo</th>
-                <th>Nombre</th>
-                <th>Tipo</th>
-                <th>Cantidad</th>
-                <th>Observaciones</th>
-            </tr>
-        </thead>
-        <tbody>
+    if(isset($items)){
+        if(sizeof($items)>0){
+        
+            echo '<table width="100%">
+                    <thead>
+                        <tr>
+                            <th colspan="4" style="text-align: center;">RECIBIDOS CONFORMES</th>
+                        </tr>
+                        <tr>
+                            <th>C&oacute;digo</th>
+                            <th>Nombre</th>
+                            <th>Tipo</th>
+                            <th>Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>';
+
+                   
+                    foreach($items as $row){
+                        echo "<tr>";
+                        echo "<td>".$row['item_iditem']."</td>";
+                        echo "<td>".$row['nombre']."</td>";
+                        echo "<td>".$row['condicioncomercial']."</td>";
+                        echo "<td>".$row['cantidad']."</td>";
+                        echo "</tr>";
+                    }
+                   
+
+                echo '    </tbody>
+                </table>';
             
-       <?php
-        foreach($fallados as $row){
-            echo "<tr>";
-            echo "<td>".$row['item_iditem']."</td>";
-            echo "<td>".$row['nombre']."</td>";
-            echo "<td>".$row['condicioncomercial']."</td>";
-            echo "<td>".$row['cantidad']."</td>";
-            echo "<td>".$row['observaciones']."</td>";
-            echo "</tr>";
         }
-       ?>
+        
+    }
+    
+    ?>
+    
+    
+
+
+    
+    <?php
+    
+    if(isset($fallados)){
+        if(sizeof($fallados)>0){
             
-        </tbody>
-    </table>
+            echo '<table width="100%">
+            <thead>
+                <tr>
+                    <th colspan="5" style="text-align: center;">FALLADOS</th>
+                </tr>
+                <tr>
+                    <th>C&oacute;digo</th>
+                    <th>Nombre</th>
+                    <th>Tipo</th>
+                    <th>Cantidad</th>
+                    <th>Observaciones</th>
+                </tr>
+            </thead>
+            <tbody>';
+
+            foreach($fallados as $row){
+                echo "<tr>";
+                echo "<td>".$row['item_iditem']."</td>";
+                echo "<td>".$row['nombre']."</td>";
+                echo "<td>".$row['condicioncomercial']."</td>";
+                echo "<td>".$row['cantidad']."</td>";
+                echo "<td>".$row['observaciones']."</td>";
+                echo "</tr>";
+            }
+
+            echo '</tbody>
+            </table>';
+            
+        }
+        
+    }
+    
+   ?>    
+                  
+        
 	
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('observaciones')); ?>:</b>

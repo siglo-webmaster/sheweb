@@ -15,7 +15,5 @@ $this->menu=array(
 <?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
 <h1>Administrar items de Pedido <?php echo $pedidosproveedores->idpedidosproveedores; ?></h1>
 
-<?php echo $this->renderPartial('_additems', array('pedidosproveedores'=>$pedidosproveedores,
-                                                    
-                                                    )); 
+<?php echo $this->renderPartial('_additems', array('pedidosproveedores'=>$pedidosproveedores, )); 
 ?>

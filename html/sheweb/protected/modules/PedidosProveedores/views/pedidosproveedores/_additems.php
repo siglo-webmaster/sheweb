@@ -27,6 +27,33 @@
             
         </div>
         <?php
+            
+            switch($pedidosproveedores->estado){
+                case 'activo':{
+                    $accion = array('class' => 'CLinkColumn',
+                                    'header'=>'Accion',
+                                    'label'=>'Reservar',
+                                    'urlExpression'=>'Yii::app()->createUrl("/PedidosProveedores/pedidosproveedoresitemdetallereserva/getreservas/id/".$data->idpedidosproveedoresitems)',
+                              );
+                    break;
+                }
+
+                case 'impreso':{
+                    $accion = array('class' => 'CLinkColumn',
+                                    'header'=>'Accion',
+                                    'label'=>'confirmar',
+                                    'urlExpression'=>'Yii::app()->createUrl("/PedidosProveedores/pedidosproveedoresitems/confirmados/id/".$data->idpedidosproveedoresitems)',
+                              );
+                    break;
+                }
+                
+                default: {
+                    $accion=array('name'=>'',
+                            'value'=>'',
+                        );
+                }
+            }
+            
             $Provider = new CActiveDataProvider('ViewPedidosproveedoresitemsagrupado', array('criteria'=>array('condition'=>'pedidosproveedores_idpedidosproveedores='.$pedidosproveedores->idpedidosproveedores)));
  
             $this->widget('ext.groupgridview.GroupGridView', array(
@@ -35,14 +62,12 @@
                 'mergeColumns' => array('nombre'),
                  'columns' => array(
                   'nombre',
-                  'solicitado',
                   'condicioncomercial',
+                  'solicitado',
+                  'confirmado',
                   'reservado',
-                  array('class' => 'CLinkColumn',
-                        'header'=>'Accion',
-                        'label'=>'Reservar',
-                        'urlExpression'=>'Yii::app()->createUrl("/PedidosProveedores/pedidosproveedoresitemdetallereserva/getreservas/id/".$data->idpedidosproveedoresitems)',
-                  ),
+                  $accion,
+                   
                   array('class' => 'CButtonColumn',
                         'template'=>'{update}{delete}',
                         'buttons'=>array(

@@ -41,6 +41,7 @@
                         <th>Item</th>
                         <th>Tipo</th>
                         <th>Solicitado</th>
+                        <th>Confirmado</th>
                         <th>Recibido</th>
                         <th>Recibir</th>
                         <th>Fallados</th>
@@ -60,6 +61,7 @@
                          "</td>";
                     echo"<td>".$row['condicioncomercial']."<input type='hidden' size='4' name='idcondicioncomercial_".$i."' value='".$row['idcondicioncomercial']."'></input></td>";
                     echo"<td>".$row['solicitado']."</td>";
+                    echo"<td>".$row['confirmado']."</td>";
                     echo"<td>".$row['recibido']."</td>";
                     echo"<td><input type='text' size='4' name='recibir_".$i."'></input></td>";
                     echo"<td><input type='text' size='4' name='fallado_".$i."'></input></td>";

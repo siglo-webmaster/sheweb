@@ -87,6 +87,20 @@ return array(
 				*/
 			),
 		),
+            
+            'mailer' => array(
+                    'class' => 'ext.swiftMailer.SwiftMailer',
+                    // For SMTP
+                    'mailer' => 'smtp',
+                    'host'=>'localhost',
+                    'From'=>'sistemasiglo@siglodelhombre.com',
+                   // 'username'=>'smptusername',
+                   // 'password'=>'123456',
+                    // For sendmail:
+                    'mailer'=>'mail',
+                ),
+
+            
 	),
 
 	// application-level parameters that can be accessed

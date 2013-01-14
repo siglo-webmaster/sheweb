@@ -32,7 +32,15 @@ $this->menu=array(
         ?>
 
 <?php
-    echo $this->renderPartial('_view',array('data'=>$model,"pedidosproveedoresdocumentos"=>$pedidosproveedoresdocumentos));
+    if(isset($_REQUEST['mail'])){
+        $mail=$_REQUEST['mail'];
+        unset($_REQUEST['mail']);
+    }
+    if(!isset($mail)){
+        $mail=false;
+    }
+    
+    echo $this->renderPartial('_view',array('data'=>$model,"pedidosproveedoresdocumentos"=>$pedidosproveedoresdocumentos,'mail'=>$mail));
 ?>
 
 <?php /*$this->widget('zii.widgets.CDetailView', array(

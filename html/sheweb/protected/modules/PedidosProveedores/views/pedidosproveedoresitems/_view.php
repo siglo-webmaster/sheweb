@@ -20,7 +20,11 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('solicitado')); ?>:</b>
 	<?php echo CHtml::encode($data->solicitado); ?>
 	<br />
-
+        
+        <b><?php echo CHtml::encode($data->getAttributeLabel('confirmado')); ?>:</b>
+	<?php echo CHtml::encode($data->confirmado); ?>
+	<br />
+        
 	<b><?php echo CHtml::encode($data->getAttributeLabel('recibido')); ?>:</b>
 	<?php echo CHtml::encode($data->recibido); ?>
 	<br />

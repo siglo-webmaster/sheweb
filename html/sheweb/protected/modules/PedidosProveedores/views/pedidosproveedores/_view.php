@@ -15,7 +15,11 @@
 ?>
 <div class="view" id="pedido">
 
-	<b><h3>Pedido a proveedores #<?php echo $data->idpedidosproveedores; ?></h3></b>
+        <b><h3>
+        <?php
+            echo CHtml::link("Pedido a proveedores #".$data->idpedidosproveedores,Yii::app()->createUrl('PedidosProveedores/pedidosproveedores/view',array('id'=>$data->idpedidosproveedores)));
+        ?>
+        </h3></b>
 	        
         <b><?php echo CHtml::encode($data->getAttributeLabel('estado')); ?>:</b>
 	<?php echo CHtml::encode($data->estado); ?>
@@ -102,6 +106,29 @@
                                
                                case 'impreso':{
                                    echo "<td>";
+                                 
+                                   ///EMAIL
+                                    if(!isset($mail)){
+                                        $mail=false;
+                                    }
+                                    if($mail){
+                                        $html = $this->renderPartial('view',array('model'=>$data,'pedidosproveedoresdocumentos'=>$pedidosproveedoresdocumentos,'mail'=>false),true);
+                                        Yii::app()->mailer->AddAddress($data->idproveedor0->email);
+                                        Yii::app()->mailer->AddAddress("oborja@siglodelhombre.com");
+                                        Yii::app()->mailer->Subject = "Pedido a proveedores # ".$data->idpedidosproveedores;
+                                        Yii::app()->mailer->MsgHTML($html);
+                                        Yii::app()->mailer->Send();
+                                        echo "<b>Pedido a proveedor enviado al correo: </b>".$data->idproveedor0->email;
+                                    }else{
+                                        echo "<div style='float:right; margin: 0 10px 0 10px;'>";
+                                        echo CHtml::link("<img src='".Yii::app()->createUrl('images/basic/email-out.png')."'>",Yii::app()->createUrl($this->module->id."/pedidosproveedores/view", array("id"=>$data->idpedidosproveedores,'mail'=>true)));
+                                        echo "</div>";
+                                    }
+                                    
+                                    //FIN EMAIL
+                                    
+                                    //IMPRESION
+                               
                                    $this->widget('ext.mPrint.mPrint', array(
                                         'title' => 'Siglo del Hombre Editores S.A.',        //the title of the document. Defaults to the HTML title
                                         'tooltip' => 'Imprimir',    //tooltip message of the print icon. Defaults to 'print'
@@ -114,6 +141,8 @@
                                         ),
                                         'publishCss' => true       //publish the CSS for the whole page?
                                     ));
+                                   
+                                   //FIN IMPRESION
                                    echo "</td>";
                                    break;
                                }
@@ -154,12 +183,40 @@
          <?php
             $Provider = new CActiveDataProvider('ViewPedidosproveedoresitemsagrupado', array('criteria'=>array('condition'=>'pedidosproveedores_idpedidosproveedores='.$data->idpedidosproveedores)));
             
+            switch($data->estado){
+                case 'activo':{
+                    $accion = array('class' => 'CLinkColumn',
+                                    'header'=>'Accion',
+                                    'label'=>'Reservar',
+                                    'urlExpression'=>'Yii::app()->createUrl("/PedidosProveedores/pedidosproveedoresitemdetallereserva/getreservas/id/".$data->idpedidosproveedoresitems)',
+                              );
+                    break;
+                }
+
+                case 'impreso':{
+                    $accion = array('class' => 'CLinkColumn',
+                                    'header'=>'Accion',
+                                    'label'=>'confirmar',
+                                    'urlExpression'=>'Yii::app()->createUrl("/PedidosProveedores/pedidosproveedoresitems/confirmados/id/".$data->idpedidosproveedoresitems)',
+                              );
+                    break;
+                }
+                
+                default: {
+                    $accion=array('name'=>'',
+                            'value'=>'',
+                        );
+                }
+            }
+            
+            
             if($data->estado=='activo'){
                 $columnas = array(
                   'item_iditem',
                   'nombre',
-                  'solicitado',
                   'condicioncomercial',
+                  'solicitado',
+                  'confirmado',
                   'reservado',
                   array('class' => 'CLinkColumn',
                         'header'=>'Accion',
@@ -180,8 +237,10 @@
                 $columnas = array(
                   'item_iditem',
                   'nombre',
+                  'condicioncomercial', 
                   'solicitado',
-                  'condicioncomercial',
+                  'confirmado',
+                  $accion,  
                 );
             }
             
@@ -223,5 +282,9 @@
 	<br />
 
 	*/ ?>
+        
+        
+        
+
 
 </div>

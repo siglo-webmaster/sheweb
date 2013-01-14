@@ -115,19 +115,7 @@
                                 ),//FIN TIPO->Tipos de identificacion
                              
                              
-                                 //TIPO->Tipos de terceros
-                                array("url"=>array("route"=>"/Parametros/tiposterceros/admin"),
-                                       "label"=>"Tipos terceros",
-                                            array(
-                                                "url"=>array("route"=>"/Parametros/tiposterceros/create"),
-                                                  "label"=>"Nuevo tipotercero",
-                                              ),
-                                             array(
-                                                  "url"=>array("route"=>"/Parametros/tiposterceros/index"),
-                                                  "label"=>"Listar tiposterceros",
-                                              )
-                                    
-                                ),//FIN TIPO->Tipos de terceros
+                                
                              
                               //TIPO->Tipos condicion comerciales
                                 array("url"=>array("route"=>"/Parametros/condicioncomercial/admin"),
@@ -177,10 +165,7 @@
                          array(
                              "url"=>array(),
                              "label"=>"Items",
-                                array(
-                                    "url"=>array("route"=>"/Parametros/terceros"),
-                                              "label"=>"Terceros",
-                                ),
+                                
                                array(
                                     "url"=>array("route"=>"/Parametros/editorial"),
                                               "label"=>"Editoriales",
@@ -206,6 +191,33 @@
                                        'label'=>'Productos'
                                    ),
                          ),//FIN ITEMS
+                    
+                         //TERCEROS
+                         array(
+                            "url"=>array("route"=>"/Parametros/terceros"),
+                                      "label"=>"Terceros",
+                             
+                                 array(
+                                "url"=>array("route"=>"/Parametros/terceros/index"),
+                                      "label"=>"Listado Terceros",),
+                                array(
+                                "url"=>array("route"=>"/Parametros/terceros/create"),
+                                      "label"=>"Nuevo Tercero",),
+                              //TIPO->Tipos de terceros
+                                array("url"=>array("route"=>"/Parametros/tiposterceros/admin"),
+                                       "label"=>"Tipos terceros",
+                                            array(
+                                                "url"=>array("route"=>"/Parametros/tiposterceros/create"),
+                                                  "label"=>"Nuevo tipotercero",
+                                              ),
+                                             array(
+                                                  "url"=>array("route"=>"/Parametros/tiposterceros/index"),
+                                                  "label"=>"Listar tiposterceros",
+                                              )
+                                    
+                                ),//FIN TIPO->Tipos de terceros
+                        ),
+                         //FIN TERCEROS
                          
                     
                     ),///FIN MENU

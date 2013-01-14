@@ -32,7 +32,7 @@ class PedidosproveedoresitemsController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','confirmados'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -124,6 +124,37 @@ class PedidosproveedoresitemsController extends Controller
 
                                
 		$this->render('update',array(
+			'model'=>$model,
+                    'pedidosproveedores_idpedidosproveedores'=>$model->pedidosproveedores_idpedidosproveedores,
+		));
+	}
+        
+        /**
+	 * Updates a particular model.
+	 * If update is successful, the browser will be redirected to the 'view' page.
+	 * @param integer $id the ID of the model to be updated
+	 */
+	public function actionConfirmados($id)
+	{
+		$model=$this->loadModel($id);
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+                
+                if($model->pedidosproveedoresIdpedidosproveedores->estado!="impreso"){
+                    throw new CHttpException(99,'El pedido # '.$model->pedidosproveedoresIdpedidosproveedores->idpedidosproveedores.' no ha sido impreso. No puede confirmar items');
+                }
+                
+		if(isset($_POST['Pedidosproveedoresitems']))
+		{
+			$model->attributes=$_POST['Pedidosproveedoresitems'];
+			if($model->save())
+				$this->redirect (Yii::app ()->baseUrl."/index.php/PedidosProveedores/pedidosproveedores/additems/id/".$model->pedidosproveedores_idpedidosproveedores);
+
+		}
+
+                               
+		$this->render('confirmados',array(
 			'model'=>$model,
                     'pedidosproveedores_idpedidosproveedores'=>$model->pedidosproveedores_idpedidosproveedores,
 		));

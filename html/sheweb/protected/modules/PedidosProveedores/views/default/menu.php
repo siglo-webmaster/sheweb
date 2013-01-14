@@ -24,6 +24,11 @@
                                                         "url"=>array("route"=>"/".$this->module->id."/pedidosproveedores/index/estado/aprobado"),
                                                         "label"=>"Pedidos Aprobados"
                                                 ),
+                                    
+                                                array(
+                                                        "url"=>array("route"=>"/".$this->module->id."/pedidosproveedores/index/estado/impreso"),
+                                                        "label"=>"Pedidos Impresos"
+                                                ),
 
                                                 array(
                                                         "url"=>array("route"=>"/".$this->module->id."/pedidosproveedores/index/estado/cerrado"),
