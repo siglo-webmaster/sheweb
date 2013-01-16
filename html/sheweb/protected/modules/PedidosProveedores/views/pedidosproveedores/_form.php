@@ -60,6 +60,18 @@
 		<?php echo $form->error($pedidosproveedores,'tipopedidosproveedores_idtipopedidosproveedores'); ?>
 	</div>
         
+        
+        <div class="row">
+		<?php echo $form->labelEx($pedidosproveedores,'tipostransporte_idtipostransporte'); ?>
+		<?php 
+                
+                    $select = CHtml::listData(Tipostransporte::model()->findAll(), 'idtipostransporte', 'nombre');
+                    echo $form->dropDownList($pedidosproveedores,'tipostransporte_idtipostransporte',$select);
+                    
+                ?>
+		<?php echo $form->error($pedidosproveedores,'tipostransporte_idtipostransporte'); ?>
+	</div>
+        
         <hr class='separador_blanco'>
         
          <div class="row">

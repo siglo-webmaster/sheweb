@@ -15,4 +15,4 @@ $this->menu=array(
 <?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
 <h1>Create Proyectosespeciales</h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form', array('model'=>$model,'proyectosespecialesuser'=>$proyectosespecialesuser,)); ?>

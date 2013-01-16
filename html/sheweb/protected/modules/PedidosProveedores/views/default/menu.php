@@ -53,6 +53,10 @@
                                                         "url"=>array("route"=>"/".$this->module->id."/proyectosespeciales/admin"),
                                                         "label"=>"Admin proyectos"
                                                 ),
+                                                array(
+                                                        "url"=>array("route"=>"/".$this->module->id."/proyectosespecialesHasUsergroupsUser"),
+                                                        "label"=>"Usuarios-proyectos"
+                                                ),
                                 ),
                     
                                 //

@@ -30,6 +30,8 @@
         <?php echo $separador; ?>
         <br>
         
+        
+        
 	<b><?php echo CHtml::encode($data->getAttributeLabel('usuariocreacion')); ?>:</b>
 	<?php 
                 if(isset($data->usuariocreacion0->username)){
@@ -162,7 +164,16 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('moneda_idmoneda')); ?>:</b>
 	<?php echo CHtml::encode($data->monedaIdmoneda->nombre); ?>
-	<br />
+	<?php echo $separador; ?>
+        
+        <b><?php echo "Transporte: "; ?></b>
+	<?php 
+                if(isset($data->tipostransporteIdtipostransporte->nombre)){
+                    echo CHtml::encode($data->tipostransporteIdtipostransporte->nombre);
+                }
+        ?>
+        <br />
+	
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fechacreacion')); ?>:</b>
 	<?php echo CHtml::encode($data->fechacreacion); ?>

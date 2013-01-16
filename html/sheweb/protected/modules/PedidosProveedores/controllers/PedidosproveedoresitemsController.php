@@ -85,6 +85,10 @@ class PedidosproveedoresitemsController extends Controller
                         $model->estado='activo';
                         $model->recibido=0;
 			if($model->save()){
+                            /*ASIGNACION DE RESERVAS AUTOMATICA*/
+                            
+                            /*FIN ASIGNACION RESERVAS*/
+                            
                             $this->redirect (Yii::app ()->baseUrl."/index.php/PedidosProveedores/pedidosproveedores/additems/id/".$pedidosproveedores_idpedidosproveedores);
                         }else{
                             $model->item_iditem = $temp2;

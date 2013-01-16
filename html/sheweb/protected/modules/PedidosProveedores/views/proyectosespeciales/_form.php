@@ -37,11 +37,30 @@
 		<?php echo $form->error($model,'moneda_idmoneda'); ?>
 	</div>
 
+        <div class="row">
+         
+         <?php
+                echo "<b>Usuarios:</b>";
+                $data= CHtml::listData(UsergroupsUser::model()->findAll(), 'id', 'username');
+                $this->widget('ext.EchMultiSelect.EchMultiSelect', array(
+                        'name' => 'usergroups_user[]',    
+                        'data' => $data,
+                        'value'=>$proyectosespecialesuser,
+                        'dropDownHtmlOptions'=> array(
+                            'style'=>'width:100px;',
+                        ),
+                    ));
+        ?>
+            
+            
+        </div>
+        
 	<div class="row">
 		<?php echo $form->labelEx($model,'nombre'); ?>
 		<?php echo $form->textField($model,'nombre',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'nombre'); ?>
 	</div>
+        
         
         <hr class="separador_blanco">
             
@@ -109,6 +128,8 @@
 		<?php echo $form->error($model,'fechacierre'); ?>
 	</div>
 
+        
+        
 	<div class="row">
 		<?php echo $form->labelEx($model,'observaciones'); ?>
 		<?php echo $form->textArea($model,'observaciones', array('rows'=>4,'cols'=>80)); ?>

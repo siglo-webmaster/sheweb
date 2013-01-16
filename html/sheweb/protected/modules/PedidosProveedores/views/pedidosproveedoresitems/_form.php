@@ -48,7 +48,7 @@
                     'source'=>Yii::app()->createUrl($this->module->id."/item/getItem/idproveedor/" . $pedido->idproveedor),// <- path to controller which returns dynamic data
                     // additional javascript options for the autocomplete plugin
                     'options'=>array(
-                            'minLength'=>'1', // min chars to start search
+                            'minLength'=>'2', // min chars to start search
                             'select'=>'js:function(event, ui) { console.log(ui.item.id +":"+ui.item.value); }'
                     ),
                     'htmlOptions'=>array(
@@ -62,15 +62,18 @@
             echo $form->error($model,'item_iditem');
         ?>
         </div>
-            
-	<?php /*<div class="row">
-		
-		<?php echo $form->textField($model,'item_iditem'); ?>
-		<?php echo $form->error($model,'item_iditem'); ?>
-	</div>
-         * 
-         */
+        <?php
+               /* $script = "
+                    $('#item_iditem').ajaxSuccess(function(){ 
+                              
+                     });
+                    ";
+                 Yii::app()->clientScript->registerScript('form_js', $script);
+            */
         ?>
+            
+        
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'solicitado'); ?>
 		<?php echo $form->textField($model,'solicitado'); ?>

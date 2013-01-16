@@ -159,6 +159,35 @@
                                     
                                 ),//FIN TIPO->Tipos de formatos
                              
+                             //TIPO->Tipos transporte
+                                array("url"=>array("route"=>"/Parametros/tipostransporte/admin"),
+                                       "label"=>"Tipos transporte",
+                                            array(
+                                                "url"=>array("route"=>"/Parametros/tipostransporte/create"),
+                                                  "label"=>"Nuevo tipo transporte",
+                                              ),
+                                             array(
+                                                  "url"=>array("route"=>"/Parametros/tipostransporte/index"),
+                                                  "label"=>"Listar tipos transporte",
+                                              )
+                                    
+                                ),//FIN TIPO->Tipos transporte
+                             
+                             //TIPO->Tipos vendedor
+                                array("url"=>array("route"=>"/Parametros/tipovendedor/admin"),
+                                       "label"=>"Tipos vendedor",
+                                            array(
+                                                "url"=>array("route"=>"/Parametros/tipovendedor/create"),
+                                                  "label"=>"Nuevo tipo vendedor",
+                                              ),
+                                             array(
+                                                  "url"=>array("route"=>"/Parametros/tipovendedor/index"),
+                                                  "label"=>"Listar tipos vendedor",
+                                              )
+                                    
+                                ),//FIN TIPO->Tipos vendedor
+                             
+                             
                                 
                          ),//FIN TIPO
                          //ITEMS
@@ -190,6 +219,11 @@
                                        'url'=>array('route'=>"/".$this->module->id."/item"),
                                        'label'=>'Productos'
                                    ),
+                             
+                                    array(
+                                   "url"=>array("route"=>"/Parametros/porcentajesreservas"),
+                                             "label"=>"Porcentajes reserva",
+                                    ),
                          ),//FIN ITEMS
                     
                          //TERCEROS
@@ -218,6 +252,8 @@
                                 ),//FIN TIPO->Tipos de terceros
                         ),
                          //FIN TERCEROS
+                         
+                    //TERCEROS
                          
                     
                     ),///FIN MENU

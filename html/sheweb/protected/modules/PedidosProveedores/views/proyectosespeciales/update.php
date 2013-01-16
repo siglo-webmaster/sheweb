@@ -18,4 +18,4 @@ $this->menu=array(
 <?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
 <h1>Update Proyectosespeciales <?php echo $model->idproyectosespeciales; ?></h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form', array('model'=>$model,'proyectosespecialesuser'=>$proyectosespecialesuser,)); ?>

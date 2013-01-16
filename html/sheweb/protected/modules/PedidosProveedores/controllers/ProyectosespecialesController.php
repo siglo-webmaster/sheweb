@@ -63,7 +63,7 @@ class ProyectosespecialesController extends Controller
 	public function actionCreate()
 	{
 		$model=new Proyectosespeciales;
-
+                $proyectosespecialesuser = new ProyectosespecialesHasUsergroupsUser;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -71,12 +71,30 @@ class ProyectosespecialesController extends Controller
 		{
 			$model->attributes=$_POST['Proyectosespeciales'];
                         $model->idusuariocreacion = Yii::app()->user->id;
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->idproyectosespeciales));
+			if($model->save()){
+                            if(isset($_POST['usergroups_user'])){
+                                
+                                foreach($_POST['usergroups_user'] as $usuario){
+                                    
+                                    $model2=new ProyectosespecialesHasUsergroupsUser;
+                                    $model2->proyectosespeciales_idproyectosespeciales = $model->idproyectosespeciales;
+                                    $model2->usergroups_user_id = $usuario;
+                                    $model2->save();
+                                    unset($model2);
+                                    
+                                }
+                            }
+                            
+                            
+                            $this->redirect(array('view','id'=>$model->idproyectosespeciales));
+                        }
 		}
+                
+                
 
 		$this->render('create',array(
 			'model'=>$model,
+                        'proyectosespecialesuser'=>$proyectosespecialesuser,
 		));
 	}
 
@@ -95,12 +113,44 @@ class ProyectosespecialesController extends Controller
 		if(isset($_POST['Proyectosespeciales']))
 		{
 			$model->attributes=$_POST['Proyectosespeciales'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->idproyectosespeciales));
+			if($model->save()){
+                            if(isset($_POST['usergroups_user'])){
+                                 
+                                ProyectosespecialesHasUsergroupsUser::model()->deleteAll('proyectosespeciales_idproyectosespeciales=:proyectosespeciales_idproyectosespeciales',array('proyectosespeciales_idproyectosespeciales'=>$model->idproyectosespeciales));
+                                foreach($_POST['usergroups_user'] as $usuario){
+                                    
+                                    $model2=new ProyectosespecialesHasUsergroupsUser;
+                                    $model2->proyectosespeciales_idproyectosespeciales = $model->idproyectosespeciales;
+                                    $model2->usergroups_user_id = $usuario;
+                                    $model2->save();
+                                    unset($model2);
+                                    
+                                }
+                            }
+                            
+                            $this->redirect(array('view','id'=>$model->idproyectosespeciales));
+                            
+                        }
+				
 		}
-
+                
+                
+                $sql = "select *   from proyectosespeciales_has_usergroups_user as p 
+                            where p.proyectosespeciales_idproyectosespeciales='".$id."'" ;               
+                $proyectosespecialesuser = Yii::app()->db->createCommand($sql)->queryAll();
+                if(is_array($proyectosespecialesuser)){
+                    $users=array();
+                    foreach($proyectosespecialesuser as $row){
+                        $users[]=$row['usergroups_user_id'];
+                    }
+                }else{
+                    $users=null;
+                }
+                
+                
 		$this->render('update',array(
 			'model'=>$model,
+                        'proyectosespecialesuser'=>$users,
 		));
 	}
 
