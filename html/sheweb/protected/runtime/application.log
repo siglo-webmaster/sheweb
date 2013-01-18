@@ -5763,3 +5763,857 @@ Stack trace:
 REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/proyectosespeciales/update/id/3
 in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/ProyectosespecialesController.php (127)
 in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/01/18 08:06:20 [error] [php] include(UserGroupsUser.php): failed to open stream: No such file or directory (/home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/YiiBase.php:423)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/porcentajesreservas/_form.php(21): spl_autoload_call()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): PorcentajesreservasController->renderInternal()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): PorcentajesreservasController->renderFile()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/porcentajesreservas/create.php(18): PorcentajesreservasController->renderPartial()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): PorcentajesreservasController->renderInternal()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): PorcentajesreservasController->renderFile()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): PorcentajesreservasController->renderPartial()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PorcentajesreservasController.php(79): PorcentajesreservasController->render()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): PorcentajesreservasController->actionCreate()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PorcentajesreservasController->runAction()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PorcentajesreservasController->filterAccessControl()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#18 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PorcentajesreservasController->runActionWithFilters()
+#19 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PorcentajesreservasController->run()
+#20 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#21 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/porcentajesreservas/create
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/porcentajesreservas/_form.php (21)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/porcentajesreservas/create.php (18)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PorcentajesreservasController.php (79)
+2013/01/18 08:06:48 [error] [exception.CException] exception 'CException' with message 'Property "UsergroupsUser.usergroups_user_id" is not defined.' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(144): CComponent->__get('usergroups_user...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/helpers/CHtml.php(1809): CActiveRecord->__get('usergroups_user...')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/helpers/CHtml.php(1772): CHtml::value(Object(UsergroupsUser), 'usergroups_user...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/porcentajesreservas/_form.php(21): CHtml::listData(Array, 'usergroups_user...', 'username')
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/oborja/pu...')
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/oborja/pu...', Array, true)
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/oborja/pu...', Array, true)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/porcentajesreservas/create.php(18): CController->renderPartial('_form', Array)
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/oborja/pu...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/oborja/pu...', Array, true)
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/oborja/pu...', Array, true)
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PorcentajesreservasController.php(79): CController->render('create', Array)
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): PorcentajesreservasController->actionCreate()
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#21 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#23 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#24 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#25 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/porcentajesreservas/create
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/porcentajesreservas
+---
+2013/01/18 09:13:06 [error] [php] Undefined variable: data (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/porcentajesreservas/view.php:25)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): PorcentajesreservasController->renderFile()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): PorcentajesreservasController->renderPartial()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PorcentajesreservasController.php(56): PorcentajesreservasController->render()
+#3 unknown(0): PorcentajesreservasController->actionView()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PorcentajesreservasController->runAction()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PorcentajesreservasController->filterAccessControl()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PorcentajesreservasController->runActionWithFilters()
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PorcentajesreservasController->run()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/porcentajesreservas/view/id/1
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/porcentajesreservas/view.php (25)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PorcentajesreservasController.php (56)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/01/18 09:13:08 [error] [php] Undefined variable: data (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/porcentajesreservas/view.php:25)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): PorcentajesreservasController->renderFile()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): PorcentajesreservasController->renderPartial()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PorcentajesreservasController.php(56): PorcentajesreservasController->render()
+#3 unknown(0): PorcentajesreservasController->actionView()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PorcentajesreservasController->runAction()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PorcentajesreservasController->filterAccessControl()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PorcentajesreservasController->runActionWithFilters()
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PorcentajesreservasController->run()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/porcentajesreservas/view/id/1
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/porcentajesreservas/view.php (25)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PorcentajesreservasController.php (56)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/01/18 09:13:08 [error] [php] Undefined variable: data (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/porcentajesreservas/view.php:25)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): PorcentajesreservasController->renderFile()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): PorcentajesreservasController->renderPartial()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PorcentajesreservasController.php(56): PorcentajesreservasController->render()
+#3 unknown(0): PorcentajesreservasController->actionView()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PorcentajesreservasController->runAction()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PorcentajesreservasController->filterAccessControl()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PorcentajesreservasController->runActionWithFilters()
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PorcentajesreservasController->run()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/porcentajesreservas/view/id/1
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/porcentajesreservas/view.php (25)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PorcentajesreservasController.php (56)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/01/18 09:13:08 [error] [php] Undefined variable: data (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/porcentajesreservas/view.php:25)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): PorcentajesreservasController->renderFile()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): PorcentajesreservasController->renderPartial()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PorcentajesreservasController.php(56): PorcentajesreservasController->render()
+#3 unknown(0): PorcentajesreservasController->actionView()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PorcentajesreservasController->runAction()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PorcentajesreservasController->filterAccessControl()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PorcentajesreservasController->runActionWithFilters()
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PorcentajesreservasController->run()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/porcentajesreservas/view/id/1
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/porcentajesreservas/view.php (25)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PorcentajesreservasController.php (56)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/01/18 09:13:25 [error] [php] Undefined variable: data (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/porcentajesreservas/view.php:25)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): PorcentajesreservasController->renderFile()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): PorcentajesreservasController->renderPartial()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PorcentajesreservasController.php(56): PorcentajesreservasController->render()
+#3 unknown(0): PorcentajesreservasController->actionView()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PorcentajesreservasController->runAction()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PorcentajesreservasController->filterAccessControl()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PorcentajesreservasController->runActionWithFilters()
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PorcentajesreservasController->run()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/porcentajesreservas/view/id/1
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/porcentajesreservas/view.php (25)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PorcentajesreservasController.php (56)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/01/18 09:40:58 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('admin')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('Parametros/pais...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/Parametros/pais/admin
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/Parametros
+---
+2013/01/18 09:41:05 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('Parametros/pais...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/Parametros/pais/create
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/Parametros
+---
+2013/01/18 09:41:24 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('index')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('Parametros/pais...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/Parametros/pais/index
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/Parametros
+---
+2013/01/18 09:42:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('admin')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('Parametros/pais...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/Parametros/pais/admin
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/Parametros
+---
+2013/01/18 09:44:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('update')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('Parametros/pais...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/Parametros/pais/update/id/1
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/Parametros/pais/view/id/1
+---
+2013/01/18 10:46:32 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresdocumentos" of "Pedidosproveedoresdocumentos".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (131)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/01/18 10:46:32 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresdocumentos" of "Pedidosproveedoresdocumentos".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (131)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/01/18 10:48:54 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (88)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/01/18 10:48:54 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitemdetallereserva" of "Pedidosproveedoresitemdetallereserva".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (105)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/01/18 10:48:54 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitemdetallereserva" of "Pedidosproveedoresitemdetallereserva".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (105)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/01/18 10:48:54 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresdocumentos" of "Pedidosproveedoresdocumentos".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (131)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/01/18 10:48:54 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresdocumentos" of "Pedidosproveedoresdocumentos".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (131)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/01/18 10:53:46 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sheweb2013.tipovendedor' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `tipovendedor`.
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/Parametros/controllers/TipovendedorController.php (140)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/01/18 10:53:46 [error] [exception.CDbException] exception 'CDbException' with message 'The table "tipovendedor" for active record class "Tipovendedor" cannot be found in the database.' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php:2312
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Tipovendedor))
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(403): CActiveRecord::model('Tipovendedor')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/Parametros/controllers/TipovendedorController.php(140): CActiveRecord->__construct('search')
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): TipovendedorController->actionAdmin()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('admin')
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('Parametros/tipo...')
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/Parametros/tipovendedor/admin
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/Parametros
+---
+2013/01/18 11:04:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "PedidosProveedores/PedidosProveedores/pedidosproveedores/dinamicmoneda".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/PedidosProveedores/pedidosproveedores/dinamicmoneda
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/create
+---
+2013/01/18 11:22:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site/index".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('site/index')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/site/index
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/userGroups/admin
+---
+2013/01/18 11:25:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "EntradasAlmacen".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('EntradasAlmacen')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/site/index
+---
+2013/01/18 11:38:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/create
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores
+---
+2013/01/18 11:38:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('index')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/index
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores
+---
+2013/01/18 11:39:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/create
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores
+---
+2013/01/18 11:39:44 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('index')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('EntradasAlmacen...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen/pedidosproveedoresentradasalmacen/index
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen
+---
+2013/01/18 11:39:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('index')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('EntradasAlmacen...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen/pedidosproveedoresentradasalmacen/index/estado/cerrado
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen
+---
+2013/01/18 11:44:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/create
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores
+---
+2013/01/18 11:44:27 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedoresitems/create/pedidosproveedores_idpedidosproveedores/8
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/8
+---
+2013/01/18 11:44:35 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('getreservas')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedoresitemdetallereserva/getreservas/id/57
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/index
+---
+2013/01/18 12:08:31 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'NO ESTA AUTORIZADO PARA ACCEDER A ESTE MODULO' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/EntradasAlmacen/views/default/index.php:15
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/oborja/pu...', NULL, true)
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/oborja/pu...', NULL, true)
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): CController->renderPartial('index', NULL, true)
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/EntradasAlmacen/controllers/DefaultController.php(35): CController->render('index')
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): DefaultController->actionIndex()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('')
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('EntradasAlmacen')
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/site
+---
+2013/01/18 12:08:39 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'NO ESTA AUTORIZADO PARA ACCEDER A ESTE MODULO' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/EntradasAlmacen/views/default/index.php:15
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/oborja/pu...', NULL, true)
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/oborja/pu...', NULL, true)
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): CController->renderPartial('index', NULL, true)
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/EntradasAlmacen/controllers/DefaultController.php(35): CController->render('index')
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): DefaultController->actionIndex()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('')
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('EntradasAlmacen')
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen
+---
+2013/01/18 12:08:42 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'NO ESTA AUTORIZADO PARA ACCEDER A ESTE MODULO' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/EntradasAlmacen/views/default/index.php:15
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/oborja/pu...', NULL, true)
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/oborja/pu...', NULL, true)
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): CController->renderPartial('index', NULL, true)
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/EntradasAlmacen/controllers/DefaultController.php(35): CController->render('index')
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): DefaultController->actionIndex()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('')
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('EntradasAlmacen')
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores
+---
+2013/01/18 12:08:44 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'NO ESTA AUTORIZADO PARA ACCEDER A ESTE MODULO' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/EntradasAlmacen/views/default/index.php:15
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/oborja/pu...', NULL, true)
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/oborja/pu...', NULL, true)
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): CController->renderPartial('index', NULL, true)
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/EntradasAlmacen/controllers/DefaultController.php(35): CController->render('index')
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): DefaultController->actionIndex()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('')
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('EntradasAlmacen')
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen
+---
+2013/01/18 12:14:20 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/site
+---
+2013/01/18 12:14:22 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('EntradasAlmacen')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores
+---
+2013/01/18 12:14:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('Parametros')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/Parametros
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen
+---
+2013/01/18 12:15:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/create
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores
+---
+2013/01/18 12:16:06 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedoresitems/create/pedidosproveedores_idpedidosproveedores/8
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/index
+---
+2013/01/18 12:16:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('changestate')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/changestate/id/10
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/index
+---
+2013/01/18 12:16:36 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/proyectosespeciales/create
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/index/estado/cerrado
+---
+2013/01/18 12:16:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('EntradasAlmacen')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores
+---
+2013/01/18 12:16:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('Parametros')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/Parametros
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen
+---
+2013/01/18 12:21:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/site
+---
+2013/01/18 12:21:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('EntradasAlmacen')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores
+---
+2013/01/18 12:21:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('Parametros')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/Parametros
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen
+---
+2013/01/18 12:21:45 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/userGroups
+---
+2013/01/18 12:21:45 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('EntradasAlmacen')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores
+---
+2013/01/18 12:21:46 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('Parametros')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/Parametros
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen
+---
+2013/01/18 12:22:54 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/create
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores
+---
+2013/01/18 14:58:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "PedidosProveedores/PedidosProveedores/pedidosproveedores/dinamicmoneda".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/PedidosProveedores/pedidosproveedores/dinamicmoneda
+HTTP_REFERER=http://192.168.16.4/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/create
+---

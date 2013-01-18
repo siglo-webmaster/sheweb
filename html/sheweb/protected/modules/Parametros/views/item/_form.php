@@ -91,6 +91,7 @@
 		
 	</div>
 
+      
 	<div class="row">
 		<?php echo $form->labelEx($item,'isbn'); ?>
 		<?php echo $form->textField($item,'isbn',array('size'=>45,'maxlength'=>45)); ?>
@@ -101,6 +102,13 @@
 		<?php echo $form->labelEx($item,'barcode'); ?>
 		<?php echo $form->textField($item,'barcode',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($item,'barcode'); ?>
+	</div>
+        
+        
+        <div class="row">
+		<?php echo $form->labelEx($item,'codigosiglo'); ?>
+		<?php echo $form->textField($item,'codigosiglo',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($item,'codigosiglo'); ?>
 	</div>
 
         <div class="row">

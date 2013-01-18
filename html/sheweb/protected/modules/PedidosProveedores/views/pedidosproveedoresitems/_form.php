@@ -48,7 +48,7 @@
                     'source'=>Yii::app()->createUrl($this->module->id."/item/getItem/idproveedor/" . $pedido->idproveedor),// <- path to controller which returns dynamic data
                     // additional javascript options for the autocomplete plugin
                     'options'=>array(
-                            'minLength'=>'2', // min chars to start search
+                            'minLength'=>'1', // min chars to start search
                             'select'=>'js:function(event, ui) { console.log(ui.item.id +":"+ui.item.value); }'
                     ),
                     'htmlOptions'=>array(

@@ -24,6 +24,10 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('barcode')); ?>:</b>
 	<?php echo CHtml::encode($data->barcode); ?>
 	<br />
+        
+        <b><?php echo CHtml::encode($data->getAttributeLabel('codigosiglo')); ?>:</b>
+	<?php echo CHtml::encode($data->codigosiglo); ?>
+	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fechaedicion')); ?>:</b>
 	<?php echo CHtml::encode($data->fechaedicion); ?>

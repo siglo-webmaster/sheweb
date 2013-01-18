@@ -7,6 +7,7 @@
  * @property integer $iditem
  * @property integer $editorial_ideditorial
  * @property string $nombre
+ * @property string $codigosiglo
  * @property string $isbn
  * @property string $barcode
  * @property string $fechaedicion
@@ -55,11 +56,11 @@ class Item extends CActiveRecord
 			array('editorial_ideditorial', 'required'),
 			array('editorial_ideditorial, temporal', 'numerical', 'integerOnly'=>true),
 			array('nombre', 'length', 'max'=>512),
-			array('isbn, barcode, estado', 'length', 'max'=>45),
+			array('codigosiglo, isbn, barcode, estado', 'length', 'max'=>45),
 			array('fechaedicion, fechacreacion', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('iditem, editorial_ideditorial, nombre, isbn, barcode, fechaedicion, fechacreacion, temporal, estado', 'safe', 'on'=>'search'),
+			array('iditem, editorial_ideditorial, nombre, codigosiglo, isbn, barcode, fechaedicion, fechacreacion, temporal, estado', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -91,6 +92,7 @@ class Item extends CActiveRecord
 			'iditem' => 'Iditem',
 			'editorial_ideditorial' => 'Editorial Ideditorial',
 			'nombre' => 'Nombre',
+			'codigosiglo' => 'Codigosiglo',
 			'isbn' => 'Isbn',
 			'barcode' => 'Barcode',
 			'fechaedicion' => 'Fechaedicion',
@@ -114,6 +116,7 @@ class Item extends CActiveRecord
 		$criteria->compare('iditem',$this->iditem);
 		$criteria->compare('editorial_ideditorial',$this->editorial_ideditorial);
 		$criteria->compare('nombre',$this->nombre,true);
+		$criteria->compare('codigosiglo',$this->codigosiglo,true);
 		$criteria->compare('isbn',$this->isbn,true);
 		$criteria->compare('barcode',$this->barcode,true);
 		$criteria->compare('fechaedicion',$this->fechaedicion,true);
@@ -126,6 +129,7 @@ class Item extends CActiveRecord
 		));
 	}
         
+        
         /*LOG DE CAMBIOS*/
         public function behaviors()
         {
@@ -134,4 +138,5 @@ class Item extends CActiveRecord
                     'application.extensions.auditTrail.behaviors.LoggableBehavior',
             );
         }
+ 
 }

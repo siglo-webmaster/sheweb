@@ -2,6 +2,9 @@
 
 class SiteController extends Controller
 {
+    
+         static $_permissionControl = array( );
+        
 	/**
 	 * Declares class-based actions.
 	 */

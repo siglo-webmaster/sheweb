@@ -173,20 +173,7 @@
                                     
                                 ),//FIN TIPO->Tipos transporte
                              
-                             //TIPO->Tipos vendedor
-                                array("url"=>array("route"=>"/Parametros/tipovendedor/admin"),
-                                       "label"=>"Tipos vendedor",
-                                            array(
-                                                "url"=>array("route"=>"/Parametros/tipovendedor/create"),
-                                                  "label"=>"Nuevo tipo vendedor",
-                                              ),
-                                             array(
-                                                  "url"=>array("route"=>"/Parametros/tipovendedor/index"),
-                                                  "label"=>"Listar tipos vendedor",
-                                              )
-                                    
-                                ),//FIN TIPO->Tipos vendedor
-                             
+                                                        
                              
                                 
                          ),//FIN TIPO

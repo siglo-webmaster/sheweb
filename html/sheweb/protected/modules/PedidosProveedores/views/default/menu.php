@@ -57,6 +57,10 @@
                                                         "url"=>array("route"=>"/".$this->module->id."/proyectosespecialesHasUsergroupsUser"),
                                                         "label"=>"Usuarios-proyectos"
                                                 ),
+                                                array(
+                                                        "url"=>array("route"=>"/".$this->module->id."/porcentajesreservas"),
+                                                        "label"=>"Porcentajesreservas"
+                                                ),
                                 ),
                     
                                 //

@@ -8,13 +8,17 @@ class ItemController extends Controller
 	 */
 	public $layout='//layouts/column2';
 
+        static $_permissionControl = array( 'read'=>'Consultar',
+                                            'write' => 'Crear o Actializar', 
+                                            'admin'=>'Administrar');
+        
 	/**
 	 * @return array action filters
 	 */
 	public function filters()
 	{
 		return array(
-			'accessControl', // perform access control for CRUD operations
+			'userGroupsAccessControl', // perform access control for CRUD operations
 			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
@@ -29,15 +33,15 @@ class ItemController extends Controller
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				 'pbac'=>array('read'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update','getItem'),
-				'users'=>array('@'),
+				'pbac'=>array('write'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete','getItem'),
-				'users'=>array('admin'),
+				'pbac'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -56,19 +60,22 @@ class ItemController extends Controller
 		));
 	}
         
-        public function actionGetItem(){
-          
-	  if (!empty($_GET['term'])) {
-		$sql = 'SELECT iditem as id, concat ("[",iditem,"] ",nombre ) as value FROM item WHERE nombre LIKE :qterm ';
-		
-		$command = Yii::app()->db->createCommand($sql);
-		$qterm = '%'.$_GET['term'].'%';
-		$command->bindParam(":qterm", $qterm, PDO::PARAM_STR);
-		$result = $command->queryAll();
-		echo CJSON::encode($result); exit;
-	  } else {
-		return false;
-          }
+         public function actionGetItem($idproveedor){
+
+            if (!empty($_GET['term'])) {
+                $sql = 'SELECT distinct i.iditem as id, concat ("[", i.iditem, "] ", "[", COALESCE(i.codigosiglo,""), "] ", i.nombre ) as value FROM item as i
+                inner join item_has_terceros as iht on iht.item_iditem=i.iditem
+                and iht.terceros_idterceros='.$idproveedor.'
+                WHERE (i.nombre LIKE :qterm) or (i.iditem LIKE :qterm)  or (i.codigosiglo LIKE :qterm) ';
+
+                $command = Yii::app()->db->createCommand($sql);
+                $qterm = '%'.$_GET['term'].'%';
+                $command->bindParam(":qterm", $qterm, PDO::PARAM_STR);
+                $result = $command->queryAll();
+                echo CJSON::encode($result); exit;
+            } else {
+                return false;
+            }
         }
 
 	/**

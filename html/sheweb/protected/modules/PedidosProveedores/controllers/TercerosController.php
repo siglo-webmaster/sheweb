@@ -8,13 +8,17 @@ class TercerosController extends Controller
 	 */
 	public $layout='//layouts/column2';
 
+        static $_permissionControl = array( 'read'=>'Consultar',
+                                            'write' => 'Crear o Actializar', 
+                                            'admin'=>'Administrar');
+        
 	/**
 	 * @return array action filters
 	 */
 	public function filters()
 	{
 		return array(
-			'accessControl', // perform access control for CRUD operations
+			'userGroupsAccessControl', // perform access control for CRUD operations
 			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
@@ -29,15 +33,15 @@ class TercerosController extends Controller
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				 'pbac'=>array('read'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
-				'users'=>array('@'),
+				'pbac'=>array('write'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'pbac'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -63,19 +67,62 @@ class TercerosController extends Controller
 	public function actionCreate()
 	{
 		$model=new Terceros;
-
+                $terceros_has_moneda = new TercerosHasMoneda;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+                $terceros_has_tiposterceros = new TercerosHasTiposterceros;
+                
 		if(isset($_POST['Terceros']))
 		{
 			$model->attributes=$_POST['Terceros'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->idterceros));
+			if($model->save()){
+                            
+                            //relacion con tipos de Tercero
+                            if(isset($_POST['terceros_has_tiposterceros'])){
+                                if(is_array($_POST['terceros_has_tiposterceros'] )){
+                                    foreach($_POST['terceros_has_tiposterceros'] as $idtipotercero){
+                                        $tercerohastipotercero =  new TercerosHasTiposterceros;
+                                        $tercerohastipotercero->terceros_idterceros = $model->idterceros;
+                                        $tercerohastipotercero->tiposterceros_idtiposterceros = $idtipotercero;
+                                        if (!$tercerohastipotercero->save()){
+                                            print_r($tercerohastipotercero->errors);
+                                            yii::app()->end();
+                                        }
+                                        
+                                     }
+                                }
+                                   
+                            }
+                            
+                            
+                            //relacion con tipos de moneda
+                            if(isset($_POST['terceros_has_moneda'])){
+                                if(is_array($_POST['terceros_has_moneda'] )){
+                                    foreach($_POST['terceros_has_moneda'] as $idtipomoneda){
+                                        $tercerohastipomoneda =  new TercerosHasMoneda;
+                                        $tercerohastipomoneda->terceros_idterceros = $model->idterceros;
+                                        $tercerohastipomoneda->moneda_idmoneda = $idtipomoneda;
+                                        if (!$tercerohastipomoneda->save()){
+                                            print_r($tercerohastipomoneda->errors);
+                                            yii::app()->end();
+                                        }
+                                        
+                                     }
+                                }
+                                   
+                            }
+                            
+                            $this->redirect(array('view','id'=>$model->idterceros));
+                        }
+				
 		}
-
+                 
+                
+                
 		$this->render('create',array(
 			'model'=>$model,
+                        'terceros_has_tiposterceros'=>$terceros_has_tiposterceros,
+                        'terceros_has_moneda'=>$terceros_has_moneda,
 		));
 	}
 
@@ -87,19 +134,87 @@ class TercerosController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
+                $terceros_has_moneda = new TercerosHasMoneda;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
+		$terceros_has_tiposterceros = new TercerosHasTiposterceros;
+                
 		if(isset($_POST['Terceros']))
 		{
 			$model->attributes=$_POST['Terceros'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->idterceros));
+			if($model->save()){
+                            
+                            //relacion con tipos de Tercero
+                             $terceros_has_tiposterceros->deleteAllByAttributes(array('terceros_idterceros'=>$model->idterceros));
+                            if(isset($_POST['terceros_has_tiposterceros'])){
+                                if(is_array($_POST['terceros_has_tiposterceros'] )){
+                                    foreach($_POST['terceros_has_tiposterceros'] as $idtipotercero){
+                                        $tercerohastipotercero =  new TercerosHasTiposterceros;
+                                        $tercerohastipotercero->terceros_idterceros = $model->idterceros;
+                                        $tercerohastipotercero->tiposterceros_idtiposterceros = $idtipotercero;
+                                        if (!$tercerohastipotercero->save()){
+                                            print_r($tercerohastipotercero->errors);
+                                            yii::app()->end();
+                                        }
+                                        
+                                     }
+                                } 
+                                   
+                            }
+                            
+                            
+                             //relacion con tipos de moneda
+                            $terceros_has_moneda->deleteAllByAttributes(array('terceros_idterceros'=>$model->idterceros));
+                            if(isset($_POST['terceros_has_moneda'])){
+                                if(is_array($_POST['terceros_has_moneda'] )){
+                                    foreach($_POST['terceros_has_moneda'] as $idtipomoneda){
+                                        $tercerohastipomoneda =  new TercerosHasMoneda;
+                                        $tercerohastipomoneda->terceros_idterceros = $model->idterceros;
+                                        $tercerohastipomoneda->moneda_idmoneda = $idtipomoneda;
+                                        if (!$tercerohastipomoneda->save()){
+                                            print_r($tercerohastipomoneda->errors);
+                                            yii::app()->end();
+                                        }
+                                        
+                                     }
+                                }
+                                   
+                            }
+                            $this->redirect(array('view','id'=>$model->idterceros));
+                        }
+				
 		}
 
+                
+               //Get listado de tipos de terceros
+               $sql = "select distinct tiposterceros_idtiposterceros   from terceros_has_tiposterceros where terceros_idterceros='".$id."'" ;               
+                $tiposterceros = Yii::app()->db->createCommand($sql)->queryAll();
+                if(is_array($tiposterceros)){
+                    $form=array();
+                    foreach($tiposterceros as $row){
+                        $form[]=$row['tiposterceros_idtiposterceros'];
+                    }
+                }else{
+                    $row=null;
+                }
+               
+                //Get listado de tipos de monedas
+               $sql = "select distinct moneda_idmoneda   from terceros_has_moneda where terceros_idterceros='".$id."'" ;               
+                $tiposmoneda = Yii::app()->db->createCommand($sql)->queryAll();
+                if(is_array($tiposmoneda)){
+                    $moneda=array();
+                    foreach($tiposmoneda as $row){
+                        $moneda[]=$row['moneda_idmoneda'];
+                    }
+                }else{
+                    $row=null;
+                }
+                
 		$this->render('update',array(
 			'model'=>$model,
+                        'terceros_has_tiposterceros'=>$form,
+                        'terceros_has_moneda'=>$moneda,
 		));
 	}
 

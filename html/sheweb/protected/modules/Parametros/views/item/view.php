@@ -26,6 +26,7 @@ $this->menu=array(
 		'nombre',
 		'isbn',
 		'barcode',
+                'codigosiglo',
 		'fechaedicion',
 		'fechacreacion',
 		'temporal',

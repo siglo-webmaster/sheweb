@@ -36,6 +36,7 @@
                                 array('label'=>'Pedidos', 'url'=>Yii::app()->createUrl("PedidosProveedores"), 'visible'=>!Yii::app()->user->isGuest),
                                 array('label'=>'Entradas Almacen', 'url'=>Yii::app()->createUrl("EntradasAlmacen"), 'visible'=>!Yii::app()->user->isGuest),
                                 array('label'=>'Parametros', 'url'=>Yii::app()->createUrl("Parametros"), 'visible'=>!Yii::app()->user->isGuest),
+                                array('label'=>'Usuarios', 'url'=>Yii::app()->createUrl("userGroups"), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Login', 'url'=>array('/userGroups'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/userGroups/user/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
