@@ -8,8 +8,13 @@
  * @property integer $pedidosproveedores_idpedidosproveedores
  * @property integer $item_iditem
  * @property integer $solicitado
+ * @property integer $confirmado
+ * @property integer $reservado
  * @property integer $recibido
  * @property string $estado
+ * @property string $usuarios_idusuarios
+ * @property integer $proyectosespeciales_idproyectosespeciales
+ * @property string $username
  * @property string $nombre
  * @property string $isbn
  * @property string $barcode
@@ -18,6 +23,8 @@
  * @property integer $temporal
  * @property integer $ideditorial
  * @property string $nombreeditorial
+ * @property integer $idcondicioncomercial
+ * @property string $condicioncomercial
  */
 class ViewPedidosproveedoresitems extends CActiveRecord
 {
@@ -47,15 +54,17 @@ class ViewPedidosproveedoresitems extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('pedidosproveedores_idpedidosproveedores, item_iditem, nombreeditorial', 'required'),
-			array('idpedidosproveedoresitems, pedidosproveedores_idpedidosproveedores, item_iditem, solicitado, recibido, temporal, ideditorial', 'numerical', 'integerOnly'=>true),
-			array('estado, isbn, barcode', 'length', 'max'=>45),
+			array('pedidosproveedores_idpedidosproveedores, item_iditem, proyectosespeciales_idproyectosespeciales, nombreeditorial', 'required'),
+			array('idpedidosproveedoresitems, pedidosproveedores_idpedidosproveedores, item_iditem, solicitado, confirmado, reservado, recibido, proyectosespeciales_idproyectosespeciales, temporal, ideditorial, idcondicioncomercial', 'numerical', 'integerOnly'=>true),
+			array('estado, isbn, barcode, condicioncomercial', 'length', 'max'=>45),
+			array('usuarios_idusuarios', 'length', 'max'=>20),
+			array('username', 'length', 'max'=>120),
 			array('nombre', 'length', 'max'=>512),
 			array('nombreeditorial', 'length', 'max'=>256),
 			array('fechaedicion, fechacreacion', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idpedidosproveedoresitems, pedidosproveedores_idpedidosproveedores, item_iditem, solicitado, recibido, estado, nombre, isbn, barcode, fechaedicion, fechacreacion, temporal, ideditorial, nombreeditorial', 'safe', 'on'=>'search'),
+			array('idpedidosproveedoresitems, pedidosproveedores_idpedidosproveedores, item_iditem, solicitado, confirmado, reservado, recibido, estado, usuarios_idusuarios, proyectosespeciales_idproyectosespeciales, username, nombre, isbn, barcode, fechaedicion, fechacreacion, temporal, ideditorial, nombreeditorial, idcondicioncomercial, condicioncomercial', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -80,8 +89,13 @@ class ViewPedidosproveedoresitems extends CActiveRecord
 			'pedidosproveedores_idpedidosproveedores' => 'Pedidosproveedores Idpedidosproveedores',
 			'item_iditem' => 'Item Iditem',
 			'solicitado' => 'Solicitado',
+			'confirmado' => 'Confirmado',
+			'reservado' => 'Reservado',
 			'recibido' => 'Recibido',
 			'estado' => 'Estado',
+			'usuarios_idusuarios' => 'Usuarios Idusuarios',
+			'proyectosespeciales_idproyectosespeciales' => 'Proyectosespeciales Idproyectosespeciales',
+			'username' => 'Username',
 			'nombre' => 'Nombre',
 			'isbn' => 'Isbn',
 			'barcode' => 'Barcode',
@@ -90,6 +104,8 @@ class ViewPedidosproveedoresitems extends CActiveRecord
 			'temporal' => 'Temporal',
 			'ideditorial' => 'Ideditorial',
 			'nombreeditorial' => 'Nombreeditorial',
+			'idcondicioncomercial' => 'Idcondicioncomercial',
+			'condicioncomercial' => 'Condicioncomercial',
 		);
 	}
 
@@ -108,8 +124,13 @@ class ViewPedidosproveedoresitems extends CActiveRecord
 		$criteria->compare('pedidosproveedores_idpedidosproveedores',$this->pedidosproveedores_idpedidosproveedores);
 		$criteria->compare('item_iditem',$this->item_iditem);
 		$criteria->compare('solicitado',$this->solicitado);
+		$criteria->compare('confirmado',$this->confirmado);
+		$criteria->compare('reservado',$this->reservado);
 		$criteria->compare('recibido',$this->recibido);
 		$criteria->compare('estado',$this->estado,true);
+		$criteria->compare('usuarios_idusuarios',$this->usuarios_idusuarios,true);
+		$criteria->compare('proyectosespeciales_idproyectosespeciales',$this->proyectosespeciales_idproyectosespeciales);
+		$criteria->compare('username',$this->username,true);
 		$criteria->compare('nombre',$this->nombre,true);
 		$criteria->compare('isbn',$this->isbn,true);
 		$criteria->compare('barcode',$this->barcode,true);
@@ -118,9 +139,22 @@ class ViewPedidosproveedoresitems extends CActiveRecord
 		$criteria->compare('temporal',$this->temporal);
 		$criteria->compare('ideditorial',$this->ideditorial);
 		$criteria->compare('nombreeditorial',$this->nombreeditorial,true);
+		$criteria->compare('idcondicioncomercial',$this->idcondicioncomercial);
+		$criteria->compare('condicioncomercial',$this->condicioncomercial,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+        
+        
+        /*LOG DE CAMBIOS*/
+        public function behaviors()
+        {
+            return array(
+                'LoggableBehavior'=>
+                    'application.extensions.auditTrail.behaviors.LoggableBehavior',
+            );
+        }
+ 
 }

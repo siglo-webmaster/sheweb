@@ -15,6 +15,7 @@
  * @property string $estado
  * @property integer $idcondicioncomercial
  * @property string $condicioncomercial
+ * @property integer $proyectosespeciales_idproyectosespeciales
  */
 class ViewPedidosproveedoresitemsagrupado extends CActiveRecord
 {
@@ -44,14 +45,14 @@ class ViewPedidosproveedoresitemsagrupado extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('pedidosproveedores_idpedidosproveedores, item_iditem', 'required'),
-			array('idpedidosproveedoresitems, pedidosproveedores_idpedidosproveedores, item_iditem, solicitado, confirmado, recibido, idcondicioncomercial', 'numerical', 'integerOnly'=>true),
+			array('pedidosproveedores_idpedidosproveedores, item_iditem, proyectosespeciales_idproyectosespeciales', 'required'),
+			array('idpedidosproveedoresitems, pedidosproveedores_idpedidosproveedores, item_iditem, solicitado, confirmado, recibido, idcondicioncomercial, proyectosespeciales_idproyectosespeciales', 'numerical', 'integerOnly'=>true),
 			array('nombre', 'length', 'max'=>512),
 			array('reservado', 'length', 'max'=>32),
 			array('estado, condicioncomercial', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idpedidosproveedoresitems, pedidosproveedores_idpedidosproveedores, item_iditem, nombre, solicitado, confirmado, recibido, reservado, estado, idcondicioncomercial, condicioncomercial', 'safe', 'on'=>'search'),
+			array('idpedidosproveedoresitems, pedidosproveedores_idpedidosproveedores, item_iditem, nombre, solicitado, confirmado, recibido, reservado, estado, idcondicioncomercial, condicioncomercial, proyectosespeciales_idproyectosespeciales', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -83,6 +84,7 @@ class ViewPedidosproveedoresitemsagrupado extends CActiveRecord
 			'estado' => 'Estado',
 			'idcondicioncomercial' => 'Idcondicioncomercial',
 			'condicioncomercial' => 'Condicioncomercial',
+			'proyectosespeciales_idproyectosespeciales' => 'Proyectosespeciales Idproyectosespeciales',
 		);
 	}
 
@@ -108,6 +110,7 @@ class ViewPedidosproveedoresitemsagrupado extends CActiveRecord
 		$criteria->compare('estado',$this->estado,true);
 		$criteria->compare('idcondicioncomercial',$this->idcondicioncomercial);
 		$criteria->compare('condicioncomercial',$this->condicioncomercial,true);
+		$criteria->compare('proyectosespeciales_idproyectosespeciales',$this->proyectosespeciales_idproyectosespeciales);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

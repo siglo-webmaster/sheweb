@@ -6,16 +6,19 @@
  * The followings are the available columns in table 'pedidosproveedoresitems':
  * @property integer $idpedidosproveedoresitems
  * @property integer $pedidosproveedores_idpedidosproveedores
+ * @property integer $condicioncomercial_idcondicioncomercial
  * @property integer $item_iditem
  * @property integer $solicitado
  * @property integer $confirmado
  * @property integer $recibido
+ * @property integer $chekeado
  * @property string $estado
- * @property integer $condicioncomercial_idcondicioncomercial
+ * @property integer $proyectosespeciales_idproyectosespeciales
  *
  * The followings are the available model relations:
  * @property Pedidosproveedoresitemdetallereserva[] $pedidosproveedoresitemdetallereservas
  * @property Condicioncomercial $condicioncomercialIdcondicioncomercial
+ * @property Proyectosespeciales $proyectosespecialesIdproyectosespeciales
  * @property Item $itemIditem
  * @property Pedidosproveedores $pedidosproveedoresIdpedidosproveedores
  */
@@ -47,12 +50,12 @@ class Pedidosproveedoresitems extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('pedidosproveedores_idpedidosproveedores, item_iditem, condicioncomercial_idcondicioncomercial', 'required'),
-			array('pedidosproveedores_idpedidosproveedores, item_iditem, solicitado, confirmado, recibido, condicioncomercial_idcondicioncomercial', 'numerical', 'integerOnly'=>true),
+			array('pedidosproveedores_idpedidosproveedores, condicioncomercial_idcondicioncomercial, item_iditem, proyectosespeciales_idproyectosespeciales', 'required'),
+			array('pedidosproveedores_idpedidosproveedores, condicioncomercial_idcondicioncomercial, item_iditem, solicitado, confirmado, recibido, chekeado, proyectosespeciales_idproyectosespeciales', 'numerical', 'integerOnly'=>true),
 			array('estado', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idpedidosproveedoresitems, pedidosproveedores_idpedidosproveedores, item_iditem, solicitado, confirmado, recibido, estado, condicioncomercial_idcondicioncomercial', 'safe', 'on'=>'search'),
+			array('idpedidosproveedoresitems, pedidosproveedores_idpedidosproveedores, condicioncomercial_idcondicioncomercial, item_iditem, solicitado, confirmado, recibido, chekeado, estado, proyectosespeciales_idproyectosespeciales', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -66,6 +69,7 @@ class Pedidosproveedoresitems extends CActiveRecord
 		return array(
 			'pedidosproveedoresitemdetallereservas' => array(self::HAS_MANY, 'Pedidosproveedoresitemdetallereserva', 'pedidosproveedoresitems_idpedidosproveedoresitems'),
 			'condicioncomercialIdcondicioncomercial' => array(self::BELONGS_TO, 'Condicioncomercial', 'condicioncomercial_idcondicioncomercial'),
+			'proyectosespecialesIdproyectosespeciales' => array(self::BELONGS_TO, 'Proyectosespeciales', 'proyectosespeciales_idproyectosespeciales'),
 			'itemIditem' => array(self::BELONGS_TO, 'Item', 'item_iditem'),
 			'pedidosproveedoresIdpedidosproveedores' => array(self::BELONGS_TO, 'Pedidosproveedores', 'pedidosproveedores_idpedidosproveedores'),
 		);
@@ -79,12 +83,14 @@ class Pedidosproveedoresitems extends CActiveRecord
 		return array(
 			'idpedidosproveedoresitems' => 'Idpedidosproveedoresitems',
 			'pedidosproveedores_idpedidosproveedores' => 'Pedidosproveedores Idpedidosproveedores',
+			'condicioncomercial_idcondicioncomercial' => 'Condicioncomercial Idcondicioncomercial',
 			'item_iditem' => 'Item Iditem',
 			'solicitado' => 'Solicitado',
 			'confirmado' => 'Confirmado',
 			'recibido' => 'Recibido',
+			'chekeado' => 'Chekeado',
 			'estado' => 'Estado',
-			'condicioncomercial_idcondicioncomercial' => 'Condicioncomercial Idcondicioncomercial',
+			'proyectosespeciales_idproyectosespeciales' => 'Proyectosespeciales Idproyectosespeciales',
 		);
 	}
 
@@ -101,12 +107,14 @@ class Pedidosproveedoresitems extends CActiveRecord
 
 		$criteria->compare('idpedidosproveedoresitems',$this->idpedidosproveedoresitems);
 		$criteria->compare('pedidosproveedores_idpedidosproveedores',$this->pedidosproveedores_idpedidosproveedores);
+		$criteria->compare('condicioncomercial_idcondicioncomercial',$this->condicioncomercial_idcondicioncomercial);
 		$criteria->compare('item_iditem',$this->item_iditem);
 		$criteria->compare('solicitado',$this->solicitado);
 		$criteria->compare('confirmado',$this->confirmado);
 		$criteria->compare('recibido',$this->recibido);
+		$criteria->compare('chekeado',$this->chekeado);
 		$criteria->compare('estado',$this->estado,true);
-		$criteria->compare('condicioncomercial_idcondicioncomercial',$this->condicioncomercial_idcondicioncomercial);
+		$criteria->compare('proyectosespeciales_idproyectosespeciales',$this->proyectosespeciales_idproyectosespeciales);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

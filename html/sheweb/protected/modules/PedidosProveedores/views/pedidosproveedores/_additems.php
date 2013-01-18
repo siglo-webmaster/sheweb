@@ -62,6 +62,7 @@
                 'mergeColumns' => array('nombre'),
                  'columns' => array(
                   'nombre',
+                  'proyectosespeciales_idproyectosespeciales',
                   'condicioncomercial',
                   'solicitado',
                   'confirmado',

@@ -87,6 +87,38 @@ class PedidosproveedoresitemsController extends Controller
 			if($model->save()){
                             /*ASIGNACION DE RESERVAS AUTOMATICA*/
                             
+                            $sql = "select * from view_porcentajesreservas 
+                                         where iditem='".$model->item_iditem."' 
+                                         and proyectosespeciales_idproyectosespeciales=". $model->proyectosespeciales_idproyectosespeciales ;               
+                             $reservar = Yii::app()->db->createCommand($sql)->queryAll();
+                             if(is_array($reservar)){
+                                 $solicitar = $model->solicitado;
+                                 $total = $solicitar;
+                                 foreach($reservar as $row){
+                                     if($solicitar > 0){
+                                         
+                                         $itemdetallereserva = new Pedidosproveedoresitemdetallereserva;
+                                         $itemdetallereserva->reservado = ceil( $row['porcentaje'] * $total);
+                                         if($itemdetallereserva->reservado <= 0){
+                                             unset ($itemdetallereserva);
+                                             continue;
+                                         }
+                                         if($solicitar < $itemdetallereserva->reservado){
+                                             $itemdetallereserva->reservado = $solicitar;
+                                             $solicitar = 0;
+                                         }else{
+                                             $solicitar = $solicitar - $itemdetallereserva->reservado;
+                                         }
+                                         
+                                         $itemdetallereserva->pedidosproveedoresitems_idpedidosproveedoresitems = $model->idpedidosproveedoresitems;
+                                         $itemdetallereserva->bodega_idbodega = $row['bodega_idbodega'];
+                                         $itemdetallereserva->proyectosespeciales_idproyectosespeciales = $model->proyectosespeciales_idproyectosespeciales;
+                                         $itemdetallereserva->usuarios_idusuarios = $row['usergroups_user_id'];
+                                         $itemdetallereserva->save(false);
+                                         unset ($itemdetallereserva);
+                                     }
+                                 }
+                             }
                             /*FIN ASIGNACION RESERVAS*/
                             
                             $this->redirect (Yii::app ()->baseUrl."/index.php/PedidosProveedores/pedidosproveedores/additems/id/".$pedidosproveedores_idpedidosproveedores);

@@ -83,11 +83,24 @@
 
         <div class="row">
         <?php 
+                echo "Proyecto:";
+                $select = CHtml::listData(Proyectosespeciales::model()->findAll(), 'idproyectosespeciales', 'nombre');
+                echo $form->dropDownList($model,'proyectosespeciales_idproyectosespeciales',$select);
+        ?>
+        </div>
+        
+        <hr class="separador_blanco">
+        
+        <div class="row">
+        <?php 
                 echo "Condicion Comercial:";
                 $select = CHtml::listData(Condicioncomercial::model()->findAll(), 'idcondicioncomercial', 'nombre');
                 echo $form->dropDownList($model,'condicioncomercial_idcondicioncomercial',$select);
         ?>
         </div>
+        
+        
+        
         
         <hr class="separador_blanco">
         
