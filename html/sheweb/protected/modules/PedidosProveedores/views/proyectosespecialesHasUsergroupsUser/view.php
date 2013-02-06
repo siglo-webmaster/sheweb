@@ -16,13 +16,22 @@ $this->menu=array(
 );
 ?>
 <?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
-<h1>View ProyectosespecialesHasUsergroupsUser #<?php echo $model->idproyectosespeciales_has_usergroups_user; ?></h1>
+<h1>Usuarios por proyecto especial #<?php echo $model->idproyectosespeciales_has_usergroups_user; ?></h1>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
+<?php  
+    echo $this->renderPartial('_view',array('data'=>$model));
+?>
+
+<?php 
+/*
+$this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'idproyectosespeciales_has_usergroups_user',
 		'proyectosespeciales_idproyectosespeciales',
 		'usergroups_user_id',
 	),
-)); ?>
+)); 
+ */ 
+  ?>
+ 

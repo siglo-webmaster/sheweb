@@ -48,18 +48,30 @@ class Proyectosespeciales extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idcliente, idusuariocreacion, moneda_idmoneda', 'required'),
+			array('idcliente, idusuariocreacion, moneda_idmoneda, fechainicio, fechacierre, nombre', 'required'),
 			array('idcliente, moneda_idmoneda', 'numerical', 'integerOnly'=>true),
 			array('idusuariocreacion', 'length', 'max'=>20),
 			array('nombre', 'length', 'max'=>255),
 			array('estado', 'length', 'max'=>45),
 			array('fechainicio, fechacierre, observaciones', 'safe'),
+                        array('fechainicio','verificarFechaInicio'),
+                        array('fechacierre','verificarFechaCierre'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('idproyectosespeciales, idcliente, idusuariocreacion, nombre, fechainicio, fechacierre, observaciones, estado, moneda_idmoneda', 'safe', 'on'=>'search'),
 		);
 	}
 
+        public function verificarFechaCierre(){
+            if( strtotime($this->fechainicio) > strtotime($this->fechacierre) ) 
+                $this->addError('fechacierre', 'La fecha de cierre debe ser mayor que la fecha de inicio');
+        }
+        
+        public function verificarFechaInicio(){
+            if( strtotime($this->fechainicio) <= strtotime(date('Y-m-d')) ) 
+                $this->addError('fechainicio', 'La fecha de inicio debe ser mayor que la fecha actual');
+        }
+        
 	/**
 	 * @return array relational rules.
 	 */

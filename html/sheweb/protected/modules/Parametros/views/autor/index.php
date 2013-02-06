@@ -7,12 +7,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Autor', 'url'=>array('create')),
-	array('label'=>'Manage Autor', 'url'=>array('admin')),
+	array('label'=>'Crear Autor', 'url'=>array('create')),
+	array('label'=>'Administrar Autores', 'url'=>array('admin')),
 );
 ?>
 <?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
-<h1>Autors</h1>
+<h1>Autores</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

@@ -48,6 +48,7 @@ class Pedidosproveedoresitemdetallereserva extends CActiveRecord
 			array('pedidosproveedoresitems_idpedidosproveedoresitems, bodega_idbodega', 'required'),
 			array('pedidosproveedoresitems_idpedidosproveedoresitems, bodega_idbodega, proyectosespeciales_idproyectosespeciales, reservado', 'numerical', 'integerOnly'=>true),
 			array('usuarios_idusuarios', 'length', 'max'=>20),
+                        array('reservado','numerical','integerOnly'=>true,'min'=>1,'tooSmall'=>'Debe ingresar al menos 1 producto'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('idpedidosproveedoresitemdetallereserva, pedidosproveedoresitems_idpedidosproveedoresitems, bodega_idbodega, proyectosespeciales_idproyectosespeciales, usuarios_idusuarios, reservado', 'safe', 'on'=>'search'),

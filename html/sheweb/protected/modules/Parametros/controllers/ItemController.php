@@ -57,6 +57,7 @@ class ItemController extends Controller
 	{
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+                        'it'
 		));
 	}
         
@@ -89,12 +90,15 @@ class ItemController extends Controller
                 $item_has_autor = new ItemHasAutor;
                 $item_has_tipoformato = new ItemHasTipoformato;
                 $item_has_terceros = new ItemHasTerceros;
+                $item_has_tipoitematributos = new ItemHasTipoitematributos;
+                
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Item']))
 		{
 			$item->attributes=$_POST['Item'];
+                        $item->fechacreacion = date('Y-m-d h:i:s');
 			if($item->save()){
                             //Relacionar con categorias
                             if(isset($_POST['item_has_categoria'])){
@@ -156,6 +160,68 @@ class ItemController extends Controller
                                 yii::app()->end();
                             }
                             
+                            //Relacion con tipositematributos
+                            
+                            if(isset($_POST['item_has_tipoitematributos'])){
+                                if(is_array($_POST['item_has_tipoitematributos'] )){
+                                    foreach($_POST['item_has_tipoitematributos'] as $atributo){
+                                        $itemhastipoatributos =  new ItemHasTipoitematributos;
+                                        $itemhastipoatributos->item_iditem = $item->iditem;
+                                        $itemhastipoatributos->tipoitematributos_idtipoitematributos = $atributo["idtipoitematributo"];
+                                        switch($atributo['idtipoitematributo']){
+                                            case '1':{ //GUARDAR IMAGEN
+  
+                                                    ////GUARDAR ADJUNTO
+                                                     $files_uploades = CUploadedFile::getInstancesByName('valor'.$atributo['idtipoitematributo']);
+                                                    
+                                                    if(!is_dir("uploadedfiles/productos/".$item->iditem)){
+                                                        if(!mkdir("uploadedfiles/productos/".$item->iditem)){
+                                                            die("No pudo crearse la carpeta de archivos " ."uploadedfiles/productos/".$item->iditem);
+                                                        }
+                                                    }
+                                                    
+                                                    
+                                                    
+                                                    unset($itemhastipoatributos);
+                                                    
+                                                    foreach ($files_uploades as $image => $pic) {
+                                                        if($pic->name=='')continue;
+                                                        $itemhastipoatributos =  new ItemHasTipoitematributos;
+                                                        $itemhastipoatributos->item_iditem = $item->iditem;
+                                                        $itemhastipoatributos->tipoitematributos_idtipoitematributos = $atributo["idtipoitematributo"];
+                                                        
+                                                        $itemhastipoatributos->valor = "uploadedfiles/productos/".$item->iditem."/".$pic->name;
+                                                        
+                                                        $pic->saveAs("uploadedfiles/productos/".$item->iditem."/".$pic->name);
+                                                        
+                                                        
+                                                        if (!$itemhastipoatributos ->save()){
+                                                            print_r($itemhastipoatributos->errors);
+                                                            yii::app()->end();
+                                                        }
+                                                        unset($itemhastipoatributos);
+                                                    }
+                                                    
+                                                  
+                                                break;
+                                            }
+                                            default:{ //guardat texto
+                                                 if($atributo['valor']=='')continue;
+                                                 $itemhastipoatributos->valor = $atributo['valor'];
+                                                 if (!$itemhastipoatributos ->save()){
+                                                    print_r($itemhastipoatributos->errors);
+                                                    yii::app()->end();
+                                                }
+                                            }
+                                        }
+                                        
+                                        
+                                        
+                                     }
+                                }
+                                   
+                            }
+                            
                             $this->redirect(array('view','id'=>$item->iditem));
                             
                             
@@ -169,6 +235,8 @@ class ItemController extends Controller
                         'item_has_autor'=>$item_has_autor,
                         'item_has_tipoformato'=>$item_has_tipoformato,
                         'item_has_terceros'=>$item_has_terceros,
+                        'tipoitematributos'=>  Tipoitematributos::model()->findAll(),
+                        'item_has_tipoitematributos'=> new ItemHasTipoitematributos(),
 		));
 	}
 
@@ -184,6 +252,7 @@ class ItemController extends Controller
                 $item_has_autor = new ItemHasAutor;
                 $item_has_tipoformato = new ItemHasTipoformato;
                 $item_has_terceros = new ItemHasTerceros;
+                $itemhastipoatributos =  new ItemHasTipoitematributos;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -254,6 +323,71 @@ class ItemController extends Controller
                                 yii::app()->end();
                             }
                             
+                            //Relacion con tipositematributos
+                            $itemhastipoatributos->deleteAllByAttributes(array('item_iditem'=>$item->iditem));
+                            unset($itemhastipoatributos);
+                            if(isset($_POST['item_has_tipoitematributos'])){
+                                if(is_array($_POST['item_has_tipoitematributos'] )){
+                                    foreach($_POST['item_has_tipoitematributos'] as $atributo){
+                                        $itemhastipoatributos =  new ItemHasTipoitematributos;
+                                        $itemhastipoatributos->item_iditem = $item->iditem;
+                                        $itemhastipoatributos->tipoitematributos_idtipoitematributos = $atributo["idtipoitematributo"];
+                                        switch($atributo['idtipoitematributo']){
+                                            case '1':{ //GUARDAR IMAGEN
+  
+                                                    ////GUARDAR ADJUNTO
+                                                     $files_uploades = CUploadedFile::getInstancesByName('valor'.$atributo['idtipoitematributo']);
+                                                    
+                                                    if(!is_dir("uploadedfiles/productos/".$item->iditem)){
+                                                        if(!mkdir("uploadedfiles/productos/".$item->iditem)){
+                                                            die("No pudo crearse la carpeta de archivos " ."uploadedfiles/productos/".$item->iditem);
+                                                        }
+                                                    }
+                                                    
+                                                    
+                                                    
+                                                    unset($itemhastipoatributos);
+                                                    
+                                                    foreach ($files_uploades as $image => $pic) {
+                                                        if($pic->name=='')continue;
+                                                        $itemhastipoatributos =  new ItemHasTipoitematributos;
+                                                        $itemhastipoatributos->item_iditem = $item->iditem;
+                                                        $itemhastipoatributos->tipoitematributos_idtipoitematributos = $atributo["idtipoitematributo"];
+                                                        
+                                                        $itemhastipoatributos->valor = "uploadedfiles/productos/".$item->iditem."/".$pic->name;
+                                                        
+                                                        $pic->saveAs("uploadedfiles/productos/".$item->iditem."/".$pic->name);
+                                                        
+                                                        
+                                                        if (!$itemhastipoatributos ->save()){
+                                                            print_r($itemhastipoatributos->errors);
+                                                            yii::app()->end();
+                                                        }
+                                                        unset($itemhastipoatributos);
+                                                    }
+                                                    
+                                                  
+                                                break;
+                                            }
+                                            default:{ //guardat texto
+                                                 if($atributo['valor']=='')continue;
+                                                 $itemhastipoatributos->valor = $atributo['valor'];
+                                                 if (!$itemhastipoatributos ->save()){
+                                                    print_r($itemhastipoatributos->errors);
+                                                    yii::app()->end();
+                                                }
+                                            }
+                                        }
+                                        
+                                        
+                                        
+                                     }
+                                }
+                                   
+                            }
+                            
+                            
+                            
                             $this->redirect(array('view','id'=>$item->iditem));
                             
                             
@@ -307,12 +441,20 @@ class ItemController extends Controller
                 if(!$item_has_terceros){
                     $item_has_terceros = new ItemHasTerceros;
                 }
+                
+                $item_has_tipoitematributos = ItemHasTipoitematributos::model()->findAllByAttributes(array('item_iditem'=>$id));
+                if(!$item_has_tipoitematributos){
+                    $item_has_tipoitematributos = new ItemHasTipoitematributos;
+                }
+                
 		$this->render('update',array(
 			'item'=>$item,
                         'item_has_categoria'=>$cat,
                         'item_has_autor'=>$aut,
                         'item_has_tipoformato'=>$form,
                         'item_has_terceros'=>$item_has_terceros,
+                        'tipoitematributos'=>  Tipoitematributos::model()->findAll(),
+                        'item_has_tipoitematributos'=>$item_has_tipoitematributos,
 		));
                 
 	}

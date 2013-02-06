@@ -53,17 +53,23 @@ class Item extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('editorial_ideditorial', 'required'),
+			array('editorial_ideditorial, fechaedicion, nombre, isbn, barcode,', 'required'),
 			array('editorial_ideditorial, temporal', 'numerical', 'integerOnly'=>true),
 			array('nombre', 'length', 'max'=>512),
 			array('codigosiglo, isbn, barcode, estado', 'length', 'max'=>45),
 			array('fechaedicion, fechacreacion', 'safe'),
+                        array('fechaedicion','verificarFechaEdicion'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('iditem, editorial_ideditorial, nombre, codigosiglo, isbn, barcode, fechaedicion, fechacreacion, temporal, estado', 'safe', 'on'=>'search'),
 		);
 	}
 
+        public function verificarFechaEdicion(){
+            if( strtotime($this->fechaedicion) > strtotime(date('Y-m-d')) ) 
+                $this->addError('fechaedicion', 'La fecha de edicion no puede ser mayor a la fecha actual');
+        }
+        
 	/**
 	 * @return array relational rules.
 	 */

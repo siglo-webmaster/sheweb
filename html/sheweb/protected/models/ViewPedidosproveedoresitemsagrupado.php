@@ -16,6 +16,7 @@
  * @property integer $idcondicioncomercial
  * @property string $condicioncomercial
  * @property integer $proyectosespeciales_idproyectosespeciales
+ * @property string $barcode
  */
 class ViewPedidosproveedoresitemsagrupado extends CActiveRecord
 {
@@ -49,10 +50,10 @@ class ViewPedidosproveedoresitemsagrupado extends CActiveRecord
 			array('idpedidosproveedoresitems, pedidosproveedores_idpedidosproveedores, item_iditem, solicitado, confirmado, recibido, idcondicioncomercial, proyectosespeciales_idproyectosespeciales', 'numerical', 'integerOnly'=>true),
 			array('nombre', 'length', 'max'=>512),
 			array('reservado', 'length', 'max'=>32),
-			array('estado, condicioncomercial', 'length', 'max'=>45),
+			array('estado, condicioncomercial, barcode', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idpedidosproveedoresitems, pedidosproveedores_idpedidosproveedores, item_iditem, nombre, solicitado, confirmado, recibido, reservado, estado, idcondicioncomercial, condicioncomercial, proyectosespeciales_idproyectosespeciales', 'safe', 'on'=>'search'),
+			array('idpedidosproveedoresitems, pedidosproveedores_idpedidosproveedores, item_iditem, nombre, solicitado, confirmado, recibido, reservado, estado, idcondicioncomercial, condicioncomercial, proyectosespeciales_idproyectosespeciales, barcode', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -85,6 +86,7 @@ class ViewPedidosproveedoresitemsagrupado extends CActiveRecord
 			'idcondicioncomercial' => 'Idcondicioncomercial',
 			'condicioncomercial' => 'Condicioncomercial',
 			'proyectosespeciales_idproyectosespeciales' => 'Proyectosespeciales Idproyectosespeciales',
+			'barcode' => 'Barcode',
 		);
 	}
 
@@ -111,6 +113,7 @@ class ViewPedidosproveedoresitemsagrupado extends CActiveRecord
 		$criteria->compare('idcondicioncomercial',$this->idcondicioncomercial);
 		$criteria->compare('condicioncomercial',$this->condicioncomercial,true);
 		$criteria->compare('proyectosespeciales_idproyectosespeciales',$this->proyectosespeciales_idproyectosespeciales);
+		$criteria->compare('barcode',$this->barcode,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

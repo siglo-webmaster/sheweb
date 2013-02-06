@@ -47,6 +47,7 @@ class Pedidosproveedoresentradasalmacenfallados extends CActiveRecord
 			array('idpedidosproveedoresentradasalmacen, item_iditem, condicioncomercial_idcondicioncomercial', 'required'),
 			array('idpedidosproveedoresentradasalmacen, item_iditem, cantidad, condicioncomercial_idcondicioncomercial', 'numerical', 'integerOnly'=>true),
 			array('observaciones', 'safe'),
+                        array('cantidad','numerical','integerOnly'=>true,'min'=>1,'tooSmall'=>'Debe ingresar al menos 1 producto'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('idpedidosproveedoresentradasalmacenfallados, idpedidosproveedoresentradasalmacen, item_iditem, cantidad, observaciones, condicioncomercial_idcondicioncomercial', 'safe', 'on'=>'search'),

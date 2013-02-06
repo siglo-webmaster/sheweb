@@ -9,11 +9,12 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'item-form',
 	'enableAjaxValidation'=>false,
+        'htmlOptions' => array('enctype' => 'multipart/form-data'),
 )); ?>
 
-   
+
     
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Los campos con <span class="required">*</span> son obligatorios.</p>
 
 	<?php echo $form->errorSummary($item); ?>
 
@@ -151,7 +152,63 @@
 		<?php echo $form->error($item,'temporal'); ?>
 	</div>
 
+       
+
         <hr class="separador_blanco">
+        
+   <?   ///Parametros adicionales
+        echo "<table >
+                    <thead>
+                    <tr><th colspan=2 style='text-align:center;'>Atributos adicionales</th></tr>
+                    </thead><tbody>";
+        $i=0;
+        foreach ($tipoitematributos as $row){
+            echo "<tr>".
+                    "<td>".$row->nombre.
+                    "<input type='hidden' name='item_has_tipoitematributos[".$i."][idtipoitematributo]' value='".$row->idtipoitematributos."' >".
+                    "</td>".
+                    "<td>";
+            switch($row->tipodato){
+                case 'image':{
+                     $this->widget('CMultiFileUpload',array(
+                    'name'=>"valor".$row->idtipoitematributos,
+                    'accept'=>'jpg|png|gif',
+                    'max'=>20,
+                    'remove'=>Yii::t('ui','Borrar'),
+                    'denied'=>'Tipo de archivo no permitido. Solo se permiten imagenes png, jpg o gif', //message that is displayed when a file type is not allowed
+                    'duplicate'=>'nombre de archivo duplicado', //message that is displayed when a file appears twice
+                    'htmlOptions'=>array('size'=>25),
+                    )); 
+                
+                    break;
+                }
+                case 'file':{
+                     $this->widget('CMultiFileUpload',array(
+                    'name'=>'item_has_tipoitematributos['.$i.'][valor]',
+                    'accept'=>'doc|docx|pdf|xls|xlsx|ppt|txt|tif',
+                    'max'=>20,
+                    'remove'=>Yii::t('ui','Borrar'),
+                    'denied'=>'Tipo de archivo no permitido. Solo se permiten archivos doc, docx, pdf, xls, xlsx, ppt, txt, tif ', //message that is displayed when a file type is not allowed
+                    'duplicate'=>'nombre de archivo duplicado', //message that is displayed when a file appears twice
+                    'htmlOptions'=>array('size'=>25),
+                    )); 
+                    break;
+                }
+                default:{
+                    echo "<input type='text' name='item_has_tipoitematributos[".$i."][valor]'>"; 
+                    break;
+                }
+               
+            }
+            echo "</td>".
+                    "</tr>";
+            $i++;
+            
+        }
+         
+        echo "</tbody></table>";
+   ?>
+         <hr class="separador_blanco">
 	<div class="row">
 		<?php echo $form->labelEx($item,'estado'); ?>
 		<?php echo $form->dropDownList($item,'estado',array("activo"=>"activo","inactivo"=>"inactivo")); ?>
@@ -163,7 +220,7 @@
 		<?php echo $form->dropDownList($item,'temporal',array('1'=>'Si','0'=>'No')); ?>
 		<?php echo $form->error($item,'temporal'); ?>
 	</div>
-
+        
         <hr class="separador_blanco">
         
 	<div class="row buttons">

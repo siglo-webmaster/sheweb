@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Autor', 'url'=>array('index')),
-	array('label'=>'Manage Autor', 'url'=>array('admin')),
+	array('label'=>'Listar Autores', 'url'=>array('index')),
+	array('label'=>'Administrar Autores', 'url'=>array('admin')),
 );
 ?>
 <?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>

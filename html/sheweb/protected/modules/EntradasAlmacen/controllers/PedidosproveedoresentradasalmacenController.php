@@ -76,7 +76,7 @@ class PedidosproveedoresentradasalmacenController extends Controller
 		if(isset($_POST['Pedidosproveedoresentradasalmacen']))
 		{
 			$model->attributes=$_POST['Pedidosproveedoresentradasalmacen'];
-                        $model->usuarios_idusuarios=1;
+                        $model->usuarios_idusuarios=Yii::app()->user->id;
                         $model->fecha=date('Y-m-d h:i:s');
                         if($model->save()){
                             if(isset($_POST['numeroitems'])){

@@ -8,17 +8,20 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Item', 'url'=>array('index')),
-	array('label'=>'Create Item', 'url'=>array('create')),
-	array('label'=>'Update Item', 'url'=>array('update', 'id'=>$model->iditem)),
-	array('label'=>'Delete Item', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->iditem),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Item', 'url'=>array('admin')),
+	array('label'=>'Listar productos', 'url'=>array('index')),
+	array('label'=>'Crear producto', 'url'=>array('create')),
+	array('label'=>'Editar', 'url'=>array('update', 'id'=>$model->iditem)),
+	array('label'=>'Borrar', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->iditem),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Administrar Productos', 'url'=>array('admin')),
 );
 ?>
 <?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
-<h1>View Item #<?php echo $model->iditem; ?></h1>
+<h1>Producto #<?php echo $model->iditem; ?></h1>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
+<?php 
+ echo $this->renderPartial('_view',array('data'=>$model));
+?>
+<?php /*$this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'iditem',
@@ -32,4 +35,8 @@ $this->menu=array(
 		'temporal',
 		'estado',
 	),
-)); ?>
+)); 
+ * 
+ * 
+ */
+?>

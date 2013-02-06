@@ -173,8 +173,12 @@
                                     
                                 ),//FIN TIPO->Tipos transporte
                              
-                                                        
-                             
+                                //TIPOS ATRIBUTOS  DE ITEM
+                                array(
+                                        "url"=>array("route"=>"/".$this->module->id."/tipoitematributos"),
+                                        "label"=>"atributos producto"
+                                ),                     
+                                //FIN TIPOS ATRIBUTOS  DE ITEM
                                 
                          ),//FIN TIPO
                          //ITEMS

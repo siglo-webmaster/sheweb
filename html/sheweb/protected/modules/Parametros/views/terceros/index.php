@@ -7,12 +7,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Terceros', 'url'=>array('create')),
-	array('label'=>'Manage Terceros', 'url'=>array('admin')),
+	array('label'=>'Crear Terceros', 'url'=>array('create')),
+	array('label'=>'Administrar Terceros', 'url'=>array('admin')),
 );
 ?>
 <?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
-<h1>Terceroses</h1>
+<h1>Terceros</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

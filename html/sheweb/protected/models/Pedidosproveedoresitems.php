@@ -50,9 +50,11 @@ class Pedidosproveedoresitems extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('pedidosproveedores_idpedidosproveedores, condicioncomercial_idcondicioncomercial, item_iditem, proyectosespeciales_idproyectosespeciales', 'required'),
+			array('pedidosproveedores_idpedidosproveedores, condicioncomercial_idcondicioncomercial, item_iditem, proyectosespeciales_idproyectosespeciales, solicitado', 'required'),
 			array('pedidosproveedores_idpedidosproveedores, condicioncomercial_idcondicioncomercial, item_iditem, solicitado, confirmado, recibido, chekeado, proyectosespeciales_idproyectosespeciales', 'numerical', 'integerOnly'=>true),
 			array('estado', 'length', 'max'=>45),
+                        array('solicitado','numerical','integerOnly'=>true,'min'=>1,'tooSmall'=>'Debe ingresar al menos 1 producto'),
+                        array('confirmado','numerical','integerOnly'=>true,'min'=>0,),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('idpedidosproveedoresitems, pedidosproveedores_idpedidosproveedores, condicioncomercial_idcondicioncomercial, item_iditem, solicitado, confirmado, recibido, chekeado, estado, proyectosespeciales_idproyectosespeciales', 'safe', 'on'=>'search'),

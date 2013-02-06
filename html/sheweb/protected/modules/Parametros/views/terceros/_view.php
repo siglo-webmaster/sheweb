@@ -10,11 +10,11 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('tiposidentificacion_idtiposidentificacion')); ?>:</b>
-	<?php echo CHtml::encode($data->tiposidentificacion_idtiposidentificacion); ?>
+	<?php echo CHtml::encode($data->tiposidentificacionIdtiposidentificacion->nombre); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('ciudad_idciudad')); ?>:</b>
-	<?php echo CHtml::encode($data->ciudad_idciudad); ?>
+	<?php echo CHtml::encode($data->ciudadIdciudad->nombre); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nombre')); ?>:</b>

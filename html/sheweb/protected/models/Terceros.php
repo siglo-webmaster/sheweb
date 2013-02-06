@@ -51,10 +51,11 @@ class Terceros extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('tiposidentificacion_idtiposidentificacion, ciudad_idciudad', 'required'),
+			array('tiposidentificacion_idtiposidentificacion, ciudad_idciudad, nombre, identificacion, telefono, contacto, telefonocontacto, direccion, email', 'required'),
 			array('tiposidentificacion_idtiposidentificacion, ciudad_idciudad', 'numerical', 'integerOnly'=>true),
 			array('identificacion, nombre, telefono, telefonocontacto, estado', 'length', 'max'=>45),
 			array('email, contacto, direccion', 'length', 'max'=>128),
+                        array('email', 'email','checkMX'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('idterceros, tiposidentificacion_idtiposidentificacion, ciudad_idciudad, identificacion, nombre, telefono, email, contacto, telefonocontacto, direccion, estado', 'safe', 'on'=>'search'),

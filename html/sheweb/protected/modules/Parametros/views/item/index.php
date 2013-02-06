@@ -7,12 +7,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Item', 'url'=>array('create')),
-	array('label'=>'Manage Item', 'url'=>array('admin')),
+	array('label'=>'Crear producto', 'url'=>array('create')),
+	array('label'=>'Administrar productos', 'url'=>array('admin')),
 );
 ?>
 <?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
-<h1>Items</h1>
+<h1>Productos</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

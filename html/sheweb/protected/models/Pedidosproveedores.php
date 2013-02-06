@@ -61,17 +61,31 @@ class Pedidosproveedores extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idproveedor, moneda_idmoneda, tipopedidosproveedores_idtipopedidosproveedores, tipostransporte_idtipostransporte', 'required'),
+			array('idproveedor, moneda_idmoneda, tipopedidosproveedores_idtipopedidosproveedores, tipostransporte_idtipostransporte, fechacierre, fechaestimada', 'required'),
 			array('idproveedor, moneda_idmoneda, tipopedidosproveedores_idtipopedidosproveedores, tipostransporte_idtipostransporte', 'numerical', 'integerOnly'=>true),
 			array('usuariocreacion, usuarioaprobacion', 'length', 'max'=>20),
 			array('estado', 'length', 'max'=>45),
 			array('fechacreacion, fechacierre, fechaestimada, fechaaprobacion, fechaentrada, fechaliberacion, descripcion, observaciones', 'safe'),
+                        array('fechaestimada','verificarFechaEstimada'),
+                        array('fechacierre','verificarFechaCierre'),
+                            
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('idpedidosproveedores, usuariocreacion, usuarioaprobacion, idproveedor, moneda_idmoneda, fechacreacion, fechacierre, fechaestimada, fechaaprobacion, fechaentrada, fechaliberacion, descripcion, observaciones, estado, tipopedidosproveedores_idtipopedidosproveedores, tipostransporte_idtipostransporte', 'safe', 'on'=>'search'),
 		);
 	}
 
+        public function verificarFechaEstimada(){
+            if( strtotime($this->fechacierre) > strtotime($this->fechaestimada) ) 
+                $this->addError('fechaestimada', 'La fecha de cierre debe ser menor que la fecha estimada de llegada');
+        }
+        
+        public function verificarFechaCierre(){
+            if( strtotime($this->fechacierre) <= strtotime(date('Y-m-d')) ) 
+                $this->addError('fechacierre', 'La fecha de cierre debe ser mayor que la fecha actual');
+        }
+        
+        
 	/**
 	 * @return array relational rules.
 	 */

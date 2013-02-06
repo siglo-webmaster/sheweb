@@ -38,6 +38,7 @@
             <table class="items">
                 <thead>
                     <tr>
+                        <th>barcode</th>
                         <th>Item</th>
                         <th>Tipo</th>
                         <th>Solicitado</th>
@@ -55,6 +56,7 @@
             $i=0;
             foreach($items as $row){
                 echo "<tr>";
+                    echo"<td>".$row['barcode'];
                     echo"<td>".$row['nombre'].
                             "<input type='hidden' name='idpedidosproveedoresitems_".$i."' value='".$row['idpedidosproveedoresitems']."' >".
                             "<input type='hidden' name='iditem_".$i."' value='".$row['item_iditem']."' >".

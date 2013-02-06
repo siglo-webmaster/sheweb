@@ -10,7 +10,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('editorial_ideditorial')); ?>:</b>
-	<?php echo CHtml::encode($data->editorial_ideditorial); ?>
+	<?php echo CHtml::encode($data->editorialIdeditorial->nombre); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nombre')); ?>:</b>

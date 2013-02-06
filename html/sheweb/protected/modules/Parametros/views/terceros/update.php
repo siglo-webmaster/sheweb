@@ -9,10 +9,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Terceros', 'url'=>array('index')),
-	array('label'=>'Create Terceros', 'url'=>array('create')),
-	array('label'=>'View Terceros', 'url'=>array('view', 'id'=>$model->idterceros)),
-	array('label'=>'Manage Terceros', 'url'=>array('admin')),
+	array('label'=>'Listar Terceros', 'url'=>array('index')),
+	array('label'=>'Crear', 'url'=>array('create')),
+	array('label'=>'Ver Detalles', 'url'=>array('view', 'id'=>$model->idterceros)),
+	array('label'=>'Administrar Terceros', 'url'=>array('admin')),
 );
 ?>
 <?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>

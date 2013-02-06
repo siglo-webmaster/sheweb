@@ -10,8 +10,16 @@
 	'id'=>'pedidosproveedoresitems-form',
 	'enableAjaxValidation'=>false,
 )); ?>
+    
+<?php 
+        $this->menu=array(
+                array('label'=>'Crear nuevo producto', 'url'=> Yii::app()->createUrl('/Parametros/item/create'), 'target'=>'_blank'),
+               
+        );
+         
+ ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Campos con <span class="required">*</span> son obligatorios.</p>
 
 	<?php echo $form->errorSummary($model); ?>
         
@@ -35,10 +43,11 @@
             ?>
 	</div>
         
-        
-       
+        <table border="0">
+            <tr>
+                <td colspan="2">
         <div class="row">
-        <?php
+        <?php /*
             echo $form->labelEx($model,'item_iditem'); 
             if($model->isNewRecord ){
                 $this->widget('zii.widgets.jui.CJuiAutoComplete', array(
@@ -59,9 +68,19 @@
             }else{
                 echo "[".$model->item_iditem."]" . $model->itemIditem->nombre;
             }
+            echo $form->error($model,'item_iditem');*/
+        
+
+            echo $form->labelEx($model,'item_iditem');
+            $select = CHtml::listData(Item::model()->findAllBySql("select distinct i.iditem, i.nombre from item as i  inner join  item_has_terceros as it on it.item_iditem=i.iditem and it.terceros_idterceros=$pedido->idproveedor where i.estado='activo'"), 'iditem', 'nombre');
+            echo $form->dropDownList($model,'item_iditem',$select);
             echo $form->error($model,'item_iditem');
         ?>
         </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
         <?php
                /* $script = "
                     $('#item_iditem').ajaxSuccess(function(){ 
@@ -74,13 +93,14 @@
             
         
 	
-	<div class="row">
+	
+        <div class="row">
 		<?php echo $form->labelEx($model,'solicitado'); ?>
 		<?php echo $form->textField($model,'solicitado'); ?>
 		<?php echo $form->error($model,'solicitado'); ?>
 	</div>
-
-
+                </td>
+                <td>
         <div class="row">
         <?php 
                 echo "Proyecto:";
@@ -88,6 +108,10 @@
                 echo $form->dropDownList($model,'proyectosespeciales_idproyectosespeciales',$select);
         ?>
         </div>
+        
+                </td>
+            </tr>
+        </table>
         
         <hr class="separador_blanco">
         
