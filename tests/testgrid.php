@@ -30,10 +30,10 @@ if(!$sidx) $sidx =1;
 $db = mysql_connect('localhost', "root", "pepelon2012") or die("Connection Error: " . mysql_error()); 
  
 // select the database 
-mysql_select_db('test') or die("Error connecting to db."); 
+mysql_select_db('sheweb2013') or die("Error connecting to db."); 
  
 // calculate the number of rows for the query. We need this for paging the result 
-$result = mysql_query("SELECT COUNT(*) AS count FROM invheader"); 
+$result = mysql_query("SELECT COUNT(*) AS count FROM editorial"); 
 $row = mysql_fetch_array($result,MYSQL_ASSOC); 
 $count = $row['count']; 
  
@@ -56,7 +56,7 @@ $start = $limit*$page - $limit;
 if($start <0) $start = 0; 
  
 // the actual query for the grid data 
-$SQL = "SELECT invid, invdate, amount, tax,total, note FROM invheader ORDER BY $sidx $sord LIMIT $start , $limit"; 
+$SQL = "SELECT * FROM editorial ORDER BY $sidx $sord LIMIT $start , $limit"; 
 $result = mysql_query( $SQL ) or die("Couldn't execute query.".mysql_error()); 
  
 // we should set the appropriate header information. Do not forget this.
@@ -70,13 +70,10 @@ $s .= "<records>".$count."</records>";
  
 // be sure to put text data in CDATA
 while($row = mysql_fetch_array($result,MYSQL_ASSOC)) {
-    $s .= "<row id='". $row['invid']."'>";            
-    $s .= "<cell>". $row['invid']."</cell>";
-    $s .= "<cell>". $row['invdate']."</cell>";
-    $s .= "<cell>". $row['amount']."</cell>";
-    $s .= "<cell>". $row['tax']."</cell>";
-    $s .= "<cell>". $row['total']."</cell>";
-    $s .= "<cell><![CDATA[". $row['note']."]]></cell>";
+    $s .= "<row id='". $row['ideditorial']."'>";            
+    $s .= "<cell>". $row['ideditorial']."</cell>";
+    $s .= "<cell><![CDATA[". $row['nombre']."]]></cell>";
+    $s .= "<cell>". $row['estado']."</cell>";
     $s .= "</row>";
 }
 $s .= "</rows>"; 

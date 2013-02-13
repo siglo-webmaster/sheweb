@@ -62,6 +62,10 @@
                                                         "label"=>"Porcentajesreservas"
                                                 ),
                                 ),
+                                array(
+                                                "url"=>array("route"=>"/".$this->module->id."/cargasexcel/index"),
+                                                "label"=>"Cargas excel",
+                                ),
                     
                                 //
                         ),
