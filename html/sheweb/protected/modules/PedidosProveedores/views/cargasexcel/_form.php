@@ -9,6 +9,7 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'cargasexcel-form',
 	'enableAjaxValidation'=>false,
+        'htmlOptions' => array('enctype' => 'multipart/form-data'),
 )); ?>
 
 	

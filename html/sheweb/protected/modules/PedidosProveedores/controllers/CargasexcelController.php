@@ -87,13 +87,39 @@ class CargasexcelController extends Controller
                                 die("No pudo crearse la carpeta de archivos " ."uploadedfiles/pedidosproveedoresdocumentoscargasitems/".$model->pedidosproveedores_idpedidosproveedores);
                             }
                         }
-
+                        
+                                                
                         foreach ($files_uploades as $image => $pic) {
                            // $cargasexcel=new Cargasexcel();//CARGAR MODELO 
                             //$model->pedidosproveedores_idpedidosproveedores = $model->pedidosproveedores_idpedidosproveedores; //OBTENER LLAVE FORANEA  
-                            $pic->saveAs("uploadedfiles/pedidosproveedoresdocumentos/".$model->pedidosproveedores_idpedidosproveedores."/".$pic->name);
-                            $model->file="uploadedfiles/pedidosproveedoresdocumentos/".$model->pedidosproveedores_idpedidosproveedores."/".$pic->name;
+                            $pic->saveAs("uploadedfiles/pedidosproveedoresdocumentoscargasitems/".$model->pedidosproveedores_idpedidosproveedores."/".$pic->name);
+                            $model->file="uploadedfiles/pedidosproveedoresdocumentoscargasitems/".$model->pedidosproveedores_idpedidosproveedores."/".$pic->name;
+                            
                             if($model->save()){
+                                $campos = array(
+                                        0=>'titulo',
+                                        1=>'isbn',
+                                        2=>'year',
+                                        3=>'numeroedicion',
+                                        4=>'formato',
+                                        5=>'categoria',
+                                        6=>'autor',
+                                        7=>'precio',
+                                        8=>'moneda',
+                                        9=>'descripcion'
+                                    );
+                                
+                                $datos = $this->cargarExcel($model->file);
+                                echo "<table border=1>";
+                                foreach($datos as $row){
+                                    echo "<tr>";
+                                    foreach($campos as $col){
+                                        echo "<td>".$row[$col]."</td>";
+                                    }
+                                    echo "</tr>";
+                                }
+                                echo "</table>";
+                                exit(0);
                                 $this->redirect(array('view','id'=>$model->idcargasexcel));
                             }
                             //unset($cargasexcel);
@@ -201,4 +227,43 @@ class CargasexcelController extends Controller
 			Yii::app()->end();
 		}
 	}
+        
+        
+        /*Funcion de carga de archivo excel*/
+        public function cargarExcel($file,$campos=false){
+   
+        require_once 'Excel/reader.php';
+
+        if(!$campos){
+            $campos = array(
+                0=>'titulo',
+                1=>'isbn',
+                2=>'year',
+                3=>'numeroedicion',
+                4=>'formato',
+                5=>'categoria',
+                6=>'autor',
+                7=>'precio',
+                8=>'moneda',
+                9=>'descripcion'
+            );
+        }
+
+
+        $data = new Spreadsheet_Excel_Reader();
+        $data->setOutputEncoding('UTF-8');
+
+        $data->read($file);
+
+        $carga = array();
+        for ($i = 1; $i <= $data->sheets[0]['numRows']; $i++) {
+
+                for ($j = 1; $j <= $data->sheets[0]['numCols']; $j++) {
+                        $carga[$i - 1][$campos[$j-1]] = (isset($data->sheets[0]['cells'][$i][$j]))?$data->sheets[0]['cells'][$i][$j]:'';
+                }
+        }
+
+        return $carga;
+
+    }
 }
