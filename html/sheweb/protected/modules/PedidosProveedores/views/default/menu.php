@@ -63,8 +63,24 @@
                                                 ),
                                 ),
                                 array(
-                                                "url"=>array("route"=>"/".$this->module->id."/cargasexcel/index"),
-                                                "label"=>"Cargas excel",
+                                                "url"=>array("route"=>""),
+                                                "label"=>"EXTRA",
+                                     array(
+                                                    "url"=>array("route"=>"/".$this->module->id."/cargasexcel/index"),
+                                                    "label"=>"Cargas excel",
+                                    ),
+                                     array(
+                                                    "url"=>array("route"=>"/".$this->module->id."/estrellas/index"),
+                                                    "label"=>"Estrellas",
+                                    ),
+                                    array(
+                                                    "url"=>array("route"=>"/".$this->module->id."/estrellascategoriaeditorial/index"),
+                                                    "label"=>"Estrellas cat-edit",
+                                    ),
+                                    array(
+                                                    "url"=>array("route"=>"/".$this->module->id."/reservasestrellascategoriaeditorial/index"),
+                                                    "label"=>"Reserva estrellas",
+                                    ),
                                 ),
                     
                                 //
