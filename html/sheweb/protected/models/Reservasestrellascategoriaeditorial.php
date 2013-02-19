@@ -6,15 +6,13 @@
  * The followings are the available columns in table 'reservasestrellascategoriaeditorial':
  * @property string $idreservasestrellascategoriaeditorial
  * @property string $estrellascategoriaeditorial_idestrellascategoriaeditorial
- * @property string $usergroups_user_id
- * @property integer $bodega_idbodega
+ * @property integer $ciudad_idciudad
  * @property integer $cantidad
  * @property integer $prioridad
  *
  * The followings are the available model relations:
+ * @property Ciudad $ciudadIdciudad
  * @property Estrellascategoriaeditorial $estrellascategoriaeditorialIdestrellascategoriaeditorial
- * @property UsergroupsUser $usergroupsUser
- * @property Bodega $bodegaIdbodega
  */
 class Reservasestrellascategoriaeditorial extends CActiveRecord
 {
@@ -44,12 +42,12 @@ class Reservasestrellascategoriaeditorial extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('estrellascategoriaeditorial_idestrellascategoriaeditorial, usergroups_user_id, bodega_idbodega, cantidad, prioridad', 'required'),
-			array('bodega_idbodega, cantidad, prioridad', 'numerical', 'integerOnly'=>true),
-			array('estrellascategoriaeditorial_idestrellascategoriaeditorial, usergroups_user_id', 'length', 'max'=>20),
+			array('estrellascategoriaeditorial_idestrellascategoriaeditorial, ciudad_idciudad, cantidad, prioridad', 'required'),
+			array('ciudad_idciudad, cantidad, prioridad', 'numerical', 'integerOnly'=>true),
+			array('estrellascategoriaeditorial_idestrellascategoriaeditorial', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idreservasestrellascategoriaeditorial, estrellascategoriaeditorial_idestrellascategoriaeditorial, usergroups_user_id, bodega_idbodega, cantidad, prioridad', 'safe', 'on'=>'search'),
+			array('idreservasestrellascategoriaeditorial, estrellascategoriaeditorial_idestrellascategoriaeditorial, ciudad_idciudad, cantidad, prioridad', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,9 +59,8 @@ class Reservasestrellascategoriaeditorial extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'ciudadIdciudad' => array(self::BELONGS_TO, 'Ciudad', 'ciudad_idciudad'),
 			'estrellascategoriaeditorialIdestrellascategoriaeditorial' => array(self::BELONGS_TO, 'Estrellascategoriaeditorial', 'estrellascategoriaeditorial_idestrellascategoriaeditorial'),
-			'usergroupsUser' => array(self::BELONGS_TO, 'UsergroupsUser', 'usergroups_user_id'),
-			'bodegaIdbodega' => array(self::BELONGS_TO, 'Bodega', 'bodega_idbodega'),
 		);
 	}
 
@@ -75,8 +72,7 @@ class Reservasestrellascategoriaeditorial extends CActiveRecord
 		return array(
 			'idreservasestrellascategoriaeditorial' => 'Idreservasestrellascategoriaeditorial',
 			'estrellascategoriaeditorial_idestrellascategoriaeditorial' => 'Estrellascategoriaeditorial Idestrellascategoriaeditorial',
-			'usergroups_user_id' => 'Usergroups User',
-			'bodega_idbodega' => 'Bodega Idbodega',
+			'ciudad_idciudad' => 'Ciudad Idciudad',
 			'cantidad' => 'Cantidad',
 			'prioridad' => 'Prioridad',
 		);
@@ -95,8 +91,7 @@ class Reservasestrellascategoriaeditorial extends CActiveRecord
 
 		$criteria->compare('idreservasestrellascategoriaeditorial',$this->idreservasestrellascategoriaeditorial,true);
 		$criteria->compare('estrellascategoriaeditorial_idestrellascategoriaeditorial',$this->estrellascategoriaeditorial_idestrellascategoriaeditorial,true);
-		$criteria->compare('usergroups_user_id',$this->usergroups_user_id,true);
-		$criteria->compare('bodega_idbodega',$this->bodega_idbodega);
+		$criteria->compare('ciudad_idciudad',$this->ciudad_idciudad);
 		$criteria->compare('cantidad',$this->cantidad);
 		$criteria->compare('prioridad',$this->prioridad);
 

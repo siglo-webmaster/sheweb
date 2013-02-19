@@ -15,7 +15,7 @@ $this->menu=array(
 	array('label'=>'Manage Reservasestrellascategoriaeditorial', 'url'=>array('admin')),
 );
 ?>
-<?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
+
 <h1>View Reservasestrellascategoriaeditorial #<?php echo $model->idreservasestrellascategoriaeditorial; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
@@ -23,8 +23,7 @@ $this->menu=array(
 	'attributes'=>array(
 		'idreservasestrellascategoriaeditorial',
 		'estrellascategoriaeditorial_idestrellascategoriaeditorial',
-		'usergroups_user_id',
-		'bodega_idbodega',
+		'ciudad_idciudad',
 		'cantidad',
 		'prioridad',
 	),

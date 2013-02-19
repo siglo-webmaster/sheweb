@@ -25,7 +25,7 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
-<?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
+
 <h1>Manage Reservasestrellascategoriaeditorials</h1>
 
 <p>
@@ -47,8 +47,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'idreservasestrellascategoriaeditorial',
 		'estrellascategoriaeditorial_idestrellascategoriaeditorial',
-		'usergroups_user_id',
-		'bodega_idbodega',
+		'ciudad_idciudad',
 		'cantidad',
 		'prioridad',
 		array(

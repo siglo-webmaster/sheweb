@@ -13,12 +13,8 @@
 	<?php echo CHtml::encode($data->estrellascategoriaeditorial_idestrellascategoriaeditorial); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('usergroups_user_id')); ?>:</b>
-	<?php echo CHtml::encode($data->usergroups_user_id); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('bodega_idbodega')); ?>:</b>
-	<?php echo CHtml::encode($data->bodega_idbodega); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('ciudad_idciudad')); ?>:</b>
+	<?php echo CHtml::encode($data->ciudad_idciudad); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('cantidad')); ?>:</b>

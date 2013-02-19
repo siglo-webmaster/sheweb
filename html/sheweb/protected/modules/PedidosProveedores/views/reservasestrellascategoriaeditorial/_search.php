@@ -22,13 +22,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'usergroups_user_id'); ?>
-		<?php echo $form->textField($model,'usergroups_user_id',array('size'=>20,'maxlength'=>20)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'bodega_idbodega'); ?>
-		<?php echo $form->textField($model,'bodega_idbodega'); ?>
+		<?php echo $form->label($model,'ciudad_idciudad'); ?>
+		<?php echo $form->textField($model,'ciudad_idciudad'); ?>
 	</div>
 
 	<div class="row">

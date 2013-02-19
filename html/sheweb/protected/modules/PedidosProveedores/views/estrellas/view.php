@@ -15,7 +15,7 @@ $this->menu=array(
 	array('label'=>'Manage Estrellas', 'url'=>array('admin')),
 );
 ?>
-<?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
+
 <h1>View Estrellas #<?php echo $model->idestrellas; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
