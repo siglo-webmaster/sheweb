@@ -8,11 +8,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Estrellas', 'url'=>array('index')),
-	array('label'=>'Manage Estrellas', 'url'=>array('admin')),
+	array('label'=>'Listar Estrellas', 'url'=>array('index')),
+	array('label'=>'Administrar Estrellas', 'url'=>array('admin')),
 );
 ?>
+<?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
 
-<h1>Create Estrellas</h1>
+<h1>Crear Estrellas</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

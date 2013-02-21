@@ -15,6 +15,7 @@ $this->menu=array(
 	array('label'=>'Manage Estrellascategoriaeditorial', 'url'=>array('admin')),
 );
 ?>
+<?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
 
 <h1>View Estrellascategoriaeditorial #<?php echo $model->idestrellascategoriaeditorial; ?></h1>
 

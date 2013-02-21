@@ -25,8 +25,9 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
+<?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
 
-<h1>Manage Estrellases</h1>
+<h1>Administrar Estrellas</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>

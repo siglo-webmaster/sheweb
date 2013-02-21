@@ -25,6 +25,7 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
+<?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
 
 <h1>Manage Estrellascategoriaeditorials</h1>
 

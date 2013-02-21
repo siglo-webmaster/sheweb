@@ -11,6 +11,7 @@ $this->menu=array(
 	array('label'=>'Manage Reservasestrellascategoriaeditorial', 'url'=>array('admin')),
 );
 ?>
+<?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
 
 <h1>Reservasestrellascategoriaeditorials</h1>
 
