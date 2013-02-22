@@ -1,22 +1,24 @@
 <?php
 
 /**
- * This is the model class for table "autor".
+ * This is the model class for table "itemprecio".
  *
- * The followings are the available columns in table 'autor':
- * @property integer $idautor
- * @property string $nombre
- * @property string $estado
+ * The followings are the available columns in table 'itemprecio':
+ * @property string $iditemprecio
+ * @property integer $item_iditem
+ * @property integer $moneda_idmoneda
+ * @property string $precio
  *
  * The followings are the available model relations:
- * @property Item[] $items
+ * @property Item $itemIditem
+ * @property Moneda $monedaIdmoneda
  */
-class Autor extends CActiveRecord
+class Itemprecio extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Autor the static model class
+	 * @return Itemprecio the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -28,7 +30,7 @@ class Autor extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'autor';
+		return 'itemprecio';
 	}
 
 	/**
@@ -39,12 +41,12 @@ class Autor extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre, estado', 'required'),
-			array('nombre', 'length', 'max'=>512),
-			array('estado', 'length', 'max'=>45),
+			array('item_iditem, moneda_idmoneda, precio', 'required'),
+			array('item_iditem, moneda_idmoneda', 'numerical', 'integerOnly'=>true),
+			array('precio', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idautor, nombre, estado', 'safe', 'on'=>'search'),
+			array('iditemprecio, item_iditem, moneda_idmoneda, precio', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,7 +58,8 @@ class Autor extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'items' => array(self::MANY_MANY, 'Item', 'item_has_autor(autor_idautor, item_iditem)'),
+			'itemIditem' => array(self::BELONGS_TO, 'Item', 'item_iditem'),
+			'monedaIdmoneda' => array(self::BELONGS_TO, 'Moneda', 'moneda_idmoneda'),
 		);
 	}
 
@@ -66,9 +69,10 @@ class Autor extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idautor' => 'Idautor',
-			'nombre' => 'Nombre',
-			'estado' => 'Estado',
+			'iditemprecio' => 'Iditemprecio',
+			'item_iditem' => 'Item Iditem',
+			'moneda_idmoneda' => 'Moneda Idmoneda',
+			'precio' => 'Precio',
 		);
 	}
 
@@ -83,9 +87,10 @@ class Autor extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('idautor',$this->idautor);
-		$criteria->compare('nombre',$this->nombre,true);
-		$criteria->compare('estado',$this->estado,true);
+		$criteria->compare('iditemprecio',$this->iditemprecio,true);
+		$criteria->compare('item_iditem',$this->item_iditem);
+		$criteria->compare('moneda_idmoneda',$this->moneda_idmoneda);
+		$criteria->compare('precio',$this->precio,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

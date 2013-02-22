@@ -3343,3 +3343,835 @@ REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/c
 in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (123)
 in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
 in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/02/21 09:49:50 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:337
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/index
+---
+2013/02/21 09:50:01 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:337
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/in/22
+---
+2013/02/21 10:03:56 [error] [php] Undefined offset: 10 (/home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php:263)
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CargasexcelController->runAction()
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CargasexcelController->filterUserGroupsAccessControl()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CargasexcelController->runActionWithFilters()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CargasexcelController->run()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/22
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (263)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (113)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+2013/02/21 10:57:01 [error] [php] Trying to get property of non-object (/home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php:132)
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CargasexcelController->runAction()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CargasexcelController->filterUserGroupsAccessControl()
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CargasexcelController->runActionWithFilters()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CargasexcelController->run()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/22
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (132)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/02/21 10:57:12 [error] [php] Trying to get property of non-object (/home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php:132)
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CargasexcelController->runAction()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CargasexcelController->filterUserGroupsAccessControl()
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CargasexcelController->runActionWithFilters()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CargasexcelController->run()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/22
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (132)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/02/21 10:57:49 [error] [php] Undefined index: id_editorial (/home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php:132)
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CargasexcelController->runAction()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CargasexcelController->filterUserGroupsAccessControl()
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CargasexcelController->runActionWithFilters()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CargasexcelController->run()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/22
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (132)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/02/21 11:00:54 [error] [exception.CException] exception 'CException' with message 'Property "Editorial.0" is not defined.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(144): CComponent->__get('0')
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CModel.php(593): CActiveRecord->__get('0')
+#2 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php(133): CModel->offsetGet(0)
+#3 [internal function]: CargasexcelController->actionCreate('22')
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CargasexcelController), Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CargasexcelController), Object(ReflectionMethod), Array)
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#15 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#16 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/22
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/22
+---
+2013/02/21 11:44:23 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:337
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/index
+---
+2013/02/21 11:44:36 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sheweb2013.autores' doesn't exist. The SQL statement executed was: select * from autores 
+                                                        where nombre ='AUTOR'.
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (160)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/02/21 11:44:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sheweb2013.autores' doesn't exist. The SQL statement executed was: select * from autores 
+                                                        where nombre ='AUTOR'' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php(160): CDbCommand->queryAll()
+#2 [internal function]: CargasexcelController->actionCreate('23')
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CargasexcelController), Array)
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CargasexcelController), Object(ReflectionMethod), Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#15 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/23
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/23
+---
+2013/02/21 11:47:21 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:337
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/index
+---
+2013/02/21 15:31:18 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:337
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/index
+---
+2013/02/21 15:31:33 [error] [exception.CException] exception 'CException' with message 'Property "Autor.apellido" is not defined.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:174
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(160): CComponent->__set('apellido', ' ')
+#1 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php(166): CActiveRecord->__set('apellido', ' ')
+#2 [internal function]: CargasexcelController->actionCreate('6')
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CargasexcelController), Array)
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CargasexcelController), Object(ReflectionMethod), Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#15 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/6
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/6
+---
+2013/02/21 15:31:56 [error] [exception.CException] exception 'CException' with message 'Property "Autor.apellido" is not defined.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(144): CComponent->__get('apellido')
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/validators/CRequiredValidator.php(52): CActiveRecord->__get('apellido')
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/validators/CValidator.php(214): CRequiredValidator->validateAttribute(Object(Autor), 'apellido')
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CModel.php(158): CValidator->validate(Object(Autor), NULL)
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(795): CModel->validate(NULL)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php(168): CActiveRecord->save()
+#6 [internal function]: CargasexcelController->actionCreate('6')
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CargasexcelController), Array)
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CargasexcelController), Object(ReflectionMethod), Array)
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#16 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#18 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#19 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#20 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/6
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/6
+---
+2013/02/21 15:32:21 [error] [exception.CException] exception 'CException' with message 'Property "Autor.apellido" is not defined.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:174
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(160): CComponent->__set('apellido', 'nuevo')
+#1 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php(166): CActiveRecord->__set('apellido', 'nuevo')
+#2 [internal function]: CargasexcelController->actionCreate('6')
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CargasexcelController), Array)
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CargasexcelController), Object(ReflectionMethod), Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#15 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/6
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/6
+---
+2013/02/21 15:33:08 [error] [exception.CException] exception 'CException' with message 'Property "Autor.apellido" is not defined.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(144): CComponent->__get('apellido')
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/validators/CRequiredValidator.php(52): CActiveRecord->__get('apellido')
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/validators/CValidator.php(214): CRequiredValidator->validateAttribute(Object(Autor), 'apellido')
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CModel.php(158): CValidator->validate(Object(Autor), NULL)
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(795): CModel->validate(NULL)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php(168): CActiveRecord->save()
+#6 [internal function]: CargasexcelController->actionCreate('6')
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CargasexcelController), Array)
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CargasexcelController), Object(ReflectionMethod), Array)
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#16 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#18 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#19 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#20 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/6
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/6
+---
+2013/02/21 15:35:15 [error] [exception.CException] exception 'CException' with message 'Property "Autor.apellido" is not defined.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(144): CComponent->__get('apellido')
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/validators/CRequiredValidator.php(52): CActiveRecord->__get('apellido')
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/validators/CValidator.php(214): CRequiredValidator->validateAttribute(Object(Autor), 'apellido')
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CModel.php(158): CValidator->validate(Object(Autor), NULL)
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(795): CModel->validate(NULL)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php(168): CActiveRecord->save()
+#6 [internal function]: CargasexcelController->actionCreate('6')
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CargasexcelController), Array)
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CargasexcelController), Object(ReflectionMethod), Array)
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#16 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#18 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#19 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#20 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/6
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/6
+---
+2013/02/21 16:25:49 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:337
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/index
+---
+2013/02/21 16:26:10 [error] [php] Use of undefined constant Item - assumed 'Item' (/home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php:196)
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CargasexcelController->runAction()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CargasexcelController->filterUserGroupsAccessControl()
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CargasexcelController->runActionWithFilters()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CargasexcelController->run()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/9
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (196)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/02/21 16:26:39 [error] [exception.CException] exception 'CException' with message 'Property "Item.titulo" is not defined.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:174
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(160): CComponent->__set('titulo', 'titulo')
+#1 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php(197): CActiveRecord->__set('titulo', 'titulo')
+#2 [internal function]: CargasexcelController->actionCreate('9')
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CargasexcelController), Array)
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CargasexcelController), Object(ReflectionMethod), Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#15 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/9
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/9
+---
+2013/02/21 16:27:53 [error] [exception.CException] exception 'CException' with message 'Property "Item.titulo" is not defined.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:174
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(160): CComponent->__set('titulo', 'titulo')
+#1 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php(197): CActiveRecord->__set('titulo', 'titulo')
+#2 [internal function]: CargasexcelController->actionCreate('9')
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CargasexcelController), Array)
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CargasexcelController), Object(ReflectionMethod), Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#15 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/9
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/9
+---
+2013/02/21 17:25:48 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:337
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/index
+---
+2013/02/21 17:26:03 [error] [php] Undefined offset: 11 (/home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php:370)
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CargasexcelController->runAction()
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CargasexcelController->filterUserGroupsAccessControl()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CargasexcelController->runActionWithFilters()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CargasexcelController->run()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/25
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (370)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (114)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+2013/02/21 17:28:10 [error] [php] Undefined offset: 11 (/home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php:370)
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CargasexcelController->runAction()
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CargasexcelController->filterUserGroupsAccessControl()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CargasexcelController->runActionWithFilters()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CargasexcelController->run()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/25
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (370)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (114)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+2013/02/21 17:30:08 [error] [php] Undefined offset: 10 (/home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php:369)
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CargasexcelController->runAction()
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CargasexcelController->filterUserGroupsAccessControl()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CargasexcelController->runActionWithFilters()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CargasexcelController->run()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/25
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (369)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (113)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+2013/02/21 17:32:24 [error] [php] Undefined offset: 10 (/home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php:369)
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CargasexcelController->runAction()
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CargasexcelController->filterUserGroupsAccessControl()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CargasexcelController->runActionWithFilters()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CargasexcelController->run()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/25
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (369)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (113)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+2013/02/21 17:34:01 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sheweb2013`.`cargasexcel`, CONSTRAINT `fk_cargasexcel_pedidosproveedores1` FOREIGN KEY (`pedidosproveedores_idpedidosproveedores`) REFERENCES `pedidosproveedores` (`idpedidosproveedores`) ON ). The SQL statement executed was: INSERT INTO `cargasexcel` (`pedidosproveedores_idpedidosproveedores`, `usergroups_user_id`, `fecha`, `file`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (98)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/02/21 17:34:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sheweb2013`.`cargasexcel`, CONSTRAINT `fk_cargasexcel_pedidosproveedores1` FOREIGN KEY (`pedidosproveedores_idpedidosproveedores`) REFERENCES `pedidosproveedores` (`idpedidosproveedores`) ON ). The SQL statement executed was: INSERT INTO `cargasexcel` (`pedidosproveedores_idpedidosproveedores`, `usergroups_user_id`, `fecha`, `file`) VALUES (:yp0, :yp1, :yp2, :yp3)' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(1017): CDbCommand->execute()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(796): CActiveRecord->insert(NULL)
+#2 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php(98): CActiveRecord->save()
+#3 [internal function]: CargasexcelController->actionCreate('17')
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CargasexcelController), Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CargasexcelController), Object(ReflectionMethod), Array)
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#15 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#16 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/17
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/17
+---
+2013/02/21 17:34:37 [error] [php] Undefined offset: 10 (/home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php:369)
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CargasexcelController->runAction()
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CargasexcelController->filterUserGroupsAccessControl()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CargasexcelController->runActionWithFilters()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CargasexcelController->run()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/4
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (369)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (113)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+2013/02/21 17:38:51 [error] [php] Undefined offset: 10 (/home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php:369)
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CargasexcelController->runAction()
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CargasexcelController->filterUserGroupsAccessControl()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CargasexcelController->runActionWithFilters()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CargasexcelController->run()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/4
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (369)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (113)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+2013/02/21 17:41:33 [error] [php] Undefined offset: 10 (/home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php:369)
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CargasexcelController->runAction()
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CargasexcelController->filterUserGroupsAccessControl()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CargasexcelController->runActionWithFilters()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CargasexcelController->run()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/4
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (369)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (113)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+2013/02/21 17:43:02 [error] [php] Undefined offset: 10 (/home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php:369)
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CargasexcelController->runAction()
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CargasexcelController->filterUserGroupsAccessControl()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CargasexcelController->runActionWithFilters()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CargasexcelController->run()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/4
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (369)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (113)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+2013/02/21 17:44:25 [error] [php] Undefined offset: 10 (/home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php:369)
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CargasexcelController->runAction()
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CargasexcelController->filterUserGroupsAccessControl()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CargasexcelController->runActionWithFilters()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CargasexcelController->run()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/4
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (369)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (113)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+2013/02/21 17:46:15 [error] [php] Undefined variable: iditem (/home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php:232)
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CargasexcelController->runAction()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CargasexcelController->filterUserGroupsAccessControl()
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CargasexcelController->runActionWithFilters()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CargasexcelController->run()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/4
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (232)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/02/21 17:51:04 [error] [php] Trying to get property of non-object (/home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php:224)
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CargasexcelController->runAction()
+#3 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CargasexcelController->filterUserGroupsAccessControl()
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CargasexcelController->runActionWithFilters()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CargasexcelController->run()
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/4
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (224)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/02/21 17:52:55 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '5-1' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `item_has_tipoformato` (`item_iditem`, `tipoformato_idtipoformato`) VALUES (:yp0, :yp1).
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (236)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/02/21 17:52:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '5-1' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `item_has_tipoformato` (`item_iditem`, `tipoformato_idtipoformato`) VALUES (:yp0, :yp1)' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(1017): CDbCommand->execute()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(796): CActiveRecord->insert(NULL)
+#2 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php(236): CActiveRecord->save()
+#3 [internal function]: CargasexcelController->actionCreate('4')
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CargasexcelController), Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CargasexcelController), Object(ReflectionMethod), Array)
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#15 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#16 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/4
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/4
+---
+2013/02/21 17:54:59 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '5-1' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `item_has_tipoformato` (`item_iditem`, `tipoformato_idtipoformato`) VALUES (:yp0, :yp1).
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (236)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/02/21 17:54:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '5-1' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `item_has_tipoformato` (`item_iditem`, `tipoformato_idtipoformato`) VALUES (:yp0, :yp1)' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(1017): CDbCommand->execute()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(796): CActiveRecord->insert(NULL)
+#2 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php(236): CActiveRecord->save(false)
+#3 [internal function]: CargasexcelController->actionCreate('4')
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CargasexcelController), Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CargasexcelController), Object(ReflectionMethod), Array)
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#15 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#16 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/4
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/4
+---
+2013/02/21 17:55:27 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '5-1' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `item_has_tipoformato` (`item_iditem`, `tipoformato_idtipoformato`) VALUES (:yp0, :yp1).
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php (236)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/02/21 17:55:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '5-1' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `item_has_tipoformato` (`item_iditem`, `tipoformato_idtipoformato`) VALUES (:yp0, :yp1)' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(1017): CDbCommand->execute()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(796): CActiveRecord->insert(NULL)
+#2 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php(236): CActiveRecord->save(true)
+#3 [internal function]: CargasexcelController->actionCreate('4')
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CargasexcelController), Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CargasexcelController), Object(ReflectionMethod), Array)
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#15 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#16 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/4
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/4
+---
+2013/02/21 18:36:16 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`sheweb2013`.`item_has_autor`, CONSTRAINT `fk_item_has_autor_item1` FOREIGN KEY (`item_iditem`) REFERENCES `item` (`iditem`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `item` WHERE `item`.`iditem`=23.
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/Parametros/controllers/ItemController.php (469)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/02/21 18:36:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`sheweb2013`.`item_has_autor`, CONSTRAINT `fk_item_has_autor_item1` FOREIGN KEY (`item_iditem`) REFERENCES `item` (`iditem`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `item` WHERE `item`.`iditem`=23' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(1739): CDbCommand->execute()
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(1162): CActiveRecord->deleteByPk('23')
+#2 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/Parametros/controllers/ItemController.php(469): CActiveRecord->delete()
+#3 [internal function]: ItemController->actionDelete('23')
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemController), Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemController), Object(ReflectionMethod), Array)
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1117): CFilterChain->run()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CController->filterPostOnly(Object(CFilterChain))
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#12 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#16 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('delete')
+#18 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('Parametros/item...')
+#19 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#20 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/Parametros/item/delete/id/23
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/Parametros/item/view/id/23
+---
+2013/02/21 19:07:41 [error] [exception.CException] exception 'CException' with message 'Property "Moneda.0" is not defined.' in /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(144): CComponent->__get('0')
+#1 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CModel.php(593): CActiveRecord->__get('0')
+#2 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/CargasexcelController.php(273): CModel->offsetGet(0)
+#3 [internal function]: CargasexcelController->actionCreate('4')
+#4 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CargasexcelController), Array)
+#5 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CargasexcelController), Object(ReflectionMethod), Array)
+#6 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#10 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#11 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#15 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#16 /home/adso/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/adso/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/4
+HTTP_REFERER=http://localhost/~adso/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/4
+---
