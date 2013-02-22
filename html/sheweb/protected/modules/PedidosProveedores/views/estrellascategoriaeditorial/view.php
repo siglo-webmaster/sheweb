@@ -17,9 +17,14 @@ $this->menu=array(
 ?>
 <?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
 
-<h1>View Estrellascategoriaeditorial #<?php echo $model->idestrellascategoriaeditorial; ?></h1>
+<h1>Estrellas - Categor&iacute;as - Editorial #<?php echo $model->idestrellascategoriaeditorial; ?></h1>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
+<?php echo $this->renderPartial('_view', array('data'=>$model)); ?>
+
+
+<?php 
+
+/*$this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'idestrellascategoriaeditorial',
@@ -29,4 +34,6 @@ $this->menu=array(
 		'condicioncomercial_idcondicioncomercial',
 		'cantidad',
 	),
-)); ?>
+)); */
+
+?>

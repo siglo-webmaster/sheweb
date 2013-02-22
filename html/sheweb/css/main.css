@@ -238,3 +238,23 @@ div.search-form
     float:right;
     margin: 0 10px 0 0;
 }
+
+.boton a{
+    
+    padding: 5px 20px 5px 20px;
+    margin: 5px;
+    font-size: 14px;
+    line-height: 16px;
+    background:#ddd;
+    color:#333;
+    text-align: center;
+    border: 1px solid #666;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.boton a:hover{
+    background-color: #ccc;
+}

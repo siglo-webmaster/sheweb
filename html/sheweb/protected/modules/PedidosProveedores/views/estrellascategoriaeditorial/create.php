@@ -8,12 +8,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Estrellascategoriaeditorial', 'url'=>array('index')),
-	array('label'=>'Manage Estrellascategoriaeditorial', 'url'=>array('admin')),
+	array('label'=>'Listar', 'url'=>array('index')),
+	array('label'=>'Administrar', 'url'=>array('admin')),
 );
 ?>
 <?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
 
-<h1>Create Estrellascategoriaeditorial</h1>
+<h1>Crear asociacion de Estrellas - Categorias -Editoriales</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

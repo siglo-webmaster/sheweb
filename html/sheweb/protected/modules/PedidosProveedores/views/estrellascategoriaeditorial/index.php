@@ -7,13 +7,13 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Estrellascategoriaeditorial', 'url'=>array('create')),
-	array('label'=>'Manage Estrellascategoriaeditorial', 'url'=>array('admin')),
+	array('label'=>'Nuevo', 'url'=>array('create')),
+	array('label'=>'Administrar', 'url'=>array('admin')),
 );
 ?>
 <?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
 
-<h1>Estrellascategoriaeditorials</h1>
+<h1>Estrellas - Categorias - Editoriales</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

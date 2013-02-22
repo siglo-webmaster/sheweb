@@ -18,9 +18,10 @@
  * The followings are the available model relations:
  * @property Pedidosproveedoresitemdetallereserva[] $pedidosproveedoresitemdetallereservas
  * @property Condicioncomercial $condicioncomercialIdcondicioncomercial
- * @property Proyectosespeciales $proyectosespecialesIdproyectosespeciales
  * @property Item $itemIditem
  * @property Pedidosproveedores $pedidosproveedoresIdpedidosproveedores
+ * @property Proyectosespeciales $proyectosespecialesIdproyectosespeciales
+ * @property TempEntradasalmacendetalle[] $tempEntradasalmacendetalles
  */
 class Pedidosproveedoresitems extends CActiveRecord
 {
@@ -50,11 +51,9 @@ class Pedidosproveedoresitems extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('pedidosproveedores_idpedidosproveedores, condicioncomercial_idcondicioncomercial, item_iditem, proyectosespeciales_idproyectosespeciales, solicitado', 'required'),
+			array('pedidosproveedores_idpedidosproveedores, condicioncomercial_idcondicioncomercial, item_iditem, proyectosespeciales_idproyectosespeciales', 'required'),
 			array('pedidosproveedores_idpedidosproveedores, condicioncomercial_idcondicioncomercial, item_iditem, solicitado, confirmado, recibido, chekeado, proyectosespeciales_idproyectosespeciales', 'numerical', 'integerOnly'=>true),
 			array('estado', 'length', 'max'=>45),
-                        array('solicitado','numerical','integerOnly'=>true,'min'=>1,'tooSmall'=>'Debe ingresar al menos 1 producto'),
-                        array('confirmado','numerical','integerOnly'=>true,'min'=>0,),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('idpedidosproveedoresitems, pedidosproveedores_idpedidosproveedores, condicioncomercial_idcondicioncomercial, item_iditem, solicitado, confirmado, recibido, chekeado, estado, proyectosespeciales_idproyectosespeciales', 'safe', 'on'=>'search'),
@@ -71,9 +70,10 @@ class Pedidosproveedoresitems extends CActiveRecord
 		return array(
 			'pedidosproveedoresitemdetallereservas' => array(self::HAS_MANY, 'Pedidosproveedoresitemdetallereserva', 'pedidosproveedoresitems_idpedidosproveedoresitems'),
 			'condicioncomercialIdcondicioncomercial' => array(self::BELONGS_TO, 'Condicioncomercial', 'condicioncomercial_idcondicioncomercial'),
-			'proyectosespecialesIdproyectosespeciales' => array(self::BELONGS_TO, 'Proyectosespeciales', 'proyectosespeciales_idproyectosespeciales'),
 			'itemIditem' => array(self::BELONGS_TO, 'Item', 'item_iditem'),
 			'pedidosproveedoresIdpedidosproveedores' => array(self::BELONGS_TO, 'Pedidosproveedores', 'pedidosproveedores_idpedidosproveedores'),
+			'proyectosespecialesIdproyectosespeciales' => array(self::BELONGS_TO, 'Proyectosespeciales', 'proyectosespeciales_idproyectosespeciales'),
+			'tempEntradasalmacendetalles' => array(self::HAS_MANY, 'TempEntradasalmacendetalle', 'pedidosproveedoresitems_idpedidosproveedoresitems'),
 		);
 	}
 

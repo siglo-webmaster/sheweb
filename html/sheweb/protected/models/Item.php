@@ -13,6 +13,7 @@
  * @property string $fechaedicion
  * @property integer $numeroedicion
  * @property string $fechacreacion
+ * @property string $descripcion
  * @property integer $temporal
  * @property string $estado
  *
@@ -61,10 +62,10 @@ class Item extends CActiveRecord
 			array('editorial_ideditorial, numeroedicion, temporal', 'numerical', 'integerOnly'=>true),
 			array('nombre', 'length', 'max'=>512),
 			array('codigosiglo, isbn, barcode, estado', 'length', 'max'=>45),
-			array('fechaedicion, fechacreacion', 'safe'),
+			array('fechaedicion, fechacreacion, descripcion', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('iditem, editorial_ideditorial, nombre, codigosiglo, isbn, barcode, fechaedicion, numeroedicion, fechacreacion, temporal, estado', 'safe', 'on'=>'search'),
+			array('iditem, editorial_ideditorial, nombre, codigosiglo, isbn, barcode, fechaedicion, numeroedicion, fechacreacion, descripcion, temporal, estado', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -105,6 +106,7 @@ class Item extends CActiveRecord
 			'fechaedicion' => 'Fechaedicion',
 			'numeroedicion' => 'Numeroedicion',
 			'fechacreacion' => 'Fechacreacion',
+			'descripcion' => 'Descripcion',
 			'temporal' => 'Temporal',
 			'estado' => 'Estado',
 		);
@@ -130,6 +132,7 @@ class Item extends CActiveRecord
 		$criteria->compare('fechaedicion',$this->fechaedicion,true);
 		$criteria->compare('numeroedicion',$this->numeroedicion);
 		$criteria->compare('fechacreacion',$this->fechacreacion,true);
+		$criteria->compare('descripcion',$this->descripcion,true);
 		$criteria->compare('temporal',$this->temporal);
 		$criteria->compare('estado',$this->estado,true);
 

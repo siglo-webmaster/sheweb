@@ -77,6 +77,8 @@
             }
         ?>  
             
+            
+            
             <hr>
             <table>
                 <tr>
@@ -84,24 +86,38 @@
                                case 'activo':{
                                    //AGREGAR NUEVO ITEM
                                    echo "<td>";
+                                   echo "<div class='boton'>";
                                    echo CHtml::link("Agregar nuevo item",Yii::app()->createUrl($this->module->id."/pedidosproveedoresitems/create", array("pedidosproveedores_idpedidosproveedores"=>$data->idpedidosproveedores)));
+                                   echo "</div>";
                                    echo "</td>";
                                    
                                    //CAMBIAR ESTADO
                                    echo "<td>";
+                                   echo "<div class='boton'>";
                                    echo CHtml::link("Cambiar estado",Yii::app()->createUrl($this->module->id."/pedidosproveedores/changestate", array("id"=>$data->idpedidosproveedores)));
+                                   echo "</div>";
                                    echo "</td>";
                                    
+                                   ///HACER CARGA MASIVA DESDE EXCELL
+                                   echo "<td>";
+                                   echo "<div class='boton'>";
+                                   echo CHtml::link("Carga desde EXCEL",Yii::app()->createUrl("PedidosProveedores/cargasexcel/create/id/".$data->idpedidosproveedores));
+                                   echo "</div>";
+                                   echo "</td>";
                                    break;
                                }
                                
                                case 'aprobado':{
                                    echo "<td>";
+                                   echo "<div class='boton'>";
                                    echo CHtml::link("Generar Impresion de Orden",Yii::app()->createUrl($this->module->id."/pedidosproveedores/printorder", array("id"=>$data->idpedidosproveedores)));
+                                   echo "</div>";
                                    echo "</td>";
                                     //CAMBIAR ESTADO
                                    echo "<td>";
+                                   echo "<div class='boton'>";
                                    echo CHtml::link("Cambiar estado",Yii::app()->createUrl($this->module->id."/pedidosproveedores/changestate", array("id"=>$data->idpedidosproveedores)));
+                                   echo "</div>";
                                    echo "</td>";
                                    break;
                                }

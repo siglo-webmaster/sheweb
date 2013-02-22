@@ -10,19 +10,19 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('estrellas_idestrellas')); ?>:</b>
-	<?php echo CHtml::encode($data->estrellas_idestrellas); ?>
+	<?php echo CHtml::encode($data->estrellasIdestrellas->nombre); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('categoria_idcategoria')); ?>:</b>
-	<?php echo CHtml::encode($data->categoria_idcategoria); ?>
+	<?php echo CHtml::encode($data->categoriaIdcategoria->nombre); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('editorial_ideditorial')); ?>:</b>
-	<?php echo CHtml::encode($data->editorial_ideditorial); ?>
+	<?php echo CHtml::encode($data->editorialIdeditorial->nombre); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('condicioncomercial_idcondicioncomercial')); ?>:</b>
-	<?php echo CHtml::encode($data->condicioncomercial_idcondicioncomercial); ?>
+	<?php echo CHtml::encode($data->condicioncomercialIdcondicioncomercial->nombre); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('cantidad')); ?>:</b>
