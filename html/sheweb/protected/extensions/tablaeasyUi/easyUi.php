@@ -10,31 +10,35 @@
 
 class EasyUi extends CWidget
 {
+    public $width;
+    public $height;
+    public $headers;
+    public $data;
+    public $cols;
+    public $title;
 
 	public function run(){
                 
-		// Register scripts
-		$this->registerClientScript();
+        // Register scripts
+        $this->registerClientScript();
                 
-                 ///////////
+       //////////
        $assetsDir=Yii::app()->baseUrl.DIRECTORY_SEPARATOR;
                
                 
-        echo '
-	<table class="easyui-datagrid" title="TEST" style="width:700px;height:250px"
+        echo '<table class="easyui-datagrid" title="'.$this->title.'" style="width:'.$this->width.'px;height:'.$this->height.'px"
 			data-options="singleSelect:true,collapsible:true">
 		<thead>
-			<tr>
-				<th data-options="field:\'itemid\',width:80">Item ID</th>
-				<th data-options="field:\'productid\',width:100">Product</th>
-				<th data-options="field:\'listprice\',width:80,align:\'right\'">List Price</th>
-				<th data-options="field:\'unitcost\',width:80,align:\'right\'">Unit Cost</th>
-				<th data-options="field:\'attr1\',width:250">Attribute</th>
-				<th data-options="field:\'status\',width:60,align:\'center\'">Status</th>
-			</tr>
+			<tr>';
+        
+        foreach($this->headers as $header){
+            echo '<th data-options="field:\''.$header['name'].'\',width:'.$header['width'].'">'.$header['label'].'</th>';
+        }
+	
+	echo 	'</tr>
 		</thead>
-	</table>
-              ';  
+                
+	</table>';  
                 /////////////////
 
 	
@@ -55,7 +59,7 @@ class EasyUi extends CWidget
 
 	    $cs->registerCssFile($assetsDir.'/themes/default/easyui.css');
             $cs->registerCssFile($assetsDir.'/themes/default/icon.css');  
-            $cs->registerCssFile($assetsDir.'/themes/demo.css'); 
+           
           
             $cs->registerScriptFile($assetsDir.'/jquery-1.8.0.min.js',CClientScript::POS_HEAD);
             $cs->registerScriptFile($assetsDir.'/jquery.easyui.min.js',CClientScript::POS_HEAD);

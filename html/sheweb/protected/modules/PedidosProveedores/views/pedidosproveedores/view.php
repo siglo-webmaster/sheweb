@@ -46,7 +46,29 @@ $this->menu=array(
 
 
 <?php  
-    $this->widget('ext.tablaeasyUi.easyUi');
+    $sql = "select * from pedidosproveedoresitems where pedidosproveedores_idpedidosproveedores = ".$model->idpedidosproveedores;
+    $items = Yii::app()->db->createCommand($sql)->queryAll();
+    if(is_array($items)){
+        
+        $headers = array(
+                      array('name'=>'iditem','width'=>'80','label'=>'id item'),
+                      array('name'=>'nombre','width'=>'200','label'=>'titulo'),
+                      array('name'=>'isbn','width'=>'80','label'=>'isbn'),
+                    );
+
+        $this->widget('ext.tablaeasyUi.easyUi',
+                array(
+                 'width'=>'700',
+                 'height'=>'300',
+                 'title'=>'Tabla de prueba',
+                 'headers'=>$headers,
+                 'data'=>$items,
+                 'cols'=>array('item_iditem','solicitado','estado'),
+                    )
+                );
+        
+    }
+
 
 /*
 
