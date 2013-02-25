@@ -40,7 +40,32 @@ $this->menu=array(
         $mail=false;
     }
     
-    echo $this->renderPartial('_view',array('data'=>$model,"pedidosproveedoresdocumentos"=>$pedidosproveedoresdocumentos,'mail'=>$mail));
+   // echo $this->renderPartial('_view',array('data'=>$model,"pedidosproveedoresdocumentos"=>$pedidosproveedoresdocumentos,'mail'=>$mail));
+?>
+
+
+
+<?php  
+    $this->widget('ext.tablaeasyUi.easyUi');
+
+/*
+
+    $arprovider  = new CActiveDataProvider('Pais');
+   
+    	$this->widget('ext.htmlTableUi.htmlTableUi',array(
+            'ajaxUrl'=>'site/handleHtmlTable',
+            'arProvider'=>$arprovider,    
+            'collapsed'=>false,
+            'editable'=>true,
+            'enableSort'=>true,
+            'exportUrl'=>'site/export',
+            'formTitle'=>'Form Title',
+            'sortColumn'=>1,
+            'sortOrder'=>'desc',
+            'subtitle'=>'Rev 1.3.5',
+            'title'=>'Table 2',
+	));
+*/
 ?>
 
 <?php /*$this->widget('zii.widgets.CDetailView', array(
