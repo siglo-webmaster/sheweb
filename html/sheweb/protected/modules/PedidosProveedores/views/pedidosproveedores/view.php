@@ -46,28 +46,72 @@ $this->menu=array(
 
 
 <?php  
-    $sql = "select * from pedidosproveedoresitems where pedidosproveedores_idpedidosproveedores = ".$model->idpedidosproveedores;
-    $items = Yii::app()->db->createCommand($sql)->queryAll();
-    if(is_array($items)){
-        
-        $headers = array(
-                      array('name'=>'iditem','width'=>'80','label'=>'id item'),
-                      array('name'=>'nombre','width'=>'200','label'=>'titulo'),
-                      array('name'=>'isbn','width'=>'80','label'=>'isbn'),
-                    );
+    
 
+        $headers = array(
+                    array('name'=>'idpedidosproveedoresitems',//id del campo
+                          'label'=>'ppi',//etiqueta a mostrar
+                          'hidden'=>'false',
+                          'width'=>'30',
+                          ),
+                     array('name'=>'iditem',//id del campo
+                          'label'=>'iditem',//etiqueta a mostrar
+                          'hidden'=>'false',
+                          'width'=>'40',
+                          ),
+                      array('name'=>'titulo',
+                          'width'=>'310',
+                          'label'=>'titulo',
+                          'sortable'=>'true',
+                          ),
+                      array('name'=>'condicioncomercial',
+                          'width'=>'80',
+                          'label'=>'condicion',
+                          'sortable'=>'true',
+                          ),
+                      array('name'=>'editorial',
+                          'width'=>'90',
+                          'label'=>'editorial',
+                          'sortable'=>'true',
+                          ),
+                    array('name'=>'categoria',
+                                  'width'=>'80',
+                                  'label'=>'categoria',
+                                   'editor'=>'true',
+                                   'type'=>'combobox',
+                                   'values'=>array('url'=>Yii::app()->baseUrl.'/PedidosProveedores/pedidosproveedores/getcategoria',
+                                                    'valueField'=>'nombre',
+                                                    'textField'=>'nombre',
+                                                ),
+                         ),
+                      array('name'=>'idestrellas',
+                                  'width'=>'50',
+                                  'label'=>'estrellas',
+                                   'editor'=>'true',
+                                   'type'=>'combobox',
+                                   'values'=>array('url'=>Yii::app()->baseUrl.'/PedidosProveedores/pedidosproveedores/getestrellas',
+                                                    'valueField'=>'idestrellas',
+                                                    'textField'=>'idestrellas',
+                                                ),
+                         ),
+                    );
+        
+        
         $this->widget('ext.tablaeasyUi.easyUi',
                 array(
-                 'width'=>'700',
-                 'height'=>'300',
-                 'title'=>'Tabla de prueba',
-                 'headers'=>$headers,
-                 'data'=>$items,
-                 'cols'=>array('item_iditem','solicitado','estado'),
+                 'id'=>'dg'.$model->idpedidosproveedores, ///id unico de la tabla
+                 'width'=>'700', //ancho
+                 'height'=>'300', //alto
+                 'pk'=>'idpedidosproveedoresitems', //primary key for eddit
+                 'title'=>'Items del pedido # '.$model->idpedidosproveedores, //titulo
+                 'headers'=>$headers, //array de cabeceras
+                 'dialoginfo'=>Yii::app()->baseUrl.'/PedidosProveedores/pedidosproveedores/getinfoitem/',
+                 'action'=>Yii::app()->baseUrl.'/PedidosProveedores/pedidosproveedores/getpedidoproveedoresitems/id/'.$model->idpedidosproveedores, //url de los datos
+                 'saveurl'=>Yii::app()->baseUrl.'/PedidosProveedores/pedidosproveedores/savechangesestrellas/',
                     )
                 );
         
-    }
+  
 
 
 /*

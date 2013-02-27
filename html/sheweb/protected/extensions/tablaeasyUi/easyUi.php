@@ -13,9 +13,12 @@ class EasyUi extends CWidget
     public $width;
     public $height;
     public $headers;
-    public $data;
-    public $cols;
     public $title;
+    public $id;
+    public $pk;
+    public $action;
+    public $dialoginfo;
+    public $saveurl;
 
 	public function run(){
                 
@@ -24,24 +27,88 @@ class EasyUi extends CWidget
                 
        //////////
        $assetsDir=Yii::app()->baseUrl.DIRECTORY_SEPARATOR;
-               
-                
-        echo '<table class="easyui-datagrid" title="'.$this->title.'" style="width:'.$this->width.'px;height:'.$this->height.'px"
-			data-options="singleSelect:true,collapsible:true">
+          
+       
+       ///VENTANA DE DIALOG
+             
+        echo '<div id="dlg" class="easyui-dialog" title="Información del titulo" data-options="closed:true,resizable:false,modal:true" style="width:800px;height:400px;padding:10px;top:200px; ">
+		Este es el contenido del detalle del libro
+	</div>';
+       ////FIN VENTANA DE DIALOG
+			
+        echo '<table id="'.$this->id.'" class="easyui-datagrid" title="'.$this->title.'" style="width:'.$this->width.'px;height:'.$this->height.'px"
+			data-options="iconCls: \'icon-edit\',onClickRow: onClickRow,toolbar: \'#tb\',singleSelect:true,collapsible:true,url:\''.$this->action.'\'">
 		<thead>
 			<tr>';
         
         foreach($this->headers as $header){
-            echo '<th data-options="field:\''.$header['name'].'\',width:'.$header['width'].'">'.$header['label'].'</th>';
+            
+            
+            if(isset($header['editor'])){
+                $header['type'] = (isset($header['type']))?$header['type']:'text';
+                
+                switch($header['type']){
+                   case 'combobox':{
+                       $header['editor']= ", editor:{
+                                                type:'combobox',
+                                                options:{
+                                                        valueField:'".$header['values']['valueField']."',
+                                                        textField:'".$header['values']['textField']."',
+                                                        url:'".$header['values']['url']."'
+                                                }
+                                            }";
+                       break;
+                   }
+                    
+                   default:{
+                        $header['editor']=',editor:\''.$header['type'].'\'';
+                        break;   
+                    }
+                    
+                }
+                
+            }else{
+                $header['editor']='';
+            }
+            
+            
+            if(isset($header['sortable'])){
+               $header['sortable']=',sortable:'.$header['sortable'];
+            }else{
+                $header['sortable']=',sortable:false';
+            }
+            
+            if(isset($header['hidden'])){
+               $header['hidden']=',hidden:'.$header['hidden'];
+            }else{
+                $header['hidden']=',hidden:false';
+            }
+            
+            if(isset($header['formater'])){
+                $header['formater']=',formatter:function(value,row){return row.'.$this->pk.';}';
+            }else{
+                $header['formater']='';
+            }
+            
+            
+            echo '<th data-options="field:\''.$header['name'].'\',width:'.$header['width'].''.$header['sortable'].''.$header['editor'].''.$header['hidden'].''.$header['formater'].'">'.$header['label'].'</th>';
         }
 	
 	echo 	'</tr>
 		</thead>
                 
 	</table>';  
+        
+        
+        echo '<div id="tb" style="height:auto">
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:\'icon-save\',plain:true" onclick="accept()">Aceptar</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:\'icon-undo\',plain:true" onclick="reject()">Cancelar</a>
+                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:\'icon-save\',plain:true" onclick="saveChanges()">Guardar Cambios</a>
+             </div>';
                 /////////////////
 
-	
+	$this->customClientScript();
+        
 	}
          
         
@@ -66,6 +133,99 @@ class EasyUi extends CWidget
             
 
 	}
+        
+        protected function customClientScript(){
+         echo "<script type=\"text/javascript\">
+                    var editIndex = undefined;
+                    function endEditing(){
+                            if (editIndex == undefined){return true}
+                            if ($('#".$this->id."').datagrid('validateRow', editIndex)){
+                                    
+                                   ";
+                 
+        foreach($this->headers as $header){ 
+         if(isset($header['editor'])){
+             echo "
+                    var ed = $('#".$this->id."').datagrid('getEditor', {index:editIndex,field:'".$header['name']."'});
+                    if(ed!=null){
+                        var ".$header['name']." = $(ed.target).". ((isset($header['type']))?$header['type']:'text')."('getText');
+                        $('#".$this->id."').datagrid('getRows')[editIndex]['".$header['name']."'] = ".$header['name'].";
+                        $('#".$this->id."').datagrid('endEdit', editIndex);
+                    }
+                  ";
+         }   
+         
+
+        }                        
+                                    
+        echo "
+                                    editIndex = undefined;
+                                    return true;
+                            } else {
+                                    return false;
+                            }
+                    }
+                    function onClickRow(index){
+                            if (editIndex != index){
+                                    if (endEditing()){
+                                            $('#".$this->id."').datagrid('selectRow', index).datagrid('beginEdit', index);
+                                            editIndex = index;
+                                    } else {
+                                            $('#".$this->id."').datagrid('selectRow', editIndex);
+                                    }
+                            }else{
+                                
+                                $('#dlg').load('".$this->dialoginfo."' + 'id/' +  $('#".$this->id."').datagrid('getRows')[index]['iditem']);
+                                $('#dlg').dialog('open');
+                            }
+                            
+                    }
+                    function append(){
+                            if (endEditing()){
+                                    $('#".$this->id."').datagrid('appendRow',{status:'P'});
+                                    editIndex = $('#".$this->id."').datagrid('getRows').length-1;
+                                    $('#".$this->id."').datagrid('selectRow', editIndex)
+                                                    .datagrid('beginEdit', editIndex);
+                            }
+                    }
+                    function remove(){
+                            if (editIndex == undefined){return}
+                            $('#".$this->id."').datagrid('cancelEdit', editIndex)
+                                            .datagrid('deleteRow', editIndex);
+                            editIndex = undefined;
+                    }
+                    function accept(){
+                            if (endEditing()){
+                                    $('#".$this->id."').datagrid('acceptChanges');
+                            }
+                    }
+                    function reject(){
+                            $('#".$this->id."').datagrid('rejectChanges');
+                            editIndex = undefined;
+                    }
+                    function getChanges(){
+                            var rows = $('#".$this->id."').datagrid('getChanges');
+                            alert(rows.length+' registros fueron cambiados!');
+                    }
+                    function saveChanges(){
+                           
+                            var rows = $('#".$this->id."').datagrid('getRows');
+                            
+                            
+                            $.each(rows, function(i, row) {
+                              $('#".$this->id."').datagrid('endEdit', i);
+                              var url = '".$this->saveurl."';
+                              $.ajax(url, {
+                                  type:'POST',
+                                  dataType: 'json',
+                                  data:row
+                              });
+                            });
+
+                    }
+            </script>";   
+            
+        }
 	
         
 }

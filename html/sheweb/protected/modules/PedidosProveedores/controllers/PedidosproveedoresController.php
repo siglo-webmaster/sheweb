@@ -32,11 +32,11 @@ class PedidosproveedoresController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','getpedidoproveedoresitems','getcategoria','getestrellas','getinfoitem'),
 				'pbac'=>array('read'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','additems'),
+				'actions'=>array('create','update','additems','savechangesestrellas'),
 				'pbac'=>array('write'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -49,6 +49,165 @@ class PedidosproveedoresController extends Controller
 		);
 	}
 
+        /***
+         * 
+         * retorna toda la informacion del pedido en formato json para ser utilizado 
+         * por el plugin easyUi
+         */
+        
+        
+        public function actionGetpedidoproveedoresitems($id){
+            $sql = "select idpedidosproveedoresitems, iditem, titulo, condicioncomercial, editorial, categoria, idestrellas,cantidad from view_pedidosproveedoresitemsreservaestrellas where idpedidosproveedores = ".$id;
+            $items = Yii::app()->db->createCommand($sql)->queryAll();
+            if(is_array($items)){
+                echo '{"total":'.sizeof($items).',"rows":';
+                echo json_encode($items);    
+                echo "}";
+            }
+            
+        }
+        
+        /***
+         * 
+         * retorna listado de categorias en json
+         */
+        public function actionGetcategoria(){
+            $sql = "select idcategoria, nombre from categoria where raiz = 1 order by idcategoria";
+            $items = Yii::app()->db->createCommand($sql)->queryAll();
+            if(is_array($items)){
+                
+                echo json_encode($items);    
+               
+            }
+            
+        }
+        
+         /***
+         * 
+         * retorna listado de categorias en json
+         */
+        public function actionGetestrellas(){
+            $sql = "select * from estrellas ";
+            $items = Yii::app()->db->createCommand($sql)->queryAll();
+            if(is_array($items)){
+                
+                echo json_encode($items);    
+               
+            }
+            
+        }
+        
+        
+         /***
+         * 
+         * retorna listado de categorias en json
+         */
+        public function actionGetinfoitem($id){
+            $sql = "select * from view_detalleitem where iditem= ".$id;
+            $items = Yii::app()->db->createCommand($sql)->queryAll();
+            if(is_array($items)){
+                
+                foreach($items as $row){
+                    $ed = explode('-',$row['year']);
+                    echo "<h2>".$row['titulo']."</h2>";
+                   
+                    echo "<p><b>Editorial:</b> ".$row['editorial']."<br>";
+                    echo "<b>Autor(es):</b> ".$row['autor']."<br>";
+                    echo "<b>Formato:</b> ".$row['formato']."<br>";
+                    echo "<b>Precio:</b> ".$row['precio']."<br>";
+                    echo "<b>Impresi&oacute;n:</b> ".$ed[0]."<br>";
+                    echo "<b>Edici&oacute;n: </b>".$row['numeroedicion']."<br>";
+                    echo "<b>Isbn:</b> ".$row['isbn']."</p>";
+                     echo "<h3>Rese&ntilde;a:</h3> <p >".$row['descripcion']."</p>";
+                     $row['titulo'] = str_replace(' ','+', $row['titulo']);
+                     $row['editorial'] = str_replace(' ','+', $row['editorial']);
+                   
+                }
+               
+            }
+            
+        }
+        
+        
+        public function actionSavechangesestrellas(){
+            
+            ///CATEGORIAS
+            if(trim($_REQUEST['categoria'])!=''){
+                $sql = "select idcategoria from categoria where nombre='".Yii::app()->request->getParam('categoria')."' limit 1";
+                $idcategoria = Yii::app()->db->createCommand($sql)->queryAll();
+                if(is_array($idcategoria)){
+                    $idcategoria = $idcategoria[0]['idcategoria'];
+                }else{
+                    return (1);
+                }
+            }else{
+                return(1);
+            }
+            
+            ///Editoriales
+            if(trim($_REQUEST['editorial'])!=''){
+                $sql = "select ideditorial from editorial where nombre='".Yii::app()->request->getParam('editorial')."' limit 1";
+                $ideditorial = Yii::app()->db->createCommand($sql)->queryAll();
+                if(is_array($ideditorial)){
+                    $ideditorial = $ideditorial[0]['ideditorial'];
+                }else{
+                    return (1);
+                }
+            }else{
+                return(1);
+            }
+            
+            ///CondicionCommercial
+            if(trim($_REQUEST['condicioncomercial'])!=''){
+                $sql = "select idcondicioncomercial from condicioncomercial where nombre='".Yii::app()->request->getParam('condicioncomercial')."' limit 1";
+                $idcondicioncomercial = Yii::app()->db->createCommand($sql)->queryAll();
+                if(is_array($idcondicioncomercial)){
+                    $idcondicioncomercial = $idcondicioncomercial[0]['idcondicioncomercial'];
+                }else{
+                    return (1);
+                }
+            }else{
+                return(1);
+            }
+            
+            //ESTRELLAS
+           /* if(trim($_REQUEST['idestrellas'])==''){
+                return(1);
+            }*/
+            /*
+            //CANTIDADES
+            $sql = "select cantidad from estrellascategoriaeditorial
+                        where
+                        estrellas_idestrellas=".$_REQUEST['idestrellas']." and 
+                        categoria_idcategoria=".$idcategoria." and
+                        editorial_ideditorial=".$ideditorial." and
+                        condicioncomercial_idcondicioncomercial=".$idcondicioncomercial. " limit 1";
+            $cantidad = Yii::app()->db->createCommand($sql)->queryAll();
+            if(is_array($cantidad)){
+                $cantidad = $cantidad[0]['cantidad'];
+            }else{
+                return (1);
+            }
+            */
+            $transaction = Yii::app()->db->beginTransaction(); // INICIAR TRANSACCION
+            try{
+                $item = new Item;
+                
+                if($item->updateByPk(Yii::app()->request->getParam('iditem'), array('estrellas_idestrellas'=>Yii::app()->request->getParam('iditem')))){
+                    $transaction->commit();
+                }else{
+                    
+                    $transaction->rollback();
+                }
+                
+            }catch (Exception $e){
+                $transaction->rollBack();
+                echo $e->getMessage();
+            }
+            
+            
+        }
+        
 	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed

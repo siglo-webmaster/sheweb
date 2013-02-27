@@ -14,12 +14,14 @@
  * @property integer $numeroedicion
  * @property string $fechacreacion
  * @property string $descripcion
+ * @property integer $estrellas_idestrellas
  * @property integer $temporal
  * @property string $estado
  *
  * The followings are the available model relations:
  * @property Cargasexceldetalle[] $cargasexceldetalles
  * @property Editorial $editorialIdeditorial
+ * @property Estrellas $estrellasIdestrellas
  * @property Autor[] $autors
  * @property Categoria[] $categorias
  * @property Terceros[] $terceroses
@@ -59,13 +61,13 @@ class Item extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('editorial_ideditorial', 'required'),
-			array('editorial_ideditorial, numeroedicion, temporal', 'numerical', 'integerOnly'=>true),
+			array('editorial_ideditorial, numeroedicion, estrellas_idestrellas, temporal', 'numerical', 'integerOnly'=>true),
 			array('nombre', 'length', 'max'=>512),
 			array('codigosiglo, isbn, barcode, estado', 'length', 'max'=>45),
 			array('fechaedicion, fechacreacion, descripcion', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('iditem, editorial_ideditorial, nombre, codigosiglo, isbn, barcode, fechaedicion, numeroedicion, fechacreacion, descripcion, temporal, estado', 'safe', 'on'=>'search'),
+			array('iditem, editorial_ideditorial, nombre, codigosiglo, isbn, barcode, fechaedicion, numeroedicion, fechacreacion, descripcion, estrellas_idestrellas, temporal, estado', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -79,6 +81,7 @@ class Item extends CActiveRecord
 		return array(
 			'cargasexceldetalles' => array(self::HAS_MANY, 'Cargasexceldetalle', 'item_iditem'),
 			'editorialIdeditorial' => array(self::BELONGS_TO, 'Editorial', 'editorial_ideditorial'),
+			'estrellasIdestrellas' => array(self::BELONGS_TO, 'Estrellas', 'estrellas_idestrellas'),
 			'autors' => array(self::MANY_MANY, 'Autor', 'item_has_autor(item_iditem, autor_idautor)'),
 			'categorias' => array(self::MANY_MANY, 'Categoria', 'item_has_categoria(item_iditem, categoria_idcategoria)'),
 			'terceroses' => array(self::MANY_MANY, 'Terceros', 'item_has_terceros(item_iditem, terceros_idterceros)'),
@@ -107,6 +110,7 @@ class Item extends CActiveRecord
 			'numeroedicion' => 'Numeroedicion',
 			'fechacreacion' => 'Fechacreacion',
 			'descripcion' => 'Descripcion',
+			'estrellas_idestrellas' => 'Estrellas Idestrellas',
 			'temporal' => 'Temporal',
 			'estado' => 'Estado',
 		);
@@ -133,6 +137,7 @@ class Item extends CActiveRecord
 		$criteria->compare('numeroedicion',$this->numeroedicion);
 		$criteria->compare('fechacreacion',$this->fechacreacion,true);
 		$criteria->compare('descripcion',$this->descripcion,true);
+		$criteria->compare('estrellas_idestrellas',$this->estrellas_idestrellas);
 		$criteria->compare('temporal',$this->temporal);
 		$criteria->compare('estado',$this->estado,true);
 
