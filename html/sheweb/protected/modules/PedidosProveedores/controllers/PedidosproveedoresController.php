@@ -130,6 +130,10 @@ class PedidosproveedoresController extends Controller
         
         
         public function actionSavechangesestrellas(){
+            if(trim($_REQUEST['idestrellas'])==''){
+                $_REQUEST['idestrellas']=0;
+                return(1);
+            }
             
             ///CATEGORIAS
             if(trim($_REQUEST['categoria'])!=''){
@@ -143,6 +147,18 @@ class PedidosproveedoresController extends Controller
             }else{
                 return(1);
             }
+            
+            ////ASOCIAR EL ITEM A LA CATEGORIA
+            
+            $itemhascategoria = new ItemHasCategoria;
+            $itemhascategoria->deleteAll("item_iditem = '" .Yii::app()->request->getParam('iditem')."'"); ///BORRAMOS ASOCIACIONES PREVIAS DEL ITEM
+            
+            $itemhascategoria->item_iditem = Yii::app()->request->getParam('iditem');
+            $itemhascategoria->categoria_idcategoria = $idcategoria;
+            $itemhascategoria->save();
+            
+            ////FIN ASOCIAR EL ITEM A LA CATEGORIA
+            
             
             ///Editoriales
             if(trim($_REQUEST['editorial'])!=''){
@@ -171,12 +187,10 @@ class PedidosproveedoresController extends Controller
             }
             
             //ESTRELLAS
-           /* if(trim($_REQUEST['idestrellas'])==''){
-                return(1);
-            }*/
-            /*
+            
+            
             //CANTIDADES
-            $sql = "select cantidad from estrellascategoriaeditorial
+            $sql = "select idestrellascategoriaeditorial, cantidad from estrellascategoriaeditorial
                         where
                         estrellas_idestrellas=".$_REQUEST['idestrellas']." and 
                         categoria_idcategoria=".$idcategoria." and
@@ -184,17 +198,49 @@ class PedidosproveedoresController extends Controller
                         condicioncomercial_idcondicioncomercial=".$idcondicioncomercial. " limit 1";
             $cantidad = Yii::app()->db->createCommand($sql)->queryAll();
             if(is_array($cantidad)){
+                $idestrellascategoriaeditorial = $cantidad[0]['idestrellascategoriaeditorial'];
                 $cantidad = $cantidad[0]['cantidad'];
             }else{
-                return (1);
+                return(1);
             }
-            */
+            //////FIN CANTIDADES
+            
+            
             $transaction = Yii::app()->db->beginTransaction(); // INICIAR TRANSACCION
             try{
                 $item = new Item;
                 
-                if($item->updateByPk(Yii::app()->request->getParam('iditem'), array('estrellas_idestrellas'=>Yii::app()->request->getParam('iditem')))){
-                    $transaction->commit();
+                if($item->updateByPk(Yii::app()->request->getParam('iditem'), array('estrellas_idestrellas'=>Yii::app()->request->getParam('idestrellas')))){
+                    
+                    $pedidosproveedoresitems = new Pedidosproveedoresitems;
+                    
+                    if($pedidosproveedoresitems->updateByPk(Yii::app()->request->getParam('idpedidosproveedoresitems'), array('solicitado'=>$cantidad))){
+                        
+                        
+                        ////Aqui ya se creo la cantidad de items a comprar segun lo poarametrizado por estrellas, categoria y editorial
+                        //Sigue la reservacion de dichos items basandose en lo anterior y la ciudad, de despacho
+                        
+                        if($reservasestrellascategoriaeditorial = Reservasestrellascategoriaeditorial::model()->findAllByAttributes(array('estrellascategoriaeditorial_idestrellascategoriaeditorial'=>$idestrellascategoriaeditorial))){
+                           
+                            foreach($reservasestrellascategoriaeditorial as $row){
+                                $ViewBodegareservasestrellas = ViewBodegareservasestrellas::model()->findByAttributes(array('idreservasestrellascategoriaeditorial'=>$row['idreservasestrellascategoriaeditorial'],
+                                                                                                                             'ciudad_idciudad'=>$row['ciudad_idciudad'],
+                                                                                                                            ));
+                                foreach($ViewBodegareservasestrellas as $row2){
+                                    if($bod = Bodega::model()->findAllByAttributes(array('idbodega'=>$row2['bodega_idbodega']))){
+                                        
+                                    }
+                                }
+                            }
+                           
+                           $transaction->commit();
+                        }
+  
+                    }
+                    
+                    $transaction->rollBack();
+                    
+                      
                 }else{
                     
                     $transaction->rollback();

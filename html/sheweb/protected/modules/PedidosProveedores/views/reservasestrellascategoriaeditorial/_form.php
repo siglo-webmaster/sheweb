@@ -17,13 +17,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'estrellascategoriaeditorial_idestrellascategoriaeditorial'); ?>
-		<?php echo $form->textField($model,'estrellascategoriaeditorial_idestrellascategoriaeditorial',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->dropDownList($model,'estrellascategoriaeditorial_idestrellascategoriaeditorial',CHtml::listData(Estrellascategoriaeditorial::model()->findAll(), 'idestrellascategoriaeditorial', 'idestrellascategoriaeditorial'));?>
 		<?php echo $form->error($model,'estrellascategoriaeditorial_idestrellascategoriaeditorial'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'ciudad_idciudad'); ?>
-		<?php echo $form->textField($model,'ciudad_idciudad'); ?>
+		<?php echo $form->dropDownList($model,'ciudad_idciudad',CHtml::listData(Ciudad::model()->findAll(), 'idciudad', 'nombre'));?>
 		<?php echo $form->error($model,'ciudad_idciudad'); ?>
 	</div>
 
