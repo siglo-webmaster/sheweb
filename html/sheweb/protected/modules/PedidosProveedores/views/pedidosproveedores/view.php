@@ -99,15 +99,15 @@ $this->menu=array(
         
         $this->widget('ext.tablaeasyUi.easyUi',
                 array(
-                 'id'=>'dg'.$model->idpedidosproveedores, ///id unico de la tabla
-                 'width'=>'700', //ancho
-                 'height'=>'300', //alto
-                 'pk'=>'idpedidosproveedoresitems', //primary key for eddit
-                 'title'=>'Items del pedido # '.$model->idpedidosproveedores, //titulo
-                 'headers'=>$headers, //array de cabeceras
+                 'id'       =>'dg'.$model->idpedidosproveedores, ///id unico de la tabla
+                 'width'    =>'700', //ancho
+                 'height'   =>'300', //alto
+                 'pk'       =>'idpedidosproveedoresitems', //primary key for eddit
+                 'title'    =>'Items del pedido # '.$model->idpedidosproveedores, //titulo
+                 'headers'  =>$headers, //array de cabeceras
                  'dialoginfo'=>Yii::app()->baseUrl.'/PedidosProveedores/pedidosproveedores/getinfoitem/',
-                 'action'=>Yii::app()->baseUrl.'/PedidosProveedores/pedidosproveedores/getpedidoproveedoresitems/id/'.$model->idpedidosproveedores, //url de los datos
-                 'saveurl'=>Yii::app()->baseUrl.'/PedidosProveedores/pedidosproveedores/savechangesestrellas/',
+                 'action'   =>Yii::app()->baseUrl.'/PedidosProveedores/pedidosproveedores/getpedidoproveedoresitems/id/'.$model->idpedidosproveedores, //url de los datos
+                 'saveurl'  =>Yii::app()->baseUrl.'/PedidosProveedores/pedidosproveedores/savechangesestrellas/',
                     )
                 );
         

@@ -19,6 +19,7 @@ class EasyUi extends CWidget
     public $action;
     public $dialoginfo;
     public $saveurl;
+    public $menubutton;
 
 	public function run(){
                 
@@ -32,7 +33,7 @@ class EasyUi extends CWidget
        ///VENTANA DE DIALOG
              
         echo '<div id="dlg" class="easyui-dialog" title="Información del titulo" data-options="closed:true,resizable:false,modal:true" style="width:800px;height:400px;padding:10px;top:200px; ">
-		Este es el contenido del detalle del libro
+		
 	</div>';
        ////FIN VENTANA DE DIALOG
 			
@@ -98,13 +99,15 @@ class EasyUi extends CWidget
 		</thead>
                 
 	</table>';  
+        if(is_array($this->menubutton)){
+            echo '<div id="tb" style="height:auto">';
+            foreach($this->menubutton as $row){
+                echo '<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" onclick="'.$row['onclick'].'()">'.$row['label'].'</a>';
+            }
+            echo '</div>';
+        }
         
         
-        echo '<div id="tb" style="height:auto">
-		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:\'icon-save\',plain:true" onclick="accept()">Aceptar</a>
-		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:\'icon-undo\',plain:true" onclick="reject()">Cancelar</a>
-                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:\'icon-save\',plain:true" onclick="saveChanges()">Guardar Cambios</a>
-             </div>';
                 /////////////////
 
 	$this->customClientScript();
@@ -174,7 +177,7 @@ class EasyUi extends CWidget
                                             $('#".$this->id."').datagrid('selectRow', editIndex);
                                     }
                             }else{
-                                
+                                window.open('".$this->dialoginfo."');
                                 $('#dlg').load('".$this->dialoginfo."' + 'id/' +  $('#".$this->id."').datagrid('getRows')[index]['iditem']);
                                 $('#dlg').dialog('open');
                             }
@@ -221,6 +224,8 @@ class EasyUi extends CWidget
                                   data:row
                               });
                             });
+                            
+                            alert('Los registros fueron almacenados');
 
                     }
             </script>";   

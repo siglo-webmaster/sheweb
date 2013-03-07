@@ -1,6 +1,6 @@
 <?php
 
-class ReservasestrellascategoriaeditorialController extends Controller
+class BodegareservasestrellasController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -28,7 +28,7 @@ class ReservasestrellascategoriaeditorialController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','getreservasestrellascategoriaeditorial', 'getcantidades','getprioridades'),
+				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -60,22 +60,23 @@ class ReservasestrellascategoriaeditorialController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($id)
 	{
-		$model=new Reservasestrellascategoriaeditorial;
+		$model=new Bodegareservasestrellas;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Reservasestrellascategoriaeditorial']))
+		if(isset($_POST['Bodegareservasestrellas']))
 		{
-			$model->attributes=$_POST['Reservasestrellascategoriaeditorial'];
+			$model->attributes=$_POST['Bodegareservasestrellas'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idreservasestrellascategoriaeditorial));
+				$this->redirect(array('view','id'=>$model->idbodegareservasestrellas));
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
+                        'id'=>$id,
 		));
 	}
 
@@ -91,11 +92,11 @@ class ReservasestrellascategoriaeditorialController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Reservasestrellascategoriaeditorial']))
+		if(isset($_POST['Bodegareservasestrellas']))
 		{
-			$model->attributes=$_POST['Reservasestrellascategoriaeditorial'];
+			$model->attributes=$_POST['Bodegareservasestrellas'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idreservasestrellascategoriaeditorial));
+				$this->redirect(array('view','id'=>$model->idbodegareservasestrellas));
 		}
 
 		$this->render('update',array(
@@ -116,47 +117,13 @@ class ReservasestrellascategoriaeditorialController extends Controller
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
-        
-        
-        public function actionGetreservasestrellascategoriaeditorial(){
-            $sql = "select  * from view_reservasestrellascategoriaeditorial ";
-            $items = Yii::app()->db->createCommand($sql)->queryAll();
-            if(is_array($items)){
-                echo '{"total":'.sizeof($items).',"rows":';
-                echo json_encode($items);    
-                echo "}";
-            }
-            
-            
-        }
-        
-        public function actionGetcantidades(){
-            
-           for ($i=0;$i<=200;$i++){
-               $cantidad[]['idcantidad'] = $i;
-               
-           }     
-           echo json_encode($cantidad);    
-               
-       }      
-       
-       
-       public function actionGetprioridades(){
-            
-           for ($i=1;$i<=10;$i++){
-               $prioridad[]['idprioridad'] = $i;
-               
-           }     
-           echo json_encode($prioridad);    
-               
-       }
 
 	/**
 	 * Lists all models.
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Reservasestrellascategoriaeditorial');
+		$dataProvider=new CActiveDataProvider('Bodegareservasestrellas');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -167,10 +134,10 @@ class ReservasestrellascategoriaeditorialController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Reservasestrellascategoriaeditorial('search');
+		$model=new Bodegareservasestrellas('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Reservasestrellascategoriaeditorial']))
-			$model->attributes=$_GET['Reservasestrellascategoriaeditorial'];
+		if(isset($_GET['Bodegareservasestrellas']))
+			$model->attributes=$_GET['Bodegareservasestrellas'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -184,7 +151,7 @@ class ReservasestrellascategoriaeditorialController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=Reservasestrellascategoriaeditorial::model()->findByPk($id);
+		$model=Bodegareservasestrellas::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -196,7 +163,7 @@ class ReservasestrellascategoriaeditorialController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='reservasestrellascategoriaeditorial-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='bodegareservasestrellas-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

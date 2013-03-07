@@ -905,3 +905,1693 @@ REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosprov
 in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (229)
 in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
 in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/05 07:42:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/72
+---
+2013/03/05 08:50:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/72
+---
+2013/03/05 08:51:26 [error] [php] Undefined offset: 0 (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php:201)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/savechangesestrellas/
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (201)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/05 08:54:32 [error] [php] Invalid argument supplied for foreach() (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php:229)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/savechangesestrellas/
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (229)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/05 08:58:08 [error] [php] Invalid argument supplied for foreach() (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php:229)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/savechangesestrellas/
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (229)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/05 09:00:16 [error] [php] Invalid argument supplied for foreach() (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php:229)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/savechangesestrellas/
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (229)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/05 09:15:52 [error] [php] Invalid argument supplied for foreach() (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php:229)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/savechangesestrellas/
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (229)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/05 09:42:36 [error] [php] Undefined variable: dataProvide (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/estrellascategoriaeditorial/index.php:20)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): EstrellascategoriaeditorialController->renderFile()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): EstrellascategoriaeditorialController->renderPartial()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/EstrellascategoriaeditorialController.php(128): EstrellascategoriaeditorialController->render()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): EstrellascategoriaeditorialController->actionIndex()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): EstrellascategoriaeditorialController->runAction()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): EstrellascategoriaeditorialController->filterAccessControl()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): EstrellascategoriaeditorialController->runActionWithFilters()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): EstrellascategoriaeditorialController->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/estrellascategoriaeditorial/index.php (20)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/EstrellascategoriaeditorialController.php (128)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/05 09:50:23 [error] [php] Trying to get property of non-object (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/estrellascategoriaeditorial/index.php:53)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): EstrellascategoriaeditorialController->renderFile()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): EstrellascategoriaeditorialController->renderPartial()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/EstrellascategoriaeditorialController.php(128): EstrellascategoriaeditorialController->render()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): EstrellascategoriaeditorialController->actionIndex()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): EstrellascategoriaeditorialController->runAction()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): EstrellascategoriaeditorialController->filterAccessControl()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): EstrellascategoriaeditorialController->runActionWithFilters()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): EstrellascategoriaeditorialController->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/estrellascategoriaeditorial/index.php (53)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/EstrellascategoriaeditorialController.php (128)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/05 09:50:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 09:51:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 09:51:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 09:51:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 09:56:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 09:56:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 09:57:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:08:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:09:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:09:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:10:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:10:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:11:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:12:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:13:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:14:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:14:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:15:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:16:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:17:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:17:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:17:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:18:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:18:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:18:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:19:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:19:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:26:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/72
+---
+2013/03/05 10:27:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:32:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:38:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 10:44:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 11:07:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/73
+---
+2013/03/05 11:08:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/73
+---
+2013/03/05 11:14:42 [error] [php] Undefined offset: 0 (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php:201)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/savechangesestrellas/
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (201)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/05 11:22:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 11:22:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 11:26:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 11:26:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 11:26:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 11:26:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 11:27:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 11:27:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 11:47:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 11:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 11:56:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 11:56:28 [error] [php] Undefined index: idestrellas (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php:133)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/savechangesestrellas/
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (133)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/05 11:56:28 [error] [php] Undefined index: idestrellas (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php:133)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/savechangesestrellas/
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (133)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/05 11:56:28 [error] [php] Undefined index: idestrellas (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php:133)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/savechangesestrellas/
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (133)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/05 11:56:28 [error] [php] Undefined index: idestrellas (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php:133)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/savechangesestrellas/
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (133)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/05 11:56:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 11:57:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 11:57:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 11:57:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 12:16:17 [error] [php] Undefined index: onclick (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/extensions/tablaeasyUi/easyUi.php:105)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): EstrellascategoriaeditorialController->renderInternal()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): EstrellascategoriaeditorialController->renderFile()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): EstrellascategoriaeditorialController->renderPartial()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/EstrellascategoriaeditorialController.php(128): EstrellascategoriaeditorialController->render()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): EstrellascategoriaeditorialController->actionIndex()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): EstrellascategoriaeditorialController->runAction()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): EstrellascategoriaeditorialController->filterAccessControl()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): EstrellascategoriaeditorialController->runActionWithFilters()
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): EstrellascategoriaeditorialController->run()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/extensions/tablaeasyUi/easyUi.php (105)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/estrellascategoriaeditorial/index.php (91)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/EstrellascategoriaeditorialController.php (128)
+2013/03/05 12:16:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 12:17:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 12:17:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 12:18:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 12:18:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 12:18:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 12:19:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 12:20:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 12:21:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 12:34:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 12:34:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 12:35:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 14:18:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 14:19:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 14:21:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 14:26:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 14:26:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 14:26:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 14:28:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 14:28:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 14:28:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 14:29:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 14:30:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 14:30:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 14:33:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 14:34:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 14:34:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 14:34:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 14:34:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 14:36:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 14:41:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 15:03:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 15:04:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 15:05:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 15:20:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 15:21:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 15:21:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 15:25:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 15:26:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 15:26:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 15:27:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 15:32:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 15:33:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 15:33:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 15:33:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 15:35:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 15:35:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 15:42:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 15:43:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 15:43:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 15:44:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/9
+---
+2013/03/05 15:45:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 15:46:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 15:46:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 15:47:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/05 15:47:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 15:48:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 15:56:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 16:39:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 16:39:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 16:39:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 16:43:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 16:44:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 16:52:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 16:52:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 16:52:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 16:53:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "id".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('id')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('id')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 16:57:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 16:57:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "PedidosProveedores/bodegasreservasestrellas/createid/undefined".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/bodegasreservasestrellas/createid/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 16:58:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "bodegareservasestrellas".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('bodegareservase...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/bodegareservasestrellas
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/gii/crud
+---
+2013/03/05 16:58:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Pedidosproveedores/bodegareservasestrellas".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('Pedidosproveedo...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/Pedidosproveedores/bodegareservasestrellas
+---
+2013/03/05 16:59:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 16:59:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "createid".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('createid')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('createid')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/bodegareservasestrellas/createid/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:01:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:02:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "PedidosProveedores/bodegasreservasestrellas/createid/undefined".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/bodegasreservasestrellas/createid/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:02:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:06:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:08:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:08:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:10:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:10:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "list".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('list')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('list')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/bodegareservasestrellas/list/id/undefined
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:11:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:12:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:12:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:12:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:13:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:13:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:14:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:15:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:15:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:15:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:15:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:15:28 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:337
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/bodegareservasestrellas/create
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:17:02 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:337
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/bodegareservasestrellas/create
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:17:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:17:12 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:337
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/bodegareservasestrellas/create
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/05 17:17:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/06 08:25:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/06 08:51:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/06 09:11:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/06 09:12:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---

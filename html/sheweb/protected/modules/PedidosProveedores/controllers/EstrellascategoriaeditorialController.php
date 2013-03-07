@@ -28,11 +28,11 @@ class EstrellascategoriaeditorialController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','getestrellascategoriaeditorial', 'getcantidades'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','savechangesestrellascategoriaeditorial'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -128,6 +128,40 @@ class EstrellascategoriaeditorialController extends Controller
 		));
 	}
 
+        
+        public function actionGetestrellascategoriaeditorial(){
+            $sql = "select * from view_estrellascategoriaeditorial";
+            $items = Yii::app()->db->createCommand($sql)->queryAll();
+            if(is_array($items)){
+                echo '{"total":'.sizeof($items).',"rows":';
+                echo json_encode($items);    
+                echo "}";
+            }
+            
+            
+        }
+        
+        public function actionGetcantidades(){
+            
+           for ($i=0;$i<=200;$i++){
+               $cantidad[]['idcantidad'] = $i;
+               
+           }     
+           echo json_encode($cantidad);    
+               
+           
+            
+        }
+        
+        
+         public function actionSavechangesestrellascategoriaeditorial(){
+            if(trim($_REQUEST['idestrellascategoriaeditorial'])==''){
+                return(1);
+            }
+            $estrellascategoriaeditorial = new Estrellascategoriaeditorial;
+            $estrellascategoriaeditorial->updateByPk(Yii::app()->request->getParam('idestrellascategoriaeditorial'), array('cantidad'=>Yii::app()->request->getParam('cantidad')));
+         }
+        
 	/**
 	 * Manages all models.
 	 */

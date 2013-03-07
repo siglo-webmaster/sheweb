@@ -227,9 +227,14 @@ class PedidosproveedoresController extends Controller
                                                                                                                              'ciudad_idciudad'=>$row['ciudad_idciudad'],
                                                                                                                             ));
                                 foreach($ViewBodegareservasestrellas as $row2){
-                                    if($bod = Bodega::model()->findAllByAttributes(array('idbodega'=>$row2['bodega_idbodega']))){
-                                        
-                                    }
+                                    $pedidosproveedoresitemdetallereserva = new Pedidosproveedoresitemdetallereserva;
+                                    $pedidosproveedoresitemdetallereserva->isNewRecord=true;
+                                    $pedidosproveedoresitemdetallereserva->pedidosproveedoresitems_idpedidosproveedoresitems = $pedidosproveedoresitems->idpedidosproveedoresitems;
+                                    $pedidosproveedoresitemdetallereserva->bodega_idbodega = $row2['bodega_idbodega'];
+                                    $pedidosproveedoresitemdetallereserva->reservado = $row2['cantidad'];
+                                    $pedidosproveedoresitemdetallereserva->proyectosespeciales_idproyectosespeciales = $pedidosproveedoresitems->proyectosespeciales_idproyectosespeciales;
+                                    $pedidosproveedoresitemdetallereserva->usuarios_idusuarios = Yii::app()->user->id;
+                                    $pedidosproveedoresitemdetallereserva->save();
                                 }
                             }
                            
