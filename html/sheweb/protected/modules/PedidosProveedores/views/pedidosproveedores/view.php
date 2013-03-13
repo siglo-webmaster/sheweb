@@ -105,6 +105,7 @@ $this->menu=array(
                  'pk'       =>'idpedidosproveedoresitems', //primary key for eddit
                  'title'    =>'Items del pedido # '.$model->idpedidosproveedores, //titulo
                  'headers'  =>$headers, //array de cabeceras
+                 'menubutton'=>array(array('onclick'=>'saveChanges','label'=>'Guardar cambios')),
                  'dialoginfo'=>Yii::app()->baseUrl.'/PedidosProveedores/pedidosproveedores/getinfoitem/',
                  'action'   =>Yii::app()->baseUrl.'/PedidosProveedores/pedidosproveedores/getpedidoproveedoresitems/id/'.$model->idpedidosproveedores, //url de los datos
                  'saveurl'  =>Yii::app()->baseUrl.'/PedidosProveedores/pedidosproveedores/savechangesestrellas/',

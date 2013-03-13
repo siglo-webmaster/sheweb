@@ -1,5 +1,5 @@
 var menu=function(){
-  var t=15,z=500,s,a;
+  var t=15,z=900,s,a;
   function dd(n,speed){
     this.n=n;
     this.h=[];

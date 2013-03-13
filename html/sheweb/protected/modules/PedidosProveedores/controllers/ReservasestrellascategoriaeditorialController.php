@@ -118,8 +118,13 @@ class ReservasestrellascategoriaeditorialController extends Controller
 	}
         
         
-        public function actionGetreservasestrellascategoriaeditorial(){
-            $sql = "select  * from view_reservasestrellascategoriaeditorial ";
+        public function actionGetreservasestrellascategoriaeditorial($id=false){
+            if($id!=false){
+                $sql = "select  * from view_reservasestrellascategoriaeditorial where idestrellascategoriaeditorial=".$id;
+            }else{
+                $sql = "select  * from view_reservasestrellascategoriaeditorial ";
+            }
+            
             $items = Yii::app()->db->createCommand($sql)->queryAll();
             if(is_array($items)){
                 echo '{"total":'.sizeof($items).',"rows":';

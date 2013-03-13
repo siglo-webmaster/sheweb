@@ -28,7 +28,7 @@ class BodegareservasestrellasController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','getbodegareservasestrellas'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -56,6 +56,7 @@ class BodegareservasestrellasController extends Controller
 		));
 	}
 
+        
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
@@ -71,7 +72,7 @@ class BodegareservasestrellasController extends Controller
 		{
 			$model->attributes=$_POST['Bodegareservasestrellas'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idbodegareservasestrellas));
+				$this->redirect(array('index','id'=>$model->idreservasestrellascategoriaeditorial));
 		}
 
 		$this->render('create',array(
@@ -117,16 +118,32 @@ class BodegareservasestrellasController extends Controller
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
+        
+         public function actionGetbodegareservasestrellas($id){
+            $sql = "select  * from view_bodegareservasestrellasciudad where idreservasestrellascategoriaeditorial=".$id;
+            $items = Yii::app()->db->createCommand($sql)->queryAll();
+            if(is_array($items)){
+                echo '{"total":'.sizeof($items).',"rows":';
+                echo json_encode($items);    
+                echo "}";
+            }
+            
+            
+        }
+        
 
 	/**
 	 * Lists all models.
 	 */
-	public function actionIndex()
+	public function actionIndex($id)
 	{
-		$dataProvider=new CActiveDataProvider('Bodegareservasestrellas');
+               //$dataProvider=new CActiveDataProvider('Bodegareservasestrellas');
+               $this->layout='main_2';
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+			//'dataProvider'=>$dataProvider,
+                        'id'=>$id,
 		));
+                
 	}
 
 	/**
@@ -138,7 +155,7 @@ class BodegareservasestrellasController extends Controller
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Bodegareservasestrellas']))
 			$model->attributes=$_GET['Bodegareservasestrellas'];
-
+                
 		$this->render('admin',array(
 			'model'=>$model,
 		));

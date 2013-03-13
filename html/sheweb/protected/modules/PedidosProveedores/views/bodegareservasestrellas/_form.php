@@ -17,14 +17,12 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'bodega_idbodega'); ?>
-		<?php echo $form->textField($model,'bodega_idbodega'); ?>
+		<?php echo $form->dropDownList($model,'bodega_idbodega',CHtml::listData(Bodega::model()->findAll(), 'idbodega', 'nombre'));?>
 		<?php echo $form->error($model,'bodega_idbodega'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'idreservasestrellascategoriaeditorial'); ?>
-		<?php echo $form->textField($model,'idreservasestrellascategoriaeditorial',array('size'=>20,'maxlength'=>20)); ?>
-		<?php echo $form->error($model,'idreservasestrellascategoriaeditorial'); ?>
+		<?php echo $form->hiddenField($model,'idreservasestrellascategoriaeditorial',array('value'=>$id)); ?>
 	</div>
 
 	<div class="row">
@@ -35,7 +33,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'prioridad'); ?>
-		<?php echo $form->textField($model,'prioridad'); ?>
+		<?php 
+                    $intervalo=array();
+                    for ($i=1;$i<=10;$i++){
+                        $intervalo[]['idprioridad']=$i;
+                    }
+                    echo $form->dropDownList($model,'prioridad',CHtml::listData($intervalo, 'idprioridad', 'idprioridad'));
+                ?>
 		<?php echo $form->error($model,'prioridad'); ?>
 	</div>
 

@@ -139,6 +139,7 @@ class EasyUi extends CWidget
         
         protected function customClientScript(){
          echo "<script type=\"text/javascript\">
+                    
                     var editIndex = undefined;
                     function endEditing(){
                             if (editIndex == undefined){return true}
@@ -177,9 +178,10 @@ class EasyUi extends CWidget
                                             $('#".$this->id."').datagrid('selectRow', editIndex);
                                     }
                             }else{
-                                window.open('".$this->dialoginfo."');
-                                $('#dlg').load('".$this->dialoginfo."' + 'id/' +  $('#".$this->id."').datagrid('getRows')[index]['iditem']);
-                                $('#dlg').dialog('open');
+                                window.open('".$this->dialoginfo."'+ 'id/' +  $('#".$this->id."').datagrid('getRows')[index]['".$this->pk."'] + '/".(date('Y-m-d:h:i:s'))."' ,".$this->id." ,'width=950,height=700,left=300,top=200');
+                              
+                                /* $('#dlg').load('".$this->dialoginfo."' + 'id/' +  $('#".$this->id."').datagrid('getRows')[index]['iditem']);
+                                $('#dlg').dialog('open'); */
                             }
                             
                     }

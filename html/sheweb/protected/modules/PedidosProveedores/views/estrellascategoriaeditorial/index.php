@@ -84,7 +84,7 @@ $this->menu=array(
                  'title'=>'Estrellas categorias editoriales', //titulo
                  'headers'=>$headers, //array de cabeceras
                  'menubutton'=>array(array('onclick'=>'saveChanges','label'=>'Guardar cambios')),
-              //   'dialoginfo'=>Yii::app()->baseUrl.'/PedidosProveedores/pedidosproveedores/getinfoitem/',
+                 'dialoginfo'=>Yii::app()->baseUrl.'/PedidosProveedores/reservasestrellascategoriaeditorial/index/',
                  'action'=>Yii::app()->baseUrl.'/PedidosProveedores/estrellascategoriaeditorial/getestrellascategoriaeditorial', //url de los datos
                  'saveurl'=>Yii::app()->baseUrl.'/PedidosProveedores/estrellascategoriaeditorial/savechangesestrellascategoriaeditorial/',
                     )
