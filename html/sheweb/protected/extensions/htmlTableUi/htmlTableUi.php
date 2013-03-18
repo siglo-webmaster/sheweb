@@ -331,6 +331,7 @@ class HtmlTableUi extends CWidget
 		
 		// Register jQuery which will be used by the widget's code
 		$cs->registerCoreScript('jquery');
+                
 
 		//$cs->registerScriptFile($assetsDir.'/js/jquery-1.6.2.min.js',CClientScript::POS_HEAD);
 

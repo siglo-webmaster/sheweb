@@ -41,13 +41,21 @@
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/userGroups/user/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
-	</div><!-- mainmenu -->
-	<?php if(isset($this->breadcrumbs)):?>
+	</div>
+        
+        
+       
+        
+        <!-- mainmenu -->
+	<?php
+        /*
+            if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
 		)); ?><!-- breadcrumbs -->
 	<?php endif?>
-        
+        */
+        ?>
                 
 	<?php echo $content; ?>
 
@@ -57,7 +65,26 @@
                 Departamento de Sistemas <br> Siglo del Hombre Editores S.A. - <?php echo date('Y'); ?> <br/>
 		
 	</div><!-- footer -->
-
+        
+ <?php /*
+ <div class="span-5 last">
+                <div id="sidebar">
+                <?php
+                        $this->beginWidget('zii.widgets.CPortlet', array(
+                                
+                        ));
+                        $this->widget('zii.widgets.CMenu', array(
+                                'items'=>$this->menu,
+                                'htmlOptions'=>array('class'=>'operations'),
+                        ));
+                        $this->endWidget();
+                ?>
+                </div><!-- sidebar -->
+        </div>
+  * 
+  * 
+  */
+ ?>
 </div><!-- page -->
 
 </body>

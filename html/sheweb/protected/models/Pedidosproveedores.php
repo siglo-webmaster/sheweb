@@ -113,22 +113,22 @@ class Pedidosproveedores extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idpedidosproveedores' => 'Idpedidosproveedores',
-			'usuariocreacion' => 'Usuariocreacion',
-			'usuarioaprobacion' => 'Usuarioaprobacion',
-			'idproveedor' => 'Idproveedor',
-			'moneda_idmoneda' => 'Moneda Idmoneda',
-			'fechacreacion' => 'Fechacreacion',
-			'fechacierre' => 'Fechacierre',
-			'fechaestimada' => 'Fechaestimada',
-			'fechaaprobacion' => 'Fechaaprobacion',
-			'fechaentrada' => 'Fechaentrada',
-			'fechaliberacion' => 'Fechaliberacion',
+			'idpedidosproveedores' => 'Pedido #',
+			'usuariocreacion' => 'Creado por',
+			'usuarioaprobacion' => 'Aprobado por',
+			'idproveedor' => 'Proveedor',
+			'moneda_idmoneda' => 'Moneda',
+			'fechacreacion' => 'Fechade creacion',
+			'fechacierre' => 'Fecha cierre',
+			'fechaestimada' => 'Fecha llegada',
+			'fechaaprobacion' => 'Fecha aprobacion',
+			'fechaentrada' => 'Fecha entrada',
+			'fechaliberacion' => 'Fecha liberacion',
 			'descripcion' => 'Descripcion',
 			'observaciones' => 'Observaciones',
 			'estado' => 'Estado',
-			'tipopedidosproveedores_idtipopedidosproveedores' => 'Tipopedidosproveedores Idtipopedidosproveedores',
-			'tipostransporte_idtipostransporte' => 'Tipostransporte Idtipostransporte',
+			'tipopedidosproveedores_idtipopedidosproveedores' => 'Tipo',
+			'tipostransporte_idtipostransporte' => 'Transporte',
 		);
 	}
 

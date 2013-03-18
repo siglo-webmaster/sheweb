@@ -15,11 +15,7 @@
 ?>
 <div class="view" id="pedido">
 
-        <b><h3>
-        <?php
-            echo CHtml::link("Pedido a proveedores #".$data->idpedidosproveedores,Yii::app()->createUrl('PedidosProveedores/pedidosproveedores/view',array('id'=>$data->idpedidosproveedores)));
-        ?>
-        </h3></b>
+
 	        
         <b><?php echo CHtml::encode($data->getAttributeLabel('estado')); ?>:</b>
 	<?php echo CHtml::encode($data->estado); ?>
@@ -46,6 +42,44 @@
                 echo CHtml::encode($data->usuarioaprobacion0->username); 
             }
          ?>
+        
+        
+        <br />
+        
+	<b><?php echo CHtml::encode($data->getAttributeLabel('idproveedor')); ?>:</b>
+	<?php echo CHtml::encode($data->idproveedor0->nombre); ?>
+	<?php echo $separador; ?>
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('moneda_idmoneda')); ?>:</b>
+	<?php echo CHtml::encode($data->monedaIdmoneda->nombre); ?>
+	<?php echo $separador; ?>
+        
+        <b><?php echo "Transporte: "; ?></b>
+	<?php 
+                if(isset($data->tipostransporteIdtipostransporte->nombre)){
+                    echo CHtml::encode($data->tipostransporteIdtipostransporte->nombre);
+                }
+        ?>
+        <br />
+	
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('fechacreacion')); ?>:</b>
+	<?php echo CHtml::encode($data->fechacreacion); ?>
+	<?php echo $separador; ?>
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('fechacierre')); ?>:</b>
+	<?php echo CHtml::encode($data->fechacierre); ?>
+	<?php echo $separador; ?>
+        
+        <b><?php echo CHtml::encode($data->getAttributeLabel('fechaaprobacion')); ?>:</b>
+	<?php echo CHtml::encode($data->fechaaprobacion); ?>
+	<?php echo $separador; ?>
+
+        
+	<br />
+        
+        
+        
         <?php echo $separador; ?>
         <div id='ver-opciones'>
             
@@ -80,50 +114,73 @@
             
             
             <hr>
-            <table>
-                <tr>
-                    <?php switch($data->estado){
+  
+                    
+                    
+                    
+                    <?php 
+ 
+                    switch($data->estado){
                                case 'activo':{
                                    //AGREGAR NUEVO ITEM
-                                   echo "<td>";
+                            
                                    echo "<div class='boton'>";
                                    echo CHtml::link("Agregar nuevo item",Yii::app()->createUrl($this->module->id."/pedidosproveedoresitems/create", array("pedidosproveedores_idpedidosproveedores"=>$data->idpedidosproveedores)));
                                    echo "</div>";
-                                   echo "</td>";
+                                
+                                   
+                                    //Editar Pedido
+                                  
+                                   echo "<div class='boton'>";
+                                   echo CHtml::link("Editar",Yii::app()->createUrl($this->module->id."/pedidosproveedores/update", array("id"=>$data->idpedidosproveedores)));
+                                   echo "</div>";
+                                   
                                    
                                    //CAMBIAR ESTADO
-                                   echo "<td>";
+                                  
                                    echo "<div class='boton'>";
                                    echo CHtml::link("Cambiar estado",Yii::app()->createUrl($this->module->id."/pedidosproveedores/changestate", array("id"=>$data->idpedidosproveedores)));
                                    echo "</div>";
-                                   echo "</td>";
+                                
                                    
                                    ///HACER CARGA MASIVA DESDE EXCELL
-                                   echo "<td>";
+                                 
                                    echo "<div class='boton'>";
                                    echo CHtml::link("Carga desde EXCEL",Yii::app()->createUrl("PedidosProveedores/cargasexcel/create/id/".$data->idpedidosproveedores));
                                    echo "</div>";
-                                   echo "</td>";
+                                 
+                                   
+                                                                       echo "</tr><tr>";
+                                   
+                                    echo "<div class='boton'>";
+                                    echo CHtml::link("VER GRILLA",Yii::app()->createUrl($this->module->id."/pedidosproveedores/vergrilla", array("id"=>$data->idpedidosproveedores)));
+                                    echo "</div>";
+                                   
+                                   
+                                   
+                                   
                                    break;
+
+                               
                                }
                                
                                case 'aprobado':{
-                                   echo "<td>";
+                                  
                                    echo "<div class='boton'>";
                                    echo CHtml::link("Generar Impresion de Orden",Yii::app()->createUrl($this->module->id."/pedidosproveedores/printorder", array("id"=>$data->idpedidosproveedores)));
                                    echo "</div>";
-                                   echo "</td>";
+                                 
                                     //CAMBIAR ESTADO
-                                   echo "<td>";
+                                   
                                    echo "<div class='boton'>";
                                    echo CHtml::link("Cambiar estado",Yii::app()->createUrl($this->module->id."/pedidosproveedores/changestate", array("id"=>$data->idpedidosproveedores)));
                                    echo "</div>";
-                                   echo "</td>";
+                                  
                                    break;
                                }
                                
                                case 'impreso':{
-                                   echo "<td>";
+                                   
                                  
                                    ///EMAIL
                                     if(!isset($mail)){
@@ -161,53 +218,16 @@
                                     ));
                                    
                                    //FIN IMPRESION
-                                   echo "</td>";
+                                 
                                    break;
                                }
                            }
-                           
-                           //echo CHtml::link("Ver opciones ", array('view', 'id'=>$data->idpedidosproveedores)); ?></td>
-                </tr>
-            </table>
-        
-        </div>
-        
-	<br />
-        
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idproveedor')); ?>:</b>
-	<?php echo CHtml::encode($data->idproveedor0->nombre); ?>
-	<?php echo $separador; ?>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('moneda_idmoneda')); ?>:</b>
-	<?php echo CHtml::encode($data->monedaIdmoneda->nombre); ?>
-	<?php echo $separador; ?>
-        
-        <b><?php echo "Transporte: "; ?></b>
-	<?php 
-                if(isset($data->tipostransporteIdtipostransporte->nombre)){
-                    echo CHtml::encode($data->tipostransporteIdtipostransporte->nombre);
-                }
         ?>
-        <br />
-	
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('fechacreacion')); ?>:</b>
-	<?php echo CHtml::encode($data->fechacreacion); ?>
-	<?php echo $separador; ?>
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('fechacierre')); ?>:</b>
-	<?php echo CHtml::encode($data->fechacierre); ?>
-	<?php echo $separador; ?>
-        
-        <b><?php echo CHtml::encode($data->getAttributeLabel('fechaaprobacion')); ?>:</b>
-	<?php echo CHtml::encode($data->fechaaprobacion); ?>
-	<?php echo $separador; ?>
-
-        
-	<br />
-        
-        
+        </div>
+        <hr class="separador_blanco">
          <?php
+       
             $Provider = new CActiveDataProvider('ViewPedidosproveedoresitemsagrupado', array('criteria'=>array('condition'=>'pedidosproveedores_idpedidosproveedores='.$data->idpedidosproveedores)));
             
             switch($data->estado){
@@ -277,41 +297,9 @@
                 'mergeColumns' => array('nombre'),
                  'columns' => $columnas,
               ));
+
+         
+         
         ?>
-        
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('fechaestimada')); ?>:</b>
-	<?php echo CHtml::encode($data->fechaestimada); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('fechaaprobacion')); ?>:</b>
-	<?php echo CHtml::encode($data->fechaaprobacion); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('fechaentrada')); ?>:</b>
-	<?php echo CHtml::encode($data->fechaentrada); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('fechaliberacion')); ?>:</b>
-	<?php echo CHtml::encode($data->fechaliberacion); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('descripcion')); ?>:</b>
-	<?php echo CHtml::encode($data->descripcion); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('observaciones')); ?>:</b>
-	<?php echo CHtml::encode($data->observaciones); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('estado')); ?>:</b>
-	<?php echo CHtml::encode($data->estado); ?>
-	<br />
-
-	*/ ?>
-        
-        
-        
-
 
 </div>

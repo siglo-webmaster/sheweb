@@ -177,9 +177,7 @@ div.search-form
 .portlet-content
 {
 	font-size:0.9em;
-	margin: 0 0 15px 0;
-	padding: 5px 8px;
-	background:#EFFDFF;
+
 }
 
 .portlet-content ul
@@ -194,6 +192,7 @@ div.search-form
 .portlet-content li
 {
 	padding: 2px 0 4px 0px;
+        float:left;
 }
 
 .operations
@@ -239,10 +238,14 @@ div.search-form
     margin: 0 10px 0 0;
 }
 
+.boton{
+    float:left;
+}
+
 .boton a{
-    
+    float:left; 
     padding: 5px 20px 5px 20px;
-    margin: 5px;
+    margin: 0 5px 0 0;
     font-size: 14px;
     line-height: 16px;
     background:#ddd;
@@ -257,4 +260,86 @@ div.search-form
 
 .boton a:hover{
     background-color: #ccc;
+}
+
+#detalleitem{
+    float:right;
+    width:450px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    
+}
+
+#cargarapida{
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 1040px;
+    height: 600px;
+    position: fixed;
+    top:50px;   
+    background: #fff;
+    display:none;
+    z-index: 999;
+}
+
+#headcargarapida{
+    
+    float:left;
+    width:1024px; 
+    height:40px;
+    border-color:#ccc;
+    border-width:  0 0 1px 0;
+    border-style: solid;
+}
+
+#bodycargarapida{
+    
+    float:left;
+    width:1024px; 
+    font-size: 20px;
+    text-align: center;
+}
+
+#cargarapidadetalleitem{
+    font-size:12px;
+    width:455px;
+    height: 300px;
+    border: 1px solid #ddd;
+    float:left;
+    margin:10px;
+    padding:20px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+#itemscargados{
+    font-size:12px;
+    width:455px;
+    height: 300px;
+    border: 1px solid #ddd;
+    float:left;
+    margin:10px;
+    padding:20px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    
+}
+
+#capabloqueo{
+    width:2000px;
+    height:2000px;
+    background: #000;
+    opacity: 0.5;
+    position:fixed;
+    top:0;
+    left:0;
+    margin:0;
+    z-index: 998;
+    display:none;
+}
+
+.campolista{
+    float:left;
 }

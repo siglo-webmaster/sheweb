@@ -22,7 +22,9 @@
         ?>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <?php
-            echo CHtml::link("[ Regresar ]",Yii::app()->createUrl($this->module->id."/pedidosproveedores/view", array("id"=>$pedidosproveedores->idpedidosproveedores)));
+                    echo "<div class='boton'>";
+                    echo CHtml::link("Cancelar",Yii::app()->createUrl($this->module->id."/pedidosproveedores/view", array("id"=>$pedidosproveedores->idpedidosproveedores)));
+                    echo "</div>"; 
         ?>
             
         </div>

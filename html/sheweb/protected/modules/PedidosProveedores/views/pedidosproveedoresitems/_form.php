@@ -42,7 +42,7 @@
                 
             ?>
 	</div>
-        
+        <div id='detalleitem'></div>
         <table border="0">
             <tr>
                 <td colspan="2">
@@ -73,7 +73,7 @@
 
             echo $form->labelEx($model,'item_iditem');
             $select = CHtml::listData(Item::model()->findAllBySql("select distinct i.iditem, i.nombre from item as i  inner join  item_has_terceros as it on it.item_iditem=i.iditem and it.terceros_idterceros=$pedido->idproveedor where i.estado='activo'"), 'iditem', 'nombre');
-            echo $form->dropDownList($model,'item_iditem',$select);
+            echo $form->dropDownList($model,'item_iditem',$select,array('id'=>'item_iditem'));
             echo $form->error($model,'item_iditem');
         ?>
         </div>
@@ -113,6 +113,8 @@
             </tr>
         </table>
         
+        
+        
         <hr class="separador_blanco">
         
         <div class="row">
@@ -129,9 +131,36 @@
         <hr class="separador_blanco">
         
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); 
+                        echo "<div class='boton' style='float:left;'>";
+                        echo CHtml::link("Cancelar",Yii::app()->createUrl($this->module->id."/pedidosproveedores/view", array("id"=>$pedidosproveedores_idpedidosproveedores)));
+                        echo "</div>";  
+                 ?>
 	</div>
 
 <?php $this->endWidget(); ?>
 
-</div><!-- form -->
+</div>
+
+
+<?php
+
+    $cs = Yii::app()->clientScript;
+    $cs->registerCoreScript('jquery');
+?>
+<script type="text/javascript">
+     jQuery(document).ready(function(){
+         
+         /////
+        var $iditem = $('#item_iditem').val();
+        $('#detalleitem').load('<?php
+           echo  Yii::app()->baseUrl.'/PedidosProveedores/pedidosproveedores/getinfoitem/id/';
+        ?>'+$iditem);
+         /////
+         
+        $('#item_iditem').bind('change',function(){
+            var $iditem = $('#item_iditem').val();
+            $('#detalleitem').load('<?php echo  Yii::app()->baseUrl.'/PedidosProveedores/pedidosproveedores/getinfoitem/id/';?>'+$iditem);
+        });
+      });
+</script>

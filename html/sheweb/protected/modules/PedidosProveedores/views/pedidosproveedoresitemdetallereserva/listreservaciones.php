@@ -37,11 +37,12 @@ $this->menu=array(
 
 <?php 
 echo "<div id='ver-opciones'>";
-
-echo CHtml::link("[ Nueva Reserva ]", Yii::app()->createUrl("/PedidosProveedores/pedidosproveedoresitemdetallereserva/create", array("idpedidosproveedoresitems"=>$idpedidosproveedoresitems)));
-echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-echo CHtml::link(" [ Regresar al pedido ]", Yii::app()->createUrl("/PedidosProveedores/pedidosproveedores/view/id/".$idpedidosproveedores));
-
+echo "<div class='boton'>";
+echo CHtml::link("Nueva Reserva", Yii::app()->createUrl("/PedidosProveedores/pedidosproveedoresitemdetallereserva/create", array("idpedidosproveedoresitems"=>$idpedidosproveedoresitems)));
+echo "</div>";
+echo "<div class='boton'>";
+echo CHtml::link("Regresar al pedido", Yii::app()->createUrl("/PedidosProveedores/pedidosproveedores/view/id/".$idpedidosproveedores));
+echo "</div>";
 echo "</div>";
 
 $this->widget('ext.groupgridview.GroupGridView', array(

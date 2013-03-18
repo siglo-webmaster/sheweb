@@ -73,11 +73,11 @@ class Cargasexcel extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idcargasexcel' => 'Idcargasexcel',
+			'idcargasexcel' => 'Id carga',
 			'fecha' => 'Fecha',
-			'file' => 'File',
-			'usergroups_user_id' => 'Usergroups User',
-			'pedidosproveedores_idpedidosproveedores' => 'Pedidosproveedores Idpedidosproveedores',
+			'file' => 'Archivo',
+			'usergroups_user_id' => 'Usuario',
+			'pedidosproveedores_idpedidosproveedores' => 'Pedido #',
 		);
 	}
 

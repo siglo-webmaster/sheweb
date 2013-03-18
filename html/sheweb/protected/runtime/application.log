@@ -5584,3 +5584,1580 @@ Stack trace:
 REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
 HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
 ---
+2013/03/14 09:36:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/9
+---
+2013/03/14 09:59:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "veritems".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('veritems')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('veritems')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedoresitems/veritems/pedidosproveedores_idpedidosproveedores/9
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/index
+---
+2013/03/14 10:00:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "veritems".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('veritems')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('veritems')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedoresitems/veritems/id/9
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/index
+---
+2013/03/14 10:05:22 [error] [php] Undefined variable: error (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php:714)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/veritems/id/9
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (714)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 10:18:14 [error] [php] Undefined variable: error (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php:714)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/veritems/id/9
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (714)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 10:18:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "veritems".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('veritems')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('veritems')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedoresitems/veritems/id/9
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/index
+---
+2013/03/14 10:18:22 [error] [php] Undefined variable: error (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php:714)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/veritems/id/9
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (714)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 10:18:49 [error] [php] Undefined variable: data (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/veritems.php:6)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): PedidosproveedoresController->renderFile()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): PedidosproveedoresController->renderPartial()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php(715): PedidosproveedoresController->render()
+#3 unknown(0): PedidosproveedoresController->actionVeritems()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/veritems/id/9
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/veritems.php (6)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (715)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+2013/03/14 10:19:31 [error] [php] Undefined variable: data (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/veritems.php:11)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): PedidosproveedoresController->renderFile()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): PedidosproveedoresController->renderPartial()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php(715): PedidosproveedoresController->render()
+#3 unknown(0): PedidosproveedoresController->actionVeritems()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/veritems/id/9
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/veritems.php (11)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (715)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+2013/03/14 10:19:59 [error] [php] Undefined variable: data (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/veritems.php:11)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): PedidosproveedoresController->renderFile()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): PedidosproveedoresController->renderPartial()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php(715): PedidosproveedoresController->render()
+#3 unknown(0): PedidosproveedoresController->actionVeritems()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/veritems/id/9
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/veritems.php (11)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (715)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+2013/03/14 10:20:01 [error] [php] Undefined variable: data (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/veritems.php:11)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): PedidosproveedoresController->renderFile()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): PedidosproveedoresController->renderPartial()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php(715): PedidosproveedoresController->render()
+#3 unknown(0): PedidosproveedoresController->actionVeritems()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/veritems/id/9
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/veritems.php (11)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (715)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+2013/03/14 10:20:01 [error] [php] Undefined variable: data (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/veritems.php:11)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): PedidosproveedoresController->renderFile()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): PedidosproveedoresController->renderPartial()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php(715): PedidosproveedoresController->render()
+#3 unknown(0): PedidosproveedoresController->actionVeritems()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/veritems/id/9
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/veritems.php (11)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (715)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+2013/03/14 10:20:01 [error] [php] Undefined variable: data (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/veritems.php:11)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): PedidosproveedoresController->renderFile()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): PedidosproveedoresController->renderPartial()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php(715): PedidosproveedoresController->render()
+#3 unknown(0): PedidosproveedoresController->actionVeritems()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/veritems/id/9
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/veritems.php (11)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (715)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+2013/03/14 10:20:19 [error] [php] Undefined variable: data (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/veritems.php:15)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): PedidosproveedoresController->renderFile()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): PedidosproveedoresController->renderPartial()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php(715): PedidosproveedoresController->render()
+#3 unknown(0): PedidosproveedoresController->actionVeritems()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/veritems/id/9
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/veritems.php (15)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (715)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+2013/03/14 10:20:33 [error] [php] Undefined variable: data (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/veritems.php:16)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): PedidosproveedoresController->renderFile()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): PedidosproveedoresController->renderPartial()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php(715): PedidosproveedoresController->render()
+#3 unknown(0): PedidosproveedoresController->actionVeritems()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/veritems/id/9
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/veritems.php (16)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (715)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+2013/03/14 10:21:00 [error] [php] Undefined variable: model (/home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php(607) : eval()'d code:1)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/grid/CGridColumn.php(145): CLinkColumn->renderDataCellContent()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/extensions/groupgridview/GroupGridView.php(169): CLinkColumn->renderDataCell()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/grid/CGridView.php(517): GroupGridView->renderTableRow()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/extensions/groupgridview/GroupGridView.php(33): GroupGridView->renderTableBody()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/grid/CGridView.php(427): GroupGridView->renderTableBody()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(161): GroupGridView->renderItems()
+#6 unknown(0): GroupGridView->renderSection()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/zii/widgets/CBaseListView.php(129): GroupGridView->renderContent()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(174): GroupGridView->run()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/veritems.php(293): PedidosproveedoresController->widget()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): PedidosproveedoresController->renderInternal()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): PedidosproveedoresController->renderFile()
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): PedidosproveedoresController->renderPartial()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php(715): PedidosproveedoresController->render()
+#16 unknown(0): PedidosproveedoresController->actionVeritems()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#18 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#19 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#20 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#21 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#22 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#23 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#24 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#25 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#26 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#27 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#28 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#29 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#30 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/veritems/id/9
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/extensions/groupgridview/GroupGridView.php (169)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/extensions/groupgridview/GroupGridView.php (33)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/veritems.php (293)
+2013/03/14 10:23:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/9
+---
+2013/03/14 10:23:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "veritems".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('veritems')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('veritems')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedoresitems/veritems/pedidosproveedores_idpedidosproveedores/9
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/veritems/id/9
+---
+2013/03/14 10:26:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/9
+---
+2013/03/14 10:28:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/9
+---
+2013/03/14 10:29:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/74
+---
+2013/03/14 10:30:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/74
+---
+2013/03/14 10:31:42 [error] [php] Undefined variable: error (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php:271)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/veritems/id/9
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (271)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 10:32:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/veritems/id/9
+---
+2013/03/14 10:32:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/veritems/id/9
+---
+2013/03/14 10:46:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresitemsController.php:252
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresitemsController.php(59): PedidosproveedoresitemsController->loadModel('10')
+#1 [internal function]: PedidosproveedoresitemsController->actionView('10')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(PedidosproveedoresitemsController), Array)
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(PedidosproveedoresitemsController), Object(ReflectionMethod), Array)
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('view')
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedoresitems/view/id/10
+---
+2013/03/14 10:48:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/9
+---
+2013/03/14 10:48:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/9
+---
+2013/03/14 10:52:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/9
+---
+2013/03/14 10:53:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/userGroups/components/UserGroupsAccessControl.php:97
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/auth/CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('vergrilla')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 10:53:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/9
+---
+2013/03/14 11:01:21 [error] [php] Undefined variable: model (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/_view.php:156)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): PedidosproveedoresController->renderFile()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/view.php(43): PedidosproveedoresController->renderPartial()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): PedidosproveedoresController->renderInternal()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): PedidosproveedoresController->renderFile()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): PedidosproveedoresController->renderPartial()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php(715): PedidosproveedoresController->render()
+#7 unknown(0): PedidosproveedoresController->actionView()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#18 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#19 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#20 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/9
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/_view.php (156)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/view.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (715)
+2013/03/14 11:02:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 11:02:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 11:02:40 [error] [php] Undefined offset: 0 (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php:201)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/savechangesestrellas/
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (201)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 11:06:13 [error] [php] Undefined variable: data (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/vergrilla.php:3)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): PedidosproveedoresController->renderFile()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): PedidosproveedoresController->renderPartial()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php(728): PedidosproveedoresController->render()
+#3 unknown(0): PedidosproveedoresController->actionVergrilla()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresController->runAction()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresController->filterUserGroupsAccessControl()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresController->runActionWithFilters()
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresController->run()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/vergrilla.php (3)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (728)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+2013/03/14 11:07:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 11:08:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 11:08:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 11:08:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 11:08:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 11:11:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 11:17:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 11:18:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 11:18:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 11:18:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 11:19:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 11:19:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 11:21:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 11:24:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 11:42:30 [error] [exception.CException] exception 'CException' with message 'PedidosproveedoresController has an extra endWidget() call in its view.' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php:211
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/views/layouts/main.php(55): CBaseController->endWidget()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/oborja/pu...')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/oborja/pu...', Array, true)
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/widgets/CContentDecorator.php(77): CBaseController->renderFile('/home/oborja/pu...', Array, true)
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate('?<div class="sp...')
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput('?<div class="sp...')
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(207): COutputProcessor->run()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/views/layouts/column2.php(10): CBaseController->endContent()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/oborja/pu...')
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/oborja/pu...', Array, true)
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(785): CBaseController->renderFile('/home/oborja/pu...', Array, true)
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php(703): CController->render('index', Array)
+#13 [internal function]: PedidosproveedoresController->actionIndex('activo')
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(PedidosproveedoresController), Array)
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(PedidosproveedoresController), Object(ReflectionMethod), Array)
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#19 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#20 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#21 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#23 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('index')
+#25 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#26 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#27 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/index
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/create
+---
+2013/03/14 11:54:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 11:58:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "edit".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('edit')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('edit')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedoresitems/edit/id/9
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/9
+---
+2013/03/14 11:59:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "edit".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('edit')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('edit')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedoresitems/edit/id/9
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/9
+---
+2013/03/14 11:59:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresitemsController.php:252
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresitemsController.php(148): PedidosproveedoresitemsController->loadModel('9')
+#1 [internal function]: PedidosproveedoresitemsController->actionUpdate('9')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(PedidosproveedoresitemsController), Array)
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(PedidosproveedoresitemsController), Object(ReflectionMethod), Array)
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('update')
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedoresitems/update/id/9
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/9
+---
+2013/03/14 12:11:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 12:19:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/11
+---
+2013/03/14 12:22:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 12:22:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 12:22:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 12:30:07 [error] [exception.CException] exception 'CException' with message 'Property "GroupGridView.pageSize" is not defined.' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:174
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWidgetFactory.php(162): CComponent->__set('pageSize', 100)
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(147): CWidgetFactory->createWidget(Object(PedidosproveedoresController), 'ext.groupgridvi...', Array)
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(173): CBaseController->createWidget('ext.groupgridvi...', Array)
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/_view.php(300): CBaseController->widget('ext.groupgridvi...', Array)
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/oborja/pu...')
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/oborja/pu...', Array, true)
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/oborja/pu...', Array, true)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/view.php(43): CController->renderPartial('_view', Array)
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/oborja/pu...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/oborja/pu...', Array, true)
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/oborja/pu...', Array, true)
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php(715): CController->render('view', Array)
+#13 [internal function]: PedidosproveedoresController->actionView('9', false)
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(PedidosproveedoresController), Array)
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(PedidosproveedoresController), Object(ReflectionMethod), Array)
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#19 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#20 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#21 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#23 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('view')
+#25 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#26 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#27 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/9
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/9
+---
+2013/03/14 12:30:41 [error] [exception.CException] exception 'CException' with message 'Property "GroupGridView.pagination" is not defined.' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:174
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWidgetFactory.php(162): CComponent->__set('pagination', Array)
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(147): CWidgetFactory->createWidget(Object(PedidosproveedoresController), 'ext.groupgridvi...', Array)
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(173): CBaseController->createWidget('ext.groupgridvi...', Array)
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/_view.php(302): CBaseController->widget('ext.groupgridvi...', Array)
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/oborja/pu...')
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/oborja/pu...', Array, true)
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/oborja/pu...', Array, true)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/view.php(43): CController->renderPartial('_view', Array)
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/oborja/pu...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/oborja/pu...', Array, true)
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/oborja/pu...', Array, true)
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php(715): CController->render('view', Array)
+#13 [internal function]: PedidosproveedoresController->actionView('9', false)
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(PedidosproveedoresController), Array)
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(PedidosproveedoresController), Object(ReflectionMethod), Array)
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#19 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#20 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#21 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#23 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('view')
+#25 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#26 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#27 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/9
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/9
+---
+2013/03/14 12:30:42 [error] [exception.CException] exception 'CException' with message 'Property "GroupGridView.pagination" is not defined.' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:174
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWidgetFactory.php(162): CComponent->__set('pagination', Array)
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(147): CWidgetFactory->createWidget(Object(PedidosproveedoresController), 'ext.groupgridvi...', Array)
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(173): CBaseController->createWidget('ext.groupgridvi...', Array)
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/_view.php(302): CBaseController->widget('ext.groupgridvi...', Array)
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/oborja/pu...')
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/oborja/pu...', Array, true)
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/oborja/pu...', Array, true)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/view.php(43): CController->renderPartial('_view', Array)
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/oborja/pu...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/oborja/pu...', Array, true)
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/oborja/pu...', Array, true)
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php(715): CController->render('view', Array)
+#13 [internal function]: PedidosproveedoresController->actionView('9', false)
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(PedidosproveedoresController), Array)
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(PedidosproveedoresController), Object(ReflectionMethod), Array)
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#19 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#20 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#21 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#23 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('view')
+#25 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#26 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#27 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/9
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/9
+---
+2013/03/14 12:30:42 [error] [exception.CException] exception 'CException' with message 'Property "GroupGridView.pagination" is not defined.' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:174
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWidgetFactory.php(162): CComponent->__set('pagination', Array)
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(147): CWidgetFactory->createWidget(Object(PedidosproveedoresController), 'ext.groupgridvi...', Array)
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(173): CBaseController->createWidget('ext.groupgridvi...', Array)
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/_view.php(302): CBaseController->widget('ext.groupgridvi...', Array)
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/oborja/pu...')
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/oborja/pu...', Array, true)
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/oborja/pu...', Array, true)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/view.php(43): CController->renderPartial('_view', Array)
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/oborja/pu...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/oborja/pu...', Array, true)
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/oborja/pu...', Array, true)
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php(715): CController->render('view', Array)
+#13 [internal function]: PedidosproveedoresController->actionView('9', false)
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(PedidosproveedoresController), Array)
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(PedidosproveedoresController), Object(ReflectionMethod), Array)
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#19 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#20 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#21 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#23 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('view')
+#25 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#26 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#27 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/9
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/cargasexcel/create/id/9
+---
+2013/03/14 12:31:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 12:34:00 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.pagination" is not defined.' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:174
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/schema/CDbCriteria.php(161): CComponent->__set('pagination', Array)
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CActiveDataProvider.php(105): CDbCriteria->__construct(Array)
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php(153): CActiveDataProvider->setCriteria(Array)
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CActiveDataProvider.php(84): CComponent->__set('criteria', Array)
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/_view.php(233): CActiveDataProvider->__construct('ViewPedidosprov...', Array)
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/oborja/pu...')
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/oborja/pu...', Array, true)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/oborja/pu...', Array, true)
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedores/view.php(43): CController->renderPartial('_view', Array)
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/oborja/pu...')
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/oborja/pu...', Array, true)
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/oborja/pu...', Array, true)
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php(715): CController->render('view', Array)
+#14 [internal function]: PedidosproveedoresController->actionView('9', false)
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(PedidosproveedoresController), Array)
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(PedidosproveedoresController), Object(ReflectionMethod), Array)
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#18 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#20 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#21 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#22 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#24 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('view')
+#26 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#27 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#28 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/view/id/9
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/9
+---
+2013/03/14 12:35:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/13
+---
+2013/03/14 12:36:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/13
+---
+2013/03/14 14:19:23 [error] [php] Object of class Pedidosproveedoresitemdetallereserva could not be converted to string (/home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedoresitemdetallereserva/_form.php:52)
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): PedidosproveedoresitemdetallereservaController->renderFile()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedoresitemdetallereserva/create.php(18): PedidosproveedoresitemdetallereservaController->renderPartial()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): PedidosproveedoresitemdetallereservaController->renderInternal()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): PedidosproveedoresitemdetallereservaController->renderFile()
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): PedidosproveedoresitemdetallereservaController->renderPartial()
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresitemdetallereservaController.php(87): PedidosproveedoresitemdetallereservaController->render()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): PedidosproveedoresitemdetallereservaController->actionCreate()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): PedidosproveedoresitemdetallereservaController->runAction()
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): UserGroupsAccessControl->filter()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): PedidosproveedoresitemdetallereservaController->filterUserGroupsAccessControl()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): PedidosproveedoresitemdetallereservaController->runActionWithFilters()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): PedidosproveedoresitemdetallereservaController->run()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#18 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CWebApplication->run()
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedoresitemdetallereserva/create/idpedidosproveedoresitems/54
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedoresitemdetallereserva/_form.php (52)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedoresitemdetallereserva/create.php (18)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresitemdetallereservaController.php (87)
+2013/03/14 14:19:35 [error] [exception.CException] exception 'CException' with message 'Property "Pedidosproveedoresitemdetallereserva.pedidosproveedores_idpedidosproveedores" is not defined.' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(144): CComponent->__get('pedidosproveedo...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedoresitemdetallereserva/_form.php(52): CActiveRecord->__get('pedidosproveedo...')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/oborja/pu...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/oborja/pu...', Array, true)
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/oborja/pu...', Array, true)
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedoresitemdetallereserva/create.php(18): CController->renderPartial('_form', Array)
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/oborja/pu...')
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/oborja/pu...', Array, true)
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/oborja/pu...', Array, true)
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresitemdetallereservaController.php(87): CController->render('create', Array)
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): PedidosproveedoresitemdetallereservaController->actionCreate()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#19 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#21 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#22 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedoresitemdetallereserva/create/idpedidosproveedoresitems/54
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedoresitemdetallereserva/getreservas/id/54
+---
+2013/03/14 14:19:35 [error] [exception.CException] exception 'CException' with message 'Property "Pedidosproveedoresitemdetallereserva.pedidosproveedores_idpedidosproveedores" is not defined.' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(144): CComponent->__get('pedidosproveedo...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedoresitemdetallereserva/_form.php(52): CActiveRecord->__get('pedidosproveedo...')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/oborja/pu...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/oborja/pu...', Array, true)
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/oborja/pu...', Array, true)
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/views/pedidosproveedoresitemdetallereserva/create.php(18): CController->renderPartial('_form', Array)
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(127): require('/home/oborja/pu...')
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/oborja/pu...', Array, true)
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(870): CBaseController->renderFile('/home/oborja/pu...', Array, true)
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresitemdetallereservaController.php(87): CController->render('create', Array)
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): PedidosproveedoresitemdetallereservaController->actionCreate()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#19 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#21 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#22 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedoresitemdetallereserva/create/idpedidosproveedoresitems/54
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedoresitemdetallereserva/getreservas/id/54
+---
+2013/03/14 14:22:06 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: Select pedidosproveedores_idpedidosproveedores from pedidosproveedoresitems where idpedidosproveedoresitems=.
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresitemdetallereservaController.php (160)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 14:22:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: Select pedidosproveedores_idpedidosproveedores from pedidosproveedoresitems where idpedidosproveedoresitems=' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresitemdetallereservaController.php(160): CDbCommand->queryAll()
+#2 [internal function]: PedidosproveedoresitemdetallereservaController->actionGetreservas('')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(PedidosproveedoresitemdetallereservaController), Array)
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(PedidosproveedoresitemdetallereservaController), Object(ReflectionMethod), Array)
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('getreservas')
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedoresitemdetallereserva/getreservas/id
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedoresitemdetallereserva/create/idpedidosproveedoresitems/54
+---
+2013/03/14 14:54:41 [error] [exception.CHttpException.99] exception 'CHttpException' with message 'El pedido # 10 no esta Activo. No puede agregar mas items' in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresitemsController.php:75
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(50): PedidosproveedoresitemsController->actionCreate()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedoresitems/create/pedidosproveedores_idpedidosproveedores/10
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/index.php/PedidosProveedores/pedidosproveedores/additems/id/10
+---
+2013/03/14 15:30:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/11
+---
+2013/03/14 15:35:56 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sheweb2013`.`pedidosproveedores`, CONSTRAINT `fk_pedidosproveedores_tipostransporte1` FOREIGN KEY (`tipostransporte_idtipostransporte`) REFERENCES `tipostransporte` (`idtipostransporte`) ON D). The SQL statement executed was: INSERT INTO `pedidosproveedores` (`usuariocreacion`, `usuarioaprobacion`, `idproveedor`, `moneda_idmoneda`, `fechacreacion`, `fechacierre`, `fechaestimada`, `fechaaprobacion`, `fechaentrada`, `fechaliberacion`, `descripcion`, `observaciones`, `estado`, `tipopedidosproveedores_idtipopedidosproveedores`, `tipostransporte_idtipostransporte`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14).
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (288)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:35:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sheweb2013`.`pedidosproveedores`, CONSTRAINT `fk_pedidosproveedores_tipostransporte1` FOREIGN KEY (`tipostransporte_idtipostransporte`) REFERENCES `tipostransporte` (`idtipostransporte`) ON D). The SQL statement executed was: INSERT INTO `pedidosproveedores` (`usuariocreacion`, `usuarioaprobacion`, `idproveedor`, `moneda_idmoneda`, `fechacreacion`, `fechacierre`, `fechaestimada`, `fechaaprobacion`, `fechaentrada`, `fechaliberacion`, `descripcion`, `observaciones`, `estado`, `tipopedidosproveedores_idtipopedidosproveedores`, `tipostransporte_idtipostransporte`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14)' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(1017): CDbCommand->execute()
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/ar/CActiveRecord.php(796): CActiveRecord->insert(NULL)
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php(288): CActiveRecord->save(false)
+#3 [internal function]: PedidosproveedoresController->actionClone('5', false)
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(PedidosproveedoresController), Array)
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(PedidosproveedoresController), Object(ReflectionMethod), Array)
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('clone')
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/clone/id/5
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/admin
+---
+2013/03/14 15:36:09 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:10 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:10 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:10 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:10 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:10 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:10 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:11 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:11 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:11 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:11 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:11 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:12 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:12 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:12 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:12 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:12 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:12 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:13 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:13 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:13 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:13 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:13 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:13 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:14 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:14 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:14 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresitems" of "Pedidosproveedoresitems".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (297)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:14 [warning] [application] Failed to set unsafe attribute "idpedidosproveedoresdocumentos" of "Pedidosproveedoresdocumentos".
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/PedidosProveedores/controllers/PedidosproveedoresController.php (340)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/14 15:36:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/76
+---
+2013/03/14 15:39:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/14 15:53:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/14 15:53:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/estrellascategoriaeditorial/index
+---
+2013/03/15 12:19:42 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and estado='activo'' at line 1. The SQL statement executed was: select * from view_pedidosproveedoresitemsagrupado where pedidosproveedores_idpedidosproveedores= and estado='activo' .
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/EntradasAlmacen/controllers/PedidosproveedoresentradasalmacenController.php (131)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/15 12:19:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and estado='activo'' at line 1. The SQL statement executed was: select * from view_pedidosproveedoresitemsagrupado where pedidosproveedores_idpedidosproveedores= and estado='activo' ' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/EntradasAlmacen/controllers/PedidosproveedoresentradasalmacenController.php(131): CDbCommand->queryAll()
+#2 [internal function]: PedidosproveedoresentradasalmacenController->actionCreate('')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(PedidosproveedoresentradasalmacenController), Array)
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(PedidosproveedoresentradasalmacenController), Object(ReflectionMethod), Array)
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('EntradasAlmacen...')
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen/pedidosproveedoresentradasalmacen/create/id/
+---
+2013/03/15 14:40:57 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'B_7702192311041_firme' in 'where clause'. The SQL statement executed was: select * from view_pedidosproveedoresitemsagrupado where pedidosproveedores_idpedidosproveedores=B_7702192311041_firme and estado='activo' .
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/EntradasAlmacen/controllers/PedidosproveedoresentradasalmacenController.php (131)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/15 14:40:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'B_7702192311041_firme' in 'where clause'. The SQL statement executed was: select * from view_pedidosproveedoresitemsagrupado where pedidosproveedores_idpedidosproveedores=B_7702192311041_firme and estado='activo' ' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/EntradasAlmacen/controllers/PedidosproveedoresentradasalmacenController.php(131): CDbCommand->queryAll()
+#2 [internal function]: PedidosproveedoresentradasalmacenController->actionCreate('B_7702192311041...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(PedidosproveedoresentradasalmacenController), Array)
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(PedidosproveedoresentradasalmacenController), Object(ReflectionMethod), Array)
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('EntradasAlmacen...')
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen/pedidosproveedoresentradasalmacen/create/id/B_7702192311041_firme
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen/pedidosproveedoresentradasalmacen/create/id/10
+---
+2013/03/15 14:41:35 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'hola' in 'where clause'. The SQL statement executed was: select * from view_pedidosproveedoresitemsagrupado where pedidosproveedores_idpedidosproveedores=hola and estado='activo' .
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/EntradasAlmacen/controllers/PedidosproveedoresentradasalmacenController.php (131)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/15 14:41:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'hola' in 'where clause'. The SQL statement executed was: select * from view_pedidosproveedoresitemsagrupado where pedidosproveedores_idpedidosproveedores=hola and estado='activo' ' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/EntradasAlmacen/controllers/PedidosproveedoresentradasalmacenController.php(131): CDbCommand->queryAll()
+#2 [internal function]: PedidosproveedoresentradasalmacenController->actionCreate('hola')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(PedidosproveedoresentradasalmacenController), Array)
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(PedidosproveedoresentradasalmacenController), Object(ReflectionMethod), Array)
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('EntradasAlmacen...')
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen/pedidosproveedoresentradasalmacen/create/id/hola
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen/pedidosproveedoresentradasalmacen/create/id/10
+---
+2013/03/15 14:41:44 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'hola' in 'where clause'. The SQL statement executed was: select * from view_pedidosproveedoresitemsagrupado where pedidosproveedores_idpedidosproveedores=hola and estado='activo' .
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/EntradasAlmacen/controllers/PedidosproveedoresentradasalmacenController.php (131)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/15 14:41:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'hola' in 'where clause'. The SQL statement executed was: select * from view_pedidosproveedoresitemsagrupado where pedidosproveedores_idpedidosproveedores=hola and estado='activo' ' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/EntradasAlmacen/controllers/PedidosproveedoresentradasalmacenController.php(131): CDbCommand->queryAll()
+#2 [internal function]: PedidosproveedoresentradasalmacenController->actionCreate('hola')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(PedidosproveedoresentradasalmacenController), Array)
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(PedidosproveedoresentradasalmacenController), Object(ReflectionMethod), Array)
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('EntradasAlmacen...')
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen/pedidosproveedoresentradasalmacen/create/id/hola
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen/pedidosproveedoresentradasalmacen/create/id/10
+---
+2013/03/15 14:41:48 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'hola' in 'where clause'. The SQL statement executed was: select * from view_pedidosproveedoresitemsagrupado where pedidosproveedores_idpedidosproveedores=hola and estado='activo' .
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/EntradasAlmacen/controllers/PedidosproveedoresentradasalmacenController.php (131)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php (43)
+in /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php (13)
+2013/03/15 14:41:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'hola' in 'where clause'. The SQL statement executed was: select * from view_pedidosproveedoresitemsagrupado where pedidosproveedores_idpedidosproveedores=hola and estado='activo' ' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/modules/EntradasAlmacen/controllers/PedidosproveedoresentradasalmacenController.php(131): CDbCommand->queryAll()
+#2 [internal function]: PedidosproveedoresentradasalmacenController->actionCreate('hola')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(PedidosproveedoresentradasalmacenController), Array)
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(PedidosproveedoresentradasalmacenController), Object(ReflectionMethod), Array)
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#12 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('create')
+#14 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('EntradasAlmacen...')
+#15 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen/pedidosproveedoresentradasalmacen/create/id/hola
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/EntradasAlmacen/pedidosproveedoresentradasalmacen/create/id/10
+---
+2013/03/15 14:57:13 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:337
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/protected/components/Controller.php(43): CFilter->filter(Object(CFilterChain))
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#5 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(292): CFilterChain->run()
+#7 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('getpedidoprovee...')
+#9 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('PedidosProveedo...')
+#10 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/getpedidoproveedoresitems/9
+---
+2013/03/15 15:43:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Parametros/admin".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('Parametros/admi...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/Parametros/admin
+---
+2013/03/15 15:44:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "edit".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php:484
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CController.php(271): CController->missingAction('edit')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(283): CController->run('edit')
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('Parametros/item...')
+#3 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/Parametros/item/edit/id/66
+---
+2013/03/15 16:01:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/reservasestrellascategoriaeditorial/index
+---
+2013/03/15 16:01:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/bodegareservasestrellas/index/id/4/2013-03-15:04:01:33
+---
+2013/03/15 16:01:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/bodegareservasestrellas/index/id/4/id/7/2013-03-15:04:01:35
+---
+2013/03/15 16:02:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/11
+---
+2013/03/15 16:02:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/11
+---
+2013/03/15 16:03:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/12ec8af1/themes/default/icon.css".' in /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/web/CWebApplication.php(142): CWebApplication->runController('assets/12ec8af1...')
+#1 /home/oborja/public_html/gitSHEWEB/sheweb/yii-1.1.12.b600af/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/oborja/public_html/gitSHEWEB/sheweb/html/sheweb/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~oborja/gitSHEWEB/sheweb/html/sheweb/assets/12ec8af1/themes/default/icon.css
+HTTP_REFERER=http://localhost/~oborja/gitSHEWEB/sheweb/html/sheweb/PedidosProveedores/pedidosproveedores/vergrilla/id/11
+---

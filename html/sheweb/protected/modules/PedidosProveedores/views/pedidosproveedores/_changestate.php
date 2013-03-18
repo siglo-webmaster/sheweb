@@ -12,8 +12,6 @@
         'htmlOptions' => array('enctype' => 'multipart/form-data'),
 )); ?>
 
-    
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
         <?php echo $form->errorSummary(array($pedidosproveedores)); ?>
 
@@ -50,9 +48,10 @@
             ?>
             <?php echo $form->error($pedidosproveedores,'fechaestimada'); ?>
 	</div>
-
+        <hr class="separador_blanco">
         
         <div class="row">
+            <b>Estado:</b>
 		<?php echo $form->dropDownList($pedidosproveedores,'estado',array('activo'=>'activo','aprobado'=>'aprobado','cerrado'=>'cerrado','anulado'=>'anulado'));?>
 	</div>
         
@@ -61,7 +60,12 @@
             
         
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($pedidosproveedores->isNewRecord ? 'Crear' : 'Guardar'); ?>
+		<?php echo CHtml::submitButton($pedidosproveedores->isNewRecord ? 'Crear' : 'Guardar'); 
+             echo "<div class='boton' >";
+            echo CHtml::link("Cancelar",Yii::app()->createUrl($this->module->id."/pedidosproveedores/view", array("id"=>$pedidosproveedores->idpedidosproveedores)));
+            echo "</div>"; 
+            
+            ?>
 	</div>
 
 <?php $this->endWidget(); ?>

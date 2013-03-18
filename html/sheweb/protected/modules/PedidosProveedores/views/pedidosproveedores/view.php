@@ -40,13 +40,13 @@ $this->menu=array(
         $mail=false;
     }
     
-   // echo $this->renderPartial('_view',array('data'=>$model,"pedidosproveedoresdocumentos"=>$pedidosproveedoresdocumentos,'mail'=>$mail));
+    echo $this->renderPartial('_view',array('data'=>$model,"pedidosproveedoresdocumentos"=>$pedidosproveedoresdocumentos,'mail'=>$mail));
 ?>
 
 
 
 <?php  
-    
+    /*
 
         $headers = array(
                     array('name'=>'idpedidosproveedoresitems',//id del campo
@@ -114,28 +114,14 @@ $this->menu=array(
         
   
 
-
-/*
-
-    $arprovider  = new CActiveDataProvider('Pais');
-   
-    	$this->widget('ext.htmlTableUi.htmlTableUi',array(
-            'ajaxUrl'=>'site/handleHtmlTable',
-            'arProvider'=>$arprovider,    
-            'collapsed'=>false,
-            'editable'=>true,
-            'enableSort'=>true,
-            'exportUrl'=>'site/export',
-            'formTitle'=>'Form Title',
-            'sortColumn'=>1,
-            'sortOrder'=>'desc',
-            'subtitle'=>'Rev 1.3.5',
-            'title'=>'Table 2',
-	));
 */
+
 ?>
 
-<?php /*$this->widget('zii.widgets.CDetailView', array(
+<?php 
+/*
+
+$this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'idpedidosproveedores',
@@ -154,8 +140,7 @@ $this->menu=array(
 		'estado',
 	),
 )); 
- * 
- */
+*/
  ?>
  
 

@@ -28,10 +28,16 @@ $('.search-form form').submit(function(){
 <?php include_once(Yii::app()->basePath . "/modules/".$this->module->id."/views/default/menu.php"); ?>
 <h1>Administrar Pedidos</h1>
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
+<?php
+    echo "<div class='boton'>";
+    echo CHtml::link("Nuevo pedido",Yii::app()->createUrl($this->module->id."/pedidosproveedores/create"));
+    echo "</div>";
+    
+     echo "<div class='boton'>";
+    echo CHtml::link("Listar pedidos",Yii::app()->createUrl($this->module->id."/pedidosproveedores/index"));
+    echo "</div>";
+?>
+<hr class="separador_blanco">
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">

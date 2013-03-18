@@ -34,6 +34,10 @@
                                                         "url"=>array("route"=>"/".$this->module->id."/pedidosproveedores/index/estado/cerrado"),
                                                         "label"=>"Pedidos Cerrados"
                                                 ),
+                                                array(
+                                                        "url"=>array("route"=>"/".$this->module->id."/pedidosproveedores/admin"),
+                                                        "label"=>"Administrar"
+                                                ),
                                 ),
                                 //
                                 

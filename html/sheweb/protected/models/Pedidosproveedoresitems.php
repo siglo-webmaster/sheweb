@@ -83,16 +83,16 @@ class Pedidosproveedoresitems extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idpedidosproveedoresitems' => 'Idpedidosproveedoresitems',
-			'pedidosproveedores_idpedidosproveedores' => 'Pedidosproveedores Idpedidosproveedores',
-			'condicioncomercial_idcondicioncomercial' => 'Condicioncomercial Idcondicioncomercial',
-			'item_iditem' => 'Item Iditem',
+			'idpedidosproveedoresitems' => 'id',
+			'pedidosproveedores_idpedidosproveedores' => 'Pedido #',
+			'condicioncomercial_idcondicioncomercial' => 'Condicioncomercial',
+			'item_iditem' => 'Titulo',
 			'solicitado' => 'Solicitado',
 			'confirmado' => 'Confirmado',
 			'recibido' => 'Recibido',
 			'chekeado' => 'Chekeado',
 			'estado' => 'Estado',
-			'proyectosespeciales_idproyectosespeciales' => 'Proyectosespeciales Idproyectosespeciales',
+			'proyectosespeciales_idproyectosespeciales' => 'Proyecto',
 		);
 	}
 

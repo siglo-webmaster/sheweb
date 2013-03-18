@@ -37,7 +37,11 @@
         <hr class="separador_blanco">
         
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); 
+                echo "<div class='boton' style='float:left;'>";
+                echo CHtml::link("Cancelar",Yii::app()->createUrl($this->module->id."/pedidosproveedores/view", array("id"=>$pedidosproveedores_idpedidosproveedores)));
+                echo "</div>"
+                ?>
 	</div>
 
 <?php $this->endWidget(); ?>

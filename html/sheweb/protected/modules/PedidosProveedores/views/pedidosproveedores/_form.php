@@ -163,6 +163,7 @@
         
         <div class="row">
             <b>V&iacute;nculos anexos (uno por linea):</b> 
+            <br>
 		<?php echo $form->textArea($pedidosproveedoresdocumentos,'url', array('rows'=>4,'cols'=>80)); ?>
 	</div>
         
@@ -177,7 +178,12 @@
             
         
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($pedidosproveedores->isNewRecord ? 'Crear' : 'Guardar'); ?>
+		<?php echo CHtml::submitButton($pedidosproveedores->isNewRecord ? 'Crear' : 'Guardar');
+                    echo "<div class='boton'>";
+                    echo CHtml::link("Cancelar",Yii::app()->createUrl($this->module->id."/pedidosproveedores/view", array("id"=>$pedidosproveedores->idpedidosproveedores)));
+                    echo "</div>";  
+                                   
+                 ?>
 	</div>
 
 <?php $this->endWidget(); ?>

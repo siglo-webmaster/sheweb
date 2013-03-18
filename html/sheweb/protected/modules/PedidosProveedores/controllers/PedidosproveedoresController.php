@@ -32,7 +32,7 @@ class PedidosproveedoresController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','getpedidoproveedoresitems','getcategoria','getestrellas','getinfoitem'),
+				'actions'=>array('index','view','getpedidoproveedoresitems','getcategoria','getestrellas','getinfoitem','veritems','vergrilla'),
 				'pbac'=>array('read'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -263,9 +263,9 @@ class PedidosproveedoresController extends Controller
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
-	public function actionView($id,$error=false)
+	public function actionVeritems($id,$error=false)
 	{
-		$this->render('view',array(
+		$this->render('veritems',array(
 			'model'=>$this->loadModel($id),
                         'pedidosproveedoresdocumentos'=>Yii::app()->db->createCommand("select * from pedidosproveedoresdocumentos where pedidosproveedores_idpedidosproveedores=".$id." ")->queryAll(),
                         'error'=>$error,
@@ -700,6 +700,33 @@ class PedidosproveedoresController extends Controller
 		$dataProvider=new CActiveDataProvider('Pedidosproveedores',array('criteria'=>array('condition'=>"estado='".$estado."'")));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+		));
+	}
+        
+        /**
+	 * Ver items de un pedido
+	 */
+	public function actionView($id,$error=false)
+	{
+            
+		$this->render('view',array(
+			'model'=>$this->loadModel($id),
+                        'pedidosproveedoresdocumentos'=>Yii::app()->db->createCommand("select * from pedidosproveedoresdocumentos where pedidosproveedores_idpedidosproveedores=".$id." ")->queryAll(),
+                        'error'=>$error,
+                        
+		));
+	}
+        
+        
+        /**
+	 * Ver items de un pedido
+	 */
+	public function actionVergrilla($id,$error=false)
+	{
+		$this->render('vergrilla',array(
+			'model'=>$this->loadModel($id),
+                        'pedidosproveedoresdocumentos'=>Yii::app()->db->createCommand("select * from pedidosproveedoresdocumentos where pedidosproveedores_idpedidosproveedores=".$id." ")->queryAll(),
+                        
 		));
 	}
 
