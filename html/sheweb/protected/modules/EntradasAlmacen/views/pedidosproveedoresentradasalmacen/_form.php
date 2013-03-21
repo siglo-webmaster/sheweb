@@ -33,7 +33,7 @@
         
 
 	<div class="row">
-		<?php echo $form->hiddenField($model,'pedidosproveedores_idpedidosproveedores',array('value'=>$idpedidosproveedores)); ?>
+		<?php echo $form->hiddenField($model,'pedidosproveedores_idpedidosproveedores',array('value'=>$idpedidosproveedores,'id'=>'pedidosproveedores_idpedidosproveedores')); ?>
 		<?php echo $form->error($model,'pedidosproveedores_idpedidosproveedores'); ?>
 	</div>
         <div id='capabloqueo'></div>
@@ -130,11 +130,20 @@
         
      
      jQuery(document).ready(function(){
-         
+         var $idtempentradaalamacen;
+         var $idtemp_entradasalamacendetalle='false'; 
          ///FUNCION QUE ACTIVA LA VENTANA EMERGENTE
          var activarventana = function($condicioncomercial){
+               
+                 ///LLAMADO A LA BASE DE DATOS PARA GENERAR UNA NUEVA ENTRADA DE ALMACEN TEMPORAL
+                 
                  
                  $('#bodycargarapida').empty();
+                 $.post("<?php echo Yii::app()->createUrl($this->module->id."/pedidosproveedoresentradasalmacen/crearentradatemporal"); ?>", { bodega_idbodega: $('#bodega_idbodega').val(), pedidosproveedores_idpedidosproveedores: $('#pedidosproveedores_idpedidosproveedores').val()})
+                        .done(function(data) {
+                         $idtempentradaalamacen = data;
+                  });
+                  //// FIN LLAMADO A BASE DE DATOS PARA CREAR ENTRADA DE ALMACEN TEMPORAL
                 
                  $('<input type="hidden" id="condicioncomercial" value="'+$condicioncomercial+'">').appendTo('#bodycargarapida');
                  
@@ -408,56 +417,156 @@
          };
          
          
-         //////////////
+         //////////////INICIO AGREGAR ITEM LISTADO
          var agregarItemaListado = function(){
-                    if (typeof $('#D_'+$('#barcode').val()).attr('alt') != 'undefined'){
+                    
+                    //////INTENTAMOS GUARDAR EL ITEM A INTRODUCIR EN EL LISTADO /////
+                    //alert($('#B_'+$('#barcode').val()+'_'+$('#condicioncomercial').val()).attr('alt'));
+                    if($('#fallados').val().length <1){
+                        $('#fallados').val(0);
+                    }
+                    if($('#amount').val().length <1){
+                        $('#amount').val(0);
+                    }
+                    $.post("<?php echo Yii::app()->createUrl($this->module->id."/pedidosproveedoresentradasalmacen/crearentradaitemtemporal"); ?>", {idtempentradaalamacen: $idtempentradaalamacen,pedidosproveedoresitems_idpedidosproveedoresitems:$('#B_'+$('#barcode').val()+'_'+$('#condicioncomercial').val()).attr('alt'), amount:$('#amount').val(),fallados:$('#fallados').val(), observaciones:$('#observaciones').val()},
+                        function(data) {
+     
+                        switch(data){
+                            case 'el item ya existe':{
+                                    //preguntar si quiere adicionar la cantidad
+                                    
+                                     if (confirm("El item ya existe en el listado de recepcion. desea aumentar la cantidad ?")) {
+                                          $.post("<?php echo Yii::app()->createUrl($this->module->id."/pedidosproveedoresentradasalmacen/crearentradaitemtemporal"); ?>", {idtempentradaalamacen: $idtempentradaalamacen,pedidosproveedoresitems_idpedidosproveedoresitems:$('#B_'+$('#barcode').val()+'_'+$('#condicioncomercial').val()).attr('alt'), amount:$('#amount').val(),fallados:$('#fallados').val(), observaciones:$('#observaciones').val(), accion_item:'sumar'},
+                                                function(data2) {
+                                                    alert(data2);
+                                                     var $tmp =parseInt($('#cantidad_'+data2).attr('alt'));
+
+                                                    if($('#amount').val().length <1){
+                                                        $('#amount').val(0);
+                                                    }
+
+                                                    $tmp+= parseInt($('#amount').val());
+                                                    $('#cantidad_'+data2).attr('alt',$tmp);
+                                                    $('#cantidad_'+data2).empty();
+                                                    $('#cantidad_'+data2).html($tmp);
+
+                                                    if($('#fallados').val().length <1){
+                                                        $('#fallados').val(0);
+                                                    }
+                                                    var $tmp =parseInt($('#fallados_'+data2).attr('alt'));
+                                                    $tmp+= parseInt($('#fallados').val());
+                                                    $('#fallados_'+data2).attr('alt',$tmp);
+                                                    $('#fallados_'+data2).empty();
+                                                    $('#fallados_'+data2).html($tmp);
+                                                    
+                                                    
+                                                    
+                                                }
+                                            );
+                                         
+                                         
+                                       
+                                    }
+                                    
+                                    break;
+                            }
+                            case 'error':{
+                                    //detener la ejecucion
+                                    alert('error');
+                                    return (1);
+                                    break;
+                            }
+                            default:{
+                                    
+                                    ///aqui creamos el nodo
+                                    
+                                    $("<tr id='D_"+data+"' alt='ok'></tr>").appendTo('#tbtcr');
+                                    $('<td><span>'+$('#barcode').val()+'</span></td>').appendTo('#D_'+data);
+                                    $('<td><span>'+$('#nombre_'+ data).attr('alt') +'</span></td>').appendTo('#D_'+data);
+                                    $('<td><span id="cantidad_'+data+'" alt="'+$('#amount').val()+'">'+$('#amount').val()+'</span></td>').appendTo('#D_'+data);
+                                    $('<td><span id="fallados_'+data+'" alt="'+$('#fallados').val()+'">'+$('#fallados').val()+'</span></td>').appendTo('#D_'+data);
+                                    $('<td><span class="boton" id="borrar_'+data+'" alt="'+data+'" ><a href="#">x</a></span></td>').appendTo('#D_'+data);
+
+                                    $('#borrar_'+data).bind('click',function(){
+
+                                       $('#D_'+$(this).attr('alt')).remove();
+                                       $('#barcode').focus();
+                                    }); 
+                                    
+                                    
+                            }
+                        }
+                        
+                        $('#barcode').focus();
+                        $('#cargarapidadetalleitem').empty();
+                        $('#td4').empty();
+                        $('#td5').empty();
+                        $('#td6').empty();
+                        $('#amount').val('');
+                        $('#cifras').val(4);                        
+                        $('#barcode').val('');
+                        $('#fallados').val('');
+                        $('#observaciones').val('');
+                         /*                       
+                        if (typeof $('#D_'+$('#barcode').val()).attr('alt') != 'undefined'){
                                                                       
-                            if (confirm("El item ya existe en el listado de recepcion. desea aumentar la cantidad ?")) {
-                                var $tmp =parseInt($('#cantidad_'+$('#barcode').val()).attr('alt'));
-                                
-                                if($('#amount').val().length <1){
-                                    $('#amount').val(0);
+                                if (confirm("El item ya existe en el listado de recepcion. desea aumentar la cantidad ?")) {
+                                    var $tmp =parseInt($('#cantidad_'+$('#barcode').val()).attr('alt'));
+
+                                    if($('#amount').val().length <1){
+                                        $('#amount').val(0);
+                                    }
+
+                                    $tmp+= parseInt($('#amount').val());
+                                    $('#cantidad_'+$('#barcode').val()).attr('alt',$tmp);
+                                    $('#cantidad_'+$('#barcode').val()).empty();
+                                    $('#cantidad_'+$('#barcode').val()).html($tmp);
+
+                                    if($('#fallados').val().length <1){
+                                        $('#fallados').val(0);
+                                    }
+                                    var $tmp =parseInt($('#fallados_'+$('#barcode').val()).attr('alt'));
+                                    $tmp+= parseInt($('#fallados').val());
+                                    $('#fallados_'+$('#barcode').val()).attr('alt',$tmp);
+                                    $('#fallados_'+$('#barcode').val()).empty();
+                                    $('#fallados_'+$('#barcode').val()).html($tmp);
                                 }
-                                
-                                $tmp+= parseInt($('#amount').val());
-                                $('#cantidad_'+$('#barcode').val()).attr('alt',$tmp);
-                                $('#cantidad_'+$('#barcode').val()).empty();
-                                $('#cantidad_'+$('#barcode').val()).html($tmp);
-                                
+
+                            } else{
                                 if($('#fallados').val().length <1){
                                     $('#fallados').val(0);
                                 }
-                                var $tmp =parseInt($('#fallados_'+$('#barcode').val()).attr('alt'));
-                                $tmp+= parseInt($('#fallados').val());
-                                $('#fallados_'+$('#barcode').val()).attr('alt',$tmp);
-                                $('#fallados_'+$('#barcode').val()).empty();
-                                $('#fallados_'+$('#barcode').val()).html($tmp);
+                                if($('#amount').val().length <1){
+                                    $('#amount').val(0);
+                                }
+                                $("<tr id='D_"+$('#barcode').val()+"' alt='ok'></tr>").appendTo('#tbtcr');
+                                $('<td><span>'+$('#barcode').val()+'</span></td>').appendTo('#D_'+$('#barcode').val());
+                                $('<td><span>'+$('#nombre_'+ $('#B_'+$('#barcode').val()+'_'+$('#condicioncomercial').val()).val()).attr('alt')+'</span></td>').appendTo('#D_'+$('#barcode').val());
+                                $('<td><span id="cantidad_'+$('#barcode').val()+'" alt="'+$('#amount').val()+'">'+$('#amount').val()+'</span></td>').appendTo('#D_'+$('#barcode').val());
+                                $('<td><span id="fallados_'+$('#barcode').val()+'" alt="'+$('#fallados').val()+'">'+$('#fallados').val()+'</span></td>').appendTo('#D_'+$('#barcode').val());
+                                $('<td><span class="boton" id="borrar_'+$('#barcode').val()+'" alt="'+$('#barcode').val()+'" ><a href="#">x</a></span></td>').appendTo('#D_'+$('#barcode').val());
+
+                                $('#borrar_'+$('#barcode').val()).bind('click',function(){
+
+                                   $('#D_'+$(this).attr('alt')).remove();
+                                   $('#barcode').focus();
+                                });                             
                             }
-                            
-                        } else{
-                            if($('#fallados').val().length <1){
-                                $('#fallados').val(0);
-                            }
-                            if($('#amount').val().length <1){
-                                $('#amount').val(0);
-                            }
-                            $("<tr id='D_"+$('#barcode').val()+"' alt='ok'></tr>").appendTo('#tbtcr');
-                            $('<td><span>'+$('#barcode').val()+'</span></td>').appendTo('#D_'+$('#barcode').val());
-                            $('<td><span>'+$('#nombre_'+ $('#B_'+$('#barcode').val()+'_'+$('#condicioncomercial').val()).val()).attr('alt')+'</span></td>').appendTo('#D_'+$('#barcode').val());
-                            $('<td><span id="cantidad_'+$('#barcode').val()+'" alt="'+$('#amount').val()+'">'+$('#amount').val()+'</span></td>').appendTo('#D_'+$('#barcode').val());
-                            $('<td><span id="fallados_'+$('#barcode').val()+'" alt="'+$('#fallados').val()+'">'+$('#fallados').val()+'</span></td>').appendTo('#D_'+$('#barcode').val());
-                            $('<td><span class="boton" id="borrar_'+$('#barcode').val()+'" alt="'+$('#barcode').val()+'" ><a href="#">x</a></span></td>').appendTo('#D_'+$('#barcode').val());
-                            
-                            $('#borrar_'+$('#barcode').val()).bind('click',function(){
-                               
-                               $('#D_'+$(this).attr('alt')).remove();
-                               $('#barcode').focus();
-                            });                             
-                        }
+                        
+                        */
+                        
+                        
+                        
+                        
+                        //////FIN REQUWEST
+                    });
+                    
+                    
+                    
              
          }
          
-         //////////////////////
+         //////////////////////FIN AGREGAR ITEM LISTADO ////////
          
          $('#activacargarapida').bind('click',function(){
              activarventana('firme');
@@ -548,7 +657,7 @@
                           }else{
                                 agregarItemaListado();
                                 ///PREPARAR TODO PARA NUEVA CARGA
-                                $('#barcode').focus();
+      /*                          $('#barcode').focus();
                                 $('#cargarapidadetalleitem').empty();
                                 $('#td4').empty();
                                 $('#td5').empty();
@@ -557,7 +666,7 @@
                                 $('#cifras').val(4);                        
                                 $('#barcode').val('');
                                 $('#fallados').val('');
-                                $('#observaciones').val('');
+                                $('#observaciones').val('');*/
                           }
                           
                           break;
@@ -586,7 +695,7 @@
               }
             
              return false;
-         })  
+         });  
          
          
           //////CAPTURAR TECLA F5

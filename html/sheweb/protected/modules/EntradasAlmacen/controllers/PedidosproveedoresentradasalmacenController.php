@@ -36,7 +36,7 @@ class PedidosproveedoresentradasalmacenController extends Controller
 				 'pbac'=>array('read'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','guardaritemtemporal','crearentradatemporal','crearentradaitemtemporal'),
 				'pbac'=>array('write'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -183,6 +183,108 @@ class PedidosproveedoresentradasalmacenController extends Controller
 		));
 	}
 
+        
+        /*crea el esqueleto de una entrada temporal al cual se va a cargar los items temporales de entrada.
+         * Esta servira finalmente para hacer la entrada definitiva y sera borrada portariormente
+         */
+        
+        /*Guardar item temporalmente mientras se pone en firme la entradad de almacen
+         * 
+         */
+        
+        public function actionCrearentradatemporal(){
+            //$parametros=array();
+            
+           
+            $temp = new TempEntradasalmacen;
+            $temp->bodega_idbodega = Yii::app()->request->getParam('bodega_idbodega');
+            $temp->pedidosproveedores_idpedidosproveedores = Yii::app()->request->getParam('pedidosproveedores_idpedidosproveedores');
+            $temp->usergroups_user_id = Yii::app()->user->id;
+            $transaction=Yii::app()->db->beginTransaction();
+            try{
+                $temp->save();
+                $transaction->commit();
+                echo $temp->idtemp_entradasalmacen;
+            }catch(Exception $e){
+                
+                $transaction->rollback();
+                echo "false";
+                
+            }
+
+        }
+        
+        
+        /*Guardar item temporalmente mientras se pone en firme la entradad de almacen
+         * 
+         */
+        
+        public function actionCrearentradaitemtemporal(){
+
+            $entradaalmacen = TempEntradasalmacendetalle::model()->findByAttributes(array(
+                                                                                        'temp_entradasalmacen_idtemp_entradasalmacen'=>Yii::app()->request->getParam('idtempentradaalamacen'),
+                                                                                        'pedidosproveedoresitems_idpedidosproveedoresitems'=>Yii::app()->request->getParam('pedidosproveedoresitems_idpedidosproveedoresitems')
+                                                                                ));
+            if($entradaalmacen){
+                echo "el item ya existe";
+                
+                switch(Yii::app()->request->getParam('accion_item')){
+                    case 'sumar':{
+                        $temp = TempEntradasalmacendetalle::model()->findByPk($entradaalmacen->idtempentradasalmacendetalle);
+                        $temp->isNewRecord=false;
+                        
+                        $temp->recibido+=Yii::app()->request->getParam('amount');
+                        $temp->fallado+=Yii::app()->request->getParam('fallados');
+                        if(Yii::app()->request->getParam('observaciones')!=''){
+                            $temp->observacionesfallado=Yii::app()->request->getParam('observaciones');
+                        }
+                        
+                        
+                    }
+                }
+                
+               
+            }else{
+                $temp = new TempEntradasalmacendetalle;
+                $temp->pedidosproveedoresitems_idpedidosproveedoresitems = Yii::app()->request->getParam('pedidosproveedoresitems_idpedidosproveedoresitems');
+                $temp->temp_entradasalmacen_idtemp_entradasalmacen =  Yii::app()->request->getParam('idtempentradaalamacen');
+                $temp->recibido=Yii::app()->request->getParam('amount');
+                $temp->fallado=Yii::app()->request->getParam('fallados');
+                $temp->observacionesfallado=Yii::app()->request->getParam('observaciones');
+            }
+            
+            $transaction=Yii::app()->db->beginTransaction();
+            try{
+                if($temp->save()){
+                    $transaction->commit();
+                    echo $temp->idtemp_entradasalmacendetalle;
+                    
+                }
+                
+            }catch(Exception $e){
+                
+                $transaction->rollback();
+                echo "false";
+                
+            }
+
+        }
+        
+        public function actionGuardaritemtemporal(){
+            $parametros=array();
+            foreach($_REQUEST as $key=>$value){
+                $parametros[$key]=$value;
+            }
+            $tempitems = new TempEntradasalmacendetalle;
+            $tempitems->attributes =$parametros;
+            if($tempitems->save()){
+                return true;
+            }else{
+                return false;
+            }
+            
+        }
+        
 	/**
 	 * Manages all models.
 	 */
