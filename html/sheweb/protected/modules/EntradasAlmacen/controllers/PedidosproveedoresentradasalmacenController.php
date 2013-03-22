@@ -226,7 +226,11 @@ class PedidosproveedoresentradasalmacenController extends Controller
                                                                                         'pedidosproveedoresitems_idpedidosproveedoresitems'=>Yii::app()->request->getParam('pedidosproveedoresitems_idpedidosproveedoresitems')
                                                                                 ));
             if($entradaalmacen){
-                echo "el item ya existe";
+                if(!isset($_REQUEST['accion_item'])){
+                    echo "el item ya existe";
+                    return (0);
+                }
+                
                 
                 switch(Yii::app()->request->getParam('accion_item')){
                     case 'sumar':{
@@ -239,7 +243,7 @@ class PedidosproveedoresentradasalmacenController extends Controller
                             $temp->observacionesfallado=Yii::app()->request->getParam('observaciones');
                         }
                         
-                        
+                        break;
                     }
                 }
                 

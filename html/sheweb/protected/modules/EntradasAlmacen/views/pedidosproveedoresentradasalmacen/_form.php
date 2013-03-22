@@ -434,7 +434,7 @@
                         switch(data){
                             case 'el item ya existe':{
                                     //preguntar si quiere adicionar la cantidad
-                                    
+                                    alert('ya existe!!');
                                      if (confirm("El item ya existe en el listado de recepcion. desea aumentar la cantidad ?")) {
                                           $.post("<?php echo Yii::app()->createUrl($this->module->id."/pedidosproveedoresentradasalmacen/crearentradaitemtemporal"); ?>", {idtempentradaalamacen: $idtempentradaalamacen,pedidosproveedoresitems_idpedidosproveedoresitems:$('#B_'+$('#barcode').val()+'_'+$('#condicioncomercial').val()).attr('alt'), amount:$('#amount').val(),fallados:$('#fallados').val(), observaciones:$('#observaciones').val(), accion_item:'sumar'},
                                                 function(data2) {
@@ -463,9 +463,7 @@
                                                     
                                                 }
                                             );
-                                         
-                                         
-                                       
+                                      
                                     }
                                     
                                     break;
