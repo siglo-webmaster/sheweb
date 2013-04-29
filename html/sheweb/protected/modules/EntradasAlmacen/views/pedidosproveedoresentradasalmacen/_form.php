@@ -209,6 +209,7 @@
                  
                  $('<div id=\'opcionesalternativas\'></div>').appendTo('#bodycargarapida');
                  $("<div  id='cuerpoopcionesalternativas' alt='true'></div>").appendTo('#opcionesalternativas');
+                  $("<input type='hidden'  id='contadoralternativas' value='0'></input>").appendTo('#opcionesalternativas');
                  
                  
                  $("<div  id='botonera2' alt='true'></div>").appendTo('#opcionesalternativas');
@@ -226,6 +227,7 @@
                   
                  
                  $('#crearclonar').bind('click', function(){
+                        
                         $('#crearclonar').hide();
                         $('#guardarclonar').show();
                         $('#cancelarclonar').show();
@@ -327,11 +329,7 @@
                   });
                  
                  $('#guardarclonar').bind('click',function(){
-                     alert('va a guardarse el item');
-                     $('#cuerpoopcionesalternativas').empty();
-                    $('#cancelarclonar').hide();
-                    $('#guardarclonar').hide();
-                    $('#crearclonar').show();
+                     agregarItemAlternativoaListado(); 
                  });
                  
                  $('#capabloqueo').show();
@@ -422,23 +420,35 @@
                     
                     //////INTENTAMOS GUARDAR EL ITEM A INTRODUCIR EN EL LISTADO /////
                     //alert($('#B_'+$('#barcode').val()+'_'+$('#condicioncomercial').val()).attr('alt'));
+                    var filaitem = $('#B_'+$('#barcode').val()+'_'+$('#condicioncomercial').val()).val();
                     if($('#fallados').val().length <1){
                         $('#fallados').val(0);
                     }
                     if($('#amount').val().length <1){
                         $('#amount').val(0);
                     }
+                    if(($('#amount').val()==0)&&($('#fallados').val()==0)){
+                        alert('No ha introducido una cantidad de libros a recibir');
+                        return 0;
+                    }
+                    
+                    if($('#barcode').val().length <1){
+                        alert('el codigo de barras no puede estar en blanco');
+                        $('#barcode').focus();
+                        return 0;
+                    }
+                    
                     $.post("<?php echo Yii::app()->createUrl($this->module->id."/pedidosproveedoresentradasalmacen/crearentradaitemtemporal"); ?>", {idtempentradaalamacen: $idtempentradaalamacen,pedidosproveedoresitems_idpedidosproveedoresitems:$('#B_'+$('#barcode').val()+'_'+$('#condicioncomercial').val()).attr('alt'), amount:$('#amount').val(),fallados:$('#fallados').val(), observaciones:$('#observaciones').val()},
                         function(data) {
      
                         switch(data){
                             case 'el item ya existe':{
                                     //preguntar si quiere adicionar la cantidad
-                                    alert('ya existe!!');
+                                    
                                      if (confirm("El item ya existe en el listado de recepcion. desea aumentar la cantidad ?")) {
                                           $.post("<?php echo Yii::app()->createUrl($this->module->id."/pedidosproveedoresentradasalmacen/crearentradaitemtemporal"); ?>", {idtempentradaalamacen: $idtempentradaalamacen,pedidosproveedoresitems_idpedidosproveedoresitems:$('#B_'+$('#barcode').val()+'_'+$('#condicioncomercial').val()).attr('alt'), amount:$('#amount').val(),fallados:$('#fallados').val(), observaciones:$('#observaciones').val(), accion_item:'sumar'},
                                                 function(data2) {
-                                                    alert(data2);
+                                                    
                                                      var $tmp =parseInt($('#cantidad_'+data2).attr('alt'));
 
                                                     if($('#amount').val().length <1){
@@ -477,10 +487,10 @@
                             default:{
                                     
                                     ///aqui creamos el nodo
-                                    
+                                   
                                     $("<tr id='D_"+data+"' alt='ok'></tr>").appendTo('#tbtcr');
                                     $('<td><span>'+$('#barcode').val()+'</span></td>').appendTo('#D_'+data);
-                                    $('<td><span>'+$('#nombre_'+ data).attr('alt') +'</span></td>').appendTo('#D_'+data);
+                                    $('<td><span>'+$('#nombre_'+ filaitem).attr('alt') +'</span></td>').appendTo('#D_'+data);
                                     $('<td><span id="cantidad_'+data+'" alt="'+$('#amount').val()+'">'+$('#amount').val()+'</span></td>').appendTo('#D_'+data);
                                     $('<td><span id="fallados_'+data+'" alt="'+$('#fallados').val()+'">'+$('#fallados').val()+'</span></td>').appendTo('#D_'+data);
                                     $('<td><span class="boton" id="borrar_'+data+'" alt="'+data+'" ><a href="#">x</a></span></td>').appendTo('#D_'+data);
@@ -565,6 +575,111 @@
          }
          
          //////////////////////FIN AGREGAR ITEM LISTADO ////////
+         
+         
+         //////AGREGAR NUEVO ITEM PROVENIENTE DE FUNCION ALTERNATIVA A LISTADO///////////////
+         
+          var agregarItemAlternativoaListado = function(){
+             //////INTENTAMOS GUARDAR EL ITEM A INTRODUCIR EN EL LISTADO /////
+                    
+                    if($('#abarcode').val().length <1){
+                        alert('El codigo de barras no puede estar vacio');
+                        return 0;
+                    }
+                    
+                    if($('#aisbn').val().length <1){
+                        alert('El isbn no puede estar vacio');
+                        return 0;
+                    }
+                    
+                    if($('#atitulo').val().length <1){
+                        alert('El titulo no puede estar vacio');
+                        return 0;
+                    }
+                    
+                    if($('#aautor').val().length <1){
+                        alert('El autor no puede estar vacio');
+                        return 0;
+                    }
+                    
+                    
+                    if($('#afallados').val().length <1){
+                        $('#afallados').val(0);
+                    }
+                    
+                    if($('#acantidad').val().length <1){
+                        $('#acantidad').val(0);
+                    }
+                    
+                    if(($('#acantidad').val()==0)&&($('#afallados').val()==0)){
+                        alert('No ha introducido una cantidad de libros a recibir');
+                        return 0;
+                    }
+                    
+                    
+                     $.post("<?php echo Yii::app()->createUrl($this->module->id."/pedidosproveedoresentradasalmacen/crearentradaitemtemporal"); ?>", {idtempentradaalamacen: $idtempentradaalamacen,pedidosproveedoresitems_idpedidosproveedoresitems:$('#B_'+$('#barcode').val()+'_'+$('#condicioncomercial').val()).attr('alt'), amount:$('#amount').val(),fallados:$('#fallados').val(), observaciones:$('#observaciones').val()},
+                        function(data) {
+                    
+
+                            var data = $('#contadoralternativas').val();  
+
+                              ///aqui creamos el nodo
+
+                               $("<tr id='OP_"+data+"' alt='ok'></tr>").appendTo('#tbtcr');
+                               $('<td><span>'+$('#abarcode').val()+'</span></td>').appendTo('#OP_'+data);
+                               $('<td><span>'+$('#atitulo').val() +'</span></td>').appendTo('#OP_'+data);
+                               $('<td><span id="acantidad_'+data+'" alt="'+$('#acantidad').val()+'">'+$('#acantidad').val()+'</span></td>').appendTo('#OP_'+data);
+                               $('<td><span id="afallados_'+data+'" alt="'+$('#afallados').val()+'">'+$('#afallados').val()+'</span></td>').appendTo('#OP_'+data);
+                               $('<input type="hidden" id="nuevoitembarcode_'+data+'" value="'+$('#abarcode').val()+'" >').appendTo('#OP_'+data);
+                               $('<input type="hidden" id="nuevoitemisbn_'+data+'" value="'+$('#aisbn').val()+'" >').appendTo('#OP_'+data);
+                               $('<input type="hidden" id="nuevoitemtitulo_'+data+'" value="'+$('#atitulo').val()+'" >').appendTo('#OP_'+data);
+                               $('<input type="hidden" id="nuevoitemeditorial_'+data+'" value="'+$('#aeditorial').val()+'" >').appendTo('#OP_'+data);
+                               $('<input type="hidden" id="nuevoitemyear_'+data+'" value="'+$('#ayear').val()+'" >').appendTo('#OP_'+data);
+                               $('<input type="hidden" id="nuevoitemedicion_'+data+'" value="'+$('#aedicion').val()+'" >').appendTo('#OP_'+data);
+                               $('<input type="hidden" id="nuevoitemformato_'+data+'" value="'+$('#aformato').val()+'" >').appendTo('#OP_'+data);
+                               $('<input type="hidden" id="nuevoitemcantidad_'+data+'" value="'+$('#acantidad').val()+'" >').appendTo('#OP_'+data);
+                               $('<input type="hidden" id="nuevoitemautor_'+data+'" value="'+$('#aautor').val()+'" >').appendTo('#OP_'+data);
+                               $('<input type="hidden" id="nuevoitemfallados_'+data+'" value="'+$('#afallados').val()+'" >').appendTo('#OP_'+data);
+                               $('<input type="hidden" id="nuevoitemobservacion_'+data+'" value="'+$('#aobservacion').val()+'" >').appendTo('#OP_'+data);
+
+                               $('<td><span class="boton" id="aborrar_'+data+'" alt="'+data+'" ><a href="#">x</a></span></td>').appendTo('#OP_'+data);
+
+                               $('#aborrar_'+data).bind('click',function(){
+
+                                  $('#OP_'+$(this).attr('alt')).remove();
+                                  $('#barcode').focus();
+                               }); 
+
+
+                               $('#OP_'+data).css('color','#999');
+
+                               data++;
+
+                               $('#contadoralternativas').val(data);
+
+                               $('#cuerpoopcionesalternativas').empty();
+                               $('#cancelarclonar').hide();
+                               $('#guardarclonar').hide();
+                               $('#crearclonar').show();
+
+                               $('#barcode').focus();
+                               $('#cargarapidadetalleitem').empty();
+                               $('#td4').empty();
+                               $('#td5').empty();
+                               $('#td6').empty();
+                               $('#amount').val('');
+                               $('#cifras').val(4);                        
+                               $('#barcode').val('');
+                               $('#fallados').val('');
+                               $('#observaciones').val('');
+                        
+                     });
+                        
+          }
+         
+         
+         //////AGREGAR NUEVO ITEM PROVENIENTE DE FUNCION ALTERNATIVA A LISTADO///////////////
+         
          
          $('#activacargarapida').bind('click',function(){
              activarventana('firme');

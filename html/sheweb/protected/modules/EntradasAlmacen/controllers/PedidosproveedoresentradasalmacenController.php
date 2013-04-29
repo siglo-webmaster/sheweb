@@ -263,6 +263,8 @@ class PedidosproveedoresentradasalmacenController extends Controller
                     $transaction->commit();
                     echo $temp->idtemp_entradasalmacendetalle;
                     
+                }else{
+                    echo "false";
                 }
                 
             }catch(Exception $e){
